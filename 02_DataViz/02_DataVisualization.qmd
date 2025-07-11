@@ -182,6 +182,7 @@ Source: [BloggoType](http://bloggotype.blogspot.com/2016/08/holiday-notes2-gramm
 ```{r}
 #| label: starwars-massheight-2
 #| fig-align: center
+#| warning: false
 ggplot(data = starwars, mapping = aes(x = height, y = mass)) +
   geom_point() +
   labs(title = "Mass vs. height of Starwars characters",
@@ -190,21 +191,6 @@ ggplot(data = starwars, mapping = aes(x = height, y = mass)) +
 
 
 ## Hello ggplot2!
-
-- The ggplot2 package comes with the tidyverse
-
-```{r}
-#| label: tidyverse-code
-#| eval: false
-library(tidyverse)
-```
-
-. . .
-
-- `ggplot()` is the main function in ggplot2
-- Plots are constructed in layers
-
-. . .
 
 ```{r}
 #| label: ggplot-syntax
@@ -251,6 +237,7 @@ glimpse(penguins)
 #| label: penguins-bill-plot
 #| echo: false
 #| fig-align: center
+#| warning: false
 ggplot(data = penguins, 
        mapping = aes(x = bill_dep, y = bill_len,
                      colour = species)) +
@@ -271,7 +258,7 @@ ggplot(data = penguins)
 ```
 
 
-## Walk through syntax {auto-animate=true}
+## Walk through syntax
 
 ```{r}
 #| label: penguins-bill-plot-code-2
@@ -284,7 +271,7 @@ ggplot(data = penguins,
 ```
 
 
-## Walk through syntax {auto-animate=true}
+## Walk through syntax 
 
 ```{r}
 #| label: penguins-bill-plot-code-3
@@ -298,13 +285,13 @@ ggplot(data = penguins,
 ```
 
 
-## Walk through syntax {auto-animate=true}
+## Walk through syntax 
 
 ```{r}
 #| label: penguins-bill-plot-code-4
 #| code-line-numbers: "5"
 #| fig-align: center
-
+#| warning: false
 ggplot(data = penguins,
        mapping = aes(x = bill_dep,
                      y = bill_len)
@@ -313,13 +300,13 @@ ggplot(data = penguins,
 ```
 
 
-## Walk through syntax {auto-animate=true}
+## Walk through syntax
 
 ```{r}
 #| label: penguins-bill-plot-code-5
 #| code-line-numbers: "4"
 #| fig-align: center
-
+#| warning: false
 ggplot(data = penguins,
        mapping = aes(x = bill_dep,
                      y = bill_len,
@@ -329,13 +316,13 @@ ggplot(data = penguins,
 ```
 
 
-## Walk through syntax {auto-animate=true}
+## Walk through syntax 
 
 ```{r}
 #| label: penguins-bill-plot-code-6
 #| code-line-numbers: "7,8,9,10"
 #| fig.show: "hide"
-
+#| warning: false
 ggplot(data = penguins,
        mapping = aes(x = bill_dep,
                      y = bill_len,
@@ -348,14 +335,14 @@ ggplot(data = penguins,
        colour = "Species")
 ```
 
-## Walk through syntax {auto-animate=true}
+## Walk through syntax 
 
 ```{r}
 #| label: penguins-bill-plot-code-6-show
 #| ref.label: "penguins-bill-plot-code-6"
 #| echo: FALSE
 #| fig-align: center
-
+#| warning: false
 ```
 
 
@@ -370,6 +357,8 @@ ggplot(data = penguins,
 ::: {.column width=48%}
 ```{r}
 #| label: tip-named-args
+#| code-line-numbers: "1,2"
+#| warning: false
 ggplot(data = penguins,
        mapping = aes(x = bill_dep,
                      y = bill_len,
@@ -384,6 +373,8 @@ ggplot(data = penguins,
 ::: {.column width=48%}
 ```{r}
 #| label: tip-not-named-args
+#| code-line-numbers: "1,2"
+#| warning: false
 ggplot(penguins,
        aes(x = bill_dep,
            y = bill_len,
@@ -399,7 +390,7 @@ ggplot(penguins,
 #| label: penguins-bill-plot-code-7
 #| code-line-numbers: "11,12"
 #| fig.show: "hide"
-
+#| warning: false
 ggplot(data = penguins,
        mapping = aes(x = bill_dep,
                      y = bill_len,
@@ -422,7 +413,7 @@ ggplot(data = penguins,
 #| ref.label: "penguins-bill-plot-code-7"
 #| echo: FALSE
 #| fig-align: center
-
+#| warning: false
 ```
 
 
@@ -592,6 +583,7 @@ ggplot(penguins,
 ```{r}
 #| label: histogram
 #| fig-align: center
+#| warning: FALSE
 ggplot(penguins, aes(x = flipper_len)) +
   geom_histogram()
 ```
@@ -604,6 +596,7 @@ ggplot(penguins, aes(x = flipper_len)) +
 ```{r}
 #| label: density
 #| fig-align: center
+#| warning: FALSE
 ggplot(penguins, aes(x = flipper_len)) +
   geom_density()
 ```
@@ -618,6 +611,7 @@ ggplot(penguins, aes(x = flipper_len)) +
 ```{r}
 #| label: boxplot
 #| fig-align: center
+#| warning: FALSE
 ggplot(penguins, aes(x = flipper_len)) +
   geom_boxplot()
 ```
@@ -633,6 +627,7 @@ ggplot(penguins, aes(x = flipper_len)) +
 ```{r}
 #| label: point
 #| fig-align: center
+#| warning: FALSE
 ggplot(penguins, aes(x = bill_dep, y = bill_len)) +
   geom_point()
 ```
@@ -645,6 +640,7 @@ ggplot(penguins, aes(x = bill_dep, y = bill_len)) +
 ```{r}
 #| label: bar
 #| fig-align: center
+#| warning: FALSE
 ggplot(penguins, aes(x = species)) +
   geom_bar()
 ```
@@ -659,6 +655,7 @@ ggplot(penguins, aes(x = species)) +
 #| label: bar-stacked
 #| fig-align: center
 #| code-line-numbers: "2"
+#| warning: FALSE
 ggplot(penguins, aes(x = species, 
                      fill = sex)) +
   geom_bar()
@@ -676,6 +673,7 @@ ggplot(penguins, aes(x = species,
 #| label: bar-side
 #| fig-align: center
 #| code-line-numbers: "3"
+#| warning: FALSE
 ggplot(penguins, aes(x = species, 
                      fill = sex)) +
   geom_bar(position = "dodge")
@@ -690,5 +688,5 @@ ggplot(penguins, aes(x = species,
 
 ```{r}
 #| echo: false
-countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+countdown::countdown(minutes = 20, seconds = 0, play_sound = TRUE)
 ```

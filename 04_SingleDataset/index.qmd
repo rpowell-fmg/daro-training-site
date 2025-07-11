@@ -12,14 +12,30 @@ format: html
 ```
 ## Exercises
 
-**Exercise 1**
+- Data:
+    - Using `college_recent_grads` data from the **fivethirtyeight** package
+    - Use `?college_recent_grads` to review the documentation and `glimpse(college_recent_grads)` to see the structure of the data
+    
+**Select, arrange, filter, distinct, count**
 
--    
+1. Which major has the highest percentage of women? (Hint: use `arrange(desc())` to easily see the top items)
+    - Output only relevant variables
+2. Get a list of STEM majors that have median earnings < \$36,000
+    - (Hint: use the `%in%` to see if the `major_category` is in `stem_categories`)
+    - Output only relevant variables
+    - Use this code to create a list of STEM majors to compare to:
+```{r}
+    stem_categories <- c("Biology & Life Science",
+                         "Computers & Mathematics",
+                         "Engineering",
+                         "Physical Sciences")
+```
+    
+3. Output a count of the number of majors in each `major_category`
 
-**Exercise 2**
+**mutate, group_by, summarize**
 
--    
-
-**Exercise 3**
-
--    
+4. Create a new variable called `STEM` that is a 0/1 indicator if the major is in one of the `stem_categories` from #2 above.
+5. Which major category has the highest typical (can use `mean()`, `median()`, etc.) median income? (Hint: use `group_by()` and `summarize()`)
+6. Create a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not.
+7. As time permits, review the data to create new variables, summarize different aspects, or visualize the data in different ways. Familiarize yourself with ggplot!

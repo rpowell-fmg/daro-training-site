@@ -12,14 +12,25 @@ format: html
 ```
 ## Exercises
 
-**Exercise 1**
+- Load the `edibnb.rds` data: `edibnb<-readRDS("PATHNAME/edibnb.RDS")`
+    - Airbnb Listings in Edinburgh with the following data:
+        - id: ID number of the listing
+        - price: Price, in GBP, for one night stay
+        - neighborhood: neighborhood listing is located in
+        - accommodates: Number of people listing accommodates
+        - bathrooms: Number of bathrooms
+        - bedrooms: Number of bedrooms
+        - beds: Number of beds (which can be different than the number of bedrooms)
+        - review_scores_rating: Average rating of property
+        - number_of_reviews: Number of reviews
+        - listing_url: Listing URL
+    - Source: [https://www.kaggle.com/datasets/thoroc/edinburgh-inside-airbnb](https://www.kaggle.com/datasets/thoroc/edinburgh-inside-airbnb)
 
--    
+1. How many observations (rows) does the dataset have?
+2. Run View(edibnb) in your Console to view the data in the data viewer. What does each row in the dataset represent?
+3. Create a barchart:
+    a. Displaying the count of listings in each neighborhood 
+    b. Add different colors for the number of reviews
+4. Create a visualization that will help you compare the distribution of review scores (review_scores_rating) across neighborhoods.
+5. As time permits, create visualizations to review the price, number of bedrooms, or look at ratings by reviews.  Familiarize yourself with ggplot!
 
-**Exercise 2**
-
--    
-
-**Exercise 3**
-
--    

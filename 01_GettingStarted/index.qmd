@@ -12,14 +12,15 @@ format: html
 ```
 ## Exercises
 
-**Exercise 1**
+**1. Customize your layout**
 
--    
+- Go to `Tools > Global Options > Appearance` and `Tools > Global Options > Pane Layout` to design an environment that works for you!
 
-**Exercise 2**
+**2. Install Packages**
 
--    
-
-**Exercise 3**
-
--    
+- Install the following packages in your environment `install.packages()`:
+    - tidyverse
+    - fivethirtyeight
+    - janitor
+    - labelled
+- Load the `tidyverse` and `fivethirtyeight` packages into R using `library()`

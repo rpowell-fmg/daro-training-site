@@ -1,0 +1,17 @@
+{
+  "hash": "8c85d48285662b2b5333b1763eecfe0c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Single Dataset\"\nformat: html\n---\n\n\n\n\n## Slides\n\n[View slides in full screen](04_SingleDataset.html)\n\n\n\n\n```{=html}\n<iframe class=\"slide-deck\" src=\"04_SingleDataset.html\" height=\"450\" width=\"800\" style=\"border: 1px solid #F0F0F0;\"></iframe>\n```\n\n\n\n## Exercises\n\n- Data:\n    - Using `college_recent_grads` data from the **fivethirtyeight** package\n    - Use `?college_recent_grads` to review the documentation and `glimpse(college_recent_grads)` to see the structure of the data\n    \n**Select, arrange, filter, distinct, count**\n\n1. Which major has the highest percentage of women? (Hint: use `arrange(desc())` to easily see the top items)\n    - Output only relevant variables\n2. Get a list of STEM majors that have median earnings < \\$36,000\n    - (Hint: use the `%in%` to see if the `major_category` is in `stem_categories`)\n    - Output only relevant variables\n    - Use this code to create a list of STEM majors to compare to:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n    stem_categories <- c(\"Biology & Life Science\",\n                         \"Computers & Mathematics\",\n                         \"Engineering\",\n                         \"Physical Sciences\")\n```\n:::\n\n\n\n    \n3. Output a count of the number of majors in each `major_category`\n\n**mutate, group_by, summarize**\n\n4. Create a new variable called `STEM` that is a 0/1 indicator if the major is in one of the `stem_categories` from #2 above.\n5. Which major category has the highest typical (can use `mean()`, `median()`, etc.) median income? (Hint: use `group_by()` and `summarize()`)\n6. Create a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not.\n7. As time permits, review the data to create new variables, summarize different aspects, or visualize the data in different ways. Familiarize yourself with ggplot!",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

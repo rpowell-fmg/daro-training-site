@@ -123,7 +123,7 @@ knitr::include_graphics("images/rstudio-my-default.png")
 
 ```{r}
 #| echo: false
-countdown::countdown(minutes = 1, seconds = 30, play_sound = TRUE)
+countdown::countdown(minutes = 3, seconds = 0, play_sound = TRUE)
 ```
 
 # R essentials {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
@@ -152,19 +152,9 @@ library(package_name)
 
 . . .
 
-- Assignment/setting values is done with `<-`
-```{r}
-#| eval: FALSE
-#| echo: TRUE
-starwars_droids <- starwars %>%
-  filter(species == "Droid")
-```
-
-. . .
-
 - File paths should be specified with a forward slash "/"
     - this is the same for macs, linux systems, and URLs, but is opposite windows
-    - "J:\R_Transition" is the windows path, but in R it needs to be "J:/R_Transition"
+    - "C:\\R_Transition" is the windows path, but in R it needs to be "C:/R_Transition"
     
 
 ## A short list (for now) of R essentials (cont.)
@@ -179,6 +169,22 @@ dataset$variable_name
 
 . . .
 
+- Assignment/setting values is done with `<-`
+```{r}
+#| eval: FALSE
+#| echo: TRUE
+starwars_droids <- starwars %>%
+  filter(species == "Droid")
+```
+
+. . .
+
+-   R is case sensitive: 
+    - `starwars$species` is different from `StarWars$Species`
+    - `case_when()` is different from `CASE_WHEN()` and `Case_When`
+
+## A short list (for now) of R essentials (cont.)
+
 -   Object documentation can be accessed with `?`
 
 ```{r}
@@ -186,12 +192,6 @@ dataset$variable_name
 #| echo: TRUE
 ?mean
 ```
-
-. . .
-
--   R is case sensitive: 
-    - `starwars$Species` is different from `StarWars$Species`
-    - `case_when()` is different from `CASE_WHEN()` and `Case_When`
 
 . . .
 
@@ -247,5 +247,5 @@ Mitchell O'Hara-Wild, [useR! 2018 feature wall](https://www.mitchelloharawild.co
 
 ```{r}
 #| echo: false
-countdown::countdown(minutes = 1, seconds = 30, play_sound = TRUE)
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE)
 ```

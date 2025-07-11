@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "daro-training-site",
+    "title": "R Training for DARO!",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2",
+    "text": "All slides and exercises will be posted here throughout the week!",
     "crumbs": [
       "Home"
     ]
@@ -16,7 +16,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Day 4",
+      "Day 3",
       "Labelled Data"
     ]
   },
@@ -27,7 +27,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Day 4",
+      "Day 3",
       "Labelled Data"
     ]
   },
@@ -38,7 +38,7 @@
     "section": "Exercises",
     "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
     "crumbs": [
-      "Day 4",
+      "Day 3",
       "Labelled Data"
     ]
   },
@@ -49,7 +49,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Day 4",
+      "Day 3",
       "Data Attributes"
     ]
   },
@@ -60,7 +60,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Day 4",
+      "Day 3",
       "Data Attributes"
     ]
   },
@@ -71,7 +71,7 @@
     "section": "Exercises",
     "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
     "crumbs": [
-      "Day 4",
+      "Day 3",
       "Data Attributes"
     ]
   },
@@ -115,7 +115,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Day 3",
+      "Day 2",
       "Pivoting Data"
     ]
   },
@@ -126,7 +126,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Day 3",
+      "Day 2",
       "Pivoting Data"
     ]
   },
@@ -137,7 +137,7 @@
     "section": "Exercises",
     "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
     "crumbs": [
-      "Day 3",
+      "Day 2",
       "Pivoting Data"
     ]
   },
@@ -148,7 +148,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Day 3",
+      "Day 2",
       "Joining Datasets"
     ]
   },
@@ -159,7 +159,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Day 3",
+      "Day 2",
       "Joining Datasets"
     ]
   },
@@ -170,7 +170,7 @@
     "section": "Exercises",
     "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
     "crumbs": [
-      "Day 3",
+      "Day 2",
       "Joining Datasets"
     ]
   },
@@ -181,7 +181,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Day 2",
+      "Day 1",
       "Single Dataset"
     ]
   },
@@ -192,7 +192,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Day 2",
+      "Day 1",
       "Single Dataset"
     ]
   },
@@ -201,9 +201,9 @@
     "href": "04_SingleDataset/index.html#exercises",
     "title": "Single Dataset",
     "section": "Exercises",
-    "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
+    "text": "Exercises\n\nData:\n\nUsing college_recent_grads data from the fivethirtyeight package\nUse ?college_recent_grads to review the documentation and glimpse(college_recent_grads) to see the structure of the data\n\n\nSelect, arrange, filter, distinct, count\n\nWhich major has the highest percentage of women? (Hint: use arrange(desc()) to easily see the top items)\n\nOutput only relevant variables\n\nGet a list of STEM majors that have median earnings &lt; $36,000\n\n(Hint: use the %in% to see if the major_category is in stem_categories)\nOutput only relevant variables\nUse this code to create a list of STEM majors to compare to:\n\n\n\n    stem_categories &lt;- c(\"Biology & Life Science\",\n                         \"Computers & Mathematics\",\n                         \"Engineering\",\n                         \"Physical Sciences\")\n\n\nOutput a count of the number of majors in each major_category\n\nmutate, group_by, summarize\n\nCreate a new variable called STEM that is a 0/1 indicator if the major is in one of the stem_categories from #2 above.\nWhich major category has the highest typical (can use mean(), median(), etc.) median income? (Hint: use group_by() and summarize())\nCreate a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not.\nAs time permits, review the data to create new variables, summarize different aspects, or visualize the data in different ways. Familiarize yourself with ggplot!",
     "crumbs": [
-      "Day 2",
+      "Day 1",
       "Single Dataset"
     ]
   },
@@ -214,7 +214,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Day 2",
+      "Day 1",
       "Tidy Data"
     ]
   },
@@ -225,7 +225,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Day 2",
+      "Day 1",
       "Tidy Data"
     ]
   },
@@ -234,9 +234,9 @@
     "href": "03_TidyData/index.html#exercises",
     "title": "Tidy Data",
     "section": "Exercises",
-    "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
+    "text": "Exercises\n\nTake your plot code and change it so it uses a pipe (%&gt;%) workflow instead of calling the data directly in ggplot()",
     "crumbs": [
-      "Day 2",
+      "Day 1",
       "Tidy Data"
     ]
   },
@@ -267,7 +267,7 @@
     "href": "02_DataViz/index.html#exercises",
     "title": "Data Visualization",
     "section": "Exercises",
-    "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
+    "text": "Exercises\n\nLoad the edibnb.rds data: edibnb&lt;-readRDS(\"PATHNAME/edibnb.RDS\")\n\nAirbnb Listings in Edinburgh with the following data:\n\nid: ID number of the listing\nprice: Price, in GBP, for one night stay\nneighborhood: neighborhood listing is located in\naccommodates: Number of people listing accommodates\nbathrooms: Number of bathrooms\nbedrooms: Number of bedrooms\nbeds: Number of beds (which can be different than the number of bedrooms)\nreview_scores_rating: Average rating of property\nnumber_of_reviews: Number of reviews\nlisting_url: Listing URL\n\nSource: https://www.kaggle.com/datasets/thoroc/edinburgh-inside-airbnb\n\n\n\nHow many observations (rows) does the dataset have?\nRun View(edibnb) in your Console to view the data in the data viewer. What does each row in the dataset represent?\nCreate a barchart:\n\nDisplaying the count of listings in each neighborhood\nAdd different colors for the number of reviews\n\nCreate a visualization that will help you compare the distribution of review scores (review_scores_rating) across neighborhoods.\nAs time permits, create visualizations to review the price, number of bedrooms, or look at ratings by reviews. Familiarize yourself with ggplot!",
     "crumbs": [
       "Day 1",
       "Data Visualization"
@@ -300,7 +300,7 @@
     "href": "01_GettingStarted/index.html#exercises",
     "title": "Getting Started",
     "section": "Exercises",
-    "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
+    "text": "Exercises\n1. Customize your layout\n\nGo to Tools &gt; Global Options &gt; Appearance and Tools &gt; Global Options &gt; Pane Layout to design an environment that works for you!\n\n2. Install Packages\n\nInstall the following packages in your environment install.packages():\n\ntidyverse\nfivethirtyeight\njanitor\nlabelled\n\nLoad the tidyverse and fivethirtyeight packages into R using library()",
     "crumbs": [
       "Day 1",
       "Getting Started"
@@ -353,14 +353,21 @@
     "href": "01_GettingStarted/01_GettingStarted.html#a-short-list-for-now-of-r-essentials",
     "title": "Getting Started",
     "section": "A short list (for now) of R essentials",
-    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\n\nPackages are installed with the install.packages function and loaded with the library function:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)\n\n\n\n\nAssignment/setting values is done with &lt;-\n\n\nstarwars_droids &lt;- starwars %&gt;%\n  filter(species == \"Droid\")\n\n\n\n\nFile paths should be specified with a forward slash “/”\n\nthis is the same for macs, linux systems, and URLs, but is opposite windows\n“J:_Transition” is the windows path, but in R it needs to be “J:/R_Transition”"
+    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\n\nPackages are installed with the install.packages function and loaded with the library function:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)\n\n\n\n\nFile paths should be specified with a forward slash “/”\n\nthis is the same for macs, linux systems, and URLs, but is opposite windows\n“C:\\R_Transition” is the windows path, but in R it needs to be “C:/R_Transition”"
   },
   {
     "objectID": "01_GettingStarted/01_GettingStarted.html#a-short-list-for-now-of-r-essentials-cont.",
     "href": "01_GettingStarted/01_GettingStarted.html#a-short-list-for-now-of-r-essentials-cont.",
     "title": "Getting Started",
     "section": "A short list (for now) of R essentials (cont.)",
-    "text": "A short list (for now) of R essentials (cont.)\n\nColumns (variables) in data frames are accessed with $:\n\n\ndataset$variable_name\n\n\n\nObject documentation can be accessed with ?\n\n\n?mean\n\n\n\n\nR is case sensitive:\n\nstarwars$Species is different from StarWars$Species\ncase_when() is different from CASE_WHEN() and Case_When\n\n\n\n\n\n# is how you comment your code\n\n\n# Here is some code to list Star Wars Droids\nstarwars %&gt;%                  # starwars dataset\n  filter(species == \"Droid\")  # subset to droids"
+    "text": "A short list (for now) of R essentials (cont.)\n\nColumns (variables) in data frames are accessed with $:\n\n\ndataset$variable_name\n\n\n\nAssignment/setting values is done with &lt;-\n\n\nstarwars_droids &lt;- starwars %&gt;%\n  filter(species == \"Droid\")\n\n\n\n\nR is case sensitive:\n\nstarwars$species is different from StarWars$Species\ncase_when() is different from CASE_WHEN() and Case_When"
+  },
+  {
+    "objectID": "01_GettingStarted/01_GettingStarted.html#a-short-list-for-now-of-r-essentials-cont.-1",
+    "href": "01_GettingStarted/01_GettingStarted.html#a-short-list-for-now-of-r-essentials-cont.-1",
+    "title": "Getting Started",
+    "section": "A short list (for now) of R essentials (cont.)",
+    "text": "A short list (for now) of R essentials (cont.)\n\nObject documentation can be accessed with ?\n\n\n?mean\n\n\n\n# is how you comment your code\n\n\n# Here is some code to list Star Wars Droids\nstarwars %&gt;%                  # starwars dataset\n  filter(species == \"Droid\")  # subset to droids"
   },
   {
     "objectID": "01_GettingStarted/01_GettingStarted.html#tidyverse",
@@ -451,7 +458,7 @@
     "href": "02_DataViz/02_DataVisualization.html#hello-ggplot2",
     "title": "Data and Visualization",
     "section": "Hello ggplot2!",
-    "text": "Hello ggplot2!\n\nThe ggplot2 package comes with the tidyverse\n\n\nlibrary(tidyverse)\n\n\n\nggplot() is the main function in ggplot2\nPlots are constructed in layers\n\n\n\n\nggplot(data = [dataset],\n       mapping = aes(x = [x-variable], y = [y-variable])) +\n   geom_xxx() +\n   other options"
+    "text": "Hello ggplot2!\n\nggplot(data = [dataset],\n       mapping = aes(x = [x-variable], y = [y-variable])) +\n   geom_xxx() +\n   other options"
   },
   {
     "objectID": "02_DataViz/02_DataVisualization.html#data-palmer-penguins",
@@ -654,7 +661,7 @@
     "href": "03_TidyData/03_TidyData.html#a-grammar-of-data-wrangling",
     "title": "Data Wrangling",
     "section": "A grammar of data wrangling…",
-    "text": "A grammar of data wrangling…\n… based on the concepts of functions as verbs that manipulate data frames\n\n\n\n\n\n\n\n\n\n\n\n\nselect: pick columns by name\narrange: reorder rows\nfilter: pick rows matching criteria\ndistinct: filter for unique rows\nmutate: add new variables\nsummarise or summarize: agreggation of values\ngroup_by: for grouped operations\n… (many more)"
+    "text": "A grammar of data wrangling…\n… based on the concepts of functions as verbs that manipulate data frames\n\n\n\n\n\n\n\n\n\n\n\n\nselect: pick columns by name\narrange: reorder rows\nfilter: pick rows matching criteria\ndistinct: filter for unique rows\nmutate: add new variables\nsummarize: agreggation of values\ngroup_by: for grouped operations\n… (many more)"
   },
   {
     "objectID": "03_TidyData/03_TidyData.html#rules-of-dplyr-functions",

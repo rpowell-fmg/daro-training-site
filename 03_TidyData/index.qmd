@@ -12,14 +12,4 @@ format: html
 ```
 ## Exercises
 
-**Exercise 1**
-
--    
-
-**Exercise 2**
-
--    
-
-**Exercise 3**
-
--    
+- Take your plot code and change it so it uses a pipe (`%>%`) workflow instead of calling the data directly in `ggplot()`

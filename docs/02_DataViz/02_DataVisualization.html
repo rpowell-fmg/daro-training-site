@@ -337,25 +337,11 @@ $ starships  &lt;list&gt; &lt;"X-wing", "Imperial shuttle"&gt;, &lt;&gt;, &lt;&g
 <img data-src="02_DataVisualization_files/figure-revealjs/starwars-massheight-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="hello-ggplot2" class="slide level2">
 <h2>Hello ggplot2!</h2>
-<ul>
-<li>The ggplot2 package comes with the tidyverse</li>
-</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<ul>
-<li><code>ggplot()</code> is the main function in ggplot2</li>
-<li>Plots are constructed in layers</li>
-</ul>
-</div>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="|1,2|1|2|3|"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> [dataset],</span>
-<span id="cb12-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> [x<span class="sc">-</span>variable], <span class="at">y =</span> [y<span class="sc">-</span>variable])) <span class="sc">+</span></span>
-<span id="cb12-3"><a></a>   <span class="fu">geom_xxx</span>() <span class="sc">+</span></span>
-<span id="cb12-4"><a></a>   other options</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="|1,2|1|2|3|"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> [dataset],</span>
+<span id="cb11-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> [x<span class="sc">-</span>variable], <span class="at">y =</span> [y<span class="sc">-</span>variable])) <span class="sc">+</span></span>
+<span id="cb11-3"><a></a>   <span class="fu">geom_xxx</span>() <span class="sc">+</span></span>
+<span id="cb11-4"><a></a>   other options</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
@@ -378,7 +364,7 @@ $ starships  &lt;list&gt; &lt;"X-wing", "Imperial shuttle"&gt;, &lt;&gt;, &lt;&g
 </div>
 </div><div class="column" style="width:70%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">glimpse</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">glimpse</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 344
 Columns: 8
@@ -400,69 +386,69 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 <section id="walk-through-syntax" class="slide level2">
 <h2>Walk through syntax</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/penguins-bill-plot-code-1-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="walk-through-syntax-1" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Walk through syntax</h2>
+<section id="walk-through-syntax-1" class="slide level2">
+<h2>Walk through syntax</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb16-1" class="hljs-ln-code"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb16-2" class="hljs-ln-code"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep)</span>
-<span id="cb16-3" class="hljs-ln-code"><a></a>       )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb15-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep)</span>
+<span id="cb15-3"><a></a>       )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/penguins-bill-plot-code-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="walk-through-syntax-2" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Walk through syntax</h2>
+<section id="walk-through-syntax-2" class="slide level2">
+<h2>Walk through syntax</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb17-1" class="hljs-ln-code"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb17-2" class="hljs-ln-code"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
-<span id="cb17-3" class="hljs-ln-code"><a></a>                     <span class="at">y =</span> bill_len)</span>
-<span id="cb17-4" class="hljs-ln-code"><a></a>       )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb16-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
+<span id="cb16-3"><a></a>                     <span class="at">y =</span> bill_len)</span>
+<span id="cb16-4"><a></a>       )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/penguins-bill-plot-code-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="walk-through-syntax-3" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Walk through syntax</h2>
+<section id="walk-through-syntax-3" class="slide level2">
+<h2>Walk through syntax</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb18-1" class="hljs-ln-code"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb18-2" class="hljs-ln-code"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
-<span id="cb18-3" class="hljs-ln-code"><a></a>                     <span class="at">y =</span> bill_len)</span>
-<span id="cb18-4" class="hljs-ln-code"><a></a>       ) <span class="sc">+</span></span>
-<span id="cb18-5" class="hljs-ln-code"><a></a>  <span class="fu">geom_point</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb17-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
+<span id="cb17-3"><a></a>                     <span class="at">y =</span> bill_len)</span>
+<span id="cb17-4"><a></a>       ) <span class="sc">+</span></span>
+<span id="cb17-5"><a></a>  <span class="fu">geom_point</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/penguins-bill-plot-code-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="walk-through-syntax-4" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Walk through syntax</h2>
+<section id="walk-through-syntax-4" class="slide level2">
+<h2>Walk through syntax</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb19-1" class="hljs-ln-code"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb19-2" class="hljs-ln-code"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
-<span id="cb19-3" class="hljs-ln-code"><a></a>                     <span class="at">y =</span> bill_len,</span>
-<span id="cb19-4" class="hljs-ln-code"><a></a>                     <span class="at">color =</span> species)</span>
-<span id="cb19-5" class="hljs-ln-code"><a></a>       ) <span class="sc">+</span></span>
-<span id="cb19-6" class="hljs-ln-code"><a></a>  <span class="fu">geom_point</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb18-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
+<span id="cb18-3"><a></a>                     <span class="at">y =</span> bill_len,</span>
+<span id="cb18-4"><a></a>                     <span class="at">color =</span> species)</span>
+<span id="cb18-5"><a></a>       ) <span class="sc">+</span></span>
+<span id="cb18-6"><a></a>  <span class="fu">geom_point</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/penguins-bill-plot-code-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="walk-through-syntax-5" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Walk through syntax</h2>
+<section id="walk-through-syntax-5" class="slide level2">
+<h2>Walk through syntax</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="7,8,9,10"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb20-1" class="hljs-ln-code"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb20-2" class="hljs-ln-code"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
-<span id="cb20-3" class="hljs-ln-code"><a></a>                     <span class="at">y =</span> bill_len,</span>
-<span id="cb20-4" class="hljs-ln-code"><a></a>                     <span class="at">color =</span> species)</span>
-<span id="cb20-5" class="hljs-ln-code"><a></a>       ) <span class="sc">+</span></span>
-<span id="cb20-6" class="hljs-ln-code"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb20-7" class="hljs-ln-code"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Bill depth and length"</span>,</span>
-<span id="cb20-8" class="hljs-ln-code"><a></a>       <span class="at">subtitle =</span> <span class="st">"Dimensions for Adelie, Chinstrap, and Gentoo Penguins"</span>,</span>
-<span id="cb20-9" class="hljs-ln-code"><a></a>       <span class="at">x =</span> <span class="st">"Bill depth (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
-<span id="cb20-10" class="hljs-ln-code"><a></a>       <span class="at">colour =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="7,8,9,10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb19-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
+<span id="cb19-3"><a></a>                     <span class="at">y =</span> bill_len,</span>
+<span id="cb19-4"><a></a>                     <span class="at">color =</span> species)</span>
+<span id="cb19-5"><a></a>       ) <span class="sc">+</span></span>
+<span id="cb19-6"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb19-7"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Bill depth and length"</span>,</span>
+<span id="cb19-8"><a></a>       <span class="at">subtitle =</span> <span class="st">"Dimensions for Adelie, Chinstrap, and Gentoo Penguins"</span>,</span>
+<span id="cb19-9"><a></a>       <span class="at">x =</span> <span class="st">"Bill depth (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
+<span id="cb19-10"><a></a>       <span class="at">colour =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="walk-through-syntax-6" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Walk through syntax</h2>
+<section id="walk-through-syntax-6" class="slide level2">
+<h2>Walk through syntax</h2>
 
 <img data-src="02_DataVisualization_files/figure-revealjs/penguins-bill-plot-code-6-show-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section></section>
 <section>
@@ -476,11 +462,11 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 <h2></h2>
 <div class="column" style="width:48%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb21-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
-<span id="cb21-3"><a></a>                     <span class="at">y =</span> bill_len,</span>
-<span id="cb21-4"><a></a>                     <span class="at">colour =</span> species)) <span class="sc">+</span></span>
-<span id="cb21-5"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="1,2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb20-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
+<span id="cb20-3"><a></a>                     <span class="at">y =</span> bill_len,</span>
+<span id="cb20-4"><a></a>                     <span class="at">colour =</span> species)) <span class="sc">+</span></span>
+<span id="cb20-5"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -493,11 +479,11 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 
 </div><div class="column" style="width:48%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
-<span id="cb22-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
-<span id="cb22-3"><a></a>           <span class="at">y =</span> bill_len,</span>
-<span id="cb22-4"><a></a>           <span class="at">colour =</span> species)) <span class="sc">+</span></span>
-<span id="cb22-5"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="1,2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
+<span id="cb21-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
+<span id="cb21-3"><a></a>           <span class="at">y =</span> bill_len,</span>
+<span id="cb21-4"><a></a>           <span class="at">colour =</span> species)) <span class="sc">+</span></span>
+<span id="cb21-5"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -510,18 +496,18 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 <section id="themes" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Themes</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="11,12"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb23-1" class="hljs-ln-code"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb23-2" class="hljs-ln-code"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
-<span id="cb23-3" class="hljs-ln-code"><a></a>                     <span class="at">y =</span> bill_len,</span>
-<span id="cb23-4" class="hljs-ln-code"><a></a>                     <span class="at">color =</span> species)</span>
-<span id="cb23-5" class="hljs-ln-code"><a></a>       ) <span class="sc">+</span></span>
-<span id="cb23-6" class="hljs-ln-code"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb23-7" class="hljs-ln-code"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Bill depth and length"</span>,</span>
-<span id="cb23-8" class="hljs-ln-code"><a></a>       <span class="at">subtitle =</span> <span class="st">"Dimensions for Adelie, Chinstrap, and Gentoo Penguins"</span>,</span>
-<span id="cb23-9" class="hljs-ln-code"><a></a>       <span class="at">x =</span> <span class="st">"Bill depth (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
-<span id="cb23-10" class="hljs-ln-code"><a></a>       <span class="at">colour =</span> <span class="st">"Species"</span>) <span class="sc">+</span></span>
-<span id="cb23-11" class="hljs-ln-code"><a></a>  <span class="fu">scale_colour_viridis_d</span>() <span class="sc">+</span></span>
-<span id="cb23-12" class="hljs-ln-code"><a></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="11,12"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb22-1" class="hljs-ln-code"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb22-2" class="hljs-ln-code"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
+<span id="cb22-3" class="hljs-ln-code"><a></a>                     <span class="at">y =</span> bill_len,</span>
+<span id="cb22-4" class="hljs-ln-code"><a></a>                     <span class="at">color =</span> species)</span>
+<span id="cb22-5" class="hljs-ln-code"><a></a>       ) <span class="sc">+</span></span>
+<span id="cb22-6" class="hljs-ln-code"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb22-7" class="hljs-ln-code"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Bill depth and length"</span>,</span>
+<span id="cb22-8" class="hljs-ln-code"><a></a>       <span class="at">subtitle =</span> <span class="st">"Dimensions for Adelie, Chinstrap, and Gentoo Penguins"</span>,</span>
+<span id="cb22-9" class="hljs-ln-code"><a></a>       <span class="at">x =</span> <span class="st">"Bill depth (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
+<span id="cb22-10" class="hljs-ln-code"><a></a>       <span class="at">colour =</span> <span class="st">"Species"</span>) <span class="sc">+</span></span>
+<span id="cb22-11" class="hljs-ln-code"><a></a>  <span class="fu">scale_colour_viridis_d</span>() <span class="sc">+</span></span>
+<span id="cb22-12" class="hljs-ln-code"><a></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="themes-1" class="slide level2" data-auto-animate="true">
@@ -546,11 +532,11 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 <section id="colour" class="slide level2">
 <h2>Colour</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
-<span id="cb24-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep, </span>
-<span id="cb24-3"><a></a>           <span class="at">y =</span> bill_len,</span>
-<span id="cb24-4"><a></a>           <span class="at">colour =</span> species)) <span class="sc">+</span></span>
-<span id="cb24-5"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
+<span id="cb23-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep, </span>
+<span id="cb23-3"><a></a>           <span class="at">y =</span> bill_len,</span>
+<span id="cb23-4"><a></a>           <span class="at">colour =</span> species)) <span class="sc">+</span></span>
+<span id="cb23-5"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/colour-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:120.0%"></section>
@@ -558,12 +544,12 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 <h2>Shape</h2>
 <p>Mapped to a different variable than <code>colour</code></p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
-<span id="cb25-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep, </span>
-<span id="cb25-3"><a></a>           <span class="at">y =</span> bill_len,</span>
-<span id="cb25-4"><a></a>           <span class="at">colour =</span> species,</span>
-<span id="cb25-5"><a></a>           <span class="at">shape =</span> island)) <span class="sc">+</span></span>
-<span id="cb25-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
+<span id="cb24-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep, </span>
+<span id="cb24-3"><a></a>           <span class="at">y =</span> bill_len,</span>
+<span id="cb24-4"><a></a>           <span class="at">colour =</span> species,</span>
+<span id="cb24-5"><a></a>           <span class="at">shape =</span> island)) <span class="sc">+</span></span>
+<span id="cb24-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/shape-island-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:120.0%"></section>
@@ -571,41 +557,41 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 <h2>Shape</h2>
 <p>Mapped to same variable as <code>colour</code></p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
-<span id="cb26-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep, </span>
-<span id="cb26-3"><a></a>           <span class="at">y =</span> bill_len,</span>
-<span id="cb26-4"><a></a>           <span class="at">colour =</span> species,</span>
-<span id="cb26-5"><a></a>           <span class="at">shape =</span> species)) <span class="sc">+</span></span>
-<span id="cb26-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
+<span id="cb25-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep, </span>
+<span id="cb25-3"><a></a>           <span class="at">y =</span> bill_len,</span>
+<span id="cb25-4"><a></a>           <span class="at">colour =</span> species,</span>
+<span id="cb25-5"><a></a>           <span class="at">shape =</span> species)) <span class="sc">+</span></span>
+<span id="cb25-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/shape-species-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:120.0%"></section>
 <section id="size" class="slide level2">
 <h2>Size</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
-<span id="cb27-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep, </span>
-<span id="cb27-3"><a></a>           <span class="at">y =</span> bill_len,</span>
-<span id="cb27-4"><a></a>           <span class="at">colour =</span> species,</span>
-<span id="cb27-5"><a></a>           <span class="at">shape =</span> species,</span>
-<span id="cb27-6"><a></a>           <span class="at">size =</span> body_mass)) <span class="sc">+</span></span>
-<span id="cb27-7"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb27-8"><a></a>  <span class="fu">scale_colour_viridis_d</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
+<span id="cb26-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep, </span>
+<span id="cb26-3"><a></a>           <span class="at">y =</span> bill_len,</span>
+<span id="cb26-4"><a></a>           <span class="at">colour =</span> species,</span>
+<span id="cb26-5"><a></a>           <span class="at">shape =</span> species,</span>
+<span id="cb26-6"><a></a>           <span class="at">size =</span> body_mass)) <span class="sc">+</span></span>
+<span id="cb26-7"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb26-8"><a></a>  <span class="fu">scale_colour_viridis_d</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/size-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:120.0%"></section>
 <section id="alpha" class="slide level2">
 <h2>Alpha</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
-<span id="cb28-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep, </span>
-<span id="cb28-3"><a></a>           <span class="at">y =</span> bill_len,</span>
-<span id="cb28-4"><a></a>           <span class="at">colour =</span> species,</span>
-<span id="cb28-5"><a></a>           <span class="at">shape =</span> species,</span>
-<span id="cb28-6"><a></a>           <span class="at">size =</span> body_mass,</span>
-<span id="cb28-7"><a></a>           <span class="at">alpha =</span> flipper_len)) <span class="sc">+</span> </span>
-<span id="cb28-8"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb28-9"><a></a>  <span class="fu">scale_colour_viridis_d</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
+<span id="cb27-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep, </span>
+<span id="cb27-3"><a></a>           <span class="at">y =</span> bill_len,</span>
+<span id="cb27-4"><a></a>           <span class="at">colour =</span> species,</span>
+<span id="cb27-5"><a></a>           <span class="at">shape =</span> species,</span>
+<span id="cb27-6"><a></a>           <span class="at">size =</span> body_mass,</span>
+<span id="cb27-7"><a></a>           <span class="at">alpha =</span> flipper_len)) <span class="sc">+</span> </span>
+<span id="cb27-8"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb27-9"><a></a>  <span class="fu">scale_colour_viridis_d</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/alpha-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:120.0%"></section>
@@ -614,12 +600,12 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 <div class="column" style="width:48%;">
 <p><strong>Mapping</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="4,5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
-<span id="cb29-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
-<span id="cb29-3"><a></a>           <span class="at">y =</span> bill_len,</span>
-<span id="cb29-4"><a></a>           <span class="at">size =</span> body_mass,</span>
-<span id="cb29-5"><a></a>           <span class="at">alpha =</span> flipper_len)) <span class="sc">+</span></span>
-<span id="cb29-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="4,5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
+<span id="cb28-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
+<span id="cb28-3"><a></a>           <span class="at">y =</span> bill_len,</span>
+<span id="cb28-4"><a></a>           <span class="at">size =</span> body_mass,</span>
+<span id="cb28-5"><a></a>           <span class="at">alpha =</span> flipper_len)) <span class="sc">+</span></span>
+<span id="cb28-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -633,12 +619,12 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 </div><div class="column" style="width:48%;">
 <p><strong>Setting</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30" data-code-line-numbers="5,6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
-<span id="cb30-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
-<span id="cb30-3"><a></a>           <span class="at">y =</span> bill_len)</span>
-<span id="cb30-4"><a></a>       ) <span class="sc">+</span> </span>
-<span id="cb30-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, </span>
-<span id="cb30-6"><a></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="5,6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">ggplot</span>(penguins,</span>
+<span id="cb29-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_dep,</span>
+<span id="cb29-3"><a></a>           <span class="at">y =</span> bill_len)</span>
+<span id="cb29-4"><a></a>       ) <span class="sc">+</span> </span>
+<span id="cb29-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, </span>
+<span id="cb29-6"><a></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -672,8 +658,8 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 <li>Histogram <code>geom_histogram()</code></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_len)) <span class="sc">+</span></span>
-<span id="cb31-2"><a></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_len)) <span class="sc">+</span></span>
+<span id="cb30-2"><a></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/histogram-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
@@ -684,8 +670,8 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 <li>Density plot <code>geom_density()</code></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_len)) <span class="sc">+</span></span>
-<span id="cb32-2"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_len)) <span class="sc">+</span></span>
+<span id="cb31-2"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/density-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
@@ -697,8 +683,8 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 <li>Box plot <code>geom_boxplot()</code></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_len)) <span class="sc">+</span></span>
-<span id="cb33-2"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_len)) <span class="sc">+</span></span>
+<span id="cb32-2"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/boxplot-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
@@ -711,8 +697,8 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 <li>Scatterplots <code>geom_point()</code></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_dep, <span class="at">y =</span> bill_len)) <span class="sc">+</span></span>
-<span id="cb34-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_dep, <span class="at">y =</span> bill_len)) <span class="sc">+</span></span>
+<span id="cb33-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/point-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
@@ -722,8 +708,8 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 <li>Bar plot <code>geom_bar()</code></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species)) <span class="sc">+</span></span>
-<span id="cb35-2"><a></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species)) <span class="sc">+</span></span>
+<span id="cb34-2"><a></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/bar-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
@@ -736,9 +722,9 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 </ul></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb36" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, </span>
-<span id="cb36-2"><a></a>                     <span class="at">fill =</span> sex)) <span class="sc">+</span></span>
-<span id="cb36-3"><a></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, </span>
+<span id="cb35-2"><a></a>                     <span class="at">fill =</span> sex)) <span class="sc">+</span></span>
+<span id="cb35-3"><a></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/bar-stacked-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
@@ -752,9 +738,9 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 </ul></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb37" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, </span>
-<span id="cb37-2"><a></a>                     <span class="at">fill =</span> sex)) <span class="sc">+</span></span>
-<span id="cb37-3"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, </span>
+<span id="cb36-2"><a></a>                     <span class="at">fill =</span> sex)) <span class="sc">+</span></span>
+<span id="cb36-3"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_DataVisualization_files/figure-revealjs/bar-side-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section></section>
@@ -764,9 +750,9 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z"></path></svg> when you are finished</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_9050a6c0" data-update-every="1" data-play-sound="true" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_df1cd705" data-update-every="1" data-play-sound="true" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>

@@ -60,7 +60,7 @@ knitr::include_graphics("images/dplyr-part-of-tidyverse.png")
 -   `filter`: pick rows matching criteria
 -   `distinct`: filter for unique rows
 -   `mutate`: add new variables
--   `summarise` or `summarize`: agreggation of values
+-   `summarize`: agreggation of values
 -   `group_by`: for grouped operations
 -   ... (many more)
 :::
@@ -255,7 +255,7 @@ In programming, a pipe is a technique for passing information from one process t
 ```{r}
 #| label: pipe-intro-3
 #| eval: false
-#| code-line-numbers: "|1"
+#| code-line-numbers: "1"
 starwars %>%
   select(name, homeworld) %>%
   arrange(homeworld)
@@ -438,5 +438,15 @@ ggplot(starwars, aes(x = homeworld, fill = sex)) +
 ```
 
 
+# Your turn: <br>Using `%>%` {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE)
+```
 
 
