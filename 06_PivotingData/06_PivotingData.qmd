@@ -1,0 +1,473 @@
+---
+title: "Pivoting Data"
+order: 6
+title-slide-attributes:
+    data-background-gradient: linear-gradient(to top right, {{< brand color background >}}, {{< brand color pastelpink >}}, {{< brand color fmorange >}}, {{< brand color tangerine >}})
+
+format: 
+  revealjs:
+    margin: .15
+    quarto-required: ">= 1.6.0"
+    width: 1600
+    height: 900
+    slide-number: "c"
+    css: ../styles.css
+    code-copy: true
+    echo: true
+    code-overflow: scroll
+---
+
+```{r}
+#| label: packages
+#| echo: false
+library(tidyverse)
+library(emojifont)
+options(width=33)
+```
+
+# Data: Sales
+## Data: Sales
+
+```{r}
+#| label: load-data
+#| echo: FALSE
+customers <- read_csv("../data/sales/customers.csv")
+prices <- read_csv("../data/sales/prices.csv")
+```
+
+::: {.column}
+### We have...
+```{r}
+#| label: sales-start
+#| echo: FALSE
+customers
+```
+:::
+
+:::: {.column}
+::: {.fragment}
+### We want...
+```{r}
+#| label: sales-goal
+#| echo: FALSE
+customers %>%
+  pivot_longer(cols = item_1:item_3, names_to = "item_no", values_to = "item")
+```
+:::
+::::
+
+## A grammar of data tidying
+
+::: {.column}
+```{r}
+#| label: dplyr-part-of-tidyverse
+#| echo: FALSE
+#| out.width: "60%"
+#| caption: "tidyr is part of the tidyverse"
+knitr::include_graphics("images/tidyr-part-of-tidyverse.png")
+```
+:::
+
+::: {.column}
+The goal of tidyr is to help you tidy your data via
+
+- pivoting for going between wide and long data
+- splitting and combining character columns
+- nesting and unnesting columns
+- clarifying how `NA`s should be treated
+:::
+
+# Pivoting data {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
+
+## Not this...
+
+```{r}
+#| label: pivot-gif-friends
+#| echo: FALSE
+#| out.width: "70%"
+#| fig-align: center
+knitr::include_graphics("images/pivot.gif")
+```
+
+## but this!
+
+```{r}
+#| label: pivot-gif-data
+#| echo: FALSE
+#| out.width: "45%"
+#| out.extra: 'style="background-color: #F0F0F0"'
+#| fig-align: center
+knitr::include_graphics("images/tidyr-longer-wider.gif")
+```
+
+## Wider vs. longer
+
+::: {.column}
+### wider
+more columns
+```{r}
+#| label: wider-ex
+#| echo: FALSE
+customers
+```
+:::
+
+:::: {.column}
+::: {.fragment}
+### longer
+more rows
+```{r}
+#| label: longer-ex
+#| echo: FALSE
+customers %>%
+  pivot_longer(cols = item_1:item_3, names_to = "item_no", values_to = "item")
+```
+:::
+::::
+
+# Pivoting to Long Data {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
+
+## `pivot_longer()`
+
+::: {.column}
+- `data` (as usual)
+:::
+::: {.column}
+```{r}
+#| label: pivot-longer-syntax-1
+#| eval: FALSE
+#| code-line-numbers: "|2"
+pivot_longer(
+  data,
+  cols, 
+  names_to = "name", 
+  values_to = "value"
+  )
+```
+:::
+
+## `pivot_longer()` {auto-animate=true}
+
+::: {.column}
+- `data` (as usual)
+- `cols`: columns to pivot into longer format 
+:::
+::: {.column}
+```{r}
+#| label: pivot-longer-syntax-2
+#| eval: FALSE
+#| code-line-numbers: 3
+pivot_longer(
+  data,
+  cols, 
+  names_to = "name", 
+  values_to = "value"
+  )
+```
+:::
+
+## `pivot_longer()` {auto-animate=true}
+
+::: {.column}
+- `data` (as usual)
+- `cols`: columns to pivot into longer format 
+- `names_to`: name of the column where column names of pivoted variables go (character string)
+:::
+::: {.column}
+```{r}
+#| label: pivot-longer-syntax-3
+#| eval: FALSE
+#| code-line-numbers: 4
+pivot_longer(
+  data,
+  cols, 
+  names_to = "name", 
+  values_to = "value"
+  )
+```
+:::
+
+## `pivot_longer()` {auto-animate=true}
+
+::: {.column}
+- `data` (as usual)
+- `cols`: columns to pivot into longer format 
+- `names_to`: name of the column where column names of pivoted variables go (character string)
+- `values_to`: name of the column where data in pivoted variables go (character string)
+:::
+::: {.column}
+```{r}
+#| label: pivot-longer-syntax-4
+#| eval: FALSE
+#| code-line-numbers: 5
+pivot_longer(
+  data,
+  cols, 
+  names_to = "name", 
+  values_to = "value"
+  )
+```
+:::
+
+## Why pivot?
+
+::: {.incremental}
+- Let's say we want to determine the total cost spent by customer.
+- We have the items that each customer bought, and the cost per item.
+- Will be easiest to:
+    - make customer data long, so each row is a purchase
+    - merge on the cost for each item
+    - sum costs by customer
+    
+::: 
+
+## Why pivot?
+
+::: {.column}
+```{r}
+#| label: why-cust-org
+customers
+```
+:::
+
+::: {.column}
+```{r}
+#| label: why-prices-org
+prices
+```
+:::
+
+
+## Customers $\rightarrow$ purchases
+
+::: {.column}
+```{r}
+#| label: pivot-customers-1
+#| eval: false
+#| code-line-numbers: "|3"
+purchases <- customers %>%
+  pivot_longer( 
+    cols = item_1:item_3,
+    names_to = "item_no",
+    values_to = "item"
+    ) 
+```
+:::
+
+::: {.column}
+- pivot variables item_1 to item_3
+:::
+
+
+## Customers $\rightarrow$ purchases {auto-animate=true}
+
+::: {.column}
+```{r}
+#| label: pivot-customers-2
+#| eval: false
+#| code-line-numbers: "4"
+purchases <- customers %>%
+  pivot_longer( 
+    cols = item_1:item_3,
+    names_to = "item_no",
+    values_to = "item"
+    ) 
+```
+:::
+
+::: {.column}
+- pivot variables item_1 to item_3
+- column names -> new column called item_no
+:::
+
+## Customers $\rightarrow$ purchases {auto-animate=true}
+
+::: {.column}
+```{r}
+#| label: pivot-customers-3
+#| eval: false
+#| code-line-numbers: "5"
+purchases <- customers %>%
+  pivot_longer( 
+    cols = item_1:item_3,
+    names_to = "item_no",
+    values_to = "item"
+    ) 
+```
+:::
+
+::: {.column}
+- pivot variables item_1 to item_3
+- column names -> new column called item_no
+- values in columns -> new column called item
+:::
+
+## Customers $\rightarrow$ purchases {auto-animate=true}
+
+::: {.column}
+```{r}
+#| label: pivot-purchases
+purchases <- customers %>%
+  pivot_longer( 
+    cols = item_1:item_3,
+    names_to = "item_no",
+    values_to = "item"
+    ) 
+
+purchases
+```
+:::
+
+::: {.column}
+- pivot variables item_1 to item_3
+- column names -> new column called item_no
+- values in columns -> new column called item
+:::
+
+## Customers $\rightarrow$ purchases {auto-animate=true}
+
+::: {.column}
+```{r}
+#| label: pivot-purchaces-merge
+#| code-line-numbers: "9,10"
+purchases <- customers %>%
+  pivot_longer( 
+    cols = item_1:item_3,
+    names_to = "item_no",
+    values_to = "item"
+    ) 
+
+purchases %>% 
+  left_join(prices, 
+            by="item")
+```
+:::
+
+::: {.column}
+- pivot variables item_1 to item_3
+- column names -> new column called item_no
+- values in columns -> new column called item
+- `left_join()` the prices data to get the cost per item
+:::
+
+## Customers $\rightarrow$ purchases {auto-animate=true}
+
+::: {.column}
+```{r}
+#| label: pivot-purchaces-sum
+#| code-line-numbers: "11-14"
+purchases <- customers %>%
+  pivot_longer( 
+    cols = item_1:item_3,
+    names_to = "item_no",
+    values_to = "item"
+    ) 
+
+purchases %>% 
+  left_join(prices, 
+            by="item") %>% 
+  group_by(customer_id) %>% 
+  summarize(total_price = 
+              sum(price, 
+                  na.rm = TRUE))
+```
+:::
+
+::: {.column}
+- pivot variables item_1 to item_3
+- column names -> new column called item_no
+- values in columns -> new column called item
+- `left_join()` the prices data to get the cost per item
+- `group_by()` and `summarize()` to get the total price for each customer
+:::
+
+# Pivoting to Wide Data {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
+
+## `pivot_wider()`
+
+::: {.column}
+- `data` (as usual)
+- **Different from `pivot_longer()`**: No column information is needed
+:::
+::: {.column}
+```{r}
+#| label: pivot-wider-syntax-1
+#| eval: FALSE
+#| code-line-numbers: "|2"
+pivot_wider(
+  data,
+  names_from = "name", 
+  values_from = "value"
+  )
+```
+:::
+
+## `pivot_wider()` {auto-animate=true}
+
+::: {.column}
+- `data` (as usual)
+- **Different from `pivot_longer()`**: No column information is needed
+- `names_from`: name of the column where variables are located
+:::
+::: {.column}
+```{r}
+#| label: pivot-wider-syntax-2
+#| eval: FALSE
+#| code-line-numbers: 4
+pivot_wider(
+  data,
+  names_from = "name", 
+  values_from = "value"
+  )
+```
+:::
+
+## `pivot_wider()` {auto-animate=true}
+
+::: {.column}
+- `data` (as usual)
+- **Different from `pivot_longer()`**: No column information is needed
+- `names_from`: name of the column where variables are located
+- `values_from`: name of the column where data/values are located
+:::
+::: {.column}
+```{r}
+#| label: pivot-wider-syntax-3
+#| eval: FALSE
+#| code-line-numbers: 5
+pivot_longer(
+  data,
+  cols, 
+  names_to = "name", 
+  values_to = "value"
+  )
+```
+:::
+
+
+## Purchases $\rightarrow$ customers
+```{r}
+#| label: full-width-set
+#| echo: false
+options(width=69)
+```
+
+```{r}
+#| label: pivot-wider-ex
+purchases %>%
+  pivot_wider( 
+    names_from = item_no, 
+    values_from = item 
+  ) 
+```
+
+# Your turn: <br>`pivot_longer`, `pivot_wider` {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+```

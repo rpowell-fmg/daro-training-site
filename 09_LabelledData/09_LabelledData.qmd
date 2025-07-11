@@ -1,0 +1,430 @@
+---
+title: "Labelled Data"
+order: 9
+title-slide-attributes:
+    data-background-gradient: linear-gradient(to top right, {{< brand color background >}}, {{< brand color pastelpink >}}, {{< brand color fmorange >}}, {{< brand color tangerine >}})
+
+format: 
+  revealjs:
+    margin: .15
+    quarto-required: ">= 1.6.0"
+    width: 1600
+    height: 900
+    slide-number: "c"
+    css: ../styles.css
+    code-copy: true
+    echo: true
+    code-overflow: scroll
+---
+
+# Labels
+```{r}
+#| label: packages
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+library(tidyverse)
+library(readxl)
+library(haven)
+library(labelled)
+library(emojifont)
+options(width=69)
+```
+
+```{r}
+#| label: load-data
+#| echo: false
+spss_ex<-read_sav("../data/import/svy_spss.sav")
+spss_meta_vars<-read_excel("../data/spss_svy_metadata.xlsx", sheet = "varnames_labels") %>% filter(!is.na(varname))
+spss_meta_vals<-read_excel("../data/spss_svy_metadata.xlsx", sheet = "values_labels") %>% filter(!is.na(varname))
+```
+
+## labelled 
+
+:::: {.column}
+::: {.incremental}
+- Functions and methods to handle and manipulate labelled data
+    - Variable labels
+    - Value labels
+    - Missing values
+- Create data dictionaries
+
+:::
+::::
+
+::: {.column}
+```{r}
+#| label: image-labelled
+#| echo: FALSE
+#| out.width: "70%"
+#| fig-align: center
+knitr::include_graphics("images/labelled.png")
+```
+:::
+
+::: {.footnote}
+See [https://larmarange.github.io/labelled/](https://larmarange.github.io/labelled/) for more information
+:::
+
+## Cleaning Approaches
+
+<br>
+```{r}
+#| label: image-labelled-a1
+#| echo: FALSE
+#| fig-align: center
+knitr::include_graphics("images/approach-a-1.png")
+```
+
+## Cleaning Approaches
+
+<br>
+```{r}
+#| label: image-labelled-a2
+#| echo: FALSE
+#| fig-align: center
+knitr::include_graphics("images/approach-a-2.png")
+```
+
+. . .
+
+<br>
+```{r}
+#| label: image-labelled-b1
+#| echo: FALSE
+#| fig-align: center
+knitr::include_graphics("images/approach-b-1.png")
+```
+
+## Cleaning Approaches
+
+<br>
+```{r}
+#| label: image-labelled-a2-b2
+#| echo: FALSE
+#| fig-align: center
+knitr::include_graphics("images/approach-a-2.png")
+```
+
+<br>
+```{r}
+#| label: image-labelled-b2
+#| echo: FALSE
+#| fig-align: center
+knitr::include_graphics("images/approach-b-2.png")
+```
+
+# Variable names and labels
+
+```{r}
+#| label: set-col-width
+#| echo: false
+options(width=33)
+```
+
+## Rename variables
+
+`rename()` function from **dplyr** package allows us to update variable names one at a time in the format `old_var` = `new_var`
+
+::: {.column}
+```{r}
+#| label: rename-org
+names(spss_ex)
+```
+:::
+
+:::: {.column}
+::: {.fragment}
+```{r}
+#| label: rename-one
+#| code-line-numbers: "2"
+spss_ex_rename<-spss_ex %>% 
+  rename(UNIQUEID = CaseId)
+
+names(spss_ex_rename)
+```
+:::
+::::
+
+## Rename Multiple variables
+
+::: {.column}
+```{r}
+#| label: rename-multi-org
+names(spss_ex)
+```
+:::
+
+::: {.column}
+```{r}
+#| label: rename-multi-manual
+#| code-line-numbers: "2-4"
+spss_ex_rename<-spss_ex %>% 
+  rename(UNIQUEID = CaseId,
+         LDate = LastConnectionDate,
+         Consent = Q1)
+
+names(spss_ex_rename)
+```
+:::
+
+## Rename Multiple variables - `select()`
+
+::: {.column}
+```{r}
+#| label: rename-multi-select-org
+spss_ex %>% 
+  select(CaseId,
+         LastConnectionDate,
+         Q1,
+         everything()) %>% 
+  names()
+```
+:::
+
+::: {.column}
+```{r}
+#| label: rename-multi-select-manual
+#| code-line-numbers: "2-5"
+spss_ex_rename<-spss_ex %>% 
+  select(UNIQUEID = CaseId,
+         LDate = LastConnectionDate,
+         Consent = Q1,
+         everything())
+
+names(spss_ex_rename)
+```
+:::
+
+## Rename Multiple Variables - All at once
+
+`rename_with()` allows us to do this across all variables (or a subset of variables)
+
+. . .
+
+**Important Notes for Quality**
+
+::: {.incremental}
+- Make this change to a new dataset so you can compare and make sure the variable names were assigned correctly
+- Have a dataset with the old and new variable names as columns so you know the changes are aligned (calling this "metavars")
+:::
+
+. . .
+
+```{r}
+#| label: rename-with-syntax
+#| eval: false
+#| code-line-numbers: "|2|3"
+df %>% 
+  rename_with(~ new_varnames, 
+              all_of(old_varnames))
+```
+
+## rename_with example {.smaller}
+
+::: {.column}
+```{r}
+#| label: varlist
+spss_meta_vars %>% 
+  select(varname,new_varname)
+```
+:::
+
+::: {.column}
+```{r}
+#| label: varlist-q7
+spss_meta_vars %>% 
+  select(varname,new_varname) %>% 
+  filter(str_detect(varname, "^Q7"))
+```
+:::
+
+## rename_with example {.smaller}
+
+::: {.column}
+```{r}
+#| label: q7-labels-old
+spss_ex %>% 
+  select(starts_with("Q7")) %>% 
+  var_label()
+```
+:::
+
+:::: {.column}
+::: {.fragment}
+```{r}
+#| label: q7-labels-new
+#| code-line-numbers: "|2|3"
+#| output-location: fragment
+spss_ex %>% 
+  rename_with(~ spss_meta_vars$new_varname, 
+              all_of(spss_meta_vars$varname)) %>% 
+  select(starts_with("Q7")) %>% 
+  var_label()
+```
+:::
+::::
+
+## Relabel Variables
+
+`var_label()` function from **labelled** package allows us view labels and set labels
+
+:::: {.column}
+::: {.fragment}
+View for a single variable
+```{r}
+#| label: varlabel-view1
+var_label(spss_ex$Q2)
+```
+:::
+::::
+
+:::: {.column}
+::: {.fragment}
+Set for a single varible
+```{r}
+#| label: varlabel-set1
+var_label(spss_ex$Q2) <- "Q2: Prior military service"
+var_label(spss_ex$Q2)
+```
+:::
+::::
+
+# {background-gradient="radial-gradient(#FFA219, #FFFFFF, #FFFFFF)"}
+
+::: {.tip}
+`r emoji('warning')`<b>Warning!</b> <br><br> 
+Using `var_label()` will change the label on the same dataset! <br>USE WITH CAUTION!
+:::
+
+## Relabel Multiple variables {.smaller}
+
+::: {.column}
+```{r}
+#| label: varlabel-view2
+var_label(spss_ex$Q2)
+var_label(spss_ex$QS)
+```
+:::
+
+:::: {.column}
+::: {.fragment}
+```{r}
+#| label: varlabel-set2
+#| code-line-numbers: "2-3"
+spss_ex_newlabel<-spss_ex %>% 
+  set_variable_labels(Q2 = "Q2: Ever been in military",
+                      QS = "QS: State")
+```
+:::
+::: {.fragment}
+```{r}
+#| label: varlabel-set2-view
+var_label(spss_ex_newlabel$Q2)
+var_label(spss_ex_newlabel$QS)
+```
+:::
+::::
+
+## Relabel Multiple Variables - All at once
+
+```{r}
+#| label: set-full-width
+#| echo: false
+options(width=69)
+```
+
+**Important Notes for Quality**
+
+::: {.incremental}
+- Make this change to a new dataset so you can compare and make sure the variable labels were assigned correctly
+- Have a dataset with the varible name and labels as columns so you know the changes are aligned (calling this "metavars")
+:::
+
+. . .
+
+```{r}
+#| label: meta-vars-ex
+spss_meta_vars %>% 
+  select(varname, new_label)
+```
+
+## Relabel example {.smaller}
+
+```{r}
+#| label: set-col-width2
+#| echo: false
+options(width=50)
+```
+
+::: {.column}
+```{r}
+#| label: labels-ex-q7
+spss_meta_vars %>% 
+  select(varname,new_label) %>% 
+  filter(str_detect(varname,"^Q7"))
+```
+:::
+
+::: {.column}
+```{r}
+#| label: labels-ex-q7-new
+#| code-line-numbers: "|2|3"
+spss_ex %>% 
+  select(all_of(spss_meta_vars$varname)) %>% 
+  set_variable_labels(.labels=spss_meta_vars$new_label) %>% 
+  select(starts_with("Q7")) %>% 
+  var_label()
+```
+:::
+
+## Relabel example - incorrect sorting {.smaller}
+
+::: {.column}
+```{r}
+#| label: labels-ex-arrange
+spss_meta_vars2 <- spss_meta_vars %>% 
+  arrange(varname)
+
+spss_meta_vars %>% select(varname, new_label) %>% head()
+spss_meta_vars2 %>% select(varname, new_label) %>% head()
+```
+:::
+
+:::: {.column}
+::: {.fragment}
+```{r}
+#| label: labels-ex-q7-new-arrange
+#| code-line-numbers: "2|3"
+#| output-location: fragment
+spss_ex %>% 
+  select(all_of(spss_meta_vars2$varname)) %>% 
+  set_variable_labels(.labels=spss_meta_vars$new_label) %>% 
+  select(starts_with("Q7")) %>% 
+  var_label()
+```
+:::
+::::
+
+# {background-gradient="radial-gradient(#FFA219, #FFFFFF, #FFFFFF)"}
+
+::: {.tip}
+`r emoji('warning')`<b>Warning!</b> <br><br> 
+Order on your full dataset and the order of your labels needs to be the same! <br><br>Goal is to have a function that does this for you...more to come.
+:::
+
+# Variable values and labels
+
+# Data dictionary/codebook
+
+
+# Your turn: <br>Labelled data {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+```

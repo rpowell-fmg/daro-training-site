@@ -1,1 +1,36 @@
 /* css styles */
+
+.reveal .slide-logo {
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 40px !important;
+  max-height: 2.2rem;
+  height: 25px !important;
+  width: auto;
+  z-index: 2;
+}
+
+.reveal.has-logo .slide-number {
+  bottom: 10px !important;
+  right: 10px;
+}
+
+.slide-number, .reveal.has-logo .slide-number {
+  bottom: 10px !important;
+  right: 10px !important;
+  top: unset !important;
+}
+
+
+.tip {
+  text-align: center;
+  font-family: "Tinos" !important;
+  font-size: 52pt;
+}
+
+.topicslide {
+  text-align: bottom-right;
+  top: unset !important;
+  font-family: "Tinos" !important;
+}

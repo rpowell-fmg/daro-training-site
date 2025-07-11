@@ -1,0 +1,481 @@
+---
+title: "Merging/Joining Multiple Datasets"
+order: 5
+title-slide-attributes:
+    data-background-gradient: linear-gradient(to top right, {{< brand color background >}}, {{< brand color pastelpink >}}, {{< brand color fmorange >}}, {{< brand color tangerine >}})
+
+format: 
+  revealjs:
+    margin: .15
+    quarto-required: ">= 1.6.0"
+    width: 1600
+    height: 900
+    slide-number: "c"
+    css: ../styles.css
+    code-copy: true
+    echo: true
+    code-overflow: scroll
+---
+
+```{r}
+#| label: packages
+#| echo: false
+library(tidyverse)
+library(emojifont)
+options(width=69)
+```
+
+
+# Data {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #FECCDD)"}
+
+# Data: Women in science {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #FECCDD)"}
+Information on 10 women in science who changed the world
+
+```{r}
+#| label: load-data
+#| echo: FALSE
+#| cache: true
+professions <- read_csv("../data/scientists/professions.csv")
+dates <- read_csv("../data/scientists/dates.csv")
+works <- read_csv("../data/scientists/works.csv")
+```
+
+## Inputs
+
+::: {.panel-tabset}
+
+### professions
+```{r}
+#| label: data-prof
+#| echo: FALSE
+professions
+```
+
+### dates
+```{r}
+#| label: data-dates
+#| echo: FALSE
+dates
+```
+
+### works
+```{r}
+#| label: data-works
+#| echo: FALSE
+works
+```
+:::
+
+::: {.footnote}
+Source: [Discover Magazine](https://www.discovermagazine.com/the-sciences/meet-10-women-in-science-who-changed-the-world)
+:::
+
+
+
+## Desired output
+
+```{r}
+#| label: output-goal
+#| echo: FALSE
+#| content-overflow: nostretch
+professions %>%
+  left_join(dates, by="name") %>%
+  left_join(works, by="name")
+```
+
+
+
+## Inputs, reminder
+
+```{r}
+#| label: set-col-wdith
+#| echo: false
+options(width=32)
+```
+
+::: {.column}
+```{r}
+#| label: scientists-varnames
+names(professions)
+names(dates)
+names(works)
+```
+:::
+
+::: {.column}
+```{r}
+#| label: scientists-rows
+nrow(professions)
+nrow(dates)
+nrow(works)
+```
+:::
+
+
+
+# Joining data frames {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
+
+## Joining data frames
+
+```{r}
+#| label: ex-join-syntax
+#| eval: FALSE
+something_join(x, y)
+```
+
+- `left_join()`: all rows from x
+- `right_join()`: all rows from y
+- `full_join()`: all rows from both x and y
+- `semi_join()`: all rows from x where there are matching values in y, keeping just columns from x
+- `inner_join()`: all rows from x where there are matching values in y, return
+all combination of multiple matches in the case of multiple matches
+- `anti_join()`: return all rows from x where there are not matching values in y, never duplicate rows of x
+- ...
+
+
+## Setup
+```{r}
+#| label: set-full-wdith
+#| echo: false
+options(width=69)
+```
+
+For the next few slides...
+
+::: {.column}
+```{r}
+#| label: setup-x
+#| echo: FALSE
+x <- tibble(
+  id = c(1, 2, 3),
+  value_x = c("x1", "x2", "x3")
+  )
+```
+
+```{r}
+#| label: setup-x-print
+#| echo: FALSE
+x
+```
+:::
+::: {.column}
+```{r}
+#| label: setup-y
+#| echo: FALSE
+y <- tibble(
+  id = c(1, 2, 4),
+  value_y = c("y1", "y2", "y4")
+  )
+```
+
+```{r}
+#| label: setup-y-print
+#| echo: FALSE
+y
+```
+:::
+
+
+## `left_join()`
+
+::: {.column}
+```{r}
+#| label: left-join-gif
+#| echo: FALSE
+#| out.width: "80%" 
+#| out.extra: 'style="background-color: #F0F0F0"'
+knitr::include_graphics("images/left-join.gif")
+```
+:::
+::: {.column}
+```{r}
+#| label: left-join-xy
+left_join(x, y)
+```
+:::
+
+## `left_join()`
+
+```{r}
+#| label: left-join-sci
+#| code-line-numbers: 2
+professions %>%
+  left_join(dates) 
+```
+
+
+## `right_join()`
+
+::: {.column}
+```{r}
+#| label: right-join-gif
+#| echo: FALSE
+#| out.width: "80%" 
+#| out.extra: 'style="background-color: #F0F0F0"'
+knitr::include_graphics("images/right-join.gif")
+```
+:::
+::: {.column}
+```{r}
+#| label: right-join-xy
+right_join(x, y)
+```
+:::
+
+## `right_join()`
+
+```{r}
+#| label: right-join-sci
+#| code-line-numbers: 2
+professions %>%
+  right_join(dates)
+```
+
+
+## `full_join()`
+
+::: {.column}
+```{r}
+#| label: full-join-gif
+#| echo: FALSE
+#| out.width: "80%" 
+#| out.extra: 'style="background-color: #F0F0F0"'
+knitr::include_graphics("images/full-join.gif")
+```
+:::
+::: {.column}
+```{r}
+#| label: full-join-xy
+full_join(x, y)
+```
+:::
+
+## `full_join()`
+
+```{r}
+#| label: full-join-sci
+#| code-line-numbers: 2
+dates %>%
+  full_join(works)
+```
+
+
+## `inner_join()`
+
+::: {.column}
+```{r}
+#| label: inner-join-gif
+#| echo: FALSE
+#| out.width: "80%" 
+#| out.extra: 'style="background-color: #F0F0F0"'
+knitr::include_graphics("images/inner-join.gif")
+```
+:::
+::: {.column}
+```{r}
+#| label: inner-join-xy
+inner_join(x, y)
+```
+:::
+
+## `inner_join()`
+
+```{r}
+#| label: inner-join-sci
+#| code-line-numbers: 2
+dates %>%
+  inner_join(works)
+```
+
+## `semi_join()`
+
+::: {.column}
+```{r}
+#| label: semi-join-gif
+#| echo: FALSE
+#| out.width: "80%" 
+#| out.extra: 'style="background-color: #F0F0F0"'
+knitr::include_graphics("images/semi-join.gif")
+```
+:::
+::: {.column}
+```{r}
+#| label: semi-join-xy
+semi_join(x, y)
+```
+:::
+
+## `semi_join()`
+
+```{r}
+#| label: semi-join-sci
+#| code-line-numbers: 2
+dates %>%
+  semi_join(works)
+```
+
+## `anti_join()`
+
+::: {.column}
+```{r}
+#| label: anti-join-gif
+#| echo: FALSE
+#| out.width: "80%" 
+#| out.extra: 'style="background-color: #F0F0F0"'
+knitr::include_graphics("images/anti-join.gif")
+```
+:::
+::: {.column}
+```{r}
+#| label: anti-join-xy
+anti_join(x, y)
+```
+:::
+
+## `anti_join()`
+
+```{r}
+#| label: anti-join-sci
+#| code-line-numbers: 2
+dates %>%
+  anti_join(works)
+```
+
+# {background-gradient="radial-gradient(#FFA219, #FFFFFF, #FFFFFF)"}
+
+::: {.tip}
+`r emoji('bulb')`<b>Tip!</b> <br><br> 
+Order of the datasets matters when you join
+`anti_join(x, y)` is different from `anti_join(y, x)`
+:::
+
+
+## Putting it altogether
+
+```{r}
+#| label: join-sci-final
+#| code-line-numbers: "|2|3"
+professions %>%
+  left_join(dates) %>%
+  left_join(works)
+```
+
+## Putting it altogether - better syntax
+
+```{r}
+#| label: join-sci-final-2
+#| code-line-numbers: "2,3"
+professions %>%
+  left_join(dates, by="name") %>%
+  left_join(works, by="name")
+```
+
+
+# Joining on multiple variables {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
+
+## Set-up for multiple variables join
+
+::: {.column}
+```{r}
+#| label: x-multiple
+x_multi <- x %>% 
+  mutate(id2=c(4,5,6)) %>% 
+  select(id,id2,value_x)
+
+x_multi
+```
+:::
+
+::: {.column}
+```{r}
+#| label: y-multiple
+y_multi <- y %>% 
+  mutate(id2=c(4,6,8)) %>% 
+  select(id,id2,value_y)
+
+y_multi
+```
+:::
+
+## Left and right joins with multiple variables
+
+::: {.column}
+```{r}
+#| label: left-multiple
+#| code-line-numbers: 3
+x_multi %>% 
+  left_join(y_multi,
+            by=c("id","id2"))
+```
+:::
+
+:::: {.column}
+::: {.fragment}
+```{r}
+#| label: right-multiple
+#| code-line-numbers: 3
+x_multi %>% 
+  right_join(y_multi,
+             by=c("id","id2"))
+```
+:::
+::::
+
+## Full and inner joins with multiple variables
+
+::: {.column}
+```{r}
+#| label: full-multiple
+#| code-line-numbers: 3
+x_multi %>% 
+  full_join(y_multi,
+            by=c("id","id2"))
+```
+:::
+
+:::: {.column}
+::: {.fragment}
+```{r}
+#| label: inner-multiple
+#| code-line-numbers: 3
+x_multi %>% 
+  inner_join(y_multi,
+             by=c("id","id2"))
+```
+:::
+::::
+
+## Semi and anti joins with multiple variables
+
+::: {.column}
+```{r}
+#| label: semi-multiple
+#| code-line-numbers: 3
+x_multi %>% 
+  semi_join(y_multi,
+            by=c("id","id2"))
+```
+:::
+
+:::: {.column}
+::: {.fragment}
+```{r}
+#| label: anti-multiple
+#| code-line-numbers: 3
+x_multi %>% 
+  anti_join(y_multi,
+            by=c("id","id2"))
+```
+:::
+::::
+
+# Your turn:  <br>Join data {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+```

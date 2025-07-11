@@ -1,0 +1,25 @@
+---
+title: "Data Visualization"
+format: html
+---
+
+## Slides
+
+[View slides in full screen](02_DataVisualization.html)
+
+```{=html}
+<iframe class="slide-deck" src="02_DataVisualization.html" height="450" width="800" style="border: 1px solid #F0F0F0;"></iframe>
+```
+## Exercises
+
+**Exercise 1**
+
+-    
+
+**Exercise 2**
+
+-    
+
+**Exercise 3**
+
+-    

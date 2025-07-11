@@ -1,0 +1,251 @@
+---
+title: "Getting Started"
+order: 1
+title-slide-attributes:
+    data-background-gradient: linear-gradient(to top right, {{< brand color background >}}, {{< brand color pastelpink >}}, {{< brand color fmorange >}}, {{< brand color tangerine >}})
+
+format: 
+  revealjs:
+    margin: .15
+    quarto-required: ">= 1.6.0"
+    width: 1600
+    height: 900
+    slide-number: "c"
+    css: ../styles.css
+    code-copy: true
+    echo: true
+    code-overflow: scroll
+---
+
+```{r}
+#| echo: FALSE
+library(countdown)
+```
+
+# Source material {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #FECCDD)"}
+
+Adapted from [Data Science in a Box](https://datasciencebox.org/)
+
+# Overview {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
+
+## R vs. RStudio
+
+::: column
+```{r}
+#| echo: FALSE
+#| out.width: "25%"
+knitr::include_graphics("images/r-logo.png")
+```
+
+-   R is an open-source statistical **programming language**
+-   R is also an environment for statistical computing and graphics
+-   It's easily extensible with *packages*
+:::
+
+::: column
+```{r}
+#| echo: FALSE
+#| out.width: "55%"
+knitr::include_graphics("images/RStudio_logo_flat.png")
+```
+
+-   RStudio is a convenient interface for R called an **IDE** (integrated development environment), e.g. *"I write R code in the RStudio IDE"*
+-   RStudio is not a requirement for programming with R, but it's very commonly used by R programmers and data scientists
+:::
+
+## R packages
+
+-   **Packages** are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data<sup>1</sup>
+
+-   As of September 2020, there are over 16,000 R packages available on **CRAN** (the Comprehensive R Archive Network)<sup>2</sup>
+
+-   We're going to work with a small (but important) subset of these!
+
+::: footnote
+<sup>1</sup> Wickham and Bryan, [R Packages](https://r-pkgs.org/).
+
+<sup>2</sup> [CRAN contributed packages](https://cran.r-project.org/web/packages/).
+:::
+
+## RStudio overview
+
+```{r}
+#| echo: FALSE
+#| fig-align: center
+knitr::include_graphics("images/tour-r-rstudio.png")
+```
+
+## RStudio default
+
+```{r}
+#| echo: FALSE
+#| fig-align: center
+knitr::include_graphics("images/rstudio-default.png")
+```
+
+## RStudio customization
+
+<center>`Tools > Global Options`</center>
+
+::: column
+<center>Appearance</center>
+
+```{r}
+#| echo: FALSE
+#| fig-align: center
+knitr::include_graphics("images/rstudio-themes.png")
+```
+:::
+
+::: column
+<center>Pane layout</center>
+
+```{r}
+#| echo: FALSE
+#| fig-align: center
+knitr::include_graphics("images/rstudio-panels.png")
+```
+:::
+
+## My RStudio layout
+
+```{r}
+#| echo: FALSE
+#| fig-align: center
+knitr::include_graphics("images/rstudio-my-default.png")
+```
+
+# Your turn: <br>Customize your layout {background-gradient="linear-gradient(to bottom , #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 1, seconds = 30, play_sound = TRUE)
+```
+
+# R essentials {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
+
+## A short list (for now) of R essentials
+
+-   Functions are (most often) verbs, followed by what they will be applied to in parentheses:
+
+```{r}
+#| eval: FALSE
+#| echo: TRUE
+do_this(to_this)
+do_that(to_this, to_that, with_those)
+```
+
+. . .
+
+-   Packages are installed with the `install.packages` function and loaded with the `library` function:
+
+```{r}
+#| eval: FALSE
+#| echo: TRUE
+install.packages("package_name")
+library(package_name)
+```
+
+. . .
+
+- Assignment/setting values is done with `<-`
+```{r}
+#| eval: FALSE
+#| echo: TRUE
+starwars_droids <- starwars %>%
+  filter(species == "Droid")
+```
+
+. . .
+
+- File paths should be specified with a forward slash "/"
+    - this is the same for macs, linux systems, and URLs, but is opposite windows
+    - "J:\R_Transition" is the windows path, but in R it needs to be "J:/R_Transition"
+    
+
+## A short list (for now) of R essentials (cont.)
+
+-   Columns (variables) in data frames are accessed with `$`:
+
+```{r}
+#| eval: FALSE
+#| echo: TRUE
+dataset$variable_name
+```
+
+. . .
+
+-   Object documentation can be accessed with `?`
+
+```{r}
+#| eval: FALSE
+#| echo: TRUE
+?mean
+```
+
+. . .
+
+-   R is case sensitive: 
+    - `starwars$Species` is different from `StarWars$Species`
+    - `case_when()` is different from `CASE_WHEN()` and `Case_When`
+
+. . .
+
+- `#` is how you comment your code
+
+```{r}
+#| eval: FALSE
+#| echo: TRUE
+# Here is some code to list Star Wars Droids
+starwars %>%                  # starwars dataset
+  filter(species == "Droid")  # subset to droids
+```
+
+## tidyverse
+
+::: column
+```{r}
+#| echo: FALSE
+knitr::include_graphics("images/tidyverse.png")
+```
+:::
+
+:::: column
+::: {style="font-size: 150%;"}
+<center>[tidyverse.org](https://www.tidyverse.org/)</center>
+:::
+
+-   The **tidyverse** is an opinionated collection of R packages designed for data science
+-   All packages share an underlying philosophy and a common grammar
+::::
+
+
+## {background-color=#000000}
+
+<center>
+
+```{r}
+#| echo: FALSE
+knitr::include_graphics("images/hex-australia.png")
+```
+
+::: footnote
+Mitchell O'Hara-Wild, [useR! 2018 feature wall](https://www.mitchelloharawild.com/blog/user-2018-feature-wall/)
+:::
+
+</center>
+
+# Your turn: <br>Install packages {background-gradient="linear-gradient(to bottom , #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 1, seconds = 30, play_sound = TRUE)
+```

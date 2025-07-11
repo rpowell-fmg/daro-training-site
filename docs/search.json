@@ -4,7 +4,1679 @@
     "href": "index.html",
     "title": "daro-training-site",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "09_LabelledData/index.html",
+    "href": "09_LabelledData/index.html",
+    "title": "Labelled Data",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 4",
+      "Labelled Data"
+    ]
+  },
+  {
+    "objectID": "09_LabelledData/index.html#slides",
+    "href": "09_LabelledData/index.html#slides",
+    "title": "Labelled Data",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 4",
+      "Labelled Data"
+    ]
+  },
+  {
+    "objectID": "09_LabelledData/index.html#exercises",
+    "href": "09_LabelledData/index.html#exercises",
+    "title": "Labelled Data",
+    "section": "Exercises",
+    "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
+    "crumbs": [
+      "Day 4",
+      "Labelled Data"
+    ]
+  },
+  {
+    "objectID": "08_DataAttributes/index.html",
+    "href": "08_DataAttributes/index.html",
+    "title": "Data Attributes",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 4",
+      "Data Attributes"
+    ]
+  },
+  {
+    "objectID": "08_DataAttributes/index.html#slides",
+    "href": "08_DataAttributes/index.html#slides",
+    "title": "Data Attributes",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 4",
+      "Data Attributes"
+    ]
+  },
+  {
+    "objectID": "08_DataAttributes/index.html#exercises",
+    "href": "08_DataAttributes/index.html#exercises",
+    "title": "Data Attributes",
+    "section": "Exercises",
+    "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
+    "crumbs": [
+      "Day 4",
+      "Data Attributes"
+    ]
+  },
+  {
+    "objectID": "07_ImportExport/index.html",
+    "href": "07_ImportExport/index.html",
+    "title": "Import/Export",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 3",
+      "Import/Export"
+    ]
+  },
+  {
+    "objectID": "07_ImportExport/index.html#slides",
+    "href": "07_ImportExport/index.html#slides",
+    "title": "Import/Export",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 3",
+      "Import/Export"
+    ]
+  },
+  {
+    "objectID": "07_ImportExport/index.html#exercises",
+    "href": "07_ImportExport/index.html#exercises",
+    "title": "Import/Export",
+    "section": "Exercises",
+    "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
+    "crumbs": [
+      "Day 3",
+      "Import/Export"
+    ]
+  },
+  {
+    "objectID": "06_PivotingData/index.html",
+    "href": "06_PivotingData/index.html",
+    "title": "Pivoting Data",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 3",
+      "Pivoting Data"
+    ]
+  },
+  {
+    "objectID": "06_PivotingData/index.html#slides",
+    "href": "06_PivotingData/index.html#slides",
+    "title": "Pivoting Data",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 3",
+      "Pivoting Data"
+    ]
+  },
+  {
+    "objectID": "06_PivotingData/index.html#exercises",
+    "href": "06_PivotingData/index.html#exercises",
+    "title": "Pivoting Data",
+    "section": "Exercises",
+    "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
+    "crumbs": [
+      "Day 3",
+      "Pivoting Data"
+    ]
+  },
+  {
+    "objectID": "05_JoiningDatasets/index.html",
+    "href": "05_JoiningDatasets/index.html",
+    "title": "Joining Datasets",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 3",
+      "Joining Datasets"
+    ]
+  },
+  {
+    "objectID": "05_JoiningDatasets/index.html#slides",
+    "href": "05_JoiningDatasets/index.html#slides",
+    "title": "Joining Datasets",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 3",
+      "Joining Datasets"
+    ]
+  },
+  {
+    "objectID": "05_JoiningDatasets/index.html#exercises",
+    "href": "05_JoiningDatasets/index.html#exercises",
+    "title": "Joining Datasets",
+    "section": "Exercises",
+    "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
+    "crumbs": [
+      "Day 3",
+      "Joining Datasets"
+    ]
+  },
+  {
+    "objectID": "04_SingleDataset/index.html",
+    "href": "04_SingleDataset/index.html",
+    "title": "Single Dataset",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 2",
+      "Single Dataset"
+    ]
+  },
+  {
+    "objectID": "04_SingleDataset/index.html#slides",
+    "href": "04_SingleDataset/index.html#slides",
+    "title": "Single Dataset",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 2",
+      "Single Dataset"
+    ]
+  },
+  {
+    "objectID": "04_SingleDataset/index.html#exercises",
+    "href": "04_SingleDataset/index.html#exercises",
+    "title": "Single Dataset",
+    "section": "Exercises",
+    "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
+    "crumbs": [
+      "Day 2",
+      "Single Dataset"
+    ]
+  },
+  {
+    "objectID": "03_TidyData/index.html",
+    "href": "03_TidyData/index.html",
+    "title": "Tidy Data",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 2",
+      "Tidy Data"
+    ]
+  },
+  {
+    "objectID": "03_TidyData/index.html#slides",
+    "href": "03_TidyData/index.html#slides",
+    "title": "Tidy Data",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 2",
+      "Tidy Data"
+    ]
+  },
+  {
+    "objectID": "03_TidyData/index.html#exercises",
+    "href": "03_TidyData/index.html#exercises",
+    "title": "Tidy Data",
+    "section": "Exercises",
+    "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
+    "crumbs": [
+      "Day 2",
+      "Tidy Data"
+    ]
+  },
+  {
+    "objectID": "02_DataViz/index.html",
+    "href": "02_DataViz/index.html",
+    "title": "Data Visualization",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 1",
+      "Data Visualization"
+    ]
+  },
+  {
+    "objectID": "02_DataViz/index.html#slides",
+    "href": "02_DataViz/index.html#slides",
+    "title": "Data Visualization",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 1",
+      "Data Visualization"
+    ]
+  },
+  {
+    "objectID": "02_DataViz/index.html#exercises",
+    "href": "02_DataViz/index.html#exercises",
+    "title": "Data Visualization",
+    "section": "Exercises",
+    "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
+    "crumbs": [
+      "Day 1",
+      "Data Visualization"
+    ]
+  },
+  {
+    "objectID": "01_GettingStarted/index.html",
+    "href": "01_GettingStarted/index.html",
+    "title": "Getting Started",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 1",
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "01_GettingStarted/index.html#slides",
+    "href": "01_GettingStarted/index.html#slides",
+    "title": "Getting Started",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Day 1",
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "01_GettingStarted/index.html#exercises",
+    "href": "01_GettingStarted/index.html#exercises",
+    "title": "Getting Started",
+    "section": "Exercises",
+    "text": "Exercises\nExercise 1\n\n\n\nExercise 2\n\n\n\nExercise 3",
+    "crumbs": [
+      "Day 1",
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "01_GettingStarted/01_GettingStarted.html#r-vs.-rstudio",
+    "href": "01_GettingStarted/01_GettingStarted.html#r-vs.-rstudio",
+    "title": "Getting Started",
+    "section": "R vs. RStudio",
+    "text": "R vs. RStudio\n\n\n\n\n\n\n\n\n\n\n\nR is an open-source statistical programming language\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\n\n\n\n\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+  },
+  {
+    "objectID": "01_GettingStarted/01_GettingStarted.html#r-packages",
+    "href": "01_GettingStarted/01_GettingStarted.html#r-packages",
+    "title": "Getting Started",
+    "section": "R packages",
+    "text": "R packages\n\nPackages are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data1\nAs of September 2020, there are over 16,000 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n1 Wickham and Bryan, R Packages.\n2 CRAN contributed packages."
+  },
+  {
+    "objectID": "01_GettingStarted/01_GettingStarted.html#rstudio-overview",
+    "href": "01_GettingStarted/01_GettingStarted.html#rstudio-overview",
+    "title": "Getting Started",
+    "section": "RStudio overview",
+    "text": "RStudio overview"
+  },
+  {
+    "objectID": "01_GettingStarted/01_GettingStarted.html#rstudio-default",
+    "href": "01_GettingStarted/01_GettingStarted.html#rstudio-default",
+    "title": "Getting Started",
+    "section": "RStudio default",
+    "text": "RStudio default"
+  },
+  {
+    "objectID": "01_GettingStarted/01_GettingStarted.html#rstudio-customization",
+    "href": "01_GettingStarted/01_GettingStarted.html#rstudio-customization",
+    "title": "Getting Started",
+    "section": "RStudio customization",
+    "text": "RStudio customization\n\nTools &gt; Global Options\n\n\n\nAppearance\n\n\n\n\n\n\n\n\n\n\n\n\nPane layout"
+  },
+  {
+    "objectID": "01_GettingStarted/01_GettingStarted.html#my-rstudio-layout",
+    "href": "01_GettingStarted/01_GettingStarted.html#my-rstudio-layout",
+    "title": "Getting Started",
+    "section": "My RStudio layout",
+    "text": "My RStudio layout"
+  },
+  {
+    "objectID": "01_GettingStarted/01_GettingStarted.html#a-short-list-for-now-of-r-essentials",
+    "href": "01_GettingStarted/01_GettingStarted.html#a-short-list-for-now-of-r-essentials",
+    "title": "Getting Started",
+    "section": "A short list (for now) of R essentials",
+    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\n\nPackages are installed with the install.packages function and loaded with the library function:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)\n\n\n\n\nAssignment/setting values is done with &lt;-\n\n\nstarwars_droids &lt;- starwars %&gt;%\n  filter(species == \"Droid\")\n\n\n\n\nFile paths should be specified with a forward slash “/”\n\nthis is the same for macs, linux systems, and URLs, but is opposite windows\n“J:_Transition” is the windows path, but in R it needs to be “J:/R_Transition”"
+  },
+  {
+    "objectID": "01_GettingStarted/01_GettingStarted.html#a-short-list-for-now-of-r-essentials-cont.",
+    "href": "01_GettingStarted/01_GettingStarted.html#a-short-list-for-now-of-r-essentials-cont.",
+    "title": "Getting Started",
+    "section": "A short list (for now) of R essentials (cont.)",
+    "text": "A short list (for now) of R essentials (cont.)\n\nColumns (variables) in data frames are accessed with $:\n\n\ndataset$variable_name\n\n\n\nObject documentation can be accessed with ?\n\n\n?mean\n\n\n\n\nR is case sensitive:\n\nstarwars$Species is different from StarWars$Species\ncase_when() is different from CASE_WHEN() and Case_When\n\n\n\n\n\n# is how you comment your code\n\n\n# Here is some code to list Star Wars Droids\nstarwars %&gt;%                  # starwars dataset\n  filter(species == \"Droid\")  # subset to droids"
+  },
+  {
+    "objectID": "01_GettingStarted/01_GettingStarted.html#tidyverse",
+    "href": "01_GettingStarted/01_GettingStarted.html#tidyverse",
+    "title": "Getting Started",
+    "section": "tidyverse",
+    "text": "tidyverse\n\n\n\n\n\n\n\n\n\n\n\n\n\ntidyverse.org\n\n\n\nThe tidyverse is an opinionated collection of R packages designed for data science\nAll packages share an underlying philosophy and a common grammar"
+  },
+  {
+    "objectID": "01_GettingStarted/01_GettingStarted.html#section",
+    "href": "01_GettingStarted/01_GettingStarted.html#section",
+    "title": "Getting Started",
+    "section": "",
+    "text": "Mitchell O’Hara-Wild, useR! 2018 feature wall"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#starwars",
+    "href": "02_DataViz/02_DataVisualization.html#starwars",
+    "title": "Data and Visualization",
+    "section": "Starwars",
+    "text": "Starwars"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#glimpse",
+    "href": "02_DataViz/02_DataVisualization.html#glimpse",
+    "title": "Data and Visualization",
+    "section": "Glimpse",
+    "text": "Glimpse\nTake a glimpse at the data:\n\nglimpse(starwars)\n\nRows: 87\nColumns: 14\n$ name       &lt;chr&gt; \"Luke Skywalker\", \"C-3PO\", \"R2-D2\", \"Dart…\n$ height     &lt;int&gt; 172, 167, 96, 202, 150, 178, 165, 97, 183…\n$ mass       &lt;dbl&gt; 77, 75, 32, 136, 49, 120, 75, 32, 84, 77,…\n$ hair_color &lt;chr&gt; \"blond\", NA, NA, \"none\", \"brown\", \"brown,…\n$ skin_color &lt;chr&gt; \"fair\", \"gold\", \"white, blue\", \"white\", \"…\n$ eye_color  &lt;chr&gt; \"blue\", \"yellow\", \"red\", \"yellow\", \"brown…\n$ birth_year &lt;dbl&gt; 19.0, 112.0, 33.0, 41.9, 19.0, 52.0, 47.0…\n$ sex        &lt;chr&gt; \"male\", \"none\", \"none\", \"male\", \"female\",…\n$ gender     &lt;chr&gt; \"masculine\", \"masculine\", \"masculine\", \"m…\n$ homeworld  &lt;chr&gt; \"Tatooine\", \"Tatooine\", \"Naboo\", \"Tatooin…\n$ species    &lt;chr&gt; \"Human\", \"Droid\", \"Droid\", \"Human\", \"Huma…\n$ films      &lt;list&gt; &lt;\"A New Hope\", \"The Empire Strikes Back\"…\n$ vehicles   &lt;list&gt; &lt;\"Snowspeeder\", \"Imperial Speeder Bike\"&gt;…\n$ starships  &lt;list&gt; &lt;\"X-wing\", \"Imperial shuttle\"&gt;, &lt;&gt;, &lt;&gt;, …"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#dataset-dimensions",
+    "href": "02_DataViz/02_DataVisualization.html#dataset-dimensions",
+    "title": "Data and Visualization",
+    "section": "Dataset dimensions",
+    "text": "Dataset dimensions\n\nHow many rows and columns does this dataset have?\n\n\nnrow(starwars) # number of rows\n\n[1] 87\n\nncol(starwars) # number of columns\n\n[1] 14\n\ndim(starwars)  # dimensions (row column)\n\n[1] 87 14"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#dataset-content---built-in-datasets",
+    "href": "02_DataViz/02_DataVisualization.html#dataset-content---built-in-datasets",
+    "title": "Data and Visualization",
+    "section": "Dataset content - built in datasets",
+    "text": "Dataset content - built in datasets\n\nWhat does each row represent?\nWhat does each column represent?\n\n\n?starwars"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#data-visualization-1",
+    "href": "02_DataViz/02_DataVisualization.html#data-visualization-1",
+    "title": "Data and Visualization",
+    "section": "Data visualization",
+    "text": "Data visualization\n\n“The simple graph has brought more information to the data analyst’s mind than any other device.” — John Tukey\n\n\nData visualization is the creation and study of the visual representation of data\nMany tools for visualizing data – R is one of them\nMany approaches/systems within R for making data visualizations – ggplot2 is one of them, and that’s what we’re going to use"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#mass-vs.-height",
+    "href": "02_DataViz/02_DataVisualization.html#mass-vs.-height",
+    "title": "Data and Visualization",
+    "section": "Mass vs. height",
+    "text": "Mass vs. height\n\nHow would you describe the relationship between mass and height of Starwars characters?\nWhat other variables would help us understand data points that don’t follow the overall trend?\nWho is the not so tall but really chubby character?"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#jabba",
+    "href": "02_DataViz/02_DataVisualization.html#jabba",
+    "title": "Data and Visualization",
+    "section": "Jabba!",
+    "text": "Jabba!"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#ggplot2-in-tidyverse",
+    "href": "02_DataViz/02_DataVisualization.html#ggplot2-in-tidyverse",
+    "title": "Data and Visualization",
+    "section": "ggplot2 \\(\\in\\) tidyverse",
+    "text": "ggplot2 \\(\\in\\) tidyverse\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot2 is tidyverse’s data visualization package\ngg in “ggplot2” stands for Grammar of Graphics\nInspired by the book Grammar of Graphics by Leland Wilkinson"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#grammar-of-graphics",
+    "href": "02_DataViz/02_DataVisualization.html#grammar-of-graphics",
+    "title": "Data and Visualization",
+    "section": "Grammar of Graphics",
+    "text": "Grammar of Graphics\nA grammar of graphics is a tool that enables us to concisely describe the components of a graphic\n\n\nSource: BloggoType"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#mass-vs.-height-1",
+    "href": "02_DataViz/02_DataVisualization.html#mass-vs.-height-1",
+    "title": "Data and Visualization",
+    "section": "Mass vs. height",
+    "text": "Mass vs. height\n\nggplot(data = starwars, mapping = aes(x = height, y = mass)) +\n  geom_point() +\n  labs(title = \"Mass vs. height of Starwars characters\",\n       x = \"Height (cm)\", y = \"Weight (kg)\")"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#hello-ggplot2",
+    "href": "02_DataViz/02_DataVisualization.html#hello-ggplot2",
+    "title": "Data and Visualization",
+    "section": "Hello ggplot2!",
+    "text": "Hello ggplot2!\n\nThe ggplot2 package comes with the tidyverse\n\n\nlibrary(tidyverse)\n\n\n\nggplot() is the main function in ggplot2\nPlots are constructed in layers\n\n\n\n\nggplot(data = [dataset],\n       mapping = aes(x = [x-variable], y = [y-variable])) +\n   geom_xxx() +\n   other options"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#data-palmer-penguins",
+    "href": "02_DataViz/02_DataVisualization.html#data-palmer-penguins",
+    "title": "Data and Visualization",
+    "section": "Data: Palmer Penguins",
+    "text": "Data: Palmer Penguins\nMeasurements for penguin species, island in Palmer Archipelago, size (flipper length, body mass, bill dimensions), and sex. \n\n\n\n\n\n\n\n\n\n\n\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species     &lt;fct&gt; Adelie, Adelie, Adelie…\n$ island      &lt;fct&gt; Torgersen, Torgersen, …\n$ bill_len    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, …\n$ bill_dep    &lt;dbl&gt; 18.7, 17.4, 18.0, NA, …\n$ flipper_len &lt;int&gt; 181, 186, 195, NA, 193…\n$ body_mass   &lt;int&gt; 3750, 3800, 3250, NA, …\n$ sex         &lt;fct&gt; male, female, female, …\n$ year        &lt;int&gt; 2007, 2007, 2007, 2007…"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#plot-of-bill-depth-and-length-by-species",
+    "href": "02_DataViz/02_DataVisualization.html#plot-of-bill-depth-and-length-by-species",
+    "title": "Data and Visualization",
+    "section": "Plot of bill depth and length by species",
+    "text": "Plot of bill depth and length by species"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#walk-through-syntax",
+    "href": "02_DataViz/02_DataVisualization.html#walk-through-syntax",
+    "title": "Data and Visualization",
+    "section": "Walk through syntax",
+    "text": "Walk through syntax\n\nggplot(data = penguins)"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#walk-through-syntax-1",
+    "href": "02_DataViz/02_DataVisualization.html#walk-through-syntax-1",
+    "title": "Data and Visualization",
+    "section": "Walk through syntax",
+    "text": "Walk through syntax\n\nggplot(data = penguins,\n       mapping = aes(x = bill_dep)\n       )"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#walk-through-syntax-2",
+    "href": "02_DataViz/02_DataVisualization.html#walk-through-syntax-2",
+    "title": "Data and Visualization",
+    "section": "Walk through syntax",
+    "text": "Walk through syntax\n\nggplot(data = penguins,\n       mapping = aes(x = bill_dep,\n                     y = bill_len)\n       )"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#walk-through-syntax-3",
+    "href": "02_DataViz/02_DataVisualization.html#walk-through-syntax-3",
+    "title": "Data and Visualization",
+    "section": "Walk through syntax",
+    "text": "Walk through syntax\n\nggplot(data = penguins,\n       mapping = aes(x = bill_dep,\n                     y = bill_len)\n       ) +\n  geom_point()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#walk-through-syntax-4",
+    "href": "02_DataViz/02_DataVisualization.html#walk-through-syntax-4",
+    "title": "Data and Visualization",
+    "section": "Walk through syntax",
+    "text": "Walk through syntax\n\nggplot(data = penguins,\n       mapping = aes(x = bill_dep,\n                     y = bill_len,\n                     color = species)\n       ) +\n  geom_point()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#walk-through-syntax-5",
+    "href": "02_DataViz/02_DataVisualization.html#walk-through-syntax-5",
+    "title": "Data and Visualization",
+    "section": "Walk through syntax",
+    "text": "Walk through syntax\n\nggplot(data = penguins,\n       mapping = aes(x = bill_dep,\n                     y = bill_len,\n                     color = species)\n       ) +\n  geom_point() +\n  labs(title = \"Bill depth and length\",\n       subtitle = \"Dimensions for Adelie, Chinstrap, and Gentoo Penguins\",\n       x = \"Bill depth (mm)\", y = \"Bill length (mm)\",\n       colour = \"Species\")"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#walk-through-syntax-6",
+    "href": "02_DataViz/02_DataVisualization.html#walk-through-syntax-6",
+    "title": "Data and Visualization",
+    "section": "Walk through syntax",
+    "text": "Walk through syntax"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#section-1",
+    "href": "02_DataViz/02_DataVisualization.html#section-1",
+    "title": "Data and Visualization",
+    "section": "",
+    "text": "ggplot(data = penguins,\n       mapping = aes(x = bill_dep,\n                     y = bill_len,\n                     colour = species)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(penguins,\n       aes(x = bill_dep,\n           y = bill_len,\n           colour = species)) +\n  geom_point()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#themes",
+    "href": "02_DataViz/02_DataVisualization.html#themes",
+    "title": "Data and Visualization",
+    "section": "Themes",
+    "text": "Themes\n\nggplot(data = penguins,\n       mapping = aes(x = bill_dep,\n                     y = bill_len,\n                     color = species)\n       ) +\n  geom_point() +\n  labs(title = \"Bill depth and length\",\n       subtitle = \"Dimensions for Adelie, Chinstrap, and Gentoo Penguins\",\n       x = \"Bill depth (mm)\", y = \"Bill length (mm)\",\n       colour = \"Species\") +\n  scale_colour_viridis_d() +\n  theme_bw()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#themes-1",
+    "href": "02_DataViz/02_DataVisualization.html#themes-1",
+    "title": "Data and Visualization",
+    "section": "Themes",
+    "text": "Themes"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#aesthetics-options",
+    "href": "02_DataViz/02_DataVisualization.html#aesthetics-options",
+    "title": "Data and Visualization",
+    "section": "Aesthetics options",
+    "text": "Aesthetics options\nCommonly used characteristics of plotting characters that can be mapped to a specific variable in the data are\n\ncolour\nshape\nsize\nalpha (transparency)"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#colour",
+    "href": "02_DataViz/02_DataVisualization.html#colour",
+    "title": "Data and Visualization",
+    "section": "Colour",
+    "text": "Colour\n\nggplot(penguins,\n       aes(x = bill_dep, \n           y = bill_len,\n           colour = species)) +\n  geom_point()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#shape",
+    "href": "02_DataViz/02_DataVisualization.html#shape",
+    "title": "Data and Visualization",
+    "section": "Shape",
+    "text": "Shape\nMapped to a different variable than colour\n\nggplot(penguins,\n       aes(x = bill_dep, \n           y = bill_len,\n           colour = species,\n           shape = island)) +\n  geom_point()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#shape-1",
+    "href": "02_DataViz/02_DataVisualization.html#shape-1",
+    "title": "Data and Visualization",
+    "section": "Shape",
+    "text": "Shape\nMapped to same variable as colour\n\nggplot(penguins,\n       aes(x = bill_dep, \n           y = bill_len,\n           colour = species,\n           shape = species)) +\n  geom_point()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#size",
+    "href": "02_DataViz/02_DataVisualization.html#size",
+    "title": "Data and Visualization",
+    "section": "Size",
+    "text": "Size\n\nggplot(penguins,\n       aes(x = bill_dep, \n           y = bill_len,\n           colour = species,\n           shape = species,\n           size = body_mass)) +\n  geom_point() +\n  scale_colour_viridis_d()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#alpha",
+    "href": "02_DataViz/02_DataVisualization.html#alpha",
+    "title": "Data and Visualization",
+    "section": "Alpha",
+    "text": "Alpha\n\nggplot(penguins,\n       aes(x = bill_dep, \n           y = bill_len,\n           colour = species,\n           shape = species,\n           size = body_mass,\n           alpha = flipper_len)) + \n  geom_point() +\n  scale_colour_viridis_d()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#mapping-vs.-setting",
+    "href": "02_DataViz/02_DataVisualization.html#mapping-vs.-setting",
+    "title": "Data and Visualization",
+    "section": "Mapping vs. setting",
+    "text": "Mapping vs. setting\n\nMapping\n\nggplot(penguins,\n       aes(x = bill_dep,\n           y = bill_len,\n           size = body_mass,\n           alpha = flipper_len)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\nSetting\n\nggplot(penguins,\n       aes(x = bill_dep,\n           y = bill_len)\n       ) + \n  geom_point(size = 2, \n             alpha = 0.5)"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#mapping-vs.-setting-1",
+    "href": "02_DataViz/02_DataVisualization.html#mapping-vs.-setting-1",
+    "title": "Data and Visualization",
+    "section": "Mapping vs. setting",
+    "text": "Mapping vs. setting\n\nMapping: Determine the size, alpha, etc. of points based on the values of a variable in the data\n\ngoes into aes()\n\nSetting: Determine the size, alpha, etc. of points not based on the values of a variable in the data\n\ngoes into geom_*() (this was geom_point() in the previous example)"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#continuous-data",
+    "href": "02_DataViz/02_DataVisualization.html#continuous-data",
+    "title": "Data and Visualization",
+    "section": "Continuous Data",
+    "text": "Continuous Data\n\nHistogram geom_histogram()\n\n\nggplot(penguins, aes(x = flipper_len)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#continuous-data-1",
+    "href": "02_DataViz/02_DataVisualization.html#continuous-data-1",
+    "title": "Data and Visualization",
+    "section": "Continuous Data",
+    "text": "Continuous Data\n\nHistogram geom_histogram()\nDensity plot geom_density()\n\n\nggplot(penguins, aes(x = flipper_len)) +\n  geom_density()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#continuous-data-2",
+    "href": "02_DataViz/02_DataVisualization.html#continuous-data-2",
+    "title": "Data and Visualization",
+    "section": "Continuous Data",
+    "text": "Continuous Data\n\nHistogram geom_histogram()\nDensity plot geom_density()\nBox plot geom_boxplot()\n\n\nggplot(penguins, aes(x = flipper_len)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#continuous-data-3",
+    "href": "02_DataViz/02_DataVisualization.html#continuous-data-3",
+    "title": "Data and Visualization",
+    "section": "Continuous Data",
+    "text": "Continuous Data\n\nHistogram geom_histogram()\nDensity plot geom_density()\nBox plot geom_boxplot()\nScatterplots geom_point()\n\n\nggplot(penguins, aes(x = bill_dep, y = bill_len)) +\n  geom_point()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#categorical-data",
+    "href": "02_DataViz/02_DataVisualization.html#categorical-data",
+    "title": "Data and Visualization",
+    "section": "Categorical Data",
+    "text": "Categorical Data\n\nBar plot geom_bar()\n\n\nggplot(penguins, aes(x = species)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#categorical-data-1",
+    "href": "02_DataViz/02_DataVisualization.html#categorical-data-1",
+    "title": "Data and Visualization",
+    "section": "Categorical Data",
+    "text": "Categorical Data\n\nBar plot geom_bar()\n\nStacked bar chart: add fill\n\n\n\nggplot(penguins, aes(x = species, \n                     fill = sex)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "02_DataViz/02_DataVisualization.html#categorical-data-2",
+    "href": "02_DataViz/02_DataVisualization.html#categorical-data-2",
+    "title": "Data and Visualization",
+    "section": "Categorical Data",
+    "text": "Categorical Data\n\nBar plot geom_bar()\n\nStacked bar chart: add fill\nSide by side bar chart: add position = \"dodge\"\n\n\n\nggplot(penguins, aes(x = species, \n                     fill = sex)) +\n  geom_bar(position = \"dodge\")"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#characteristics-of-tidy-data",
+    "href": "03_TidyData/03_TidyData.html#characteristics-of-tidy-data",
+    "title": "Data Wrangling",
+    "section": "Characteristics of tidy data",
+    "text": "Characteristics of tidy data\n\n\nEach variable forms a column.\nEach observation forms a row.\nEach type of observational unit forms a table."
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#a-grammar-of-data-wrangling",
+    "href": "03_TidyData/03_TidyData.html#a-grammar-of-data-wrangling",
+    "title": "Data Wrangling",
+    "section": "A grammar of data wrangling…",
+    "text": "A grammar of data wrangling…\n… based on the concepts of functions as verbs that manipulate data frames\n\n\n\n\n\n\n\n\n\n\n\n\nselect: pick columns by name\narrange: reorder rows\nfilter: pick rows matching criteria\ndistinct: filter for unique rows\nmutate: add new variables\nsummarise or summarize: agreggation of values\ngroup_by: for grouped operations\n… (many more)"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#rules-of-dplyr-functions",
+    "href": "03_TidyData/03_TidyData.html#rules-of-dplyr-functions",
+    "title": "Data Wrangling",
+    "section": "Rules of dplyr functions",
+    "text": "Rules of dplyr functions\n\n\nFirst argument is always a data frame\nSubsequent arguments say what to do with that data frame\nAlways return a data frame\nDon’t modify in place"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#first-look-variables",
+    "href": "03_TidyData/03_TidyData.html#first-look-variables",
+    "title": "Data Wrangling",
+    "section": "First look: Variables",
+    "text": "First look: Variables\n\nnames(starwars)\n\n [1] \"name\"       \"height\"     \"mass\"       \"hair_color\"\n [5] \"skin_color\" \"eye_color\"  \"birth_year\" \"sex\"       \n [9] \"gender\"     \"homeworld\"  \"species\"    \"films\"     \n[13] \"vehicles\"   \"starships\""
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#second-look-overview",
+    "href": "03_TidyData/03_TidyData.html#second-look-overview",
+    "title": "Data Wrangling",
+    "section": "Second look: Overview",
+    "text": "Second look: Overview\n\nglimpse(starwars)\n\nRows: 87\nColumns: 14\n$ name       &lt;chr&gt; \"Luke Skywalker\", \"C-3PO\", \"R2-D2\", \"Dart…\n$ height     &lt;int&gt; 172, 167, 96, 202, 150, 178, 165, 97, 183…\n$ mass       &lt;dbl&gt; 77, 75, 32, 136, 49, 120, 75, 32, 84, 77,…\n$ hair_color &lt;chr&gt; \"blond\", NA, NA, \"none\", \"brown\", \"brown,…\n$ skin_color &lt;chr&gt; \"fair\", \"gold\", \"white, blue\", \"white\", \"…\n$ eye_color  &lt;chr&gt; \"blue\", \"yellow\", \"red\", \"yellow\", \"brown…\n$ birth_year &lt;dbl&gt; 19.0, 112.0, 33.0, 41.9, 19.0, 52.0, 47.0…\n$ sex        &lt;chr&gt; \"male\", \"none\", \"none\", \"male\", \"female\",…\n$ gender     &lt;chr&gt; \"masculine\", \"masculine\", \"masculine\", \"m…\n$ homeworld  &lt;chr&gt; \"Tatooine\", \"Tatooine\", \"Naboo\", \"Tatooin…\n$ species    &lt;chr&gt; \"Human\", \"Droid\", \"Droid\", \"Human\", \"Huma…\n$ films      &lt;list&gt; &lt;\"A New Hope\", \"The Empire Strikes Back\"…\n$ vehicles   &lt;list&gt; &lt;\"Snowspeeder\", \"Imperial Speeder Bike\"&gt;…\n$ starships  &lt;list&gt; &lt;\"X-wing\", \"Imperial shuttle\"&gt;, &lt;&gt;, &lt;&gt;, …"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#select-a-single-column",
+    "href": "03_TidyData/03_TidyData.html#select-a-single-column",
+    "title": "Data Wrangling",
+    "section": "Select a single column",
+    "text": "Select a single column\nView only homeworld\n\n\n\nselect(\n  starwars, \n  homeworld\n  )\n\n\n\nStart with the function (a verb): select()"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#select-a-single-column-1",
+    "href": "03_TidyData/03_TidyData.html#select-a-single-column-1",
+    "title": "Data Wrangling",
+    "section": "Select a single column",
+    "text": "Select a single column\nView only homeworld\n\n\nselect( \n  starwars,\n  homeworld\n  )\n\n\n\nStart with the function (a verb): select()\nFirst argument: data frame we’re working with , starwars"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#select-a-single-column-2",
+    "href": "03_TidyData/03_TidyData.html#select-a-single-column-2",
+    "title": "Data Wrangling",
+    "section": "Select a single column",
+    "text": "Select a single column\nView only homeworld\n\n\nselect( \n  starwars, \n  homeworld\n  )\n\n\n\nStart with the function (a verb): select()\nFirst argument: data frame we’re working with , starwars\nSecond argument: variable we want to select, homeworld"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#select-a-single-column-3",
+    "href": "03_TidyData/03_TidyData.html#select-a-single-column-3",
+    "title": "Data Wrangling",
+    "section": "Select a single column",
+    "text": "Select a single column\nView only homeworld\n\n\nselect( \n  starwars, \n  homeworld\n  )\n\n# A tibble: 87 × 1\n   homeworld\n   &lt;chr&gt;    \n 1 Tatooine \n 2 Tatooine \n 3 Naboo    \n 4 Tatooine \n 5 Alderaan \n 6 Tatooine \n 7 Tatooine \n 8 Tatooine \n 9 Tatooine \n10 Stewjon  \n# ℹ 77 more rows\n\n\n\n\nStart with the function (a verb): select()\nFirst argument: data frame we’re working with , starwars\nSecond argument: variable we want to select, homeworld\nResult: data frame with 87 rows and 1 column"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#select-multiple",
+    "href": "03_TidyData/03_TidyData.html#select-multiple",
+    "title": "Data Wrangling",
+    "section": "Select multiple",
+    "text": "Select multiple\n\nCan select more than one variable\n\n\nselect(starwars,\n       name, homeworld)\n\n# A tibble: 87 × 2\n   name               homeworld\n   &lt;chr&gt;              &lt;chr&gt;    \n 1 Luke Skywalker     Tatooine \n 2 C-3PO              Tatooine \n 3 R2-D2              Naboo    \n 4 Darth Vader        Tatooine \n 5 Leia Organa        Alderaan \n 6 Owen Lars          Tatooine \n 7 Beru Whitesun Lars Tatooine \n 8 R5-D4              Tatooine \n 9 Biggs Darklighter  Tatooine \n10 Obi-Wan Kenobi     Stewjon  \n# ℹ 77 more rows"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#objects",
+    "href": "03_TidyData/03_TidyData.html#objects",
+    "title": "Data Wrangling",
+    "section": "Objects",
+    "text": "Objects\n\n\nR is an object oriented programming language\nEverything is an object (datasets, arrays, lists, globals, etc.)\nCan have multiple datasets, arrays, etc. in your environment\n\nWhen creating, editing, manipulating data you must first reference the data/object of interest"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#workflow",
+    "href": "03_TidyData/03_TidyData.html#workflow",
+    "title": "Data Wrangling",
+    "section": "Workflow",
+    "text": "Workflow\nSay we want to narrow our dataset to only see the name and homeworld variables and sort the data by homeworld\n\n\n\nSelect\n\nstarwars %&gt;%\n  select(name, homeworld)\n\n# A tibble: 87 × 2\n   name               homeworld\n   &lt;chr&gt;              &lt;chr&gt;    \n 1 Luke Skywalker     Tatooine \n 2 C-3PO              Tatooine \n 3 R2-D2              Naboo    \n 4 Darth Vader        Tatooine \n 5 Leia Organa        Alderaan \n 6 Owen Lars          Tatooine \n 7 Beru Whitesun Lars Tatooine \n 8 R5-D4              Tatooine \n 9 Biggs Darklighter  Tatooine \n10 Obi-Wan Kenobi     Stewjon  \n# ℹ 77 more rows\n\n\n\n\n\nSelect, then arrange\n\nstarwars %&gt;%\n  select(name, homeworld) %&gt;%\n  arrange(homeworld)\n\n# A tibble: 87 × 2\n   name                homeworld     \n   &lt;chr&gt;               &lt;chr&gt;         \n 1 Leia Organa         Alderaan      \n 2 Bail Prestor Organa Alderaan      \n 3 Raymus Antilles     Alderaan      \n 4 Ratts Tyerel        Aleen Minor   \n 5 Lobot               Bespin        \n 6 Jek Tono Porkins    Bestine IV    \n 7 Nute Gunray         Cato Neimoidia\n 8 Ki-Adi-Mundi        Cerea         \n 9 Mas Amedda          Champala      \n10 Mon Mothma          Chandrila     \n# ℹ 77 more rows"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#pipes",
+    "href": "03_TidyData/03_TidyData.html#pipes",
+    "title": "Data Wrangling",
+    "section": "Pipes",
+    "text": "Pipes\nIn programming, a pipe is a technique for passing information from one process to another.\n\n\nStart with the data frame starwars, and pass it to the select() function,\n\n\n\nstarwars %&gt;%\n  select(name, homeworld) %&gt;%\n  arrange(homeworld)"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#pipes-1",
+    "href": "03_TidyData/03_TidyData.html#pipes-1",
+    "title": "Data Wrangling",
+    "section": "Pipes",
+    "text": "Pipes\nIn programming, a pipe is a technique for passing information from one process to another.\n\n\nStart with the data frame starwars, and pass it to the select() function,\nthen we select the variables name and homeland,\n\n\n\nstarwars %&gt;%\n  select(name, homeworld) %&gt;%\n  arrange(homeworld)"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#pipes-2",
+    "href": "03_TidyData/03_TidyData.html#pipes-2",
+    "title": "Data Wrangling",
+    "section": "Pipes",
+    "text": "Pipes\nIn programming, a pipe is a technique for passing information from one process to another.\n\n\nStart with the data frame starwars, and pass it to the select() function,\nthen we select the variables name and homeland,\nand then we arrange the data frame by homeland\n\n\n\nstarwars %&gt;%\n  select(name, homeworld) %&gt;%\n  arrange(homeworld)\n\n# A tibble: 87 × 2\n   name                homeworld     \n   &lt;chr&gt;               &lt;chr&gt;         \n 1 Leia Organa         Alderaan      \n 2 Bail Prestor Organa Alderaan      \n 3 Raymus Antilles     Alderaan      \n 4 Ratts Tyerel        Aleen Minor   \n 5 Lobot               Bespin        \n 6 Jek Tono Porkins    Bestine IV    \n 7 Nute Gunray         Cato Neimoidia\n 8 Ki-Adi-Mundi        Cerea         \n 9 Mas Amedda          Champala      \n10 Mon Mothma          Chandrila     \n# ℹ 77 more rows"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#how-does-a-pipe-work",
+    "href": "03_TidyData/03_TidyData.html#how-does-a-pipe-work",
+    "title": "Data Wrangling",
+    "section": "How does a pipe work?",
+    "text": "How does a pipe work?\n\nYou can think about the following sequence of actions - find keys, unlock car, start car, drive to work, park.\n\n\n\nExpressed as a set of nested functions in R pseudocode this would look like:\n\n\npark(drive(start_car(find(\"keys\")), to = \"work\"))\n\n\n\n\nWriting it out using pipes give it a more natural (and easier to read) structure:\n\n\nfind(\"keys\") %&gt;%\n  start_car() %&gt;%\n  drive(to = \"work\") %&gt;%\n  park()"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#aside",
+    "href": "03_TidyData/03_TidyData.html#aside",
+    "title": "Data Wrangling",
+    "section": "Aside",
+    "text": "Aside\nThe pipe operator is implemented in the package magrittr, though we don’t need to load this package explicitly since tidyverse does this for us.\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Treachery of Images\nRené Magritte"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#a-note-on-piping-and-layering",
+    "href": "03_TidyData/03_TidyData.html#a-note-on-piping-and-layering",
+    "title": "Data Wrangling",
+    "section": "A note on piping and layering",
+    "text": "A note on piping and layering\n\n\n%&gt;% used mainly in dplyr pipelines, we pipe the output of the previous line of code as the first input of the next line of code\n+ used in ggplot2 plots is used for “layering”, we create the plot in layers, separated by +"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#dplyr",
+    "href": "03_TidyData/03_TidyData.html#dplyr",
+    "title": "Data Wrangling",
+    "section": "dplyr",
+    "text": "dplyr\n❌\n\nstarwars +\n  select(name, homeland)\n\nError: object 'name' not found\n\n\n✅\n\nstarwars %&gt;%\n  select(name, homeland)"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#ggplot2",
+    "href": "03_TidyData/03_TidyData.html#ggplot2",
+    "title": "Data Wrangling",
+    "section": "ggplot2",
+    "text": "ggplot2\n❌\n\nggplot(starwars, aes(x = homeworld, fill = sex)) %&gt;%\n  geom_bar()\n\nError in `geom_bar()`:\n! `mapping` must be created by `aes()`.\nℹ Did you use `%&gt;%` or `|&gt;` instead of `+`?\n\n\n✅\n\nggplot(starwars, aes(x = homeworld, fill = sex)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "03_TidyData/03_TidyData.html#code-styling",
+    "href": "03_TidyData/03_TidyData.html#code-styling",
+    "title": "Data Wrangling",
+    "section": "Code styling",
+    "text": "Code styling\nMany of the styling principles are consistent across %&gt;% and +:\n\nalways a space before\nalways a line break after (for pipelines with more than 2 lines)\n\n❌\n\nggplot(starwars,aes(x=homeworld,fill=sex))+geom_bar()\n\n✅\n\nggplot(starwars, aes(x = homeworld, fill = sex)) + \n  geom_bar()"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#select---keep-variables",
+    "href": "04_SingleDataset/04_SingleDataset.html#select---keep-variables",
+    "title": "Working with a single dataset",
+    "section": "select - keep variables",
+    "text": "select - keep variables\n\npenguins %&gt;%\n  select(species, island)\n\n# A tibble: 344 × 2\n   species island   \n   &lt;fct&gt;   &lt;fct&gt;    \n 1 Adelie  Torgersen\n 2 Adelie  Torgersen\n 3 Adelie  Torgersen\n 4 Adelie  Torgersen\n 5 Adelie  Torgersen\n 6 Adelie  Torgersen\n 7 Adelie  Torgersen\n 8 Adelie  Torgersen\n 9 Adelie  Torgersen\n10 Adelie  Torgersen\n# ℹ 334 more rows"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#select---exclude-variables",
+    "href": "04_SingleDataset/04_SingleDataset.html#select---exclude-variables",
+    "title": "Working with a single dataset",
+    "section": "select - exclude variables",
+    "text": "select - exclude variables\n\npenguins %&gt;%\n  select(-year)\n\n# A tibble: 344 × 7\n   species island    bill_len bill_dep flipper_len body_mass sex   \n   &lt;fct&gt;   &lt;fct&gt;        &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;     &lt;int&gt; &lt;fct&gt; \n 1 Adelie  Torgersen     39.1     18.7         181      3750 male  \n 2 Adelie  Torgersen     39.5     17.4         186      3800 female\n 3 Adelie  Torgersen     40.3     18           195      3250 female\n 4 Adelie  Torgersen     NA       NA            NA        NA &lt;NA&gt;  \n 5 Adelie  Torgersen     36.7     19.3         193      3450 female\n 6 Adelie  Torgersen     39.3     20.6         190      3650 male  \n 7 Adelie  Torgersen     38.9     17.8         181      3625 female\n 8 Adelie  Torgersen     39.2     19.6         195      4675 male  \n 9 Adelie  Torgersen     34.1     18.1         193      3475 &lt;NA&gt;  \n10 Adelie  Torgersen     42       20.2         190      4250 &lt;NA&gt;  \n# ℹ 334 more rows"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#select---multiple-variables",
+    "href": "04_SingleDataset/04_SingleDataset.html#select---multiple-variables",
+    "title": "Working with a single dataset",
+    "section": "select - multiple variables",
+    "text": "select - multiple variables\n\na range of variables\n\n\npenguins %&gt;%\n  select(species:bill_dep)\n\n# A tibble: 344 × 4\n   species island    bill_len bill_dep\n   &lt;fct&gt;   &lt;fct&gt;        &lt;dbl&gt;    &lt;dbl&gt;\n 1 Adelie  Torgersen     39.1     18.7\n 2 Adelie  Torgersen     39.5     17.4\n 3 Adelie  Torgersen     40.3     18  \n 4 Adelie  Torgersen     NA       NA  \n 5 Adelie  Torgersen     36.7     19.3\n 6 Adelie  Torgersen     39.3     20.6\n 7 Adelie  Torgersen     38.9     17.8\n 8 Adelie  Torgersen     39.2     19.6\n 9 Adelie  Torgersen     34.1     18.1\n10 Adelie  Torgersen     42       20.2\n# ℹ 334 more rows"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#select---multiple-variables-1",
+    "href": "04_SingleDataset/04_SingleDataset.html#select---multiple-variables-1",
+    "title": "Working with a single dataset",
+    "section": "select - multiple variables",
+    "text": "select - multiple variables\n\na range of variables\nvariables with certain characteristics\n\n\n\n\npenguins %&gt;%\n  select(starts_with(\"bill\"))\n\n# A tibble: 344 × 2\n   bill_len bill_dep\n      &lt;dbl&gt;    &lt;dbl&gt;\n 1     39.1     18.7\n 2     39.5     17.4\n 3     40.3     18  \n 4     NA       NA  \n 5     36.7     19.3\n 6     39.3     20.6\n 7     38.9     17.8\n 8     39.2     19.6\n 9     34.1     18.1\n10     42       20.2\n# ℹ 334 more rows\n\n\n\n\n\npenguins %&gt;%\n  select(ends_with(\"len\"))\n\n# A tibble: 344 × 2\n   bill_len flipper_len\n      &lt;dbl&gt;       &lt;int&gt;\n 1     39.1         181\n 2     39.5         186\n 3     40.3         195\n 4     NA            NA\n 5     36.7         193\n 6     39.3         190\n 7     38.9         181\n 8     39.2         195\n 9     34.1         193\n10     42           190\n# ℹ 334 more rows"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#select-helpers",
+    "href": "04_SingleDataset/04_SingleDataset.html#select-helpers",
+    "title": "Working with a single dataset",
+    "section": "Select helpers",
+    "text": "Select helpers\n\nstarts_with(): Starts with a prefix\nends_with(): Ends with a suffix\ncontains(): Contains a literal string\nnum_range(): Matches a numerical range like x01, x02, x03\none_of(): Matches variable names in a character vector\neverything(): Matches all variables\nlast_col(): Select last variable, possibly with an offset\nmatches(): Matches a regular expression (a sequence of symbols/characters expressing a string/pattern to be searched for within text)\n\n\nSee help for any of these functions for more info, e.g. ?everything."
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#arrange-in-ascending-descending-order",
+    "href": "04_SingleDataset/04_SingleDataset.html#arrange-in-ascending-descending-order",
+    "title": "Working with a single dataset",
+    "section": "arrange in ascending / descending order",
+    "text": "arrange in ascending / descending order\n\n\npenguins %&gt;%\n  select(species,bill_dep) %&gt;%\n  arrange(bill_dep)\n\n# A tibble: 344 × 2\n   species bill_dep\n   &lt;fct&gt;      &lt;dbl&gt;\n 1 Gentoo      13.1\n 2 Gentoo      13.2\n 3 Gentoo      13.3\n 4 Gentoo      13.4\n 5 Gentoo      13.5\n 6 Gentoo      13.5\n 7 Gentoo      13.6\n 8 Gentoo      13.7\n 9 Gentoo      13.7\n10 Gentoo      13.7\n# ℹ 334 more rows\n\n\n\n\npenguins %&gt;%\n  select(species,bill_dep) %&gt;%\n  arrange(desc(bill_dep))\n\n# A tibble: 344 × 2\n   species   bill_dep\n   &lt;fct&gt;        &lt;dbl&gt;\n 1 Adelie        21.5\n 2 Adelie        21.2\n 3 Adelie        21.2\n 4 Adelie        21.1\n 5 Adelie        21.1\n 6 Adelie        21.1\n 7 Chinstrap     20.8\n 8 Adelie        20.7\n 9 Adelie        20.7\n10 Chinstrap     20.7\n# ℹ 334 more rows\n\n\n\n\n\n\n\npenguins %&gt;%\n  select(species,bill_dep) %&gt;%\n  arrange(-bill_dep)\n\n# A tibble: 344 × 2\n   species   bill_dep\n   &lt;fct&gt;        &lt;dbl&gt;\n 1 Adelie        21.5\n 2 Adelie        21.2\n 3 Adelie        21.2\n 4 Adelie        21.1\n 5 Adelie        21.1\n 6 Adelie        21.1\n 7 Chinstrap     20.8\n 8 Adelie        20.7\n 9 Adelie        20.7\n10 Chinstrap     20.7\n# ℹ 334 more rows"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#filter-to-select-a-subset-of-rows",
+    "href": "04_SingleDataset/04_SingleDataset.html#filter-to-select-a-subset-of-rows",
+    "title": "Working with a single dataset",
+    "section": "filter to select a subset of rows",
+    "text": "filter to select a subset of rows\n\npenguins %&gt;%\n  filter(species == \"Adelie\") \n\n# A tibble: 152 × 8\n   species island bill_len bill_dep flipper_len body_mass sex    year\n   &lt;fct&gt;   &lt;fct&gt;     &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;     &lt;int&gt; &lt;fct&gt; &lt;int&gt;\n 1 Adelie  Torge…     39.1     18.7         181      3750 male   2007\n 2 Adelie  Torge…     39.5     17.4         186      3800 fema…  2007\n 3 Adelie  Torge…     40.3     18           195      3250 fema…  2007\n 4 Adelie  Torge…     NA       NA            NA        NA &lt;NA&gt;   2007\n 5 Adelie  Torge…     36.7     19.3         193      3450 fema…  2007\n 6 Adelie  Torge…     39.3     20.6         190      3650 male   2007\n 7 Adelie  Torge…     38.9     17.8         181      3625 fema…  2007\n 8 Adelie  Torge…     39.2     19.6         195      4675 male   2007\n 9 Adelie  Torge…     34.1     18.1         193      3475 &lt;NA&gt;   2007\n10 Adelie  Torge…     42       20.2         190      4250 &lt;NA&gt;   2007\n# ℹ 142 more rows"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#filter-for-many-conditions-at-once",
+    "href": "04_SingleDataset/04_SingleDataset.html#filter-for-many-conditions-at-once",
+    "title": "Working with a single dataset",
+    "section": "filter for many conditions at once",
+    "text": "filter for many conditions at once\n\npenguins %&gt;%\n  filter(\n    species == \"Adelie\",\n    bill_dep &gt; 20\n    ) %&gt;%\n  select(species:bill_dep)\n\n# A tibble: 14 × 4\n   species island    bill_len bill_dep\n   &lt;fct&gt;   &lt;fct&gt;        &lt;dbl&gt;    &lt;dbl&gt;\n 1 Adelie  Torgersen     39.3     20.6\n 2 Adelie  Torgersen     42       20.2\n 3 Adelie  Torgersen     38.6     21.2\n 4 Adelie  Torgersen     34.6     21.1\n 5 Adelie  Torgersen     42.5     20.7\n 6 Adelie  Torgersen     46       21.5\n 7 Adelie  Dream         39.2     21.1\n 8 Adelie  Dream         42.3     21.2\n 9 Adelie  Biscoe        41.3     21.1\n10 Adelie  Dream         41.3     20.3\n11 Adelie  Biscoe        45.6     20.3\n12 Adelie  Biscoe        39.6     20.7\n13 Adelie  Torgersen     37.3     20.5\n14 Adelie  Dream         40.2     20.1"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#filter-for-more-complex-conditions",
+    "href": "04_SingleDataset/04_SingleDataset.html#filter-for-more-complex-conditions",
+    "title": "Working with a single dataset",
+    "section": "filter for more complex conditions",
+    "text": "filter for more complex conditions\n\npenguins %&gt;%\n  filter(\n    species == \"Adelie\",\n    bill_dep &gt; 20 | bill_dep &lt; 17\n    ) %&gt;%\n  select(species:bill_dep)\n\n# A tibble: 29 × 4\n   species island    bill_len bill_dep\n   &lt;fct&gt;   &lt;fct&gt;        &lt;dbl&gt;    &lt;dbl&gt;\n 1 Adelie  Torgersen     39.3     20.6\n 2 Adelie  Torgersen     42       20.2\n 3 Adelie  Torgersen     38.6     21.2\n 4 Adelie  Torgersen     34.6     21.1\n 5 Adelie  Torgersen     42.5     20.7\n 6 Adelie  Torgersen     46       21.5\n 7 Adelie  Dream         39.5     16.7\n 8 Adelie  Dream         39.2     21.1\n 9 Adelie  Dream         37       16.9\n10 Adelie  Dream         42.3     21.2\n# ℹ 19 more rows"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#logical-operators-in-r",
+    "href": "04_SingleDataset/04_SingleDataset.html#logical-operators-in-r",
+    "title": "Working with a single dataset",
+    "section": "Logical operators in R",
+    "text": "Logical operators in R\n\n\n\n\n\n\n\n\n\n\n\noperator\ndefinition\n\noperator\ndefinition\n\n\n\n\n&lt;\nless than\n\nx & y\nx AND y\n\n\n&lt;=\nless than or equal to\n\nx | y\nx OR y\n\n\n&gt;\ngreater than\n\nis.na(x)\ntest if x is NA\n\n\n&gt;=\ngreater than or equal to\n\n!is.na(x)\ntest if x is not NA\n\n\n==\nexactly equal to\n\nx %in% y\ntest if x is in y\n\n\n!=\nnot equal to\n\n!(x %in% y)\ntest if x is not in y"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#distinct-to-filter-for-unique-rows",
+    "href": "04_SingleDataset/04_SingleDataset.html#distinct-to-filter-for-unique-rows",
+    "title": "Working with a single dataset",
+    "section": "distinct to filter for unique rows",
+    "text": "distinct to filter for unique rows\n… and arrange to order alphabetically\n\n\npenguins %&gt;%\n  distinct(species) %&gt;%\n  arrange(species)\n\n# A tibble: 3 × 1\n  species  \n  &lt;fct&gt;    \n1 Adelie   \n2 Chinstrap\n3 Gentoo   \n\n\n\n\n\npenguins %&gt;%\n  distinct(species, island) %&gt;%\n  arrange(species, island)\n\n# A tibble: 5 × 2\n  species   island   \n  &lt;fct&gt;     &lt;fct&gt;    \n1 Adelie    Biscoe   \n2 Adelie    Dream    \n3 Adelie    Torgersen\n4 Chinstrap Dream    \n5 Gentoo    Biscoe"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#count-to-create-frequency-tables",
+    "href": "04_SingleDataset/04_SingleDataset.html#count-to-create-frequency-tables",
+    "title": "Working with a single dataset",
+    "section": "count to create frequency tables",
+    "text": "count to create frequency tables\n\nAlphabetical ordering by default \n\npenguins %&gt;%\n  count(species)\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n3 Gentoo      124\n\n\n\n\nOrder by descending frequency \n\npenguins %&gt;%\n  count(species, sort = TRUE)\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Gentoo      124\n3 Chinstrap    68"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#count-and-arrange",
+    "href": "04_SingleDataset/04_SingleDataset.html#count-and-arrange",
+    "title": "Working with a single dataset",
+    "section": "count and arrange",
+    "text": "count and arrange\n\nArrange by ascending frequency order\n\npenguins %&gt;%\n  count(species) %&gt;%\n  arrange(n)\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Chinstrap    68\n2 Gentoo      124\n3 Adelie      152\n\n\n\n\nArrange by descending frequency order\n\npenguins %&gt;%\n  count(species) %&gt;%\n  arrange(desc(n))\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Gentoo      124\n3 Chinstrap    68\n\n\nsame output as sort = TRUE"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#count-for-multiple-variables",
+    "href": "04_SingleDataset/04_SingleDataset.html#count-for-multiple-variables",
+    "title": "Working with a single dataset",
+    "section": "count for multiple variables",
+    "text": "count for multiple variables\n\npenguins %&gt;%\n  count(species,island) \n\n# A tibble: 5 × 3\n  species   island        n\n  &lt;fct&gt;     &lt;fct&gt;     &lt;int&gt;\n1 Adelie    Biscoe       44\n2 Adelie    Dream        56\n3 Adelie    Torgersen    52\n4 Chinstrap Dream        68\n5 Gentoo    Biscoe      124"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#order-matters-when-you-count",
+    "href": "04_SingleDataset/04_SingleDataset.html#order-matters-when-you-count",
+    "title": "Working with a single dataset",
+    "section": "order matters when you count",
+    "text": "order matters when you count\n\nspecies first\n\npenguins %&gt;%\n  count(species,island) \n\n# A tibble: 5 × 3\n  species   island        n\n  &lt;fct&gt;     &lt;fct&gt;     &lt;int&gt;\n1 Adelie    Biscoe       44\n2 Adelie    Dream        56\n3 Adelie    Torgersen    52\n4 Chinstrap Dream        68\n5 Gentoo    Biscoe      124\n\n\n\n\nisland first\n\npenguins %&gt;%\n  count(island,species) \n\n# A tibble: 5 × 3\n  island    species       n\n  &lt;fct&gt;     &lt;fct&gt;     &lt;int&gt;\n1 Biscoe    Adelie       44\n2 Biscoe    Gentoo      124\n3 Dream     Adelie       56\n4 Dream     Chinstrap    68\n5 Torgersen Adelie       52"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#mutate-to-add-a-new-variable",
+    "href": "04_SingleDataset/04_SingleDataset.html#mutate-to-add-a-new-variable",
+    "title": "Working with a single dataset",
+    "section": "mutate to add a new variable",
+    "text": "mutate to add a new variable\n\npenguins %&gt;%\n  mutate(bill_ratio = bill_len / bill_dep) %&gt;%\n  select(species:bill_dep,bill_ratio) %&gt;%\n  arrange(desc(bill_ratio))\n\n# A tibble: 344 × 5\n   species island bill_len bill_dep bill_ratio\n   &lt;fct&gt;   &lt;fct&gt;     &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;\n 1 Gentoo  Biscoe     51.3     14.2       3.61\n 2 Gentoo  Biscoe     50.2     14.3       3.51\n 3 Gentoo  Biscoe     59.6     17         3.51\n 4 Gentoo  Biscoe     46.1     13.2       3.49\n 5 Gentoo  Biscoe     54.3     15.7       3.46\n 6 Gentoo  Biscoe     48.7     14.1       3.45\n 7 Gentoo  Biscoe     47.2     13.7       3.45\n 8 Gentoo  Biscoe     46.5     13.5       3.44\n 9 Gentoo  Biscoe     55.1     16         3.44\n10 Gentoo  Biscoe     48.5     14.1       3.44\n# ℹ 334 more rows"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#small-and-large-bill-ratios",
+    "href": "04_SingleDataset/04_SingleDataset.html#small-and-large-bill-ratios",
+    "title": "Working with a single dataset",
+    "section": "Small and large bill ratios",
+    "text": "Small and large bill ratios\n\n\npenguins %&gt;%\n  mutate(bill_ratio = bill_len / bill_dep) %&gt;%\n  select(species,bill_ratio) %&gt;%\n  filter(bill_ratio &lt; 2)\n\n# A tibble: 35 × 2\n   species bill_ratio\n   &lt;fct&gt;        &lt;dbl&gt;\n 1 Adelie        1.90\n 2 Adelie        1.91\n 3 Adelie        1.88\n 4 Adelie        1.82\n 5 Adelie        1.64\n 6 Adelie        1.87\n 7 Adelie        1.87\n 8 Adelie        1.87\n 9 Adelie        1.86\n10 Adelie        1.94\n# ℹ 25 more rows\n\n\n\n\npenguins %&gt;%\n  mutate(bill_ratio = bill_len / bill_dep) %&gt;%\n  select(species,bill_ratio) %&gt;%\n  filter(bill_ratio &gt; 3)\n\n# A tibble: 109 × 2\n   species bill_ratio\n   &lt;fct&gt;        &lt;dbl&gt;\n 1 Gentoo        3.49\n 2 Gentoo        3.07\n 3 Gentoo        3.45\n 4 Gentoo        3.29\n 5 Gentoo        3.28\n 6 Gentoo        3.44\n 7 Gentoo        3.11\n 8 Gentoo        3.05\n 9 Gentoo        3.23\n10 Gentoo        3.04\n# ℹ 99 more rows"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#mutate-based-on-criteria",
+    "href": "04_SingleDataset/04_SingleDataset.html#mutate-based-on-criteria",
+    "title": "Working with a single dataset",
+    "section": "mutate based on criteria",
+    "text": "mutate based on criteria\n\npenguins %&gt;%\n  mutate(bill_ratio = bill_len / bill_dep,\n         ratio_class = ifelse(bill_ratio &lt; 2, \"small\", \"large\")) %&gt;%\n  count(species,ratio_class)\n\n# A tibble: 6 × 3\n  species   ratio_class     n\n  &lt;fct&gt;     &lt;chr&gt;       &lt;int&gt;\n1 Adelie    large         116\n2 Adelie    small          35\n3 Adelie    &lt;NA&gt;            1\n4 Chinstrap large          68\n5 Gentoo    large         123\n6 Gentoo    &lt;NA&gt;            1"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#mutate-based-on-criteria-cont.",
+    "href": "04_SingleDataset/04_SingleDataset.html#mutate-based-on-criteria-cont.",
+    "title": "Working with a single dataset",
+    "section": "mutate based on criteria (cont.)",
+    "text": "mutate based on criteria (cont.)\n\npenguins %&gt;%\n  mutate(bill_ratio = bill_len / bill_dep,\n         ratio_class = case_when(bill_ratio &lt; 2 ~ \"small\",\n                                 bill_ratio &gt; 3 ~ \"large\",\n                                 TRUE ~ \"medium\")) %&gt;%\n  count(species,ratio_class)\n\n# A tibble: 6 × 3\n  species   ratio_class     n\n  &lt;fct&gt;     &lt;chr&gt;       &lt;int&gt;\n1 Adelie    medium        117\n2 Adelie    small          35\n3 Chinstrap large           1\n4 Chinstrap medium         67\n5 Gentoo    large         108\n6 Gentoo    medium         16"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#case_when-overview",
+    "href": "04_SingleDataset/04_SingleDataset.html#case_when-overview",
+    "title": "Working with a single dataset",
+    "section": "case_when overview",
+    "text": "case_when overview\n\nMultiple if/else statements in a single easy to read format\nAssessed in order\nIf no .default or TRUE statement provided will result in missing data\n\n\npenguins %&gt;%\n  mutate(bill_ratio = bill_len / bill_dep,\n         ratio_class = case_when(bill_ratio &lt; 2 ~ \"small\",\n                                 bill_ratio &gt; 3 ~ \"large\")) %&gt;%\n  count(species,ratio_class)\n\n# A tibble: 6 × 3\n  species   ratio_class     n\n  &lt;fct&gt;     &lt;chr&gt;       &lt;int&gt;\n1 Adelie    small          35\n2 Adelie    &lt;NA&gt;          117\n3 Chinstrap large           1\n4 Chinstrap &lt;NA&gt;           67\n5 Gentoo    large         108\n6 Gentoo    &lt;NA&gt;           16"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#case_when---final-else-statement",
+    "href": "04_SingleDataset/04_SingleDataset.html#case_when---final-else-statement",
+    "title": "Working with a single dataset",
+    "section": "case_when - final else statement",
+    "text": "case_when - final else statement\n\npenguins %&gt;%\n  mutate(bill_ratio = bill_len / bill_dep,\n         ratio_class = case_when(bill_ratio &lt; 2 ~ \"small\",\n                                 bill_ratio &gt; 3 ~ \"large\",\n                                 TRUE ~ \"medium\")) %&gt;%\n  count(species,ratio_class)\n\n\n\npenguins %&gt;%\n  mutate(bill_ratio = bill_len / bill_dep,\n         ratio_class = case_when(.default = \"medium\",\n                                 bill_ratio &lt; 2 ~ \"small\",\n                                 bill_ratio &gt; 3 ~ \"large\")) %&gt;%\n  count(species,ratio_class)"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#case_when-order-matters",
+    "href": "04_SingleDataset/04_SingleDataset.html#case_when-order-matters",
+    "title": "Working with a single dataset",
+    "section": "case_when order matters",
+    "text": "case_when order matters\n\npenguins %&gt;%\n  mutate(bill_ratio = bill_len / bill_dep,\n         ratio_class = case_when(bill_ratio &lt; 2 ~ \"small\",\n                                 bill_ratio &lt; 3 ~ \"medium\",\n                                 TRUE ~ \"large\")) %&gt;%\n  count(species,ratio_class)\n\n\n\npenguins %&gt;%\n  mutate(bill_ratio = bill_len / bill_dep,\n         ratio_class = case_when(bill_ratio &lt; 3 ~ \"medium\",\n                                 bill_ratio &lt; 2 ~ \"small\",\n                                 TRUE ~ \"large\")) %&gt;%\n  count(species,ratio_class)\n\n\nleft side: - if bill_ratio &lt; 2 then small - else if bill_ratio &lt; 3 then medium - else then large\nright side: - if bill_ration &lt; 3 then medium - else if bill_ratio &lt; 2 then small - The small category will never be utilized since the medium will take all &lt; 2 automatically"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#case_when-order-matters-cont.",
+    "href": "04_SingleDataset/04_SingleDataset.html#case_when-order-matters-cont.",
+    "title": "Working with a single dataset",
+    "section": "case_when order matters (cont.)",
+    "text": "case_when order matters (cont.)\n\n\ncase_when(bill_ratio &lt; 2 ~ \"small\",\n          bill_ratio &lt; 3 ~ \"medium\",\n          TRUE ~ \"large\"))\n\n\n\n# A tibble: 7 × 3\n  species   ratio_class     n\n  &lt;fct&gt;     &lt;chr&gt;       &lt;int&gt;\n1 Adelie    large           1\n2 Adelie    medium        116\n3 Adelie    small          35\n4 Chinstrap large           1\n5 Chinstrap medium         67\n6 Gentoo    large         109\n7 Gentoo    medium         15\n\n\n\n\ncase_when(bill_ratio &lt; 3 ~ \"medium\",\n          bill_ratio &lt; 2 ~ \"small\",\n          TRUE ~ \"large\"))\n\n\n\n# A tibble: 6 × 3\n  species   ratio_class     n\n  &lt;fct&gt;     &lt;chr&gt;       &lt;int&gt;\n1 Adelie    large           1\n2 Adelie    medium        151\n3 Chinstrap large           1\n4 Chinstrap medium         67\n5 Gentoo    large         109\n6 Gentoo    medium         15"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#case_when-order-matters-cont.-1",
+    "href": "04_SingleDataset/04_SingleDataset.html#case_when-order-matters-cont.-1",
+    "title": "Working with a single dataset",
+    "section": "case_when order matters (cont.)",
+    "text": "case_when order matters (cont.)\n\npenguins %&gt;%\n  mutate(bill_ratio = bill_len / bill_dep,\n         ratio_class = case_when(bill_ratio &lt; 2 & sex == \"female\" ~ \"small-female\",\n                                 bill_ratio &lt; 2 ~ \"small-male\",\n                                 bill_ratio &lt; 3 & sex == \"female\" ~ \"medium-female\",\n                                 bill_ratio &lt; 3 ~ \"medium-male\",\n                                 sex == \"female\" ~ \"large-female\",\n                                 TRUE ~ \"large-male\")) %&gt;%\n  count(sex,ratio_class)\n\n\npenguins %&gt;%\n  mutate(bill_ratio = bill_len / bill_dep,\n         ratio_class = case_when(bill_ratio &lt; 2 ~ \"small-male\",\n                                 bill_ratio &lt; 2 & sex == \"female\" ~ \"small-female\",\n                                 bill_ratio &lt; 3 ~ \"medium-male\",\n                                 bill_ratio &lt; 3 & sex == \"female\" ~ \"medium-female\",\n                                 sex == \"female\" ~ \"large-female\",\n                                 TRUE ~ \"large-male\")) %&gt;%\n  count(sex,ratio_class)"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#case_when-order-matters-cont.-2",
+    "href": "04_SingleDataset/04_SingleDataset.html#case_when-order-matters-cont.-2",
+    "title": "Working with a single dataset",
+    "section": "case_when order matters (cont.)",
+    "text": "case_when order matters (cont.)\n\n\ncase_when(bill_ratio &lt; 2 & sex == \"female\" ~ \"small-female\",\n          bill_ratio &lt; 2 ~ \"small-male\",\n          bill_ratio &lt; 3 & sex == \"female\" ~ \"medium-female\",\n          bill_ratio &lt; 3 ~ \"medium-male\",\n          sex == \"female\" ~ \"large-female\",\n          TRUE ~ \"large-male\")\n\n\n\n# A tibble: 9 × 3\n  sex    ratio_class       n\n  &lt;fct&gt;  &lt;chr&gt;         &lt;int&gt;\n1 female large-female     55\n2 female medium-female    93\n3 female small-female     17\n4 male   large-male       51\n5 male   medium-male     101\n6 male   small-male       16\n7 &lt;NA&gt;   large-male        5\n8 &lt;NA&gt;   medium-male       4\n9 &lt;NA&gt;   small-male        2\n\n\n\n\ncase_when(bill_ratio &lt; 2 ~ \"small-male\",\n          bill_ratio &lt; 2 & sex == \"female\" ~ \"small-female\",\n          bill_ratio &lt; 3 ~ \"medium-male\",\n          bill_ratio &lt; 3 & sex == \"female\" ~ \"medium-female\",\n          sex == \"female\" ~ \"large-female\",\n          TRUE ~ \"large-male\")\n\n\n\n# A tibble: 9 × 3\n  sex    ratio_class      n\n  &lt;fct&gt;  &lt;chr&gt;        &lt;int&gt;\n1 female large-female    55\n2 female medium-male     93\n3 female small-male      17\n4 male   large-male      51\n5 male   medium-male    101\n6 male   small-male      16\n7 &lt;NA&gt;   large-male       5\n8 &lt;NA&gt;   medium-male      4\n9 &lt;NA&gt;   small-male       2"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#case_when-missing-data",
+    "href": "04_SingleDataset/04_SingleDataset.html#case_when-missing-data",
+    "title": "Working with a single dataset",
+    "section": "case_when missing data",
+    "text": "case_when missing data\n\npenguins %&gt;%\n  mutate(bill_ratio = bill_len / bill_dep,\n         ratio_class = case_when(bill_ratio &lt; 2 & sex == \"female\" ~ \"small-female\",\n                                 bill_ratio &lt; 2 & sex == \"male\" ~ \"small-male\",\n                                 bill_ratio &lt; 3 & sex == \"female\" ~ \"medium-female\",\n                                 bill_ratio &lt; 3 & sex == \"male\" ~ \"medium-male\",\n                                 sex == \"female\" ~ \"large-female\",\n                                 sex == \"male\" ~ \"large-male\")) %&gt;%\n  count(sex,ratio_class)\n\n# A tibble: 7 × 3\n  sex    ratio_class       n\n  &lt;fct&gt;  &lt;chr&gt;         &lt;int&gt;\n1 female large-female     55\n2 female medium-female    93\n3 female small-female     17\n4 male   large-male       51\n5 male   medium-male     101\n6 male   small-male       16\n7 &lt;NA&gt;   &lt;NA&gt;             11"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#summarize-for-summary-stats",
+    "href": "04_SingleDataset/04_SingleDataset.html#summarize-for-summary-stats",
+    "title": "Working with a single dataset",
+    "section": "summarize for summary stats",
+    "text": "summarize for summary stats\n\n\nFun fact: summarize and summarise both work\nHadley Wickham, creator of the tidyverse is from New Zealand\nmutate: observation level\nsummarize: aggregation of data\n\n\n\n\npenguins %&gt;% \n  summarize(avg_bill_len = mean(bill_len, na.rm = TRUE))\n\n# A tibble: 1 × 1\n  avg_bill_len\n         &lt;dbl&gt;\n1         43.9"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#group_by-for-grouped-operations",
+    "href": "04_SingleDataset/04_SingleDataset.html#group_by-for-grouped-operations",
+    "title": "Working with a single dataset",
+    "section": "group_by for grouped operations",
+    "text": "group_by for grouped operations\n\npenguins %&gt;% \n  group_by(species) %&gt;% \n  summarize(avg_bill_len = mean(bill_len, na.rm = TRUE))\n\n# A tibble: 3 × 2\n  species   avg_bill_len\n  &lt;fct&gt;            &lt;dbl&gt;\n1 Adelie            38.8\n2 Chinstrap         48.8\n3 Gentoo            47.5"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#group_by---multiple-variables",
+    "href": "04_SingleDataset/04_SingleDataset.html#group_by---multiple-variables",
+    "title": "Working with a single dataset",
+    "section": "group_by - multiple variables",
+    "text": "group_by - multiple variables\n\npenguins %&gt;% \n  group_by(species,island) %&gt;% \n  summarize(avg_bill_len = mean(bill_len, na.rm = TRUE))\n\n# A tibble: 5 × 3\n# Groups:   species [3]\n  species   island    avg_bill_len\n  &lt;fct&gt;     &lt;fct&gt;            &lt;dbl&gt;\n1 Adelie    Biscoe            39.0\n2 Adelie    Dream             38.5\n3 Adelie    Torgersen         39.0\n4 Chinstrap Dream             48.8\n5 Gentoo    Biscoe            47.5"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#calculating-frequencies",
+    "href": "04_SingleDataset/04_SingleDataset.html#calculating-frequencies",
+    "title": "Working with a single dataset",
+    "section": "Calculating frequencies",
+    "text": "Calculating frequencies\n\ncount is simply short for group_by then determine frequencies\nthe following two results give the same result\n\n\n\n\npenguins %&gt;% \n  group_by(species) %&gt;% \n  summarize(n = n())\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n3 Gentoo      124\n\n\n\n\npenguins %&gt;% \n  count(species)\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n3 Gentoo      124"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#multiple-summary-statistics",
+    "href": "04_SingleDataset/04_SingleDataset.html#multiple-summary-statistics",
+    "title": "Working with a single dataset",
+    "section": "Multiple summary statistics",
+    "text": "Multiple summary statistics\nsummarize can be used for multiple summary statistics as well\n\npenguins %&gt;%\n  summarize(\n    min_bill_len = min(bill_len, na.rm = TRUE),\n    mean_bill_len = mean(bill_len, na.rm = TRUE),\n    median_bill_len = median(bill_len, na.rm = TRUE),\n    max_bill_len = max(bill_len, na.rm = TRUE)\n    )\n\n# A tibble: 1 × 4\n  min_bill_len mean_bill_len median_bill_len max_bill_len\n         &lt;dbl&gt;         &lt;dbl&gt;           &lt;dbl&gt;        &lt;dbl&gt;\n1         32.1          43.9            44.4         59.6"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#summarize-with-missing-data",
+    "href": "04_SingleDataset/04_SingleDataset.html#summarize-with-missing-data",
+    "title": "Working with a single dataset",
+    "section": "summarize with missing data",
+    "text": "summarize with missing data\n\npenguins %&gt;% \n  group_by(species) %&gt;% \n  summarize(avg_bill_len = mean(bill_len))\n\n# A tibble: 3 × 2\n  species   avg_bill_len\n  &lt;fct&gt;            &lt;dbl&gt;\n1 Adelie            NA  \n2 Chinstrap         48.8\n3 Gentoo            NA  \n\n\n\n\npenguins %&gt;% \n  group_by(species) %&gt;% \n  summarize(avg_bill_len = mean(bill_len, na.rm = TRUE))\n\n# A tibble: 3 × 2\n  species   avg_bill_len\n  &lt;fct&gt;            &lt;dbl&gt;\n1 Adelie            38.8\n2 Chinstrap         48.8\n3 Gentoo            47.5"
+  },
+  {
+    "objectID": "04_SingleDataset/04_SingleDataset.html#summarize-with-missing-data-1",
+    "href": "04_SingleDataset/04_SingleDataset.html#summarize-with-missing-data-1",
+    "title": "Working with a single dataset",
+    "section": "summarize with missing data",
+    "text": "summarize with missing data\n\npenguins %&gt;%\n  filter(!is.na(bill_len)) %&gt;% \n  group_by(species) %&gt;% \n  summarize(avg_bill_len = mean(bill_len))\n\n# A tibble: 3 × 2\n  species   avg_bill_len\n  &lt;fct&gt;            &lt;dbl&gt;\n1 Adelie            38.8\n2 Chinstrap         48.8\n3 Gentoo            47.5"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#inputs",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#inputs",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "Inputs",
+    "text": "Inputs\n\nprofessionsdatesworks\n\n\n\n\n# A tibble: 10 × 2\n   name               profession                        \n   &lt;chr&gt;              &lt;chr&gt;                             \n 1 Ada Lovelace       Mathematician                     \n 2 Marie Curie        Physicist and Chemist             \n 3 Janaki Ammal       Botanist                          \n 4 Chien-Shiung Wu    Physicist                         \n 5 Katherine Johnson  Mathematician                     \n 6 Rosalind Franklin  Chemist                           \n 7 Vera Rubin         Astronomer                        \n 8 Gladys West        Mathematician                     \n 9 Flossie Wong-Staal Virologist and Molecular Biologist\n10 Jennifer Doudna    Biochemist                        \n\n\n\n\n\n\n# A tibble: 8 × 3\n  name               birth_year death_year\n  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt;\n1 Janaki Ammal             1897       1984\n2 Chien-Shiung Wu          1912       1997\n3 Katherine Johnson        1918       2020\n4 Rosalind Franklin        1920       1958\n5 Vera Rubin               1928       2016\n6 Gladys West              1930         NA\n7 Flossie Wong-Staal       1947         NA\n8 Jennifer Doudna          1964         NA\n\n\n\n\n\n\n# A tibble: 9 × 2\n  name               known_for                                       \n  &lt;chr&gt;              &lt;chr&gt;                                           \n1 Ada Lovelace       first computer algorithm                        \n2 Marie Curie        theory of radioactivity,  discovery of elements…\n3 Janaki Ammal       hybrid species, biodiversity protection         \n4 Chien-Shiung Wu    confim and refine theory of radioactive beta de…\n5 Katherine Johnson  calculations of orbital mechanics critical to s…\n6 Vera Rubin         existence of dark matter                        \n7 Gladys West        mathematical modeling of the shape of the Earth…\n8 Flossie Wong-Staal first scientist to clone HIV and create a map o…\n9 Jennifer Doudna    one of the primary developers of CRISPR, a grou…\n\n\n\n\n\n\nSource: Discover Magazine"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#desired-output",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#desired-output",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "Desired output",
+    "text": "Desired output\n\n\n# A tibble: 10 × 5\n   name               profession      birth_year death_year known_for\n   &lt;chr&gt;              &lt;chr&gt;                &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    \n 1 Ada Lovelace       Mathematician           NA         NA first co…\n 2 Marie Curie        Physicist and …         NA         NA theory o…\n 3 Janaki Ammal       Botanist              1897       1984 hybrid s…\n 4 Chien-Shiung Wu    Physicist             1912       1997 confim a…\n 5 Katherine Johnson  Mathematician         1918       2020 calculat…\n 6 Rosalind Franklin  Chemist               1920       1958 &lt;NA&gt;     \n 7 Vera Rubin         Astronomer            1928       2016 existenc…\n 8 Gladys West        Mathematician         1930         NA mathemat…\n 9 Flossie Wong-Staal Virologist and…       1947         NA first sc…\n10 Jennifer Doudna    Biochemist            1964         NA one of t…"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#inputs-reminder",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#inputs-reminder",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "Inputs, reminder",
+    "text": "Inputs, reminder\n\n\nnames(professions)\n\n[1] \"name\"       \"profession\"\n\nnames(dates)\n\n[1] \"name\"       \"birth_year\"\n[3] \"death_year\"\n\nnames(works)\n\n[1] \"name\"      \"known_for\"\n\n\n\n\nnrow(professions)\n\n[1] 10\n\nnrow(dates)\n\n[1] 8\n\nnrow(works)\n\n[1] 9"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#joining-data-frames-1",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#joining-data-frames-1",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "Joining data frames",
+    "text": "Joining data frames\n\nsomething_join(x, y)\n\n\nleft_join(): all rows from x\nright_join(): all rows from y\nfull_join(): all rows from both x and y\nsemi_join(): all rows from x where there are matching values in y, keeping just columns from x\ninner_join(): all rows from x where there are matching values in y, return all combination of multiple matches in the case of multiple matches\nanti_join(): return all rows from x where there are not matching values in y, never duplicate rows of x\n…"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#setup",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#setup",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "Setup",
+    "text": "Setup\nFor the next few slides…\n\n\n\n# A tibble: 3 × 2\n     id value_x\n  &lt;dbl&gt; &lt;chr&gt;  \n1     1 x1     \n2     2 x2     \n3     3 x3     \n\n\n\n\n\n# A tibble: 3 × 2\n     id value_y\n  &lt;dbl&gt; &lt;chr&gt;  \n1     1 y1     \n2     2 y2     \n3     4 y4"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#left_join",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#left_join",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "left_join()",
+    "text": "left_join()\n\n\n\n\n\n\n\n\n\n\n\n\nleft_join(x, y)\n\n# A tibble: 3 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     3 x3      &lt;NA&gt;"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#left_join-1",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#left_join-1",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "left_join()",
+    "text": "left_join()\n\nprofessions %&gt;%\n  left_join(dates) \n\n# A tibble: 10 × 4\n   name               profession                birth_year death_year\n   &lt;chr&gt;              &lt;chr&gt;                          &lt;dbl&gt;      &lt;dbl&gt;\n 1 Ada Lovelace       Mathematician                     NA         NA\n 2 Marie Curie        Physicist and Chemist             NA         NA\n 3 Janaki Ammal       Botanist                        1897       1984\n 4 Chien-Shiung Wu    Physicist                       1912       1997\n 5 Katherine Johnson  Mathematician                   1918       2020\n 6 Rosalind Franklin  Chemist                         1920       1958\n 7 Vera Rubin         Astronomer                      1928       2016\n 8 Gladys West        Mathematician                   1930         NA\n 9 Flossie Wong-Staal Virologist and Molecular…       1947         NA\n10 Jennifer Doudna    Biochemist                      1964         NA"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#right_join",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#right_join",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "right_join()",
+    "text": "right_join()\n\n\n\n\n\n\n\n\n\n\n\n\nright_join(x, y)\n\n# A tibble: 3 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     4 &lt;NA&gt;    y4"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#right_join-1",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#right_join-1",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "right_join()",
+    "text": "right_join()\n\nprofessions %&gt;%\n  right_join(dates)\n\n# A tibble: 8 × 4\n  name               profession                 birth_year death_year\n  &lt;chr&gt;              &lt;chr&gt;                           &lt;dbl&gt;      &lt;dbl&gt;\n1 Janaki Ammal       Botanist                         1897       1984\n2 Chien-Shiung Wu    Physicist                        1912       1997\n3 Katherine Johnson  Mathematician                    1918       2020\n4 Rosalind Franklin  Chemist                          1920       1958\n5 Vera Rubin         Astronomer                       1928       2016\n6 Gladys West        Mathematician                    1930         NA\n7 Flossie Wong-Staal Virologist and Molecular …       1947         NA\n8 Jennifer Doudna    Biochemist                       1964         NA"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#full_join",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#full_join",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "full_join()",
+    "text": "full_join()\n\n\n\n\n\n\n\n\n\n\n\n\nfull_join(x, y)\n\n# A tibble: 4 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     3 x3      &lt;NA&gt;   \n4     4 &lt;NA&gt;    y4"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#full_join-1",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#full_join-1",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "full_join()",
+    "text": "full_join()\n\ndates %&gt;%\n  full_join(works)\n\n# A tibble: 10 × 4\n   name               birth_year death_year known_for                \n   &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;                    \n 1 Janaki Ammal             1897       1984 hybrid species, biodiver…\n 2 Chien-Shiung Wu          1912       1997 confim and refine theory…\n 3 Katherine Johnson        1918       2020 calculations of orbital …\n 4 Rosalind Franklin        1920       1958 &lt;NA&gt;                     \n 5 Vera Rubin               1928       2016 existence of dark matter \n 6 Gladys West              1930         NA mathematical modeling of…\n 7 Flossie Wong-Staal       1947         NA first scientist to clone…\n 8 Jennifer Doudna          1964         NA one of the primary devel…\n 9 Ada Lovelace               NA         NA first computer algorithm \n10 Marie Curie                NA         NA theory of radioactivity,…"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#inner_join",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#inner_join",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "inner_join()",
+    "text": "inner_join()\n\n\n\n\n\n\n\n\n\n\n\n\ninner_join(x, y)\n\n# A tibble: 2 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#inner_join-1",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#inner_join-1",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "inner_join()",
+    "text": "inner_join()\n\ndates %&gt;%\n  inner_join(works)\n\n# A tibble: 7 × 4\n  name               birth_year death_year known_for                 \n  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;                     \n1 Janaki Ammal             1897       1984 hybrid species, biodivers…\n2 Chien-Shiung Wu          1912       1997 confim and refine theory …\n3 Katherine Johnson        1918       2020 calculations of orbital m…\n4 Vera Rubin               1928       2016 existence of dark matter  \n5 Gladys West              1930         NA mathematical modeling of …\n6 Flossie Wong-Staal       1947         NA first scientist to clone …\n7 Jennifer Doudna          1964         NA one of the primary develo…"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#semi_join",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#semi_join",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "semi_join()",
+    "text": "semi_join()\n\n\n\n\n\n\n\n\n\n\n\n\nsemi_join(x, y)\n\n# A tibble: 2 × 2\n     id value_x\n  &lt;dbl&gt; &lt;chr&gt;  \n1     1 x1     \n2     2 x2"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#semi_join-1",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#semi_join-1",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "semi_join()",
+    "text": "semi_join()\n\ndates %&gt;%\n  semi_join(works)\n\n# A tibble: 7 × 3\n  name               birth_year death_year\n  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt;\n1 Janaki Ammal             1897       1984\n2 Chien-Shiung Wu          1912       1997\n3 Katherine Johnson        1918       2020\n4 Vera Rubin               1928       2016\n5 Gladys West              1930         NA\n6 Flossie Wong-Staal       1947         NA\n7 Jennifer Doudna          1964         NA"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#anti_join",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#anti_join",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "anti_join()",
+    "text": "anti_join()\n\n\n\n\n\n\n\n\n\n\n\n\nanti_join(x, y)\n\n# A tibble: 1 × 2\n     id value_x\n  &lt;dbl&gt; &lt;chr&gt;  \n1     3 x3"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#anti_join-1",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#anti_join-1",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "anti_join()",
+    "text": "anti_join()\n\ndates %&gt;%\n  anti_join(works)\n\n# A tibble: 1 × 3\n  name              birth_year death_year\n  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt;\n1 Rosalind Franklin       1920       1958"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#putting-it-altogether",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#putting-it-altogether",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "Putting it altogether",
+    "text": "Putting it altogether\n\nprofessions %&gt;%\n  left_join(dates) %&gt;%\n  left_join(works)\n\n# A tibble: 10 × 5\n   name               profession      birth_year death_year known_for\n   &lt;chr&gt;              &lt;chr&gt;                &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    \n 1 Ada Lovelace       Mathematician           NA         NA first co…\n 2 Marie Curie        Physicist and …         NA         NA theory o…\n 3 Janaki Ammal       Botanist              1897       1984 hybrid s…\n 4 Chien-Shiung Wu    Physicist             1912       1997 confim a…\n 5 Katherine Johnson  Mathematician         1918       2020 calculat…\n 6 Rosalind Franklin  Chemist               1920       1958 &lt;NA&gt;     \n 7 Vera Rubin         Astronomer            1928       2016 existenc…\n 8 Gladys West        Mathematician         1930         NA mathemat…\n 9 Flossie Wong-Staal Virologist and…       1947         NA first sc…\n10 Jennifer Doudna    Biochemist            1964         NA one of t…"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#putting-it-altogether---better-syntax",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#putting-it-altogether---better-syntax",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "Putting it altogether - better syntax",
+    "text": "Putting it altogether - better syntax\n\nprofessions %&gt;%\n  left_join(dates, by=\"name\") %&gt;%\n  left_join(works, by=\"name\")\n\n# A tibble: 10 × 5\n   name               profession      birth_year death_year known_for\n   &lt;chr&gt;              &lt;chr&gt;                &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    \n 1 Ada Lovelace       Mathematician           NA         NA first co…\n 2 Marie Curie        Physicist and …         NA         NA theory o…\n 3 Janaki Ammal       Botanist              1897       1984 hybrid s…\n 4 Chien-Shiung Wu    Physicist             1912       1997 confim a…\n 5 Katherine Johnson  Mathematician         1918       2020 calculat…\n 6 Rosalind Franklin  Chemist               1920       1958 &lt;NA&gt;     \n 7 Vera Rubin         Astronomer            1928       2016 existenc…\n 8 Gladys West        Mathematician         1930         NA mathemat…\n 9 Flossie Wong-Staal Virologist and…       1947         NA first sc…\n10 Jennifer Doudna    Biochemist            1964         NA one of t…"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#set-up-for-multiple-variables-join",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#set-up-for-multiple-variables-join",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "Set-up for multiple variables join",
+    "text": "Set-up for multiple variables join\n\n\nx_multi &lt;- x %&gt;% \n  mutate(id2=c(4,5,6)) %&gt;% \n  select(id,id2,value_x)\n\nx_multi\n\n# A tibble: 3 × 3\n     id   id2 value_x\n  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  \n1     1     4 x1     \n2     2     5 x2     \n3     3     6 x3     \n\n\n\n\ny_multi &lt;- y %&gt;% \n  mutate(id2=c(4,6,8)) %&gt;% \n  select(id,id2,value_y)\n\ny_multi\n\n# A tibble: 3 × 3\n     id   id2 value_y\n  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  \n1     1     4 y1     \n2     2     6 y2     \n3     4     8 y4"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#left-and-right-joins-with-multiple-variables",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#left-and-right-joins-with-multiple-variables",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "Left and right joins with multiple variables",
+    "text": "Left and right joins with multiple variables\n\n\nx_multi %&gt;% \n  left_join(y_multi,\n            by=c(\"id\",\"id2\"))\n\n# A tibble: 3 × 4\n     id   id2 value_x value_y\n  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1     4 x1      y1     \n2     2     5 x2      &lt;NA&gt;   \n3     3     6 x3      &lt;NA&gt;   \n\n\n\n\n\nx_multi %&gt;% \n  right_join(y_multi,\n             by=c(\"id\",\"id2\"))\n\n# A tibble: 3 × 4\n     id   id2 value_x value_y\n  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1     4 x1      y1     \n2     2     6 &lt;NA&gt;    y2     \n3     4     8 &lt;NA&gt;    y4"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#full-and-inner-joins-with-multiple-variables",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#full-and-inner-joins-with-multiple-variables",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "Full and inner joins with multiple variables",
+    "text": "Full and inner joins with multiple variables\n\n\nx_multi %&gt;% \n  full_join(y_multi,\n            by=c(\"id\",\"id2\"))\n\n# A tibble: 5 × 4\n     id   id2 value_x value_y\n  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1     4 x1      y1     \n2     2     5 x2      &lt;NA&gt;   \n3     3     6 x3      &lt;NA&gt;   \n4     2     6 &lt;NA&gt;    y2     \n5     4     8 &lt;NA&gt;    y4     \n\n\n\n\n\nx_multi %&gt;% \n  inner_join(y_multi,\n             by=c(\"id\",\"id2\"))\n\n# A tibble: 1 × 4\n     id   id2 value_x value_y\n  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1     4 x1      y1"
+  },
+  {
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#semi-and-anti-joins-with-multiple-variables",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#semi-and-anti-joins-with-multiple-variables",
+    "title": "Merging/Joining Multiple Datasets",
+    "section": "Semi and anti joins with multiple variables",
+    "text": "Semi and anti joins with multiple variables\n\n\nx_multi %&gt;% \n  semi_join(y_multi,\n            by=c(\"id\",\"id2\"))\n\n# A tibble: 1 × 3\n     id   id2 value_x\n  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  \n1     1     4 x1     \n\n\n\n\n\nx_multi %&gt;% \n  anti_join(y_multi,\n            by=c(\"id\",\"id2\"))\n\n# A tibble: 2 × 3\n     id   id2 value_x\n  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  \n1     2     5 x2     \n2     3     6 x3"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#data-sales-1",
+    "href": "06_PivotingData/06_PivotingData.html#data-sales-1",
+    "title": "Pivoting Data",
+    "section": "Data: Sales",
+    "text": "Data: Sales\n\nWe have…\n\n\n# A tibble: 2 × 4\n  customer_id item_1 item_2      \n        &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;       \n1           1 bread  milk        \n2           2 milk   toilet paper\n# ℹ 1 more variable:\n#   item_3 &lt;chr&gt;\n\n\n\n\nWe want…\n\n\n# A tibble: 6 × 3\n  customer_id item_no item       \n        &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;      \n1           1 item_1  bread      \n2           1 item_2  milk       \n3           1 item_3  banana     \n4           2 item_1  milk       \n5           2 item_2  toilet pap…\n6           2 item_3  &lt;NA&gt;"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#a-grammar-of-data-tidying",
+    "href": "06_PivotingData/06_PivotingData.html#a-grammar-of-data-tidying",
+    "title": "Pivoting Data",
+    "section": "A grammar of data tidying",
+    "text": "A grammar of data tidying\n\n\n\n\n\n\n\n\n\n\n\nThe goal of tidyr is to help you tidy your data via\n\npivoting for going between wide and long data\nsplitting and combining character columns\nnesting and unnesting columns\nclarifying how NAs should be treated"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#not-this",
+    "href": "06_PivotingData/06_PivotingData.html#not-this",
+    "title": "Pivoting Data",
+    "section": "Not this…",
+    "text": "Not this…"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#but-this",
+    "href": "06_PivotingData/06_PivotingData.html#but-this",
+    "title": "Pivoting Data",
+    "section": "but this!",
+    "text": "but this!"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#wider-vs.-longer",
+    "href": "06_PivotingData/06_PivotingData.html#wider-vs.-longer",
+    "title": "Pivoting Data",
+    "section": "Wider vs. longer",
+    "text": "Wider vs. longer\n\nwider\nmore columns\n\n\n# A tibble: 2 × 4\n  customer_id item_1 item_2      \n        &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;       \n1           1 bread  milk        \n2           2 milk   toilet paper\n# ℹ 1 more variable:\n#   item_3 &lt;chr&gt;\n\n\n\n\nlonger\nmore rows\n\n\n# A tibble: 6 × 3\n  customer_id item_no item       \n        &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;      \n1           1 item_1  bread      \n2           1 item_2  milk       \n3           1 item_3  banana     \n4           2 item_1  milk       \n5           2 item_2  toilet pap…\n6           2 item_3  &lt;NA&gt;"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#pivot_longer",
+    "href": "06_PivotingData/06_PivotingData.html#pivot_longer",
+    "title": "Pivoting Data",
+    "section": "pivot_longer()",
+    "text": "pivot_longer()\n\n\ndata (as usual)\n\n\n\npivot_longer(\n  data,\n  cols, \n  names_to = \"name\", \n  values_to = \"value\"\n  )"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#pivot_longer-1",
+    "href": "06_PivotingData/06_PivotingData.html#pivot_longer-1",
+    "title": "Pivoting Data",
+    "section": "pivot_longer()",
+    "text": "pivot_longer()\n\n\ndata (as usual)\ncols: columns to pivot into longer format\n\n\n\npivot_longer(\n  data,\n  cols, \n  names_to = \"name\", \n  values_to = \"value\"\n  )"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#pivot_longer-2",
+    "href": "06_PivotingData/06_PivotingData.html#pivot_longer-2",
+    "title": "Pivoting Data",
+    "section": "pivot_longer()",
+    "text": "pivot_longer()\n\n\ndata (as usual)\ncols: columns to pivot into longer format\nnames_to: name of the column where column names of pivoted variables go (character string)\n\n\n\npivot_longer(\n  data,\n  cols, \n  names_to = \"name\", \n  values_to = \"value\"\n  )"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#pivot_longer-3",
+    "href": "06_PivotingData/06_PivotingData.html#pivot_longer-3",
+    "title": "Pivoting Data",
+    "section": "pivot_longer()",
+    "text": "pivot_longer()\n\n\ndata (as usual)\ncols: columns to pivot into longer format\nnames_to: name of the column where column names of pivoted variables go (character string)\nvalues_to: name of the column where data in pivoted variables go (character string)\n\n\n\npivot_longer(\n  data,\n  cols, \n  names_to = \"name\", \n  values_to = \"value\"\n  )"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#why-pivot",
+    "href": "06_PivotingData/06_PivotingData.html#why-pivot",
+    "title": "Pivoting Data",
+    "section": "Why pivot?",
+    "text": "Why pivot?\n\n\nLet’s say we want to determine the total cost spent by customer.\nWe have the items that each customer bought, and the cost per item.\nWill be easiest to:\n\nmake customer data long, so each row is a purchase\nmerge on the cost for each item\nsum costs by customer"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#why-pivot-1",
+    "href": "06_PivotingData/06_PivotingData.html#why-pivot-1",
+    "title": "Pivoting Data",
+    "section": "Why pivot?",
+    "text": "Why pivot?\n\n\ncustomers\n\n# A tibble: 2 × 4\n  customer_id item_1 item_2      \n        &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;       \n1           1 bread  milk        \n2           2 milk   toilet paper\n# ℹ 1 more variable:\n#   item_3 &lt;chr&gt;\n\n\n\n\nprices\n\n# A tibble: 5 × 2\n  item         price\n  &lt;chr&gt;        &lt;dbl&gt;\n1 avocado       0.5 \n2 banana        0.15\n3 bread         1   \n4 milk          0.8 \n5 toilet paper  3"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#customers-rightarrow-purchases",
+    "href": "06_PivotingData/06_PivotingData.html#customers-rightarrow-purchases",
+    "title": "Pivoting Data",
+    "section": "Customers \\(\\rightarrow\\) purchases",
+    "text": "Customers \\(\\rightarrow\\) purchases\n\n\npurchases &lt;- customers %&gt;%\n  pivot_longer( \n    cols = item_1:item_3,\n    names_to = \"item_no\",\n    values_to = \"item\"\n    ) \n\n\n\npivot variables item_1 to item_3"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#customers-rightarrow-purchases-1",
+    "href": "06_PivotingData/06_PivotingData.html#customers-rightarrow-purchases-1",
+    "title": "Pivoting Data",
+    "section": "Customers \\(\\rightarrow\\) purchases",
+    "text": "Customers \\(\\rightarrow\\) purchases\n\n\npurchases &lt;- customers %&gt;%\n  pivot_longer( \n    cols = item_1:item_3,\n    names_to = \"item_no\",\n    values_to = \"item\"\n    ) \n\n\n\npivot variables item_1 to item_3\ncolumn names -&gt; new column called item_no"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#customers-rightarrow-purchases-2",
+    "href": "06_PivotingData/06_PivotingData.html#customers-rightarrow-purchases-2",
+    "title": "Pivoting Data",
+    "section": "Customers \\(\\rightarrow\\) purchases",
+    "text": "Customers \\(\\rightarrow\\) purchases\n\n\npurchases &lt;- customers %&gt;%\n  pivot_longer( \n    cols = item_1:item_3,\n    names_to = \"item_no\",\n    values_to = \"item\"\n    ) \n\n\n\npivot variables item_1 to item_3\ncolumn names -&gt; new column called item_no\nvalues in columns -&gt; new column called item"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#customers-rightarrow-purchases-3",
+    "href": "06_PivotingData/06_PivotingData.html#customers-rightarrow-purchases-3",
+    "title": "Pivoting Data",
+    "section": "Customers \\(\\rightarrow\\) purchases",
+    "text": "Customers \\(\\rightarrow\\) purchases\n\n\npurchases &lt;- customers %&gt;%\n  pivot_longer( \n    cols = item_1:item_3,\n    names_to = \"item_no\",\n    values_to = \"item\"\n    ) \n\npurchases\n\n# A tibble: 6 × 3\n  customer_id item_no item       \n        &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;      \n1           1 item_1  bread      \n2           1 item_2  milk       \n3           1 item_3  banana     \n4           2 item_1  milk       \n5           2 item_2  toilet pap…\n6           2 item_3  &lt;NA&gt;       \n\n\n\n\npivot variables item_1 to item_3\ncolumn names -&gt; new column called item_no\nvalues in columns -&gt; new column called item"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#customers-rightarrow-purchases-4",
+    "href": "06_PivotingData/06_PivotingData.html#customers-rightarrow-purchases-4",
+    "title": "Pivoting Data",
+    "section": "Customers \\(\\rightarrow\\) purchases",
+    "text": "Customers \\(\\rightarrow\\) purchases\n\n\npurchases &lt;- customers %&gt;%\n  pivot_longer( \n    cols = item_1:item_3,\n    names_to = \"item_no\",\n    values_to = \"item\"\n    ) \n\npurchases %&gt;% \n  left_join(prices, \n            by=\"item\")\n\n# A tibble: 6 × 4\n  customer_id item_no item  price\n        &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;\n1           1 item_1  bread  1   \n2           1 item_2  milk   0.8 \n3           1 item_3  bana…  0.15\n4           2 item_1  milk   0.8 \n5           2 item_2  toil…  3   \n6           2 item_3  &lt;NA&gt;  NA   \n\n\n\n\npivot variables item_1 to item_3\ncolumn names -&gt; new column called item_no\nvalues in columns -&gt; new column called item\nleft_join() the prices data to get the cost per item"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#customers-rightarrow-purchases-5",
+    "href": "06_PivotingData/06_PivotingData.html#customers-rightarrow-purchases-5",
+    "title": "Pivoting Data",
+    "section": "Customers \\(\\rightarrow\\) purchases",
+    "text": "Customers \\(\\rightarrow\\) purchases\n\n\npurchases &lt;- customers %&gt;%\n  pivot_longer( \n    cols = item_1:item_3,\n    names_to = \"item_no\",\n    values_to = \"item\"\n    ) \n\npurchases %&gt;% \n  left_join(prices, \n            by=\"item\") %&gt;% \n  group_by(customer_id) %&gt;% \n  summarize(total_price = \n              sum(price, \n                  na.rm = TRUE))\n\n# A tibble: 2 × 2\n  customer_id total_price\n        &lt;dbl&gt;       &lt;dbl&gt;\n1           1        1.95\n2           2        3.8 \n\n\n\n\npivot variables item_1 to item_3\ncolumn names -&gt; new column called item_no\nvalues in columns -&gt; new column called item\nleft_join() the prices data to get the cost per item\ngroup_by() and summarize() to get the total price for each customer"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#pivot_wider",
+    "href": "06_PivotingData/06_PivotingData.html#pivot_wider",
+    "title": "Pivoting Data",
+    "section": "pivot_wider()",
+    "text": "pivot_wider()\n\n\ndata (as usual)\nDifferent from pivot_longer(): No column information is needed\n\n\n\npivot_wider(\n  data,\n  names_from = \"name\", \n  values_from = \"value\"\n  )"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#pivot_wider-1",
+    "href": "06_PivotingData/06_PivotingData.html#pivot_wider-1",
+    "title": "Pivoting Data",
+    "section": "pivot_wider()",
+    "text": "pivot_wider()\n\n\ndata (as usual)\nDifferent from pivot_longer(): No column information is needed\nnames_from: name of the column where variables are located\n\n\n\npivot_wider(\n  data,\n  names_from = \"name\", \n  values_from = \"value\"\n  )"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#pivot_wider-2",
+    "href": "06_PivotingData/06_PivotingData.html#pivot_wider-2",
+    "title": "Pivoting Data",
+    "section": "pivot_wider()",
+    "text": "pivot_wider()\n\n\ndata (as usual)\nDifferent from pivot_longer(): No column information is needed\nnames_from: name of the column where variables are located\nvalues_from: name of the column where data/values are located\n\n\n\npivot_longer(\n  data,\n  cols, \n  names_to = \"name\", \n  values_to = \"value\"\n  )"
+  },
+  {
+    "objectID": "06_PivotingData/06_PivotingData.html#purchases-rightarrow-customers",
+    "href": "06_PivotingData/06_PivotingData.html#purchases-rightarrow-customers",
+    "title": "Pivoting Data",
+    "section": "Purchases \\(\\rightarrow\\) customers",
+    "text": "Purchases \\(\\rightarrow\\) customers\n\npurchases %&gt;%\n  pivot_wider( \n    names_from = item_no, \n    values_from = item \n  ) \n\n# A tibble: 2 × 4\n  customer_id item_1 item_2       item_3\n        &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;        &lt;chr&gt; \n1           1 bread  milk         banana\n2           2 milk   toilet paper &lt;NA&gt;"
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#reading-rectangular-data-into-r-1",
+    "href": "07_ImportExport/07_ImportExport.html#reading-rectangular-data-into-r-1",
+    "title": "Import/Export Data",
+    "section": "Reading rectangular data into R",
+    "text": "Reading rectangular data into R\n\nreadr\n\nread_csv() - comma delimited files\nread_csv2() - semicolon separated files (common in countries where , is used as the decimal place)\nread_tsv() - tab delimited files\nread_delim() - reads in files with any delimiter\nread_fwf() - fixed width files\n…\n\n\n\nreadxl\n\nread_excel() - read xls or xlsx files\n…"
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#reading-data-import",
+    "href": "07_ImportExport/07_ImportExport.html#reading-data-import",
+    "title": "Import/Export Data",
+    "section": "Reading data (import)",
+    "text": "Reading data (import)\n\nnobel &lt;- read_csv(file = \"../data/import/nobel.csv\")\nnobel\n\n# A tibble: 935 × 26\n      id firstname   surname  year category affiliation city  country\n   &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;  \n 1     1 Wilhelm Co… Röntgen  1901 Physics  Munich Uni… Muni… Germany\n 2     2 Hendrik A.  Lorentz  1902 Physics  Leiden Uni… Leid… Nether…\n 3     3 Pieter      Zeeman   1902 Physics  Amsterdam … Amst… Nether…\n 4     4 Henri       Becque…  1903 Physics  École Poly… Paris France \n 5     5 Pierre      Curie    1903 Physics  École muni… Paris France \n 6     6 Marie       Curie    1903 Physics  &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt;   \n 7     6 Marie       Curie    1911 Chemist… Sorbonne U… Paris France \n 8     8 Lord        Raylei…  1904 Physics  Royal Inst… Lond… United…\n 9     9 Philipp     Lenard   1905 Physics  Kiel Unive… Kiel  Germany\n10    10 J.J.        Thomson  1906 Physics  University… Camb… United…\n# ℹ 925 more rows\n# ℹ 18 more variables: born_date &lt;date&gt;, died_date &lt;date&gt;,\n#   gender &lt;chr&gt;, born_city &lt;chr&gt;, born_country &lt;chr&gt;,\n#   born_country_code &lt;chr&gt;, died_city &lt;chr&gt;, died_country &lt;chr&gt;,\n#   died_country_code &lt;chr&gt;, overall_motivation &lt;chr&gt;, share &lt;dbl&gt;,\n#   motivation &lt;chr&gt;, born_country_original &lt;chr&gt;,\n#   born_city_original &lt;chr&gt;, died_country_original &lt;chr&gt;, …"
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#writing-data-export",
+    "href": "07_ImportExport/07_ImportExport.html#writing-data-export",
+    "title": "Import/Export Data",
+    "section": "Writing data (export)",
+    "text": "Writing data (export)\n\n\nWrite a file\n\n\ndf &lt;- tribble(\n  ~x, ~y,\n  1,  \"a\",\n  2,  \"b\",\n  3,  \"c\"\n)\n\nwrite_csv(df, file = \"../data/import/df.csv\")\n\n\n\n\nRead it back in to inspect\n\n\nread_csv(\"../data/import/df.csv\")\n\n# A tibble: 3 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 b    \n3     3 c"
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#data-with-bad-names",
+    "href": "07_ImportExport/07_ImportExport.html#data-with-bad-names",
+    "title": "Import/Export Data",
+    "section": "Data with bad names",
+    "text": "Data with bad names\n\nedibnb_badnames &lt;- read_csv(\"../data/import/edibnb-badnames.csv\")\nnames(edibnb_badnames)\n\n [1] \"ID\"                   \"Price\"               \n [3] \"neighbourhood\"        \"accommodates\"        \n [5] \"Number of bathrooms\"  \"Number of Bedrooms\"  \n [7] \"n beds\"               \"Review Scores Rating\"\n [9] \"Number of reviews\"    \"listing_url\"         \n\n\n\n … but R doesn’t allow spaces in variable names\n\nggplot(edibnb_badnames, aes(x = Number of bathrooms, y = Price)) +\n  geom_point()\n\nError in parse(text = input): &lt;text&gt;:1:40: unexpected symbol\n1: ggplot(edibnb_badnames, aes(x = Number of\n                                           ^"
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#option-1---define-column-names",
+    "href": "07_ImportExport/07_ImportExport.html#option-1---define-column-names",
+    "title": "Import/Export Data",
+    "section": "Option 1 - Define column names",
+    "text": "Option 1 - Define column names\n\nedibnb_col_names &lt;- read_csv(\"../data/import/edibnb-badnames.csv\",\n                             col_names = c(\"id\", \"price\", \n                                           \"neighbourhood\", \"accommodates\",\n                                           \"bathroom\", \"bedroom\", \n                                           \"bed\", \"review_scores_rating\", \n                                           \"n_reviews\", \"url\"))\n\nnames(edibnb_col_names)\n\n [1] \"id\"                   \"price\"               \n [3] \"neighbourhood\"        \"accommodates\"        \n [5] \"bathroom\"             \"bedroom\"             \n [7] \"bed\"                  \"review_scores_rating\"\n [9] \"n_reviews\"            \"url\""
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#option-2---format-text-to-snake_case",
+    "href": "07_ImportExport/07_ImportExport.html#option-2---format-text-to-snake_case",
+    "title": "Import/Export Data",
+    "section": "Option 2 - Format text to snake_case",
+    "text": "Option 2 - Format text to snake_case\n\nedibnb_clean_names &lt;- read_csv(\"../data/import/edibnb-badnames.csv\") %&gt;%\n  janitor::clean_names()\n\nnames(edibnb_clean_names)\n\n [1] \"id\"                   \"price\"               \n [3] \"neighbourhood\"        \"accommodates\"        \n [5] \"number_of_bathrooms\"  \"number_of_bedrooms\"  \n [7] \"n_beds\"               \"review_scores_rating\"\n [9] \"number_of_reviews\"    \"listing_url\""
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#option-3---use-ticks",
+    "href": "07_ImportExport/07_ImportExport.html#option-3---use-ticks",
+    "title": "Import/Export Data",
+    "section": "Option 3 - Use ticks (`)",
+    "text": "Option 3 - Use ticks (`)\nIf you go this option, ticks have to be used everytime the variable name is called\n\nggplot(edibnb_badnames, \n       aes(x = `Number of bathrooms`, \n           y = Price)) +\n  geom_point()"
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#option-1.-explicit-nas",
+    "href": "07_ImportExport/07_ImportExport.html#option-1.-explicit-nas",
+    "title": "Import/Export Data",
+    "section": "Option 1. Explicit NAs",
+    "text": "Option 1. Explicit NAs\n\nread_csv(\"../data/import/df-na.csv\", \n         na = c(\"\", \"NA\", \".\", \"9999\", \"Not applicable\"))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# A tibble: 9 × 3\n      x y     z     \n  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; \n1     1 a     hi    \n2    NA b     hello \n3     3 &lt;NA&gt;  &lt;NA&gt;  \n4     4 d     ola   \n5     5 e     hola  \n6    NA f     whatup\n7     7 g     wassup\n8     8 h     sup   \n9     9 i     &lt;NA&gt;"
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#option-2.-specify-column-types",
+    "href": "07_ImportExport/07_ImportExport.html#option-2.-specify-column-types",
+    "title": "Import/Export Data",
+    "section": "Option 2. Specify column types",
+    "text": "Option 2. Specify column types\n\nread_csv(\"../data/import/df-na.csv\", \n         col_types = list(col_double(), \n                          col_character(), \n                          col_character()))\n\n\n\n# A tibble: 9 × 3\n      x y              z     \n  &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt; \n1     1 a              hi    \n2    NA b              hello \n3     3 Not applicable 9999  \n4     4 d              ola   \n5     5 e              hola  \n6    NA f              whatup\n7     7 g              wassup\n8     8 h              sup   \n9     9 i              &lt;NA&gt;"
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#column-types",
+    "href": "07_ImportExport/07_ImportExport.html#column-types",
+    "title": "Import/Export Data",
+    "section": "Column types",
+    "text": "Column types\n\n\n\ntype function\ndata type\n\n\n\n\ncol_character()\ncharacter\n\n\ncol_date()\ndate\n\n\ncol_datetime()\nPOSIXct (date-time)\n\n\ncol_double()\ndouble (numeric)\n\n\ncol_factor()\nfactor\n\n\ncol_guess()\nlet readr guess (default)\n\n\ncol_integer()\ninteger\n\n\ncol_logical()\nlogical\n\n\ncol_number()\nnumbers mixed with non-number characters\n\n\ncol_numeric()\ndouble or integer\n\n\ncol_skip()\ndo not read\n\n\ncol_time()\ntime"
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#haven",
+    "href": "07_ImportExport/07_ImportExport.html#haven",
+    "title": "Import/Export Data",
+    "section": "haven",
+    "text": "haven\n\nSAS:\n\nread_sas() - reads .sas7bdat + .sas7bcat files\nread_xpt()- reads SAS transport files\nwrite_xpt() - writes SAS transport files\n\nSPSS:\n\nread_sav() or read_spss()- reads .sav files\nread_por() - reads older .por files\nwrite_sav() - writes .sav files\n\nStata:\n\nread_dta() or read_stata() - reads .dta files\nwrite_dta() - writes .dta files"
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#labelled-data",
+    "href": "07_ImportExport/07_ImportExport.html#labelled-data",
+    "title": "Import/Export Data",
+    "section": "Labelled data",
+    "text": "Labelled data\nWhen reading in data from SAS, SPSS, and Stata, data is likely to have labels\n\nspss_ex&lt;-read_sav(\"../data/import/svy_spss.sav\")\n\nglimpse(spss_ex)\n\nRows: 1,259\nColumns: 57\n$ CaseId                      &lt;chr&gt; \"16278\", \"1155\", \"15730\", \"1949…\n$ LastConnectionDate          &lt;chr&gt; \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",…\n$ LastConnectionStartTime     &lt;chr&gt; \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",…\n$ ConnectionDurationInSeconds &lt;chr&gt; \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"…\n$ ConnectionDurationInMinutes &lt;chr&gt; \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"…\n$ LastQuestionFilled          &lt;chr&gt; \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",…\n$ NumberOfConnections         &lt;chr&gt; \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"…\n$ resDisposition              &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ TotalDurationSec            &lt;chr&gt; \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"…\n$ Device                      &lt;chr&gt; \"Unknown\", \"Unknown\", \"Unknown\"…\n$ DeviceOS                    &lt;chr&gt; \"Unknown\", \"Unknown\", \"Unknown\"…\n$ DeviceVersion               &lt;chr&gt; \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",…\n$ DeviceBrowser               &lt;chr&gt; \"Unknown\", \"Unknown\", \"Unknown\"…\n$ DeviceBrowserVersion        &lt;chr&gt; \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",…\n$ S1                          &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ TT1                         &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA,…\n$ AGE                         &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ Q1                          &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ Q1B                         &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ Q2                          &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ Q2B                         &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ Q3                          &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ Q4                          &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ Q5                          &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ TT2                         &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ GENDER                      &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ Q6                          &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ Q7C1                        &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ Q7C2                        &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ Q7C3                        &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ Q7C4                        &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ Q7C5                        &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ Q7C6                        &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ Q7_VN                       &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ RACE                        &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ Q8                          &lt;chr&gt; \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",…\n$ QS                          &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ QSB                         &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ TT3                         &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ PROPENSITY                  &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ EM7                         &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ EM7B                        &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ EM8C1                       &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ EM8C2                       &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ EM8C3                       &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ EM8C4                       &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ EM8C5                       &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ EM8C6                       &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ EM8C7                       &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ EM8C8                       &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ EM8C9                       &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ EM8C10                      &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ EM8_VN                      &lt;dbl+lbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ EM9                         &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ EM14                        &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ Q34                         &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…\n$ Q36                         &lt;dbl+lbl&gt; NA, NA, NA, NA, NA, NA, NA,…"
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#labels",
+    "href": "07_ImportExport/07_ImportExport.html#labels",
+    "title": "Import/Export Data",
+    "section": "Labels",
+    "text": "Labels\n\nattributes(spss_ex$Q2)$label\n\n[1] \"Have you ever been in the Military, are you in a college Reserve Officers’ Training Corps (ROTC) program or one of the Service academies, or have you been accepted to and are waiting to begin any of these programs?\"\n\n\n\n\nattributes(spss_ex$Q2)$labels\n\n                                          No, none of the above apply to me. \n                                                                           0 \n                                Yes, I have previously been in the Military. \n                                                                           1 \n                                        Yes, I am currently in the Military. \n                                                                           2 \nYes, I am in or have been accepted to and will be in a college ROTC program. \n                                                                           3 \n     Yes, I am in or have been accepted to and will be in a Service academy. \n                                                                           4 \n\n\n\n\nattributes(spss_ex$Q2)$format.spss\n\n[1] \"F8.2\""
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#handling-labels-in-r",
+    "href": "07_ImportExport/07_ImportExport.html#handling-labels-in-r",
+    "title": "Import/Export Data",
+    "section": "Handling labels in R",
+    "text": "Handling labels in R\nR doesn’t use labels the same way\n\nOption 1: Factors\n\nspss_ex_factor &lt;- spss_ex %&gt;% \n  as_factor()\n\n\n\nRows: 484\nColumns: 13\n$ S1     &lt;fct&gt; I wish to contin…\n$ TT1    &lt;dbl&gt; 38, 60, 16, 48, …\n$ AGE    &lt;fct&gt; NA, NA, NA, NA, …\n$ Q1     &lt;fct&gt; \"Yes, I am an ad…\n$ Q1B    &lt;fct&gt; NA, NA, \"Yes, I …\n$ Q2     &lt;fct&gt; \"No, none of the…\n$ Q2B    &lt;fct&gt; NA, Air Force, N…\n$ Q3     &lt;fct&gt; No, Yes, NA, No,…\n$ Q4     &lt;fct&gt; Yes, NA, NA, Yes…\n$ Q5     &lt;fct&gt; Influencer, Pare…\n$ TT2    &lt;fct&gt; Prefer not to an…\n$ GENDER &lt;fct&gt; Female/Prefer no…\n$ Q6     &lt;fct&gt; Yes, Yes, Yes, Y…\n\n\n\nOption 2: Strip the labels\n\nspss_ex_nolabels &lt;- spss_ex %&gt;% \n  zap_labels()\n\n\n\nRows: 484\nColumns: 13\n$ S1     &lt;dbl&gt; 1, 1, 1, 1, 1, 1…\n$ TT1    &lt;dbl&gt; 38, 60, 16, 48, …\n$ AGE    &lt;dbl&gt; NA, NA, NA, NA, …\n$ Q1     &lt;dbl&gt; 1, 1, 2, 1, 1, 2…\n$ Q1B    &lt;dbl&gt; NA, NA, 1, NA, N…\n$ Q2     &lt;dbl&gt; 0, 1, 0, 1, 0, 1…\n$ Q2B    &lt;dbl&gt; NA, 3, NA, 9, NA…\n$ Q3     &lt;dbl&gt; 0, 1, NA, 0, NA,…\n$ Q4     &lt;dbl&gt; 1, NA, NA, 1, NA…\n$ Q5     &lt;dbl&gt; 3, 2, 1, 3, 1, 3…\n$ TT2    &lt;dbl&gt; 3, 2, 3, 1, 1, N…\n$ GENDER &lt;dbl&gt; 2, 2, 2, 1, 1, N…\n$ Q6     &lt;dbl&gt; 1, 1, 1, 1, 0, N…"
+  },
+  {
+    "objectID": "07_ImportExport/07_ImportExport.html#note-on-stripping-the-labels",
+    "href": "07_ImportExport/07_ImportExport.html#note-on-stripping-the-labels",
+    "title": "Import/Export Data",
+    "section": "Note on stripping the labels",
+    "text": "Note on stripping the labels\n\nVariable and value labels have different functions for removal\n\nzap_label() singular “label” removes the label from the variable name\nzap_labels() plural “label” removes the labels from the values\n\n\n\nattributes(spss_ex_nolabels$Q2)$label\n\n[1] \"Have you ever been in the Military, are you in a college Reserve Officers’ Training Corps (ROTC) program or one of the Service academies, or have you been accepted to and are waiting to begin any of these programs?\"\n\nattributes(spss_ex_nolabels$Q2)$labels\n\nNULL"
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#data-types-in-r",
+    "href": "08_DataAttributes/08_DataAttributes.html#data-types-in-r",
+    "title": "Data Attributes",
+    "section": "Data types in R",
+    "text": "Data types in R\n\nlogical\ncharacter\ndouble\ninteger"
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#logical-character",
+    "href": "08_DataAttributes/08_DataAttributes.html#logical-character",
+    "title": "Data Attributes",
+    "section": "Logical & character",
+    "text": "Logical & character\n\nlogical - boolean values TRUE and FALSE\n\ntypeof(TRUE)\n\n[1] \"logical\"\n\n\n\ncharacter - character strings\n\ntypeof(\"hello\")\n\n[1] \"character\""
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#double-integer",
+    "href": "08_DataAttributes/08_DataAttributes.html#double-integer",
+    "title": "Data Attributes",
+    "section": "Double & integer",
+    "text": "Double & integer\n\ndouble - floating point numerical values (default numerical type)\n\ntypeof(1.335)\n\n[1] \"double\"\n\ntypeof(7)\n\n[1] \"double\"\n\n\n\ninteger - integer numerical values (indicated with an L)\n\ntypeof(7L)\n\n[1] \"integer\"\n\ntypeof(1:3)\n\n[1] \"integer\""
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#vectors",
+    "href": "08_DataAttributes/08_DataAttributes.html#vectors",
+    "title": "Data Attributes",
+    "section": "Vectors",
+    "text": "Vectors\nVectors can be constructed using the c() function.\n\nc(1, 2, 3)\n\n[1] 1 2 3\n\nc(\"Hello\", \"World!\")\n\n[1] \"Hello\"  \"World!\"\n\nc(c(\"hi\", \"hello\"), c(\"bye\", \"jello\"))\n\n[1] \"hi\"    \"hello\" \"bye\"   \"jello\""
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#converting-between-types",
+    "href": "08_DataAttributes/08_DataAttributes.html#converting-between-types",
+    "title": "Data Attributes",
+    "section": "Converting between types",
+    "text": "Converting between types\n\n\nx &lt;- 1:3\nx\n\n[1] 1 2 3\n\ntypeof(x)\n\n[1] \"integer\"\n\n\n\n\n\ny &lt;- as.character(x)\ny\n\n[1] \"1\" \"2\" \"3\"\n\ntypeof(y)\n\n[1] \"character\""
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#converting-between-types-1",
+    "href": "08_DataAttributes/08_DataAttributes.html#converting-between-types-1",
+    "title": "Data Attributes",
+    "section": "Converting between types",
+    "text": "Converting between types\n\n\nx &lt;- c(TRUE, FALSE)\nx\n\n[1]  TRUE FALSE\n\ntypeof(x)\n\n[1] \"logical\"\n\n\n\n\n\ny &lt;- as.numeric(x)\ny\n\n[1] 1 0\n\ntypeof(y)\n\n[1] \"double\""
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#converting-between-types-2",
+    "href": "08_DataAttributes/08_DataAttributes.html#converting-between-types-2",
+    "title": "Data Attributes",
+    "section": "Converting between types",
+    "text": "Converting between types\nR will happily convert between various types without complaint when different types of data are concatenated in a vector, and that’s not always a great thing!\n\n\nc(1, \"Hello\")\n\n[1] \"1\"     \"Hello\"\n\nc(FALSE, 3L)\n\n[1] 0 3\n\n\n\n\nc(1.2, 3L)\n\n[1] 1.2 3.0\n\nc(2L, \"two\")\n\n[1] \"2\"   \"two\""
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#explicit-vs.-implicit-coercion",
+    "href": "08_DataAttributes/08_DataAttributes.html#explicit-vs.-implicit-coercion",
+    "title": "Data Attributes",
+    "section": "Explicit vs. implicit coercion",
+    "text": "Explicit vs. implicit coercion\nLet’s give formal names to what we’ve seen so far:\n\n\nExplicit coercion is when you call a function like as.logical(), as.numeric(), as.integer(), as.double(), or as.character()\n\n\n\n\nImplicit coercion happens when you use a vector in a specific context that expects a certain type of vector"
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#special-values",
+    "href": "08_DataAttributes/08_DataAttributes.html#special-values",
+    "title": "Data Attributes",
+    "section": "Special values",
+    "text": "Special values\n\nNA: Not available\nNaN: Not a number\nInf: Positive infinity\n-Inf: Negative infinity\n\n\n\n\npi / 0\n\n[1] Inf\n\n0 / 0\n\n[1] NaN\n\n\n\n\n1/0 - 1/0\n\n[1] NaN\n\n1/0 + 1/0\n\n[1] Inf"
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#data-classes-in-r",
+    "href": "08_DataAttributes/08_DataAttributes.html#data-classes-in-r",
+    "title": "Data Attributes",
+    "section": "Data classes in R",
+    "text": "Data classes in R\n\nfactor\ndatetime\ndata frame\nlist"
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#factors-1",
+    "href": "08_DataAttributes/08_DataAttributes.html#factors-1",
+    "title": "Data Attributes",
+    "section": "Factors",
+    "text": "Factors\nR uses factors to handle categorical variables, variables that have a fixed and known set of possible values\n\nx &lt;- factor(c(\"BS\", \"MS\", \"PhD\", \"MS\"))\nx\n\n[1] BS  MS  PhD MS \nLevels: BS MS PhD\n\n\n\n\n\ntypeof(x)\n\n[1] \"integer\"\n\n\n\n\nclass(x)\n\n[1] \"factor\"\n\n\n\n\nWe can think of factors like character (level labels) and an integer (level numbers) glued together\n\nglimpse(x)\n\n Factor w/ 3 levels \"BS\",\"MS\",\"PhD\": 1 2 3 2\n\nas.integer(x)\n\n[1] 1 2 3 2"
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#working-with-factors",
+    "href": "08_DataAttributes/08_DataAttributes.html#working-with-factors",
+    "title": "Data Attributes",
+    "section": "Working with factors",
+    "text": "Working with factors\nhandedness variable in the cat lovers data shows everything imported as categorical\n\ncat_lovers &lt;- read_csv(\"../data/cat-lovers.csv\")\nglimpse(cat_lovers)\n\nRows: 60\nColumns: 3\n$ name           &lt;chr&gt; \"Bernice Warren\", \"Woodrow Stone\", \"Willie B…\n$ number_of_cats &lt;chr&gt; \"0\", \"0\", \"1\", \"3\", \"3\", \"2\", \"1\", \"1\", \"0\",…\n$ handedness     &lt;chr&gt; \"left\", \"left\", \"left\", \"left\", \"left\", \"lef…"
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#working-with-factors---plotting",
+    "href": "08_DataAttributes/08_DataAttributes.html#working-with-factors---plotting",
+    "title": "Data Attributes",
+    "section": "Working with factors - plotting",
+    "text": "Working with factors - plotting\nKeeping handedness as a character outputs in alphabetical order\n\nggplot(cat_lovers, mapping = aes(x = handedness)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#use-forcats-to-manipulate-factors",
+    "href": "08_DataAttributes/08_DataAttributes.html#use-forcats-to-manipulate-factors",
+    "title": "Data Attributes",
+    "section": "Use forcats to manipulate factors",
+    "text": "Use forcats to manipulate factors\nChanging handedness to a factor, outputs in level order\n\ncat_lovers %&gt;%\n  mutate(handedness = \n           factor(handedness, \n                  level = c(\"left\", \"right\", \"ambidextrous\"))) %&gt;%\n  ggplot(mapping = aes(x = handedness)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#come-for-the-functionality",
+    "href": "08_DataAttributes/08_DataAttributes.html#come-for-the-functionality",
+    "title": "Data Attributes",
+    "section": "Come for the functionality …",
+    "text": "Come for the functionality …\n stay for the logo\n\n\n\nFactors are useful when you have true categorical data and you want to override the ordering of character vectors to improve display\n\n\n\n\nThey are also useful in modeling scenarios\n\n\n\n\nThe forcats package provides a suite of useful tools that solve common problems with factors"
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#forcats-functions",
+    "href": "08_DataAttributes/08_DataAttributes.html#forcats-functions",
+    "title": "Data Attributes",
+    "section": "forcats functions",
+    "text": "forcats functions\n\n\n\nfactor(x) turns a vector into a factor vector\n\ndefault levels are alphabetical\ncan set level order using levels = argument\n\nlevels(f) returns the levels for a factor\nfct_count(f) provides a count of the number of cases in each level\nfct_unify() standardizes levels across a list of factors\n\n\n\n\n\nreorder factor levels:\n\nfct_rev(f) reverses the order of the levels\nfct_infreq(f) changes the level order based on frequency\nand many more\n\nchange factor levels:\n\nfct_recode(f, d = \"a\", e = \"b\") changes the levels manually\nfct_collapse(f, d = c(\"a\", \"b\")) collapses two or more levels into one\nand many more\n\n\n\n\nSee https://forcats.tidyverse.org/ for more details"
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#dates-1",
+    "href": "08_DataAttributes/08_DataAttributes.html#dates-1",
+    "title": "Data Attributes",
+    "section": "Dates",
+    "text": "Dates\nTwo ways to handle dates\n\nas.Date() from base R\n\ny1 &lt;- as.Date(\"2020-01-01\")\ny1\n\n[1] \"2020-01-01\"\n\ntypeof(y1)\n\n[1] \"double\"\n\nclass(y1)\n\n[1] \"Date\"\n\n\n\n\nlubridate from the tidyverse\n\ny2 &lt;- ymd(\"2020-01-01\")\ny2\n\n[1] \"2020-01-01\"\n\ntypeof(y2)\n\n[1] \"double\"\n\nclass(y2)\n\n[1] \"Date\""
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#lubridate",
+    "href": "08_DataAttributes/08_DataAttributes.html#lubridate",
+    "title": "Data Attributes",
+    "section": "lubridate",
+    "text": "lubridate\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreate date/time variables from strings or numbers\n\nfunction name based on the order of the elements in the raw data\nymd() looks for a date in year, month, day format\nmdy() looks for a date in month, day, year format\nymd_hms() looks for a datetime in year, month, day, hour, minute, second format\n\nParse datetime components from a date/time variable\n\ndate() will parse just the date component of a datetime variable\nyear() and hour() will parse just the year and hour components\n\n\n\n\n\ndelimiters are ingored when creating the variables: “2025/07/10” and “20250710” will both create a date variable without having to specify the delimiter"
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#lubridate-examples",
+    "href": "08_DataAttributes/08_DataAttributes.html#lubridate-examples",
+    "title": "Data Attributes",
+    "section": "lubridate examples",
+    "text": "lubridate examples\n\n\nspss_ex %&gt;% \n  filter(LastConnectionDate != \"\") %&gt;% \n  mutate(LastDate_Formatted = \n           ymd(LastConnectionDate)) %&gt;% \n  select(LastConnectionDate, LastDate_Formatted)\n\n# A tibble: 736 × 2\n   LastConnectionDate LastDate_Formatted\n   &lt;chr&gt;              &lt;date&gt;            \n 1 20250321           2025-03-21        \n 2 20250410           2025-04-10        \n 3 20250321           2025-03-21        \n 4 20250321           2025-03-21        \n 5 20250321           2025-03-21        \n 6 20250321           2025-03-21        \n 7 20250321           2025-03-21        \n 8 20250410           2025-04-10        \n 9 20250410           2025-04-10        \n10 20250410           2025-04-10        \n# ℹ 726 more rows\n\n\n\n\n\nspss_ex %&gt;% \n  filter(LastConnectionStartTime != \"\") %&gt;% \n  mutate(LastStartTime_Formatted =\n           parse_date_time(LastConnectionStartTime, \"HMS\")) %&gt;% \n  select(LastConnectionStartTime, LastStartTime_Formatted)\n\n# A tibble: 736 × 2\n   LastConnectionStartTime LastStartTime_Formatted\n   &lt;chr&gt;                   &lt;dttm&gt;                 \n 1 10:13:25                0000-01-01 10:13:25    \n 2 15:51:47                0000-01-01 15:51:47    \n 3 10:14:05                0000-01-01 10:14:05    \n 4 10:26:43                0000-01-01 10:26:43    \n 5 10:14:20                0000-01-01 10:14:20    \n 6 10:25:03                0000-01-01 10:25:03    \n 7 10:14:24                0000-01-01 10:14:24    \n 8 15:52:35                0000-01-01 15:52:35    \n 9 15:52:18                0000-01-01 15:52:18    \n10 15:52:28                0000-01-01 15:52:28    \n# ℹ 726 more rows\n\n\n\n\nNote that the output here shows a “phantom” date when only a time is provided"
+  },
+  {
+    "objectID": "08_DataAttributes/08_DataAttributes.html#lubridate-examples-cont.",
+    "href": "08_DataAttributes/08_DataAttributes.html#lubridate-examples-cont.",
+    "title": "Data Attributes",
+    "section": "lubridate examples (cont.)",
+    "text": "lubridate examples (cont.)\n\nspss_ex %&gt;% \n  mutate(DateTime_Char = glue(\"{LastConnectionDate} {LastConnectionStartTime}\"),\n         LastDateTime_Formatted = ymd_hms(DateTime_Char)) %&gt;% \n  filter(LastConnectionStartTime != \"\") %&gt;% \n  select(LastConnectionDate, LastConnectionStartTime, \n         DateTime_Char, LastDateTime_Formatted)\n\n# A tibble: 736 × 4\n   LastConnectionDate LastConnectionStartTime DateTime_Char    \n   &lt;chr&gt;              &lt;chr&gt;                   &lt;glue&gt;           \n 1 20250321           10:13:25                20250321 10:13:25\n 2 20250410           15:51:47                20250410 15:51:47\n 3 20250321           10:14:05                20250321 10:14:05\n 4 20250321           10:26:43                20250321 10:26:43\n 5 20250321           10:14:20                20250321 10:14:20\n 6 20250321           10:25:03                20250321 10:25:03\n 7 20250321           10:14:24                20250321 10:14:24\n 8 20250410           15:52:35                20250410 15:52:35\n 9 20250410           15:52:18                20250410 15:52:18\n10 20250410           15:52:28                20250410 15:52:28\n# ℹ 726 more rows\n# ℹ 1 more variable: LastDateTime_Formatted &lt;dttm&gt;"
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#labelled",
+    "href": "09_LabelledData/09_LabelledData.html#labelled",
+    "title": "Labelled Data",
+    "section": "labelled",
+    "text": "labelled\n\n\n\nFunctions and methods to handle and manipulate labelled data\n\nVariable labels\nValue labels\nMissing values\n\nCreate data dictionaries\n\n\n\n\n\n\n\n\n\n\n\n\n\nSee https://larmarange.github.io/labelled/ for more information"
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#cleaning-approaches",
+    "href": "09_LabelledData/09_LabelledData.html#cleaning-approaches",
+    "title": "Labelled Data",
+    "section": "Cleaning Approaches",
+    "text": "Cleaning Approaches"
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#cleaning-approaches-1",
+    "href": "09_LabelledData/09_LabelledData.html#cleaning-approaches-1",
+    "title": "Labelled Data",
+    "section": "Cleaning Approaches",
+    "text": "Cleaning Approaches"
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#cleaning-approaches-2",
+    "href": "09_LabelledData/09_LabelledData.html#cleaning-approaches-2",
+    "title": "Labelled Data",
+    "section": "Cleaning Approaches",
+    "text": "Cleaning Approaches"
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#rename-variables",
+    "href": "09_LabelledData/09_LabelledData.html#rename-variables",
+    "title": "Labelled Data",
+    "section": "Rename variables",
+    "text": "Rename variables\nrename() function from dplyr package allows us to update variable names one at a time in the format old_var = new_var\n\n\nnames(spss_ex)\n\n [1] \"CaseId\"                     \n [2] \"LastConnectionDate\"         \n [3] \"LastConnectionStartTime\"    \n [4] \"ConnectionDurationInSeconds\"\n [5] \"ConnectionDurationInMinutes\"\n [6] \"LastQuestionFilled\"         \n [7] \"NumberOfConnections\"        \n [8] \"resDisposition\"             \n [9] \"TotalDurationSec\"           \n[10] \"Device\"                     \n[11] \"DeviceOS\"                   \n[12] \"DeviceVersion\"              \n[13] \"DeviceBrowser\"              \n[14] \"DeviceBrowserVersion\"       \n[15] \"S1\"                         \n[16] \"TT1\"                        \n[17] \"AGE\"                        \n[18] \"Q1\"                         \n[19] \"Q1B\"                        \n[20] \"Q2\"                         \n[21] \"Q2B\"                        \n[22] \"Q3\"                         \n[23] \"Q4\"                         \n[24] \"Q5\"                         \n[25] \"TT2\"                        \n[26] \"GENDER\"                     \n[27] \"Q6\"                         \n[28] \"Q7C1\"                       \n[29] \"Q7C2\"                       \n[30] \"Q7C3\"                       \n[31] \"Q7C4\"                       \n[32] \"Q7C5\"                       \n[33] \"Q7C6\"                       \n[34] \"Q7_VN\"                      \n[35] \"RACE\"                       \n[36] \"Q8\"                         \n[37] \"QS\"                         \n[38] \"QSB\"                        \n[39] \"TT3\"                        \n[40] \"PROPENSITY\"                 \n[41] \"EM7\"                        \n[42] \"EM7B\"                       \n[43] \"EM8C1\"                      \n[44] \"EM8C2\"                      \n[45] \"EM8C3\"                      \n[46] \"EM8C4\"                      \n[47] \"EM8C5\"                      \n[48] \"EM8C6\"                      \n[49] \"EM8C7\"                      \n[50] \"EM8C8\"                      \n[51] \"EM8C9\"                      \n[52] \"EM8C10\"                     \n[53] \"EM8_VN\"                     \n[54] \"EM9\"                        \n[55] \"EM14\"                       \n[56] \"Q34\"                        \n[57] \"Q36\"                        \n\n\n\n\n\nspss_ex_rename&lt;-spss_ex %&gt;% \n  rename(UNIQUEID = CaseId)\n\nnames(spss_ex_rename)\n\n [1] \"UNIQUEID\"                   \n [2] \"LastConnectionDate\"         \n [3] \"LastConnectionStartTime\"    \n [4] \"ConnectionDurationInSeconds\"\n [5] \"ConnectionDurationInMinutes\"\n [6] \"LastQuestionFilled\"         \n [7] \"NumberOfConnections\"        \n [8] \"resDisposition\"             \n [9] \"TotalDurationSec\"           \n[10] \"Device\"                     \n[11] \"DeviceOS\"                   \n[12] \"DeviceVersion\"              \n[13] \"DeviceBrowser\"              \n[14] \"DeviceBrowserVersion\"       \n[15] \"S1\"                         \n[16] \"TT1\"                        \n[17] \"AGE\"                        \n[18] \"Q1\"                         \n[19] \"Q1B\"                        \n[20] \"Q2\"                         \n[21] \"Q2B\"                        \n[22] \"Q3\"                         \n[23] \"Q4\"                         \n[24] \"Q5\"                         \n[25] \"TT2\"                        \n[26] \"GENDER\"                     \n[27] \"Q6\"                         \n[28] \"Q7C1\"                       \n[29] \"Q7C2\"                       \n[30] \"Q7C3\"                       \n[31] \"Q7C4\"                       \n[32] \"Q7C5\"                       \n[33] \"Q7C6\"                       \n[34] \"Q7_VN\"                      \n[35] \"RACE\"                       \n[36] \"Q8\"                         \n[37] \"QS\"                         \n[38] \"QSB\"                        \n[39] \"TT3\"                        \n[40] \"PROPENSITY\"                 \n[41] \"EM7\"                        \n[42] \"EM7B\"                       \n[43] \"EM8C1\"                      \n[44] \"EM8C2\"                      \n[45] \"EM8C3\"                      \n[46] \"EM8C4\"                      \n[47] \"EM8C5\"                      \n[48] \"EM8C6\"                      \n[49] \"EM8C7\"                      \n[50] \"EM8C8\"                      \n[51] \"EM8C9\"                      \n[52] \"EM8C10\"                     \n[53] \"EM8_VN\"                     \n[54] \"EM9\"                        \n[55] \"EM14\"                       \n[56] \"Q34\"                        \n[57] \"Q36\""
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#rename-multiple-variables",
+    "href": "09_LabelledData/09_LabelledData.html#rename-multiple-variables",
+    "title": "Labelled Data",
+    "section": "Rename Multiple variables",
+    "text": "Rename Multiple variables\n\n\nnames(spss_ex)\n\n [1] \"CaseId\"                     \n [2] \"LastConnectionDate\"         \n [3] \"LastConnectionStartTime\"    \n [4] \"ConnectionDurationInSeconds\"\n [5] \"ConnectionDurationInMinutes\"\n [6] \"LastQuestionFilled\"         \n [7] \"NumberOfConnections\"        \n [8] \"resDisposition\"             \n [9] \"TotalDurationSec\"           \n[10] \"Device\"                     \n[11] \"DeviceOS\"                   \n[12] \"DeviceVersion\"              \n[13] \"DeviceBrowser\"              \n[14] \"DeviceBrowserVersion\"       \n[15] \"S1\"                         \n[16] \"TT1\"                        \n[17] \"AGE\"                        \n[18] \"Q1\"                         \n[19] \"Q1B\"                        \n[20] \"Q2\"                         \n[21] \"Q2B\"                        \n[22] \"Q3\"                         \n[23] \"Q4\"                         \n[24] \"Q5\"                         \n[25] \"TT2\"                        \n[26] \"GENDER\"                     \n[27] \"Q6\"                         \n[28] \"Q7C1\"                       \n[29] \"Q7C2\"                       \n[30] \"Q7C3\"                       \n[31] \"Q7C4\"                       \n[32] \"Q7C5\"                       \n[33] \"Q7C6\"                       \n[34] \"Q7_VN\"                      \n[35] \"RACE\"                       \n[36] \"Q8\"                         \n[37] \"QS\"                         \n[38] \"QSB\"                        \n[39] \"TT3\"                        \n[40] \"PROPENSITY\"                 \n[41] \"EM7\"                        \n[42] \"EM7B\"                       \n[43] \"EM8C1\"                      \n[44] \"EM8C2\"                      \n[45] \"EM8C3\"                      \n[46] \"EM8C4\"                      \n[47] \"EM8C5\"                      \n[48] \"EM8C6\"                      \n[49] \"EM8C7\"                      \n[50] \"EM8C8\"                      \n[51] \"EM8C9\"                      \n[52] \"EM8C10\"                     \n[53] \"EM8_VN\"                     \n[54] \"EM9\"                        \n[55] \"EM14\"                       \n[56] \"Q34\"                        \n[57] \"Q36\"                        \n\n\n\n\nspss_ex_rename&lt;-spss_ex %&gt;% \n  rename(UNIQUEID = CaseId,\n         LDate = LastConnectionDate,\n         Consent = Q1)\n\nnames(spss_ex_rename)\n\n [1] \"UNIQUEID\"                   \n [2] \"LDate\"                      \n [3] \"LastConnectionStartTime\"    \n [4] \"ConnectionDurationInSeconds\"\n [5] \"ConnectionDurationInMinutes\"\n [6] \"LastQuestionFilled\"         \n [7] \"NumberOfConnections\"        \n [8] \"resDisposition\"             \n [9] \"TotalDurationSec\"           \n[10] \"Device\"                     \n[11] \"DeviceOS\"                   \n[12] \"DeviceVersion\"              \n[13] \"DeviceBrowser\"              \n[14] \"DeviceBrowserVersion\"       \n[15] \"S1\"                         \n[16] \"TT1\"                        \n[17] \"AGE\"                        \n[18] \"Consent\"                    \n[19] \"Q1B\"                        \n[20] \"Q2\"                         \n[21] \"Q2B\"                        \n[22] \"Q3\"                         \n[23] \"Q4\"                         \n[24] \"Q5\"                         \n[25] \"TT2\"                        \n[26] \"GENDER\"                     \n[27] \"Q6\"                         \n[28] \"Q7C1\"                       \n[29] \"Q7C2\"                       \n[30] \"Q7C3\"                       \n[31] \"Q7C4\"                       \n[32] \"Q7C5\"                       \n[33] \"Q7C6\"                       \n[34] \"Q7_VN\"                      \n[35] \"RACE\"                       \n[36] \"Q8\"                         \n[37] \"QS\"                         \n[38] \"QSB\"                        \n[39] \"TT3\"                        \n[40] \"PROPENSITY\"                 \n[41] \"EM7\"                        \n[42] \"EM7B\"                       \n[43] \"EM8C1\"                      \n[44] \"EM8C2\"                      \n[45] \"EM8C3\"                      \n[46] \"EM8C4\"                      \n[47] \"EM8C5\"                      \n[48] \"EM8C6\"                      \n[49] \"EM8C7\"                      \n[50] \"EM8C8\"                      \n[51] \"EM8C9\"                      \n[52] \"EM8C10\"                     \n[53] \"EM8_VN\"                     \n[54] \"EM9\"                        \n[55] \"EM14\"                       \n[56] \"Q34\"                        \n[57] \"Q36\""
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#rename-multiple-variables---select",
+    "href": "09_LabelledData/09_LabelledData.html#rename-multiple-variables---select",
+    "title": "Labelled Data",
+    "section": "Rename Multiple variables - select()",
+    "text": "Rename Multiple variables - select()\n\n\nspss_ex %&gt;% \n  select(CaseId,\n         LastConnectionDate,\n         Q1,\n         everything()) %&gt;% \n  names()\n\n [1] \"CaseId\"                     \n [2] \"LastConnectionDate\"         \n [3] \"Q1\"                         \n [4] \"LastConnectionStartTime\"    \n [5] \"ConnectionDurationInSeconds\"\n [6] \"ConnectionDurationInMinutes\"\n [7] \"LastQuestionFilled\"         \n [8] \"NumberOfConnections\"        \n [9] \"resDisposition\"             \n[10] \"TotalDurationSec\"           \n[11] \"Device\"                     \n[12] \"DeviceOS\"                   \n[13] \"DeviceVersion\"              \n[14] \"DeviceBrowser\"              \n[15] \"DeviceBrowserVersion\"       \n[16] \"S1\"                         \n[17] \"TT1\"                        \n[18] \"AGE\"                        \n[19] \"Q1B\"                        \n[20] \"Q2\"                         \n[21] \"Q2B\"                        \n[22] \"Q3\"                         \n[23] \"Q4\"                         \n[24] \"Q5\"                         \n[25] \"TT2\"                        \n[26] \"GENDER\"                     \n[27] \"Q6\"                         \n[28] \"Q7C1\"                       \n[29] \"Q7C2\"                       \n[30] \"Q7C3\"                       \n[31] \"Q7C4\"                       \n[32] \"Q7C5\"                       \n[33] \"Q7C6\"                       \n[34] \"Q7_VN\"                      \n[35] \"RACE\"                       \n[36] \"Q8\"                         \n[37] \"QS\"                         \n[38] \"QSB\"                        \n[39] \"TT3\"                        \n[40] \"PROPENSITY\"                 \n[41] \"EM7\"                        \n[42] \"EM7B\"                       \n[43] \"EM8C1\"                      \n[44] \"EM8C2\"                      \n[45] \"EM8C3\"                      \n[46] \"EM8C4\"                      \n[47] \"EM8C5\"                      \n[48] \"EM8C6\"                      \n[49] \"EM8C7\"                      \n[50] \"EM8C8\"                      \n[51] \"EM8C9\"                      \n[52] \"EM8C10\"                     \n[53] \"EM8_VN\"                     \n[54] \"EM9\"                        \n[55] \"EM14\"                       \n[56] \"Q34\"                        \n[57] \"Q36\"                        \n\n\n\n\nspss_ex_rename&lt;-spss_ex %&gt;% \n  select(UNIQUEID = CaseId,\n         LDate = LastConnectionDate,\n         Consent = Q1,\n         everything())\n\nnames(spss_ex_rename)\n\n [1] \"UNIQUEID\"                   \n [2] \"LDate\"                      \n [3] \"Consent\"                    \n [4] \"LastConnectionStartTime\"    \n [5] \"ConnectionDurationInSeconds\"\n [6] \"ConnectionDurationInMinutes\"\n [7] \"LastQuestionFilled\"         \n [8] \"NumberOfConnections\"        \n [9] \"resDisposition\"             \n[10] \"TotalDurationSec\"           \n[11] \"Device\"                     \n[12] \"DeviceOS\"                   \n[13] \"DeviceVersion\"              \n[14] \"DeviceBrowser\"              \n[15] \"DeviceBrowserVersion\"       \n[16] \"S1\"                         \n[17] \"TT1\"                        \n[18] \"AGE\"                        \n[19] \"Q1B\"                        \n[20] \"Q2\"                         \n[21] \"Q2B\"                        \n[22] \"Q3\"                         \n[23] \"Q4\"                         \n[24] \"Q5\"                         \n[25] \"TT2\"                        \n[26] \"GENDER\"                     \n[27] \"Q6\"                         \n[28] \"Q7C1\"                       \n[29] \"Q7C2\"                       \n[30] \"Q7C3\"                       \n[31] \"Q7C4\"                       \n[32] \"Q7C5\"                       \n[33] \"Q7C6\"                       \n[34] \"Q7_VN\"                      \n[35] \"RACE\"                       \n[36] \"Q8\"                         \n[37] \"QS\"                         \n[38] \"QSB\"                        \n[39] \"TT3\"                        \n[40] \"PROPENSITY\"                 \n[41] \"EM7\"                        \n[42] \"EM7B\"                       \n[43] \"EM8C1\"                      \n[44] \"EM8C2\"                      \n[45] \"EM8C3\"                      \n[46] \"EM8C4\"                      \n[47] \"EM8C5\"                      \n[48] \"EM8C6\"                      \n[49] \"EM8C7\"                      \n[50] \"EM8C8\"                      \n[51] \"EM8C9\"                      \n[52] \"EM8C10\"                     \n[53] \"EM8_VN\"                     \n[54] \"EM9\"                        \n[55] \"EM14\"                       \n[56] \"Q34\"                        \n[57] \"Q36\""
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#rename-multiple-variables---all-at-once",
+    "href": "09_LabelledData/09_LabelledData.html#rename-multiple-variables---all-at-once",
+    "title": "Labelled Data",
+    "section": "Rename Multiple Variables - All at once",
+    "text": "Rename Multiple Variables - All at once\nrename_with() allows us to do this across all variables (or a subset of variables)\n\nImportant Notes for Quality\n\n\nMake this change to a new dataset so you can compare and make sure the variable names were assigned correctly\nHave a dataset with the old and new variable names as columns so you know the changes are aligned (calling this “metavars”)\n\n\n\n\n\ndf %&gt;% \n  rename_with(~ new_varnames, \n              all_of(old_varnames))"
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#rename_with-example",
+    "href": "09_LabelledData/09_LabelledData.html#rename_with-example",
+    "title": "Labelled Data",
+    "section": "rename_with example",
+    "text": "rename_with example\n\n\nspss_meta_vars %&gt;% \n  select(varname,new_varname)\n\n# A tibble: 57 × 2\n   varname            new_varname\n   &lt;chr&gt;              &lt;chr&gt;      \n 1 CaseId             CaseId     \n 2 LastConnectionDate LastConnec…\n 3 LastConnectionSta… LastConnec…\n 4 ConnectionDuratio… Connection…\n 5 ConnectionDuratio… Connection…\n 6 LastQuestionFilled LastQuesti…\n 7 NumberOfConnectio… NumberOfCo…\n 8 resDisposition     resDisposi…\n 9 TotalDurationSec   TotalDurat…\n10 Device             Device     \n# ℹ 47 more rows\n\n\n\n\nspss_meta_vars %&gt;% \n  select(varname,new_varname) %&gt;% \n  filter(str_detect(varname, \"^Q7\"))\n\n# A tibble: 7 × 2\n  varname new_varname\n  &lt;chr&gt;   &lt;chr&gt;      \n1 Q7C1    Q7_1       \n2 Q7C2    Q7_2       \n3 Q7C3    Q7_3       \n4 Q7C4    Q7_4       \n5 Q7C5    Q7_5       \n6 Q7C6    Q7_6       \n7 Q7_VN   Q7_RF"
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#rename_with-example-1",
+    "href": "09_LabelledData/09_LabelledData.html#rename_with-example-1",
+    "title": "Labelled Data",
+    "section": "rename_with example",
+    "text": "rename_with example\n\n\nspss_ex %&gt;% \n  select(starts_with(\"Q7\")) %&gt;% \n  var_label()\n\n$Q7C1\n[1] \"What is your race? Please select one or more races to indicate the race or races that you consider yourself to be. 1 = White\"\n\n$Q7C2\n[1] \"What is your race? Please select one or more races to indicate the race or races that you consider yourself to be. 2 = Black or African American\"\n\n$Q7C3\n[1] \"What is your race? Please select one or more races to indicate the race or races that you consider yourself to be. 3 = American Indian or Alaska Native\"\n\n$Q7C4\n[1] \"What is your race? Please select one or more races to indicate the race or races that you consider yourself to be. 4 = Asian (e.g., Asian Indian, Chinese, Filipino, Japanese, Korean, Vietnamese)\"\n\n$Q7C5\n[1] \"What is your race? Please select one or more races to indicate the race or races that you consider yourself to be. 5 = Native Hawaiian or other Pacific Islander (e.g., Native Hawaiian, Samoan, Chamorro, Tongan, Fijian, Marshallese)\"\n\n$Q7C6\n[1] \"What is your race? Please select one or more races to indicate the race or races that you consider yourself to be. 6 = Some other race\"\n\n$Q7_VN\nNULL\n\n\n\n\n\nspss_ex %&gt;% \n  rename_with(~ spss_meta_vars$new_varname, \n              all_of(spss_meta_vars$varname)) %&gt;% \n  select(starts_with(\"Q7\")) %&gt;% \n  var_label()\n\n\n\n$Q7_1\n[1] \"What is your race? Please select one or more races to indicate the race or races that you consider yourself to be. 1 = White\"\n\n$Q7_2\n[1] \"What is your race? Please select one or more races to indicate the race or races that you consider yourself to be. 2 = Black or African American\"\n\n$Q7_3\n[1] \"What is your race? Please select one or more races to indicate the race or races that you consider yourself to be. 3 = American Indian or Alaska Native\"\n\n$Q7_4\n[1] \"What is your race? Please select one or more races to indicate the race or races that you consider yourself to be. 4 = Asian (e.g., Asian Indian, Chinese, Filipino, Japanese, Korean, Vietnamese)\"\n\n$Q7_5\n[1] \"What is your race? Please select one or more races to indicate the race or races that you consider yourself to be. 5 = Native Hawaiian or other Pacific Islander (e.g., Native Hawaiian, Samoan, Chamorro, Tongan, Fijian, Marshallese)\"\n\n$Q7_6\n[1] \"What is your race? Please select one or more races to indicate the race or races that you consider yourself to be. 6 = Some other race\"\n\n$Q7_RF\nNULL"
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#relabel-variables",
+    "href": "09_LabelledData/09_LabelledData.html#relabel-variables",
+    "title": "Labelled Data",
+    "section": "Relabel Variables",
+    "text": "Relabel Variables\nvar_label() function from labelled package allows us view labels and set labels\n\n\nView for a single variable\n\nvar_label(spss_ex$Q2)\n\n[1] \"Have you ever been in the Military, are you in a college Reserve Officers’ Training Corps (ROTC) program or one of the Service academies, or have you been accepted to and are waiting to begin any of these programs?\"\n\n\n\n\n\nSet for a single varible\n\nvar_label(spss_ex$Q2) &lt;- \"Q2: Prior military service\"\nvar_label(spss_ex$Q2)\n\n[1] \"Q2: Prior military service\""
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#relabel-multiple-variables",
+    "href": "09_LabelledData/09_LabelledData.html#relabel-multiple-variables",
+    "title": "Labelled Data",
+    "section": "Relabel Multiple variables",
+    "text": "Relabel Multiple variables\n\n\nvar_label(spss_ex$Q2)\n\n[1] \"Q2: Prior military service\"\n\nvar_label(spss_ex$QS)\n\n[1] \"What state do you live in?\"\n\n\n\n\n\nspss_ex_newlabel&lt;-spss_ex %&gt;% \n  set_variable_labels(Q2 = \"Q2: Ever been in military\",\n                      QS = \"QS: State\")\n\n\n\n\nvar_label(spss_ex_newlabel$Q2)\n\n[1] \"Q2: Ever been in military\"\n\nvar_label(spss_ex_newlabel$QS)\n\n[1] \"QS: State\""
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#relabel-multiple-variables---all-at-once",
+    "href": "09_LabelledData/09_LabelledData.html#relabel-multiple-variables---all-at-once",
+    "title": "Labelled Data",
+    "section": "Relabel Multiple Variables - All at once",
+    "text": "Relabel Multiple Variables - All at once\nImportant Notes for Quality\n\n\nMake this change to a new dataset so you can compare and make sure the variable labels were assigned correctly\nHave a dataset with the varible name and labels as columns so you know the changes are aligned (calling this “metavars”)\n\n\n\n\nspss_meta_vars %&gt;% \n  select(varname, new_label)\n\n# A tibble: 57 × 2\n   varname                     new_label                        \n   &lt;chr&gt;                       &lt;chr&gt;                            \n 1 CaseId                      Case ID                          \n 2 LastConnectionDate          Last connection date             \n 3 LastConnectionStartTime     Start time of last connection    \n 4 ConnectionDurationInSeconds Duration of connection in seconds\n 5 ConnectionDurationInMinutes Duration of connection in minutes\n 6 LastQuestionFilled          Last question filled             \n 7 NumberOfConnections         Number of connections            \n 8 resDisposition              Disposition                      \n 9 TotalDurationSec            Total Duration (sec.)            \n10 Device                      Device                           \n# ℹ 47 more rows"
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#relabel-example",
+    "href": "09_LabelledData/09_LabelledData.html#relabel-example",
+    "title": "Labelled Data",
+    "section": "Relabel example",
+    "text": "Relabel example\n\n\nspss_meta_vars %&gt;% \n  select(varname,new_label) %&gt;% \n  filter(str_detect(varname,\"^Q7\"))\n\n# A tibble: 7 × 2\n  varname new_label                               \n  &lt;chr&gt;   &lt;chr&gt;                                   \n1 Q7C1    Q7_1: Race - White                      \n2 Q7C2    Q7_2: Race - Black                      \n3 Q7C3    Q7_3: Race - American Indian or Alaska …\n4 Q7C4    Q7_4: Race - Asian                      \n5 Q7C5    Q7_5: Race - Native Hawaiian or other P…\n6 Q7C6    Q7_6: Race - Other                      \n7 Q7_VN   Q7_RF: Race - Refused                   \n\n\n\n\nspss_ex %&gt;% \n  select(all_of(spss_meta_vars$varname)) %&gt;% \n  set_variable_labels(.labels=spss_meta_vars$new_label) %&gt;% \n  select(starts_with(\"Q7\")) %&gt;% \n  var_label()\n\n$Q7C1\n[1] \"Q7_1: Race - White\"\n\n$Q7C2\n[1] \"Q7_2: Race - Black\"\n\n$Q7C3\n[1] \"Q7_3: Race - American Indian or Alaska Native\"\n\n$Q7C4\n[1] \"Q7_4: Race - Asian\"\n\n$Q7C5\n[1] \"Q7_5: Race - Native Hawaiian or other Pacific Islander\"\n\n$Q7C6\n[1] \"Q7_6: Race - Other\"\n\n$Q7_VN\n[1] \"Q7_RF: Race - Refused\""
+  },
+  {
+    "objectID": "09_LabelledData/09_LabelledData.html#relabel-example---incorrect-sorting",
+    "href": "09_LabelledData/09_LabelledData.html#relabel-example---incorrect-sorting",
+    "title": "Labelled Data",
+    "section": "Relabel example - incorrect sorting",
+    "text": "Relabel example - incorrect sorting\n\n\nspss_meta_vars2 &lt;- spss_meta_vars %&gt;% \n  arrange(varname)\n\nspss_meta_vars %&gt;% select(varname, new_label) %&gt;% head()\n\n# A tibble: 6 × 2\n  varname                     new_label           \n  &lt;chr&gt;                       &lt;chr&gt;               \n1 CaseId                      Case ID             \n2 LastConnectionDate          Last connection date\n3 LastConnectionStartTime     Start time of last …\n4 ConnectionDurationInSeconds Duration of connect…\n5 ConnectionDurationInMinutes Duration of connect…\n6 LastQuestionFilled          Last question filled\n\nspss_meta_vars2 %&gt;% select(varname, new_label) %&gt;% head()\n\n# A tibble: 6 × 2\n  varname                     new_label           \n  &lt;chr&gt;                       &lt;chr&gt;               \n1 AGE                         AGE: Derived Variab…\n2 CaseId                      Case ID             \n3 ConnectionDurationInMinutes Duration of connect…\n4 ConnectionDurationInSeconds Duration of connect…\n5 Device                      Device              \n6 DeviceBrowser               Device Browser      \n\n\n\n\n\nspss_ex %&gt;% \n  select(all_of(spss_meta_vars2$varname)) %&gt;% \n  set_variable_labels(.labels=spss_meta_vars$new_label) %&gt;% \n  select(starts_with(\"Q7\")) %&gt;% \n  var_label()\n\n\n\n$Q7C1\n[1] \"EM7: Highest Education\"\n\n$Q7C2\n[1] \"EM7B: Derived Education Variable\"\n\n$Q7C3\n[1] \"EM8_1: Employment - Full time\"\n\n$Q7C4\n[1] \"EM8_2: Employment - Part time\"\n\n$Q7C5\n[1] \"EM8_3: Employment - Self Employed\"\n\n$Q7C6\n[1] \"EM8_4: Employment - Student Full Time\"\n\n$Q7_VN\n[1] \"EM8_5: Employment - Student Part Time\""
   },
   {
     "objectID": "about.html",

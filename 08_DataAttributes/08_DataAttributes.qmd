@@ -1,0 +1,455 @@
+---
+title: "Data Attributes"
+order: 8
+title-slide-attributes:
+    data-background-gradient: linear-gradient(to top right, {{< brand color background >}}, {{< brand color pastelpink >}}, {{< brand color fmorange >}}, {{< brand color tangerine >}})
+
+format: 
+  revealjs:
+    margin: .15
+    quarto-required: ">= 1.6.0"
+    width: 1600
+    height: 900
+    slide-number: "c"
+    css: ../styles.css
+    code-copy: true
+    echo: true
+    code-overflow: scroll
+---
+
+# Data types
+```{r}
+#| label: packages
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+library(tidyverse)
+library(readxl)
+library(haven)
+library(glue)
+library(emojifont)
+options(width=69)
+```
+
+```{r}
+#| label: load-data
+#| echo: false
+spss_ex<-read_sav("../data/import/svy_spss.sav")
+```
+
+## Data types in R
+
+- **logical**
+- **character**
+- **double**
+- **integer**
+
+## Logical & character
+
+::: {.column}
+**logical** - boolean values `TRUE` and `FALSE`
+
+```{r}
+#| label: logical
+typeof(TRUE)
+```
+:::
+::: {.column}
+**character** - character strings
+
+```{r}
+#| label: character
+typeof("hello")
+```
+:::
+
+## Double & integer
+
+::: {.column}
+**double** - floating point numerical values (default numerical type)
+
+```{r}
+#| label: double
+typeof(1.335)
+typeof(7)
+```
+:::
+::: {.column}
+**integer** - integer numerical values (indicated with an `L`)
+
+```{r}
+#| label: integer
+typeof(7L)
+typeof(1:3)
+```
+:::
+
+## Vectors
+
+Vectors can be constructed using the `c()` function.
+
+```{r}
+#| label: vectors
+c(1, 2, 3)
+c("Hello", "World!")
+c(c("hi", "hello"), c("bye", "jello"))
+```
+
+## Converting between types
+
+::: {.column}
+```{r}
+#| label: conversion-1
+x <- 1:3
+x
+typeof(x)
+```
+:::
+
+:::: {.column}
+::: {.fragment}
+```{r}
+#| label: conversion-2
+y <- as.character(x)
+y
+typeof(y)
+```
+:::
+::::
+
+## Converting between types
+
+::: {.column}
+```{r}
+#| label: conversion-3
+x <- c(TRUE, FALSE)
+x
+typeof(x)
+```
+:::
+
+:::: {.column}
+::: {.fragment}
+```{r}
+#| label: conversion-4
+y <- as.numeric(x)
+y
+typeof(y)
+```
+:::
+::::
+
+## Converting between types
+
+R will happily convert between various types without complaint when different types of data are concatenated in a vector, and that's not always a great thing!
+
+::: {.column}
+```{r}
+#| label: conversion-5
+c(1, "Hello")
+c(FALSE, 3L)
+```
+:::
+
+::: {.column}
+```{r}
+#| label: conversion-6
+c(1.2, 3L)
+c(2L, "two")
+```
+:::
+
+## Explicit vs. implicit coercion
+
+Let's give formal names to what we've seen so far:
+
+. . .
+
+- **Explicit coercion** is when you call a function like `as.logical()`, `as.numeric()`, `as.integer()`, `as.double()`, or `as.character()`
+
+. . .
+
+- **Implicit coercion** happens when you use a vector in a specific context that expects a certain type of vector
+
+
+## Special values
+
+- `NA`: Not available
+- `NaN`: Not a number
+- `Inf`: Positive infinity
+- `-Inf`: Negative infinity
+
+. . .
+
+::: {.column}
+```{r}
+#| label: special-1
+pi / 0
+0 / 0
+```
+:::
+::: {.column}
+```{r}
+#| label: special-2
+1/0 - 1/0
+1/0 + 1/0
+```
+:::
+
+# Data classes
+
+## Data classes in R
+
+- **factor**
+- **datetime**
+- **data frame**
+- **list**
+
+# Factors
+
+## Factors
+
+R uses factors to handle categorical variables, variables that have a fixed and known set of possible values
+
+```{r}
+#| label: factor-setup
+x <- factor(c("BS", "MS", "PhD", "MS"))
+x
+```
+
+. . .
+
+::: {.column}
+```{r}
+#| label: factor-type
+typeof(x)
+```
+:::
+
+::: {.column}
+```{r}
+#| label: factor-class
+class(x)
+```
+::: 
+
+. . .
+
+We can think of factors like character (level labels) and an integer (level numbers) glued together
+
+```{r}
+#| label: factor-glimpse
+glimpse(x)
+as.integer(x)
+```
+
+## Working with factors
+
+`handedness` variable in the cat lovers data shows everything imported as categorical
+
+```{r}
+#| label: cat-lovers
+cat_lovers <- read_csv("../data/cat-lovers.csv")
+glimpse(cat_lovers)
+```
+
+## Working with factors - plotting
+
+Keeping `handedness` as a character outputs in *alphabetical* order
+
+```{r}
+#| label: plot-cat
+#| fig-align: center
+ggplot(cat_lovers, mapping = aes(x = handedness)) +
+  geom_bar()
+```
+
+## Use forcats to manipulate factors
+
+Changing `handedness` to a factor, outputs in *level* order
+
+```{r}
+#| label: plot-cat2
+#| fig-align: center
+#| code-line-numbers: "2-4"
+cat_lovers %>%
+  mutate(handedness = 
+           factor(handedness, 
+                  level = c("left", "right", "ambidextrous"))) %>%
+  ggplot(mapping = aes(x = handedness)) +
+  geom_bar()
+```
+
+## Come for the functionality ...
+
+<br>
+stay for the logo
+
+```{r}
+#| label: image-forcats
+#| echo: FALSE
+knitr::include_graphics("images/forcats-part-of-tidyverse.png")
+```
+
+. . .
+
+- Factors are useful when you have true categorical data and you want to override the ordering of character vectors to improve display 
+
+. . .
+
+- They are also useful in modeling scenarios 
+
+. . .
+
+- The **forcats** package provides a suite of useful tools that solve common problems with factors
+
+
+## forcats functions
+
+:::: {.column}
+::: {.incremental}
+- `factor(x)` turns a vector into a factor vector
+    - default levels are alphabetical
+    - can set level order using `levels = ` argument
+- `levels(f)` returns the levels for a factor
+- `fct_count(f)` provides a count of the number of cases in each level
+- `fct_unify()` standardizes levels across a list of factors
+
+:::
+::::
+
+:::: {.column}
+::: {.incremental}
+- reorder factor levels:
+    - `fct_rev(f)` reverses the order of the levels
+    - `fct_infreq(f)` changes the level order based on frequency
+    - and many more
+- change factor levels:
+    - `fct_recode(f, d = "a", e = "b")` changes the levels manually
+    - `fct_collapse(f, d = c("a", "b"))` collapses two or more levels into one
+    - and many more
+    
+:::
+::::
+
+::: {.footnote}
+See [https://forcats.tidyverse.org/](https://forcats.tidyverse.org/) for more details
+:::
+
+# Dates
+
+## Dates
+
+Two ways to handle dates
+
+::: column
+`as.Date()` from base R
+```{r}
+#| label: dates-base
+y1 <- as.Date("2020-01-01")
+y1
+typeof(y1)
+class(y1)
+```
+:::
+
+:::: column
+::: fragment
+**lubridate** from the tidyverse
+```{r}
+#| label: dates-ymd
+y2 <- ymd("2020-01-01")
+y2
+typeof(y2)
+class(y2)
+```
+:::
+::::
+
+## lubridate
+
+::: {.column width=35%}
+```{r}
+#| label: images-lubridate
+#| echo: FALSE
+#| out.width: "80%"
+#| fig-align: center
+knitr::include_graphics("images/lubridate-tidyverse.png")
+```
+::: 
+:::: {.column width=65%}
+::: {.incremental}
+- Create date/time variables from strings or numbers
+    - function name based on the order of the elements in the raw data
+    - `ymd()` looks for a date in year, month, day format
+    - `mdy()` looks for a date in month, day, year format
+    - `ymd_hms()` looks for a datetime in year, month, day, hour, minute, second format
+- Parse datetime components from a date/time variable
+    - `date()` will parse just the date component of a datetime variable
+    - `year()` and `hour()` will parse just the year and hour components
+
+:::
+::::
+
+::: {.notes}
+- delimiters are ingored when creating the variables: "2025/07/10" and "20250710" will both create a date variable without having to specify the delimiter
+:::
+
+## lubridate examples {.smaller}
+
+::: column
+```{r}
+#| label: lubridate-ex-1
+#| code-line-numbers: "3,4"
+spss_ex %>% 
+  filter(LastConnectionDate != "") %>% 
+  mutate(LastDate_Formatted = 
+           ymd(LastConnectionDate)) %>% 
+  select(LastConnectionDate, LastDate_Formatted)
+```
+:::
+
+:::: column
+::: fragment
+```{r}
+#| label: lubridate-ex-2
+#| code-line-numbers: "3,4"
+spss_ex %>% 
+  filter(LastConnectionStartTime != "") %>% 
+  mutate(LastStartTime_Formatted =
+           parse_date_time(LastConnectionStartTime, "HMS")) %>% 
+  select(LastConnectionStartTime, LastStartTime_Formatted)
+```
+:::
+
+::: fragment
+Note that the output here shows a "phantom" date when only a time is provided
+:::
+::::
+
+## lubridate examples (cont.) {.smaller}
+
+```{r}
+#| label: lubridate-ex-3
+#| warning: false
+#| code-line-numbers: "|2|3"
+spss_ex %>% 
+  mutate(DateTime_Char = glue("{LastConnectionDate} {LastConnectionStartTime}"),
+         LastDateTime_Formatted = ymd_hms(DateTime_Char)) %>% 
+  filter(LastConnectionStartTime != "") %>% 
+  select(LastConnectionDate, LastConnectionStartTime, 
+         DateTime_Char, LastDateTime_Formatted)
+```
+
+
+# Your turn: <br>Factors and date variables {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+```
+

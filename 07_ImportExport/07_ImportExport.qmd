@@ -1,0 +1,397 @@
+---
+title: "Import/Export Data"
+order: 7
+title-slide-attributes:
+    data-background-gradient: linear-gradient(to top right, {{< brand color background >}}, {{< brand color pastelpink >}}, {{< brand color fmorange >}}, {{< brand color tangerine >}})
+
+format: 
+  revealjs:
+    margin: .15
+    quarto-required: ">= 1.6.0"
+    width: 1600
+    height: 900
+    slide-number: "c"
+    css: ../styles.css
+    code-copy: true
+    echo: true
+    code-overflow: scroll
+---
+
+```{r}
+#| label: packages
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(haven)
+library(emojifont)
+options(width=69)
+```
+
+
+# Reading rectangular data into R
+
+::: {.column}
+```{r}
+#| label: images-readr
+#| echo: FALSE
+#| out.width: "80%"
+knitr::include_graphics("images/readr.png")
+```
+::: 
+::: {.column}
+```{r}
+#| label: images-readxl
+#| echo: FALSE
+#| out.width: "80%"
+knitr::include_graphics("images/readxl.png")
+```
+::: 
+
+## Reading rectangular data into R
+
+::: {.column}
+### readr
+
+- `read_csv()` - comma delimited files
+- `read_csv2()` - semicolon separated files (common in countries where , is used as the decimal place)
+- `read_tsv()` - tab delimited files
+- `read_delim()` - reads in files with any delimiter
+- `read_fwf()` - fixed width files
+- ...
+::: 
+
+:::: {.column}
+::: {.fragment}
+### readxl
+
+- `read_excel()` - read xls or xlsx files
+- ...
+::: 
+::::
+
+## Reading data (import)
+
+```{r}
+#| label: read-csv-ex
+nobel <- read_csv(file = "../data/import/nobel.csv")
+nobel
+```
+
+
+## Writing data (export)
+
+::: {.column}
+- Write a file
+
+```{r}
+#| label: export-df
+#| cache: TRUE
+df <- tribble(
+  ~x, ~y,
+  1,  "a",
+  2,  "b",
+  3,  "c"
+)
+
+write_csv(df, file = "../data/import/df.csv")
+```
+::: 
+
+:::: {.column}
+::: {.fragment}
+- Read it back in to inspect
+
+```{r}
+#| label: read-exported-data
+read_csv("../data/import/df.csv")
+```
+::: 
+::::
+
+
+# Variable names
+
+## Data with bad names
+
+```{r}
+#| label: read-badnames
+#| message: false
+edibnb_badnames <- read_csv("../data/import/edibnb-badnames.csv")
+names(edibnb_badnames)
+```
+
+. . .
+
+<br>
+... but R doesn't allow spaces in variable names
+
+```{r}
+#| label: varname-error
+#| error: true
+ggplot(edibnb_badnames, aes(x = Number of bathrooms, y = Price)) +
+  geom_point()
+```
+
+## Option 1 - Define column names
+
+```{r}
+#| label: fix-varnames-opt1
+edibnb_col_names <- read_csv("../data/import/edibnb-badnames.csv",
+                             col_names = c("id", "price", 
+                                           "neighbourhood", "accommodates",
+                                           "bathroom", "bedroom", 
+                                           "bed", "review_scores_rating", 
+                                           "n_reviews", "url"))
+
+names(edibnb_col_names)
+```
+
+## Option 2 - Format text to snake_case
+
+```{r}
+#| label: fix-varnames-opt2
+#| warning: false
+edibnb_clean_names <- read_csv("../data/import/edibnb-badnames.csv") %>%
+  janitor::clean_names()
+
+names(edibnb_clean_names)
+```
+
+## Option 3 - Use ticks (`)
+
+If you go this option, ticks have to be used **everytime** the variable name is called
+
+```{r}
+#| label: fix-varnames-opt3
+#| code-line-numbers: 2
+ggplot(edibnb_badnames, 
+       aes(x = `Number of bathrooms`, 
+           y = Price)) +
+  geom_point()
+```
+
+# Missing Data
+
+::: {.column}
+```{r}
+#| label: df-na-images
+#| echo: FALSE
+#| out.width: "100%"
+knitr::include_graphics("images/df-na.png")
+```
+::: 
+::: {.column}
+```{r}
+#| label: df-na-read
+#| eval: FALSE
+read_csv("../data/import/df-na.csv")
+```
+
+```{r} 
+#| label: df-na-print
+#| echo: FALSE
+read_csv("../data/import/df-na.csv") %>% print(n = 10)
+```
+::: 
+
+## Option 1. Explicit NAs
+
+```{r}
+#| label: na-explicit
+#| eval: FALSE
+read_csv("../data/import/df-na.csv", 
+         na = c("", "NA", ".", "9999", "Not applicable"))
+```
+
+::: {.column}
+```{r}
+#| label: df-na-images-2
+#| echo: FALSE
+#| out.width: "100%"
+knitr::include_graphics("images/df-na.png")
+```
+::: 
+::: {.column}
+```{r}
+#| label: na-explicit-print
+#| echo: FALSE
+#| message: FALSE
+read_csv("../data/import/df-na.csv", 
+  na = c("", "NA", ".", "9999",
+         "Not applicable")) %>% 
+  print(n = 10)
+```
+::: 
+
+## Option 2. Specify column types
+
+```{r} 
+#| label: col-types
+#| eval: FALSE
+read_csv("../data/import/df-na.csv", 
+         col_types = list(col_double(), 
+                          col_character(), 
+                          col_character()))
+```
+
+```{r} 
+#| label: col-types-print
+#| echo: FALSE
+read_csv("../data/import/df-na.csv", col_types = list(col_double(), 
+                                            col_character(), 
+                                            col_character())) %>%
+  print(n = 10)
+```
+
+## Column types
+
+| **type function** | **data type** |
+|------------------|------------------------------------------|
+`col_character()`  | character
+`col_date()`       | date
+`col_datetime()`   | POSIXct (date-time)
+`col_double()`     | double (numeric)
+`col_factor()`     | factor
+`col_guess()`      | let readr guess (default)
+`col_integer()`    | integer
+`col_logical()`    | logical
+`col_number()`     | numbers mixed with non-number characters
+`col_numeric()`    | double or integer
+`col_skip()`       | do not read
+`col_time()`       | time
+
+# Reading in Survey Data
+
+```{r}
+#| label: images-haven
+#| echo: FALSE
+#| out.width: "80%"
+#| fig-align: center
+knitr::include_graphics("images/haven.png")
+```
+
+## haven
+
+- SAS:
+    - `read_sas()` - reads .sas7bdat + .sas7bcat files
+    - `read_xpt()`- reads SAS transport files
+    - `write_xpt()` - writes SAS transport files 
+- SPSS: 
+    - `read_sav()` or `read_spss()`- reads .sav files 
+    - `read_por()` - reads older .por files
+    - `write_sav()` - writes .sav files
+- Stata: 
+    - `read_dta()` or `read_stata()` - reads .dta files 
+    - `write_dta()` - writes .dta files
+
+## Labelled data
+
+When reading in data from SAS, SPSS, and Stata, data is likely to have labels
+
+```{r}
+#| label: read-spss
+#| cache: true
+spss_ex<-read_sav("../data/import/svy_spss.sav")
+
+glimpse(spss_ex)
+```
+
+## Labels
+
+```{r}
+#| label: svy-attr-1
+attributes(spss_ex$Q2)$label
+```
+
+::: column
+```{r}
+#| label: svy-attr-2
+attributes(spss_ex$Q2)$labels
+```
+:::
+
+::: column
+```{r}
+#| label: svy-attr-3
+attributes(spss_ex$Q2)$format.spss
+```
+:::
+
+## Handling labels in R
+
+R doesn't use labels the same way
+
+::: column
+Option 1: Factors
+```{r}
+#| label: col-width-set
+#| echo: false
+options(width=33)
+```
+
+```{r}
+#| label: svy-factors
+spss_ex_factor <- spss_ex %>% 
+  as_factor()
+```
+
+```{r}
+#| label: svy-factors-out
+#| echo: false
+spss_ex_factor %>% 
+  filter(!is.na(Q5)) %>% 
+  select(S1:Q6) %>% 
+  glimpse()
+```
+:::
+
+::: column
+Option 2: Strip the labels
+```{r}
+#| label: svy-nolab
+spss_ex_nolabels <- spss_ex %>% 
+  zap_labels()
+```
+
+```{r}
+#| label: svy-nolab-out
+#| echo: false
+spss_ex_nolabels %>% 
+  filter(!is.na(Q5)) %>% 
+  select(S1:Q6) %>% 
+  glimpse()
+```
+:::
+
+## Note on stripping the labels
+
+```{r}
+#| label: width-set
+#| echo: false
+options(width=69)
+```
+
+
+- Variable and value labels have different functions for removal
+    - `zap_label()` singular "label" removes the label from the variable name
+    - `zap_labels()` plural "label" removes the labels from the values
+
+```{r}
+#| label: svynolab-attr
+attributes(spss_ex_nolabels$Q2)$label
+attributes(spss_ex_nolabels$Q2)$labels
+```
+
+# Your turn: <br>Import/export data {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+```

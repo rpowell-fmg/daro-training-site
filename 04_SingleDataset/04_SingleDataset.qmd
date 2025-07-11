@@ -1,0 +1,768 @@
+---
+title: "Working with a single dataset"
+order: 4
+title-slide-attributes:
+    data-background-gradient: linear-gradient(to top right, {{< brand color background >}}, {{< brand color pastelpink >}}, {{< brand color fmorange >}}, {{< brand color tangerine >}})
+
+format: 
+  revealjs:
+    margin: .15
+    quarto-required: ">= 1.6.0"
+    width: 1600
+    height: 900
+    slide-number: "c"
+    css: ../styles.css
+    code-copy: true
+    echo: true
+    code-overflow: scroll
+---
+
+```{r}
+#| label: packages
+#| echo: false
+library(tidyverse)
+library(emojifont)
+options(width=69)
+```
+
+
+# Data: Penguins 
+
+```{r}
+#| label: penguin-prep
+#| echo: false
+penguins<-tibble(penguins)
+penguins
+```
+
+# `select` and `arrange` {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
+
+## `select` - keep variables
+
+```{r}
+#| label: select-keep
+#| code-line-numbers: 2
+penguins %>%
+  select(species, island)
+```
+
+## `select` - exclude variables
+
+```{r}
+#| label: select-exclude
+#| code-line-numbers: 2
+penguins %>%
+  select(-year)
+```
+
+## `select` - multiple variables
+
+-   a range of variables
+
+```{r}
+#| label: select-range
+#| code-line-numbers: 2
+penguins %>%
+  select(species:bill_dep)
+```
+
+## `select` - multiple variables
+
+-   a range of variables
+-   variables with certain characteristics
+
+. . .
+
+::: column
+```{r}
+#| label: select-starts
+#| code-line-numbers: 2
+penguins %>%
+  select(starts_with("bill"))
+```
+:::
+
+:::: column
+::: fragment
+```{r}
+#| label: select-ends
+#| code-line-numbers: 2
+penguins %>%
+  select(ends_with("len"))
+```
+:::
+::::
+
+## Select helpers
+
+-   `starts_with()`: Starts with a prefix
+-   `ends_with()`: Ends with a suffix
+-   `contains()`: Contains a literal string
+-   `num_range()`: Matches a numerical range like x01, x02, x03
+-   `one_of()`: Matches variable names in a character vector
+-   `everything()`: Matches all variables
+-   `last_col()`: Select last variable, possibly with an offset
+-   `matches()`: Matches a regular expression (a sequence of symbols/characters expressing a string/pattern to be searched for within text)
+
+::: footnote
+See help for any of these functions for more info, e.g. `?everything`.
+:::
+
+## `arrange` in ascending / descending order
+
+```{r}
+#| label: arrange-width
+#| echo: false
+options(width=32)
+```
+
+::: column
+```{r}
+#| label: arrange-ascending
+#| code-line-numbers: 3
+penguins %>%
+  select(species,bill_dep) %>%
+  arrange(bill_dep)
+```
+:::
+
+::: column
+```{r}
+#| label: arrange-descending
+#| code-line-numbers: 3
+penguins %>%
+  select(species,bill_dep) %>%
+  arrange(desc(bill_dep))
+```
+:::
+
+. . .
+
+::: column
+:::
+
+::: column
+```{r}
+#| label: arrange-descending-minus
+#| code-line-numbers: 3
+penguins %>%
+  select(species,bill_dep) %>%
+  arrange(-bill_dep)
+```
+:::
+
+
+# `filter` {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
+
+```{r}
+#| label: filter-width
+#| echo: false
+options(width=69)
+```
+
+## `filter` to select a subset of rows
+
+```{r}
+#| labels: filter
+#| code-line-numbers: 2
+penguins %>%
+  filter(species == "Adelie") 
+```
+
+## `filter` for many conditions at once
+
+```{r}
+#| labels: filter-multi
+#| code-line-numbers: "3,4"
+penguins %>%
+  filter(
+    species == "Adelie",
+    bill_dep > 20
+    ) %>%
+  select(species:bill_dep)
+```
+
+## `filter` for more complex conditions
+
+```{r}
+#| labels: filter-complex
+#| code-line-numbers: 4
+penguins %>%
+  filter(
+    species == "Adelie",
+    bill_dep > 20 | bill_dep < 17
+    ) %>%
+  select(species:bill_dep)
+```
+
+## Logical operators in R
+
+<br>
+
+| operator | definition |   | operator | definition |
+|----------|------------------------|----|------------|------------------------|
+| `<` | less than |  | `x & y` | `x` AND `y` |
+| `<=` | less than or equal to |  |  `x | y` | `x` OR `y` |
+| `>` | greater than |  | `is.na(x)` | test if `x` is `NA` |
+| `>=` | greater than or equal to |  | `!is.na(x)` | test if `x` is not `NA` |
+| `==` | exactly equal to |  | `x %in% y` | test if `x` is in `y` |
+| `!=` | not equal to |  | `!(x %in% y)` | test if `x` is not in `y` |
+
+# `distinct` and `count` {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
+
+
+## `distinct` to filter for unique rows
+
+... and `arrange` to order alphabetically
+
+::: {.column}
+```{r}
+#| label: distinct-1var
+#| code-line-numbers: 2
+penguins %>%
+  distinct(species) %>%
+  arrange(species)
+```
+:::
+
+:::: {.column}
+::: fragment
+```{r}
+#| label: distinct-2var
+#| code-line-numbers: 2
+penguins %>%
+  distinct(species, island) %>%
+  arrange(species, island)
+```
+:::
+::::
+
+## `count` to create frequency tables
+
+::: {.column}
+Alphabetical ordering by default
+<br>
+```{r}
+#| label: count-default
+#| code-line-numbers: 2
+penguins %>%
+  count(species)
+```
+:::
+
+:::: {.column}
+::: fragment
+Order by descending frequency
+<br>
+```{r}
+#| label: count-descending-n
+#| code-line-numbers: 2
+penguins %>%
+  count(species, sort = TRUE)
+
+```
+:::
+::::
+
+## `count` and `arrange`
+
+::: {.column}
+Arrange by ascending frequency order
+```{r}
+#| label: count-ascending-n
+#| code-line-numbers: 3
+penguins %>%
+  count(species) %>%
+  arrange(n)
+```
+:::
+
+:::: {.column}
+::: fragment
+Arrange by descending frequency order
+```{r}
+#| label: count-descending-n2
+#| code-line-numbers: 3
+penguins %>%
+  count(species) %>%
+  arrange(desc(n))
+```
+
+*same output as `sort = TRUE`*
+:::
+::::
+
+## `count` for multiple variables
+
+```{r}
+#| label: count-multi-1
+#| code-line-numbers: 2
+penguins %>%
+  count(species,island) 
+```
+
+## order matters when you `count`
+
+::: {.column}
+`species` first
+```{r}
+#| label: count-multi-2
+#| code-line-numbers: 2
+penguins %>%
+  count(species,island) 
+```
+:::
+
+:::: {.column}
+::: fragment
+`island` first
+```{r}
+#| label: count-multi-3
+#| code-line-numbers: 2
+penguins %>%
+  count(island,species) 
+```
+:::
+::::
+
+# Your turn: <br>`select`, `arrange`, `filter`, `distinct`, `count` {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+```
+
+
+# `mutate` {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
+
+## `mutate` to add a new variable
+
+```{r}
+#| label: mutate-addvar
+#| code-line-numbers: 2
+penguins %>%
+  mutate(bill_ratio = bill_len / bill_dep) %>%
+  select(species:bill_dep,bill_ratio) %>%
+  arrange(desc(bill_ratio))
+
+```
+
+## Small and large bill ratios
+```{r}
+#| label: mutate-col-width
+#| echo: false
+options(width=30)
+```
+
+::: {.column}
+```{r}
+#| label: mutate-addvar-small
+#| code-line-numbers: 4
+penguins %>%
+  mutate(bill_ratio = bill_len / bill_dep) %>%
+  select(species,bill_ratio) %>%
+  filter(bill_ratio < 2)
+```
+:::
+
+::: {.column}
+```{r}
+#| label: mutate-addvar-large
+#| code-line-numbers: 4
+penguins %>%
+  mutate(bill_ratio = bill_len / bill_dep) %>%
+  select(species,bill_ratio) %>%
+  filter(bill_ratio > 3)
+```
+:::
+
+## `mutate` based on criteria
+```{r}
+#| label: mutate-full-width
+#| echo: false
+options(width=69)
+```
+
+
+```{r}
+#| label: mutate-ifelse
+#| code-line-numbers: 3
+penguins %>%
+  mutate(bill_ratio = bill_len / bill_dep,
+         ratio_class = ifelse(bill_ratio < 2, "small", "large")) %>%
+  count(species,ratio_class)
+```
+
+
+## `mutate` based on criteria (cont.)
+
+```{r}
+#| label: mutate-casewhen
+#| code-line-numbers: "3-5"
+penguins %>%
+  mutate(bill_ratio = bill_len / bill_dep,
+         ratio_class = case_when(bill_ratio < 2 ~ "small",
+                                 bill_ratio > 3 ~ "large",
+                                 TRUE ~ "medium")) %>%
+  count(species,ratio_class)
+```
+
+## `case_when` overview
+
+- Multiple if/else statements in a single easy to read format
+- Assessed in order
+- If no `.default` or `TRUE` statement provided will result in missing data
+
+```{r}
+#| label: casewhen-1
+#| code-line-numbers: "3,4"
+penguins %>%
+  mutate(bill_ratio = bill_len / bill_dep,
+         ratio_class = case_when(bill_ratio < 2 ~ "small",
+                                 bill_ratio > 3 ~ "large")) %>%
+  count(species,ratio_class)
+```
+
+## `case_when` - final else statement
+
+```{r}
+#| label: casewhen-2
+#| code-line-numbers: 5
+#| eval: false
+penguins %>%
+  mutate(bill_ratio = bill_len / bill_dep,
+         ratio_class = case_when(bill_ratio < 2 ~ "small",
+                                 bill_ratio > 3 ~ "large",
+                                 TRUE ~ "medium")) %>%
+  count(species,ratio_class)
+```
+<br>
+```{r}
+#| label: casewhen-3
+#| code-line-numbers: 3
+#| eval: false
+penguins %>%
+  mutate(bill_ratio = bill_len / bill_dep,
+         ratio_class = case_when(.default = "medium",
+                                 bill_ratio < 2 ~ "small",
+                                 bill_ratio > 3 ~ "large")) %>%
+  count(species,ratio_class)
+```
+
+## `case_when` order matters
+
+```{r}
+#| label: casewhen-4
+#| code-line-numbers: "3,4"
+#| output: false
+penguins %>%
+  mutate(bill_ratio = bill_len / bill_dep,
+         ratio_class = case_when(bill_ratio < 2 ~ "small",
+                                 bill_ratio < 3 ~ "medium",
+                                 TRUE ~ "large")) %>%
+  count(species,ratio_class)
+```
+<br>
+```{r}
+#| label: casewhen-5
+#| code-line-numbers: "3,4"
+#| output: false
+penguins %>%
+  mutate(bill_ratio = bill_len / bill_dep,
+         ratio_class = case_when(bill_ratio < 3 ~ "medium",
+                                 bill_ratio < 2 ~ "small",
+                                 TRUE ~ "large")) %>%
+  count(species,ratio_class)
+```
+
+::: {.notes}
+left side:
+- if `bill_ratio < 2` then small
+- else if `bill_ratio < 3` then medium
+- else then large
+
+right side:
+- if `bill_ration < 3` then medium
+- else if `bill_ratio < 2` then small
+- The `small` category will never be utilized since the medium will take all < 2 automatically
+
+:::
+
+## `case_when` order matters (cont.)
+```{r}
+#| label: mutate-col-width2
+#| echo: false
+options(width=30)
+```
+
+::: column
+```{r}
+#| label: casewhen-4-codesnip
+#| eval: false
+#| code-line-numbers: 1
+case_when(bill_ratio < 2 ~ "small",
+          bill_ratio < 3 ~ "medium",
+          TRUE ~ "large"))
+```
+
+```{r}
+#| label: casewhen-4-out
+#| ref.label: "casewhen-4"
+#| echo: false
+```
+:::
+
+::: column
+```{r}
+#| label: casewhen-5-codesnip
+#| eval: false
+#| code-line-numbers: 1
+case_when(bill_ratio < 3 ~ "medium",
+          bill_ratio < 2 ~ "small",
+          TRUE ~ "large"))
+```
+
+```{r}
+#| label: casewhen-5-out
+#| ref.label: "casewhen-5"
+#| echo: false
+```
+:::
+
+## `case_when` order matters (cont.)
+
+```{r}
+#| label: casewhen-6
+#| code-line-numbers: "3-8"
+#| output: false
+penguins %>%
+  mutate(bill_ratio = bill_len / bill_dep,
+         ratio_class = case_when(bill_ratio < 2 & sex == "female" ~ "small-female",
+                                 bill_ratio < 2 ~ "small-male",
+                                 bill_ratio < 3 & sex == "female" ~ "medium-female",
+                                 bill_ratio < 3 ~ "medium-male",
+                                 sex == "female" ~ "large-female",
+                                 TRUE ~ "large-male")) %>%
+  count(sex,ratio_class)
+```
+
+```{r}
+#| label: casewhen-7
+#| code-line-numbers: "3-8"
+#| output: false
+penguins %>%
+  mutate(bill_ratio = bill_len / bill_dep,
+         ratio_class = case_when(bill_ratio < 2 ~ "small-male",
+                                 bill_ratio < 2 & sex == "female" ~ "small-female",
+                                 bill_ratio < 3 ~ "medium-male",
+                                 bill_ratio < 3 & sex == "female" ~ "medium-female",
+                                 sex == "female" ~ "large-female",
+                                 TRUE ~ "large-male")) %>%
+  count(sex,ratio_class)
+```
+
+## `case_when` order matters (cont.)
+
+```{r}
+#| eval: false
+
+```
+
+::: column
+```{r}
+#| label: casewhen-6-codesnip
+#| eval: false
+#| code-line-numbers: "1,2"
+case_when(bill_ratio < 2 & sex == "female" ~ "small-female",
+          bill_ratio < 2 ~ "small-male",
+          bill_ratio < 3 & sex == "female" ~ "medium-female",
+          bill_ratio < 3 ~ "medium-male",
+          sex == "female" ~ "large-female",
+          TRUE ~ "large-male")
+```
+
+```{r}
+#| label: casewhen-6-out
+#| ref.label: "casewhen-6"
+#| echo: false
+```
+:::
+
+::: column
+```{r}
+#| label: casewhen-7-codesnip
+#| eval: false
+#| code-line-numbers: "1,2"
+case_when(bill_ratio < 2 ~ "small-male",
+          bill_ratio < 2 & sex == "female" ~ "small-female",
+          bill_ratio < 3 ~ "medium-male",
+          bill_ratio < 3 & sex == "female" ~ "medium-female",
+          sex == "female" ~ "large-female",
+          TRUE ~ "large-male")
+```
+
+```{r}
+#| label: casewhen-7-out
+#| ref.label: "casewhen-7"
+#| echo: false
+```
+:::
+
+
+## `case_when` missing data
+
+```{r}
+#| label: mutate-width2
+#| echo: false
+options(width=69)
+```
+
+```{r}
+#| label: casewhen-8
+#| code-line-numbers: "4,6,8"
+penguins %>%
+  mutate(bill_ratio = bill_len / bill_dep,
+         ratio_class = case_when(bill_ratio < 2 & sex == "female" ~ "small-female",
+                                 bill_ratio < 2 & sex == "male" ~ "small-male",
+                                 bill_ratio < 3 & sex == "female" ~ "medium-female",
+                                 bill_ratio < 3 & sex == "male" ~ "medium-male",
+                                 sex == "female" ~ "large-female",
+                                 sex == "male" ~ "large-male")) %>%
+  count(sex,ratio_class)
+```
+
+# `summarize` and `group_by` {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
+
+## `summarize` for summary stats
+
+::: {.incremental}
+- Fun fact: `summarize` and `summarise` both work
+- Hadley Wickham, creator of the `tidyverse` is from New Zealand
+- `mutate`: observation level
+- `summarize`: aggregation of data
+:::
+
+. . .
+
+```{r}
+#| label: summarize-overview
+#| code-line-numbers: 2
+penguins %>% 
+  summarize(avg_bill_len = mean(bill_len, na.rm = TRUE))
+```
+
+# {background-gradient="radial-gradient(#FFA219, #FFFFFF, #FFFFFF)"}
+
+::: {.tip}
+`r emoji('bulb')`<b>Tip!</b> <br><br> 
+`summarize()` changes the data frame entirely. 
+It collapses rows down to a single summary statistic, and removes all columns that are irrelevant to the calculation.
+:::
+
+## `group_by` for grouped operations
+
+```{r}
+#| label: summarize-groupby
+#| code-line-numbers: 2
+penguins %>% 
+  group_by(species) %>% 
+  summarize(avg_bill_len = mean(bill_len, na.rm = TRUE))
+```
+
+## `group_by` - multiple variables
+
+```{r}
+#| label: summarize-groupby-2
+#| code-line-numbers: 2
+penguins %>% 
+  group_by(species,island) %>% 
+  summarize(avg_bill_len = mean(bill_len, na.rm = TRUE))
+```
+
+## Calculating frequencies
+
+- `count` is simply short for `group_by` then determine frequencies
+- the following two results give the same result
+
+. . .
+
+::: {.column}
+```{r}
+#| label: summarize-count-comp-1
+penguins %>% 
+  group_by(species) %>% 
+  summarize(n = n())
+```
+:::
+
+::: {.column}
+```{r}
+#| label: summarize-count-comp-2
+penguins %>% 
+  count(species)
+```
+:::
+
+## Multiple summary statistics
+
+`summarize` can be used for multiple summary statistics as well
+
+```{r}
+#| label: summarize-multiple
+penguins %>%
+  summarize(
+    min_bill_len = min(bill_len, na.rm = TRUE),
+    mean_bill_len = mean(bill_len, na.rm = TRUE),
+    median_bill_len = median(bill_len, na.rm = TRUE),
+    max_bill_len = max(bill_len, na.rm = TRUE)
+    )
+```
+
+## `summarize` with missing data
+
+```{r}
+#| label: summarize-miss-1
+#| code-line-numbers: 3
+penguins %>% 
+  group_by(species) %>% 
+  summarize(avg_bill_len = mean(bill_len))
+```
+
+. . .
+
+```{r}
+#| label: summarize-miss-2
+#| code-line-numbers: 3
+penguins %>% 
+  group_by(species) %>% 
+  summarize(avg_bill_len = mean(bill_len, na.rm = TRUE))
+```
+
+
+
+## `summarize` with missing data
+
+```{r}
+#| label: summarize-miss-3
+#| code-line-numbers: 2
+penguins %>%
+  filter(!is.na(bill_len)) %>% 
+  group_by(species) %>% 
+  summarize(avg_bill_len = mean(bill_len))
+```
+
+
+# Your turn: <br>`mutate`, `group_by`, `summarize` {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+```

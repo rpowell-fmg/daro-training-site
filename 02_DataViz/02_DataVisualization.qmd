@@ -1,0 +1,694 @@
+---
+title: "Data and Visualization"
+order: 2
+title-slide-attributes:
+    data-background-gradient: linear-gradient(to top right, {{< brand color background >}}, {{< brand color pastelpink >}}, {{< brand color fmorange >}}, {{< brand color tangerine >}})
+
+format: 
+  revealjs:
+    margin: .15
+    quarto-required: ">= 1.6.0"
+    width: 1600
+    height: 900
+    slide-number: "c"
+    css: ../styles.css
+    code-copy: true
+    echo: true
+    code-overflow: scroll
+---
+
+```{r}
+#| label: packages
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+library(tidyverse)
+library(countdown)
+library(emojifont)
+```
+
+
+# Looking at Data {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
+
+## Starwars
+
+```{r}
+#| label: luke-skywalker
+#| echo: FALSE
+knitr::include_graphics("images/luke-skywalker.png")
+```
+
+
+## Glimpse
+  
+Take a `glimpse` at the data:
+
+```{r}
+#| label: starwars-width
+#| echo: false
+options(width=62)
+```
+
+```{r}
+#| label: starwars-glimpse
+glimpse(starwars)
+```
+
+## Dataset dimensions
+
+- How many rows and columns does this dataset have?
+
+```{r}
+#| label: starwars-dim
+nrow(starwars) # number of rows
+ncol(starwars) # number of columns
+dim(starwars)  # dimensions (row column)
+```
+
+## Dataset content - built in datasets
+  
+- What does each row represent?
+- What does each column represent?
+
+```{r}
+#| label: starwars-help-code
+#| eval: FALSE
+?starwars
+```
+
+
+```{r}
+#| label: starwars-help-graphic
+#| echo: FALSE
+knitr::include_graphics("images/starwars-help.png")
+```
+
+
+# Data visualization {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
+
+## Data visualization
+
+> *"The simple graph has brought more information to the data analyst's mind than any other device." --- John Tukey*
+
+- Data visualization is the creation and study of the visual representation of data
+- Many tools for visualizing data -- R is one of them
+- Many approaches/systems within R for making data visualizations -- **ggplot2** is one of them, and that's what we're going to use
+
+## Mass vs. height
+  
+- How would you describe the relationship between mass and height of Starwars characters?
+- What other variables would help us understand data points that don't follow the overall trend?
+- Who is the not so tall but really chubby character?
+
+```{r}
+#| label: starwars-massheight
+#| fig.width: 8
+#| warning: FALSE
+#| echo: FALSE
+#| fig-align: center
+
+ggplot(data = starwars, mapping = aes(x = height, y = mass)) +
+  geom_point() +
+  labs(title = "Mass vs. height of Starwars characters",
+       x = "Height (cm)", y = "Weight (kg)") +
+  geom_point(data = starwars %>% filter(name == "Jabba Desilijic Tiure"), size = 5, pch = 1, color = "pink", stroke = 3)
+```
+
+
+## Jabba!
+
+```{r}
+#| label: starwars-jabba
+#| echo: FALSE
+#| warning: FALSE
+#| cache: TRUE
+#| fig-align: center
+#jabba <- image_read("images/jabba.png")
+
+# fig <- image_graph(width = 1600, height = 900, res = 200)
+# ggplot(data = starwars, mapping = aes(x = height, y = mass)) +
+#   geom_point() +
+#   labs(title = "Mass vs. height of Starwars characters",
+#        x = "Height (cm)", y = "Weight (kg)") +
+#   geom_point(data = starwars %>% filter(name == "Jabba Desilijic Tiure"), size = 5, pch = 1, color = "pink", stroke = 3)
+# dev.off()
+# 
+# out <- fig %>% image_composite(jabba, offset = "+1000+30")
+# 
+# image_write(out, "images/jabbaplot.png", format = "png")
+knitr::include_graphics("images/jabbaplot.png")
+```
+
+
+## ggplot2 $\in$ tidyverse
+
+:::: {.columns}
+
+::: {.column}
+```{r}
+#| label: ggplot-image
+#| echo: FALSE
+#| out.width: "80%"
+knitr::include_graphics("images/ggplot2-part-of-tidyverse.png")
+```
+:::
+
+::: {.column}
+- **ggplot2** is tidyverse's data visualization package
+- `gg` in "ggplot2" stands for Grammar of Graphics
+- Inspired by the book **Grammar of Graphics** by Leland Wilkinson
+:::
+
+::::
+
+## Grammar of Graphics
+
+A grammar of graphics is a tool that enables us to concisely describe the components of a graphic
+
+```{r}
+#| label: grammer-of-graphics-image
+#| echo: FALSE
+#| out.width: "100%"
+#| fig-align: center
+knitr::include_graphics("images/grammar-of-graphics.png")
+```
+
+::: {.footnote}
+Source: [BloggoType](http://bloggotype.blogspot.com/2016/08/holiday-notes2-grammar-of-graphics.html)
+:::
+
+## Mass vs. height
+
+```{r}
+#| label: starwars-massheight-2
+#| fig-align: center
+ggplot(data = starwars, mapping = aes(x = height, y = mass)) +
+  geom_point() +
+  labs(title = "Mass vs. height of Starwars characters",
+       x = "Height (cm)", y = "Weight (kg)")
+```
+
+
+## Hello ggplot2!
+
+- The ggplot2 package comes with the tidyverse
+
+```{r}
+#| label: tidyverse-code
+#| eval: false
+library(tidyverse)
+```
+
+. . .
+
+- `ggplot()` is the main function in ggplot2
+- Plots are constructed in layers
+
+. . .
+
+```{r}
+#| label: ggplot-syntax
+#| eval: FALSE
+#| code-line-numbers: "|1,2|1|2|3|"
+ggplot(data = [dataset],
+       mapping = aes(x = [x-variable], y = [y-variable])) +
+   geom_xxx() +
+   other options
+```
+
+
+# Example {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FFA219, #FFA219, #FFA219)"}
+
+## Data: Palmer Penguins
+
+Measurements for penguin species, island in Palmer Archipelago, size (flipper length, body mass, bill dimensions), and sex.
+<br></br>
+
+::: {.column width = "30%"}
+```{r}
+#| label: penguins-image
+#| echo: FALSE
+knitr::include_graphics("images/penguins.png")
+```
+:::
+
+```{r}
+#| label: penguins-width
+#| echo: false
+options(width=44)
+```
+
+::: {.column width = "70%"}
+```{r}
+#| label: penguins-glimpse
+glimpse(penguins)
+```
+:::
+
+## Plot of bill depth and length by species
+
+```{r}
+#| label: penguins-bill-plot
+#| echo: false
+#| fig-align: center
+ggplot(data = penguins, 
+       mapping = aes(x = bill_dep, y = bill_len,
+                     colour = species)) +
+  geom_point() +
+  labs(title = "Bill depth and length",
+       subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
+       x = "Bill depth (mm)", y = "Bill length (mm)",
+       colour = "Species") + 
+  theme_bw()
+```
+
+## Walk through syntax
+
+```{r}
+#| label: penguins-bill-plot-code-1
+#| fig-align: center
+ggplot(data = penguins)
+```
+
+
+## Walk through syntax {auto-animate=true}
+
+```{r}
+#| label: penguins-bill-plot-code-2
+#| code-line-numbers: "2"
+#| fig-align: center
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_dep)
+       )
+```
+
+
+## Walk through syntax {auto-animate=true}
+
+```{r}
+#| label: penguins-bill-plot-code-3
+#| code-line-numbers: "3"
+#| fig-align: center
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_dep,
+                     y = bill_len)
+       )
+```
+
+
+## Walk through syntax {auto-animate=true}
+
+```{r}
+#| label: penguins-bill-plot-code-4
+#| code-line-numbers: "5"
+#| fig-align: center
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_dep,
+                     y = bill_len)
+       ) +
+  geom_point() 
+```
+
+
+## Walk through syntax {auto-animate=true}
+
+```{r}
+#| label: penguins-bill-plot-code-5
+#| code-line-numbers: "4"
+#| fig-align: center
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_dep,
+                     y = bill_len,
+                     color = species)
+       ) +
+  geom_point() 
+```
+
+
+## Walk through syntax {auto-animate=true}
+
+```{r}
+#| label: penguins-bill-plot-code-6
+#| code-line-numbers: "7,8,9,10"
+#| fig.show: "hide"
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_dep,
+                     y = bill_len,
+                     color = species)
+       ) +
+  geom_point() +
+  labs(title = "Bill depth and length",
+       subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
+       x = "Bill depth (mm)", y = "Bill length (mm)",
+       colour = "Species")
+```
+
+## Walk through syntax {auto-animate=true}
+
+```{r}
+#| label: penguins-bill-plot-code-6-show
+#| ref.label: "penguins-bill-plot-code-6"
+#| echo: FALSE
+#| fig-align: center
+
+```
+
+
+# {background-gradient="radial-gradient(#FFA219, #FFFFFF, #FFFFFF)"}
+
+::: {.tip}
+`r emoji('bulb')`<b>Tip!</b> <br><br> You can omit the names of first two arguments when building plots with `ggplot()`.
+:::
+
+## {background-gradient="radial-gradient(#FFA219, #FFFFFF, #FFFFFF)"}
+
+::: {.column width=48%}
+```{r}
+#| label: tip-named-args
+ggplot(data = penguins,
+       mapping = aes(x = bill_dep,
+                     y = bill_len,
+                     colour = species)) +
+  geom_point()
+```
+:::
+
+::: {.column width=4%}
+:::
+
+::: {.column width=48%}
+```{r}
+#| label: tip-not-named-args
+ggplot(penguins,
+       aes(x = bill_dep,
+           y = bill_len,
+           colour = species)) +
+  geom_point()
+```
+:::
+
+
+## Themes {auto-animate=true}
+
+```{r}
+#| label: penguins-bill-plot-code-7
+#| code-line-numbers: "11,12"
+#| fig.show: "hide"
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_dep,
+                     y = bill_len,
+                     color = species)
+       ) +
+  geom_point() +
+  labs(title = "Bill depth and length",
+       subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
+       x = "Bill depth (mm)", y = "Bill length (mm)",
+       colour = "Species") +
+  scale_colour_viridis_d() +
+  theme_bw()
+```
+
+
+## Themes {auto-animate=true}
+
+```{r}
+#| label: penguins-bill-plot-code-7-show
+#| ref.label: "penguins-bill-plot-code-7"
+#| echo: FALSE
+#| fig-align: center
+
+```
+
+
+
+
+# Aesthetics {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
+
+## Aesthetics options
+
+Commonly used characteristics of plotting characters that can be **mapped to a specific variable** in the data are
+
+- `colour`
+- `shape`
+- `size`
+- `alpha` (transparency)
+
+## Colour
+
+```{r}
+#| label: colour
+#| fig-align: center
+#| out-width: 120%
+#| warning: FALSE
+#| code-line-numbers: "4"
+ggplot(penguins,
+       aes(x = bill_dep, 
+           y = bill_len,
+           colour = species)) +
+  geom_point()
+```
+
+
+
+## Shape
+
+Mapped to a different variable than `colour`
+
+```{r}
+#| label: shape-island
+#| fig-align: center
+#| out-width: 120%
+#| warning: FALSE
+#| code-line-numbers: "5"
+ggplot(penguins,
+       aes(x = bill_dep, 
+           y = bill_len,
+           colour = species,
+           shape = island)) +
+  geom_point()
+```
+
+## Shape
+
+Mapped to same variable as `colour`
+
+```{r}
+#| label: shape-species
+#| fig-align: center
+#| out-width: 120%
+#| warning: FALSE
+#| code-line-numbers: "5"
+ggplot(penguins,
+       aes(x = bill_dep, 
+           y = bill_len,
+           colour = species,
+           shape = species)) +
+  geom_point()
+```
+
+
+## Size
+
+```{r}
+#| label: size
+#| fig-align: center
+#| out-width: 120%
+#| warning: FALSE
+#| code-line-numbers: "6"
+ggplot(penguins,
+       aes(x = bill_dep, 
+           y = bill_len,
+           colour = species,
+           shape = species,
+           size = body_mass)) +
+  geom_point() +
+  scale_colour_viridis_d()
+```
+
+
+## Alpha
+
+
+```{r}
+#| label: alpha
+#| fig-align: center
+#| out-width: 120%
+#| warning: FALSE
+#| code-line-numbers: "7"
+ggplot(penguins,
+       aes(x = bill_dep, 
+           y = bill_len,
+           colour = species,
+           shape = species,
+           size = body_mass,
+           alpha = flipper_len)) + 
+  geom_point() +
+  scale_colour_viridis_d()
+```
+
+
+## Mapping vs. setting
+
+::: {.column width=48%}
+
+**Mapping**
+```{r}
+#| label: mapping-ex
+#| warning: FALSE
+#| code-line-numbers: "4,5"
+ggplot(penguins,
+       aes(x = bill_dep,
+           y = bill_len,
+           size = body_mass,
+           alpha = flipper_len)) +
+  geom_point()
+```
+:::
+
+::: {.column width=4%}
+:::
+
+::: {.column width=48%}
+
+**Setting**
+
+```{r}
+#| label: setting-ex
+#| warning: FALSE
+#| code-line-numbers: "5,6"
+ggplot(penguins,
+       aes(x = bill_dep,
+           y = bill_len)
+       ) + 
+  geom_point(size = 2, 
+             alpha = 0.5)
+```
+:::
+
+
+
+## Mapping vs. setting
+
+- **Mapping:** Determine the size, alpha, etc. of points based on the values of a variable in the data
+  - goes into `aes()`
+
+- **Setting:** Determine the size, alpha, etc. of points **not** based on the values of a variable in the data
+  - goes into `geom_*()` (this was `geom_point()` in the previous example)
+  
+
+
+# Types of geoms {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
+
+## Continuous Data
+
+- Histogram `geom_histogram()`
+
+```{r}
+#| label: histogram
+#| fig-align: center
+ggplot(penguins, aes(x = flipper_len)) +
+  geom_histogram()
+```
+
+## Continuous Data 
+
+- Histogram `geom_histogram()`
+- Density plot `geom_density()`
+
+```{r}
+#| label: density
+#| fig-align: center
+ggplot(penguins, aes(x = flipper_len)) +
+  geom_density()
+```
+
+
+## Continuous Data 
+
+- Histogram `geom_histogram()`
+- Density plot `geom_density()`
+- Box plot `geom_boxplot()`
+
+```{r}
+#| label: boxplot
+#| fig-align: center
+ggplot(penguins, aes(x = flipper_len)) +
+  geom_boxplot()
+```
+
+
+## Continuous Data 
+
+- Histogram `geom_histogram()`
+- Density plot `geom_density()`
+- Box plot `geom_boxplot()`
+- Scatterplots `geom_point()`
+
+```{r}
+#| label: point
+#| fig-align: center
+ggplot(penguins, aes(x = bill_dep, y = bill_len)) +
+  geom_point()
+```
+
+
+## Categorical Data
+
+- Bar plot `geom_bar()`
+
+```{r}
+#| label: bar
+#| fig-align: center
+ggplot(penguins, aes(x = species)) +
+  geom_bar()
+```
+
+
+## Categorical Data 
+
+- Bar plot `geom_bar()`
+  - Stacked bar chart: add `fill`
+
+```{r}
+#| label: bar-stacked
+#| fig-align: center
+#| code-line-numbers: "2"
+ggplot(penguins, aes(x = species, 
+                     fill = sex)) +
+  geom_bar()
+```
+
+
+
+## Categorical Data 
+
+- Bar plot `geom_bar()`
+  - Stacked bar chart: add `fill`
+  - Side by side bar chart: add `position = "dodge"`
+
+```{r}
+#| label: bar-side
+#| fig-align: center
+#| code-line-numbers: "3"
+ggplot(penguins, aes(x = species, 
+                     fill = sex)) +
+  geom_bar(position = "dodge")
+```
+
+
+# Your turn: <br>`ggplot` {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+```

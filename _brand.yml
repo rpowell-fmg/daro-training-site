@@ -1,0 +1,40 @@
+meta:
+  name: Fors Marsh
+  link: https://www.forsmarsh.com/
+
+color:
+  palette:
+    black: "#000000"
+    white: "#FFFFFF"
+    fmorange: "#FFA219"
+    pastelpink: "#FECCDD"
+    aquamarine: "#6BE1CA"
+    blue: "#7CDCFF"
+    deeporange: "#CC5626"
+    tangerine: "#FF791F"
+    brightgreen: "#7FE948"
+    violet: "#8353FF"
+  foreground: black
+  background: white
+  primary: fmorange
+  secondary: pastelpink
+  tertiary: aquamarine
+  dark: deeporange
+  light: pastelpink
+
+typography:
+  fonts:
+  - family: Commissioner
+    source: google
+  - family: Source Code Pro
+    source: google
+  - family: Tinos
+    source: google
+  base: Commissioner
+  headings:
+    family: Commissioner
+    weight: 900
+
+  monospace:
+    family: Source Code Pro
+    size: .9em

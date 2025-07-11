@@ -1,0 +1,442 @@
+---
+title: "Data Wrangling"
+order: 3
+title-slide-attributes:
+    data-background-gradient: linear-gradient(to top right, {{< brand color background >}}, {{< brand color pastelpink >}}, {{< brand color fmorange >}}, {{< brand color tangerine >}})
+
+format: 
+  revealjs:
+    margin: .15
+    quarto-required: ">= 1.6.0"
+    width: 1600
+    height: 900
+    slide-number: "c"
+    css: ../styles.css
+    code-copy: true
+    echo: true
+    code-overflow: scroll
+---
+
+```{r}
+#| label: packages
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+library(tidyverse)
+library(countdown)
+library(emojifont)
+options(width=62)
+```
+
+# Tidy data {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
+
+## Characteristics of tidy data
+
+::: {.incremental}
+-   Each variable forms a column.
+-   Each observation forms a row.
+-   Each type of observational unit forms a table.
+:::
+
+# Grammar of data wrangling {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
+
+## A grammar of data wrangling...
+
+... based on the concepts of functions as verbs that manipulate data frames
+
+::: column
+```{r}
+#| label: dplyr-part-of-tidyverse
+#| echo: FALSE
+#| out.width: "70%"
+#| caption: "dplyr is part of the tidyverse"
+knitr::include_graphics("images/dplyr-part-of-tidyverse.png")
+```
+:::
+
+::: column
+-   `select`: pick columns by name
+-   `arrange`: reorder rows
+-   `filter`: pick rows matching criteria
+-   `distinct`: filter for unique rows
+-   `mutate`: add new variables
+-   `summarise` or `summarize`: agreggation of values
+-   `group_by`: for grouped operations
+-   ... (many more)
+:::
+
+## Rules of **dplyr** functions
+
+::: incremental
+-   First argument is *always* a data frame
+-   Subsequent arguments say what to do with that data frame
+-   Always return a data frame
+-   Don't modify in place
+:::
+
+
+## First look: Variables
+
+```{r}
+#| label: starwars-varnames
+#| output.lines: 18
+names(starwars)
+```
+
+## Second look: Overview
+
+```{r}
+#| label: starwars-glimpse
+#| output.lines: 18
+glimpse(starwars)
+```
+
+
+## Select a single column
+
+View only `homeworld`
+
+. . .
+
+::: column
+```{r}
+#| label: starwars-singlevar-1
+#| eval: FALSE
+#| code-line-numbers: "|1"
+select(
+  starwars, 
+  homeworld
+  )
+```
+:::
+
+::: column
+-   Start with the function (a verb): `select()`
+:::
+
+## Select a single column {auto-animate=true}
+
+View only `homeworld`
+
+::: column
+```{r}
+#| label: starwars-singlevar-2
+#| eval: FALSE
+#| code-line-numbers: "2"
+select( 
+  starwars,
+  homeworld
+  )
+```
+:::
+
+::: column
+-   Start with the function (a verb): `select()`
+-   First argument: data frame we're working with , `starwars`
+:::
+
+## Select a single column
+
+View only `homeworld`
+
+::: column
+```{r}
+#| label: starwars-singlevar-3
+#| eval: FALSE
+#| code-line-numbers: "3"
+select( 
+  starwars, 
+  homeworld
+  )
+```
+:::
+
+::: column
+-   Start with the function (a verb): `select()`
+-   First argument: data frame we're working with , `starwars`
+-   Second argument: variable we want to select, `homeworld`
+:::
+
+## Select a single column
+
+View only `homeworld`
+
+::: column
+```{r}
+#| label: starwars-singlevar-4
+select( 
+  starwars, 
+  homeworld
+  )
+```
+:::
+
+::: column
+-   Start with the function (a verb): `select()`
+-   First argument: data frame we're working with , `starwars`
+-   Second argument: variable we want to select, `homeworld`
+-   Result: data frame with `r nrow(starwars)` rows and 1 column
+:::
+
+# {background-gradient="radial-gradient(#FFA219, #FFFFFF, #FFFFFF)"}
+
+::: {.tip}
+`r emoji('bulb')`<b>Tip!</b> <br><br> dplyr functions always expect a data frame and always yield a data frame
+:::
+
+## Select multiple
+
+- Can select more than one variable
+
+```{r}
+#| label: starwars-multivar-1
+
+select(starwars,
+       name, homeworld)
+
+```
+
+# {background-gradient="radial-gradient(#FFA219, #FFFFFF, #FFFFFF)"}
+
+::: {.tip}
+`r emoji('bulb')`<b>Tip!</b> <br><br> the order you specify your variables in `select()` is the order they appear in the output dataset
+:::
+
+
+# Working with data in R {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
+
+## Objects
+
+::: {.incremental}
+
+- R is an object oriented programming language
+- Everything is an object (datasets, arrays, lists, globals, etc.)
+- Can have multiple datasets, arrays, etc. in your environment
+  - When creating, editing, manipulating data you **must** first reference the data/object of interest
+
+:::
+
+## Workflow
+
+Say we want to narrow our dataset to only see the `name` and `homeworld` variables and sort the data by `homeworld`
+
+::::: {.columns}
+:::: {.column}
+::: {.fragment}
+### Select
+```{r}
+#| label: pipe-intro-1
+starwars %>%
+  select(name, homeworld)
+```
+:::
+::::
+:::: {.column}
+::: {.fragment}
+### Select, then arrange
+```{r}
+#| label: pipe-intro-2
+starwars %>%
+  select(name, homeworld) %>%
+  arrange(homeworld)
+```
+:::
+::::
+:::::
+
+## Pipes
+
+In programming, a pipe is a technique for passing information from one process to another.
+
+::: {.column}
+- Start with the data frame `starwars`, and pass it to the `select()` function,
+:::
+::: {.column}
+```{r}
+#| label: pipe-intro-3
+#| eval: false
+#| code-line-numbers: "|1"
+starwars %>%
+  select(name, homeworld) %>%
+  arrange(homeworld)
+```
+:::
+
+## Pipes
+
+In programming, a pipe is a technique for passing information from one process to another.
+
+::: {.column}
+- Start with the data frame `starwars`, and pass it to the `select()` function,
+- then we select the variables `name` and `homeland`,
+:::
+::: {.column}
+```{r}
+#| label: pipe-intro-4
+#| eval: false
+#| code-line-numbers: "2"
+starwars %>%
+  select(name, homeworld) %>%
+  arrange(homeworld)
+```
+:::
+
+## Pipes
+
+In programming, a pipe is a technique for passing information from one process to another.
+
+::: {.column}
+- Start with the data frame `starwars`, and pass it to the `select()` function,
+- then we select the variables `name` and `homeland`,
+- and then we arrange the data frame by `homeland`
+:::
+::: {.column}
+```{r}
+#| label: pipe-intro-5
+#| code-line-numbers: "3"
+starwars %>%
+  select(name, homeworld) %>%
+  arrange(homeworld)
+```
+:::
+
+## How does a pipe work?
+
+- You can think about the following sequence of actions - find keys, 
+unlock car, start car, drive to work, park.
+
+. . .
+
+- Expressed as a set of nested functions in R pseudocode this would look like:
+```{r}
+#| label: commute-ex-1
+#| eval: FALSE
+park(drive(start_car(find("keys")), to = "work"))
+```
+
+. . .
+
+- Writing it out using pipes give it a more natural (and easier to read) 
+structure:
+```{r}
+#| label: commute-ex-2
+#| eval: FALSE
+find("keys") %>%
+  start_car() %>%
+  drive(to = "work") %>%
+  park()
+```
+
+
+## Aside
+
+The pipe operator is implemented in the package **magrittr**, though we don't need to load this package explicitly since **tidyverse** does this for us.
+
+::::: {.columns}
+:::: {.column}
+::: {.fragment}
+```{r}
+#| label: magritte
+#| echo: FALSE
+#| out.width: "90%"
+#| caption: "Magritte's pipe"
+knitr::include_graphics("images/magritte.jpg")
+```
+
+> The Treachery of Images
+>
+> René Magritte
+
+:::
+::::
+
+:::: {.column}
+::: {.fragment}
+```{r} 
+#| label: magrittr
+#| echo: FALSE
+#| out.width: "50%"
+#| fig-align: center
+#| caption: "magrittr's pipe"
+knitr::include_graphics("images/magrittr-hex.png")
+```
+:::
+::::
+:::::
+
+## A note on piping and layering
+
+::: {.incremental}
+- `%>%` used mainly in **dplyr** pipelines, *we pipe the output of the previous line of code as the first input of the next line of code*
+
+- `+` used in **ggplot2** plots is used for "layering", *we create the plot in layers, separated by `+`*
+:::
+
+## dplyr
+
+`r emoji("x")`
+
+```{r} 
+#| label: dplyr-plus
+#| error: TRUE
+starwars +
+  select(name, homeland)
+```
+
+`r emoji("white_check_mark")`
+
+```{r}
+#| label: dplyr-pipe
+#| eval: FALSE
+starwars %>%
+  select(name, homeland)
+```
+
+## ggplot2
+
+`r emoji("x")`
+
+```{r}
+#| label: ggplot-pipe
+#| error: TRUE
+ggplot(starwars, aes(x = homeworld, fill = sex)) %>%
+  geom_bar()
+```
+
+`r emoji("white_check_mark")`
+
+```{r}
+#| label: ggplot-plus
+#| out.width: "25%"
+ggplot(starwars, aes(x = homeworld, fill = sex)) +
+  geom_bar()
+```
+
+
+## Code styling
+
+Many of the styling principles are consistent across `%>%` and `+`:
+
+- always a space before
+- always a line break after (for pipelines with more than 2 lines)
+
+`r emoji("x")`
+
+```{r}
+#| label: styling-bad
+#| eval: FALSE
+ggplot(starwars,aes(x=homeworld,fill=sex))+geom_bar()
+```
+
+`r emoji("white_check_mark")`
+
+```{r}
+#| label: styling-good
+#| eval: FALSE
+ggplot(starwars, aes(x = homeworld, fill = sex)) + 
+  geom_bar()
+```
+
+
+
+

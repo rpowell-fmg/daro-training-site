@@ -4,11 +4,45 @@ project:
 
 website:
   title: "daro-training-site"
-  navbar:
-    left:
+
+  sidebar:
+    background: "#FECCDD"
+    logo: "images/logo.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://https://github.com/rpowell-fmg/daro-training-site
+        text: "GitHub"
+
+    style: docked
+    search: true
+    collapse-level: 2
+    contents:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - section: "Day 1"
+        contents:
+          - href: 01_GettingStarted/index.qmd
+          - href: 02_DataViz/index.qmd
+      - section: "Day 2"
+        contents:
+          - href: 03_TidyData/index.qmd
+          - href: 04_SingleDataset/index.qmd
+      - section: "Day 3"
+        contents:
+          - href: 05_JoiningDatasets/index.qmd
+          - href: 06_PivotingData/index.qmd
+          - href: 07_ImportExport/index.qmd
+      - section: "Day 4"
+        contents:
+          - href: 08_DataAttributes/index.qmd
+          - href: 09_LabelledData/index.qmd
+
+  page-footer:
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    left: "&copy; Copyright 2025"
+    background: "#FFA219"
 
 format:
   html:
@@ -18,5 +52,8 @@ format:
     css: styles.css
     toc: true
 
+execute:
+    freeze: auto
+    echo: true
 
-
+editor: source
