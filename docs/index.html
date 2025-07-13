@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="./images/tidyverse.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main">
     <a href="https://https://github.com/rpowell-fmg/daro-training-site" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
@@ -209,8 +209,16 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#cheat-sheets" id="toc-cheat-sheets" class="nav-link" data-scroll-target="#cheat-sheets">Cheat sheets</a></li>
+  <li><a href="#logical-operators-in-r" id="toc-logical-operators-in-r" class="nav-link" data-scroll-target="#logical-operators-in-r">Logical operators in R</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -235,8 +243,102 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>All slides and exercises will be posted here throughout the week!</p>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://r4ds.hadley.nz/">R for Data Science</a></li>
+<li>Overview of the packages in the <a href="https://tidyverse.tidyverse.org/">tidyverse</a></li>
+<li>Some examples of Stata code to R code can be found <a href="https://rstudio.github.io/cheatsheets/stata2r.pdf">here</a></li>
+</ul>
+</section>
+<section id="cheat-sheets" class="level2">
+<h2 class="anchored" data-anchor-id="cheat-sheets">Cheat sheets</h2>
+<ul>
+<li><a href="https://rstudio.github.io/cheatsheets/rstudio-ide.pdf">RStudio IDE</a></li>
+<li><a href="https://rstudio.github.io/cheatsheets/data-transformation.pdf">dplyr</a>: foundation of tidyverse data manipulation</li>
+<li><a href="https://rstudio.github.io/cheatsheets/tidyr.pdf">tidyr</a>: for reshaping data</li>
+<li><a href="https://rstudio.github.io/cheatsheets/data-import.pdf">readr &amp; readxl</a>: import/export for common delineated data (e.g., csv) and Excel files</li>
+<li><a href="https://rstudio.github.io/cheatsheets/factors.pdf">forcats</a>: working with factor variables</li>
+<li><a href="https://rstudio.github.io/cheatsheets/lubridate.pdf">lubridate</a>: working with dates &amp; datetime variables</li>
+<li><a href="https://rstudio.github.io/cheatsheets/strings.pdf">stringr</a>: working with character/string data.
+<ul>
+<li>This cheat sheet has regular expression assistance on the back</li>
+<li>Further regular expression guidelines can be found <a href="https://rstudio.github.io/cheatsheets/regex.pdf">here</a></li>
+</ul></li>
+<li><a href="https://rstudio.github.io/cheatsheets/data-visualization.pdf">ggplot2</a>: creating graphs</li>
+<li><a href="https://rstudio.github.io/cheatsheets/labelled.pdf">labelled</a>: working with labelled data</li>
+</ul>
+</section>
+<section id="logical-operators-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="logical-operators-in-r">Logical operators in R</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 32%">
+<col style="width: 5%">
+<col style="width: 16%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>operator</th>
+<th>definition</th>
+<th></th>
+<th>operator</th>
+<th>definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>&lt;</code></td>
+<td>less than</td>
+<td></td>
+<td><code>x &amp; y</code></td>
+<td><code>x</code> AND <code>y</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;=</code></td>
+<td>less than or equal to</td>
+<td></td>
+<td><code>x | y</code></td>
+<td><code>x</code> OR <code>y</code></td>
+</tr>
+<tr class="odd">
+<td><code>&gt;</code></td>
+<td>greater than</td>
+<td></td>
+<td><code>is.na(x)</code></td>
+<td>test if <code>x</code> is <code>NA</code></td>
+</tr>
+<tr class="even">
+<td><code>&gt;=</code></td>
+<td>greater than or equal to</td>
+<td></td>
+<td><code>!is.na(x)</code></td>
+<td>test if <code>x</code> is not <code>NA</code></td>
+</tr>
+<tr class="odd">
+<td><code>==</code></td>
+<td>exactly equal to</td>
+<td></td>
+<td><code>x %in% y</code></td>
+<td>test if <code>x</code> is in <code>y</code></td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td>not equal to</td>
+<td></td>
+<td><code>!(x %in% y)</code></td>
+<td>test if <code>x</code> is not in <code>y</code></td>
+</tr>
+</tbody>
+</table>
+<div class="footnote">
+<p>Most slides and exercises are adapted from <a href="https://datasciencebox.org/">Data Science in a Box</a>.</p>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

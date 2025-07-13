@@ -3,3 +3,40 @@ title: "R Training for DARO!"
 ---
 
 All slides and exercises will be posted here throughout the week!
+
+## Resources
+
+-    [R for Data Science](https://r4ds.hadley.nz/)
+-    Overview of the packages in the [tidyverse](https://tidyverse.tidyverse.org/)
+-   Some examples of Stata code to R code can be found [here](https://rstudio.github.io/cheatsheets/stata2r.pdf)
+
+## Cheat sheets
+
+-   [RStudio IDE](https://rstudio.github.io/cheatsheets/rstudio-ide.pdf)
+-   [dplyr](https://rstudio.github.io/cheatsheets/data-transformation.pdf): foundation of tidyverse data manipulation
+-   [tidyr](https://rstudio.github.io/cheatsheets/tidyr.pdf): for reshaping data
+-   [readr & readxl](https://rstudio.github.io/cheatsheets/data-import.pdf): import/export for common delineated data (e.g., csv) and Excel files
+-   [forcats](https://rstudio.github.io/cheatsheets/factors.pdf): working with factor variables
+-   [lubridate](https://rstudio.github.io/cheatsheets/lubridate.pdf): working with dates & datetime variables
+-   [stringr](https://rstudio.github.io/cheatsheets/strings.pdf): working with character/string data.
+    -   This cheat sheet has regular expression assistance on the back
+    -   Further regular expression guidelines can be found [here](https://rstudio.github.io/cheatsheets/regex.pdf)
+-   [ggplot2](https://rstudio.github.io/cheatsheets/data-visualization.pdf): creating graphs
+- [labelled](https://rstudio.github.io/cheatsheets/labelled.pdf): working with labelled data
+
+
+## Logical operators in R
+
+| operator | definition |   | operator | definition |
+|----------|------------------------|----|------------|------------------------|
+| `<` | less than |  | `x & y` | `x` AND `y` |
+| `<=` | less than or equal to |  |  `x | y` | `x` OR `y` |
+| `>` | greater than |  | `is.na(x)` | test if `x` is `NA` |
+| `>=` | greater than or equal to |  | `!is.na(x)` | test if `x` is not `NA` |
+| `==` | exactly equal to |  | `x %in% y` | test if `x` is in `y` |
+| `!=` | not equal to |  | `!(x %in% y)` | test if `x` is not in `y` |
+
+::: footnote
+Most slides and exercises are adapted from [Data Science in a
+Box](https://datasciencebox.org/).
+:::
