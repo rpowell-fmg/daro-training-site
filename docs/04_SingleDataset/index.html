@@ -249,7 +249,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#slides" id="toc-slides" class="nav-link active" data-scroll-target="#slides">Slides</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#select-arrange-filter-distinct-count" id="toc-select-arrange-filter-distinct-count" class="nav-link" data-scroll-target="#select-arrange-filter-distinct-count"><strong>select, arrange, filter, distinct, count</strong></a></li>
+  <li><a href="#mutate-group_by-summarize" id="toc-mutate-group_by-summarize" class="nav-link" data-scroll-target="#mutate-group_by-summarize"><strong>mutate, group_by, summarize</strong></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -282,14 +287,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="exercises" class="level2">
 <h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
 <ul>
-<li>Data:
-<ul>
-<li>Using <code>college_recent_grads</code> data from the <strong>fivethirtyeight</strong> package</li>
-<li>Use <code>?college_recent_grads</code> to review the documentation and <code>glimpse(college_recent_grads)</code> to see the structure of the data</li>
-</ul></li>
+<li>Use <code>college_recent_grads</code> data from the <strong>fivethirtyeight</strong> package</li>
+<li>Review documentation for the data with: <code>?college_recent_grads</code></li>
+<li>See the structure of the data with: <code>glimpse(college_recent_grads)</code></li>
 </ul>
-<p><strong>Select, arrange, filter, distinct, count</strong></p>
+</section>
+<section id="select-arrange-filter-distinct-count" class="level3">
+<h3 class="anchored" data-anchor-id="select-arrange-filter-distinct-count"><strong>select, arrange, filter, distinct, count</strong></h3>
 <ol type="1">
 <li>Which major has the highest percentage of women? (Hint: use <code>arrange(desc())</code> to easily see the top items)
 <ul>
@@ -311,7 +318,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol start="3" type="1">
 <li>Output a count of the number of majors in each <code>major_category</code></li>
 </ol>
-<p><strong>mutate, group_by, summarize</strong></p>
+</section>
+<section id="mutate-group_by-summarize" class="level3">
+<h3 class="anchored" data-anchor-id="mutate-group_by-summarize"><strong>mutate, group_by, summarize</strong></h3>
 <ol start="4" type="1">
 <li>Create a new variable called <code>STEM</code> that is a 0/1 indicator if the major is in one of the <code>stem_categories</code> from #2 above.</li>
 <li>Which major category has the highest typical (can use <code>mean()</code>, <code>median()</code>, etc.) median income? (Hint: use <code>group_by()</code> and <code>summarize()</code>)</li>
@@ -320,6 +329,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
