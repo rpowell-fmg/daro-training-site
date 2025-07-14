@@ -1,0 +1,166 @@
+---
+title: "Day 1- Solutions"
+format: html
+---
+
+# Getting Started
+
+## Installing Packages
+```{r}
+#| label: install-packages-1
+#| eval: false
+install.packages("tidyverse")
+install.packages("fivethirtyeight")
+install.packages("janitor")
+install.packages("labelled")
+```
+
+OR 
+
+```{r}
+#| label: install-packages-2
+#| eval: false
+install.packages(c("tidyverse","fivethirtyeight",
+                   "janitor","labelled"))
+```
+
+## Load Packages 
+
+```{r}
+#| label: load-packages
+library(tidyverse)
+library(fivethirtyeight)
+library(janitor)
+library(labelled)
+```
+
+
+# Data Visualization
+
+## Load Data
+```{r}
+#| label: load-data-noecho
+#| echo: false
+edibnb <- readRDS("../data/edibnb.RDS")
+```
+
+```{r}
+#| label: load-edibnb-data
+#| eval: false
+edibnb <- readRDS("PATHNAME/edibnb.RDS")
+```
+
+## Exercises
+1. How many observations (rows) does the dataset have?
+```{r} 
+#| label: dv-nobs
+
+nrow(edibnb)
+```
+
+2. Run `View(edibnb)` in your console to view the data in the data viewer. What does each row in the dataset represent?
+
+
+3. Create a barchart:
+    a. Displaying the count of listings in each neighborhood
+
+```{r}
+#| label: dv-3a
+    ggplot(edibnb, aes(x = neighborhood)) +
+      geom_bar()
+```
+
+    b. Add different colors for the number of reviews
+```{r}
+#| label: dv-3b
+    ggplot(edibnb, aes(x = neighborhood, fill = number_of_reviews)) +
+      geom_bar()
+```
+
+4. Create a visualization that will help you compare the distribution of review scores (`review_scores_rating`) across neighborhoods.
+```{r}
+#| label: dv-4
+ggplot(edibnb, aes(x = review_scores_rating, color = neighborhood)) +
+  geom_boxplot()
+
+ggplot(edibnb, aes(x = review_scores_rating, fill = neighborhood)) +
+  geom_histogram() +
+  facet_wrap(~neighborhood) +
+  theme_minimal()
+
+ggplot(edibnb, aes(x = review_scores_rating, fill = neighborhood)) +
+  geom_density(alpha = .5) +
+  facet_wrap(~neighborhood)
+```
+
+
+# Tidy Data
+
+Take your plot code and change it so it uses a pipe (`%>%`) workflow instead of calling the data directly in `ggplot()`
+
+```{r}
+#| label: tidy-sol
+edibnb %>% 
+  ggplot(aes(x = review_scores_rating, color = neighborhood)) +
+  geom_boxplot()
+
+edibnb %>% 
+  ggplot(aes(x = review_scores_rating, fill = neighborhood)) +
+  geom_histogram() +
+  facet_wrap(~neighborhood) +
+  theme_minimal()
+
+edibnb %>% 
+  ggplot(aes(x = review_scores_rating, fill = neighborhood)) +
+  geom_density(alpha = .5) +
+  facet_wrap(~neighborhood)
+```
+
+# Single Dataset - select, arrange, filter, distinct, count
+
+## Review the data
+
+```{r}
+#| label: single-data
+college_recent_grads
+glimpse(college_recent_grads)
+```
+
+## Exercises
+
+1. Which major has the highest percentage of women? (Hint: use `arrange(desc())` to easily see the top items).  Output only relevant variables
+
+```{r}
+#| label: single-1
+college_recent_grads %>%
+  arrange(desc(sharewomen)) %>%
+  select(major, major_category, sharewomen)
+```
+
+
+2. Get a list of STEM majors that have median earnings < $36,000 (Hint: use the `%in%` to see if the major_category is in `stem_categories`).  Output only relevant variables
+
+```{r}
+#| label: single-2
+stem_categories <- c(
+  "Biology & Life Science",
+  "Computers & Mathematics",
+  "Engineering",
+  "Physical Sciences"
+)
+
+stem_categories
+
+college_recent_grads %>%
+  filter(major_category %in% stem_categories & median < 36000) %>%
+  select(major, major_category, median)
+```
+
+3. Output a count of the number of majors in each major_category
+
+```{r}
+#| label: single-3
+college_recent_grads %>%
+  count(major_category)
+```
+

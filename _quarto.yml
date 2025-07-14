@@ -16,6 +16,7 @@ website:
         text: "GitHub"
 
     style: docked
+    page-navigation: true
     search: true
     collapse-level: 2
     contents:
@@ -29,6 +30,7 @@ website:
           - href: 04_SingleDataset/index.qmd
       - section: "Day 2"
         contents:
+          - href: 04b_SingleDataset_pt2/index.qmd
           - href: 05_JoiningDatasets/index.qmd
           - href: 06_PivotingData/index.qmd
       - section: "Day 3"
@@ -37,7 +39,9 @@ website:
           - href: 08_DataAttributes/index.qmd
           - href: 09_LabelledData/index.qmd
       - section: "Day 4"
+      - section: "Exercise Solutions"
         contents:
+          - href: ExerciseSolutions/Day1_Solutions.qmd
 
 
   page-footer:

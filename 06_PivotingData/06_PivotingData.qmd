@@ -1,6 +1,6 @@
 ---
 title: "Pivoting Data"
-order: 6
+order: 7
 title-slide-attributes:
     data-background-gradient: linear-gradient(to top right, {{< brand color background >}}, {{< brand color pastelpink >}}, {{< brand color fmorange >}}, {{< brand color tangerine >}})
 

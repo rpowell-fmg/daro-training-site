@@ -1,0 +1,34 @@
+---
+title: "Single Dataset - Part 2"
+format: html
+---
+
+## Slides
+
+[View slides in full screen](04b_SingleDataset_pt2.html)
+
+```{=html}
+<iframe class="slide-deck" src="04b_SingleDataset_pt2.html" height="450" width="800" style="border: 1px solid #F0F0F0;"></iframe>
+```
+## Exercises
+
+### Data
+- Use `college_recent_grads` data from the **fivethirtyeight** package
+- Review documentation for the data with: `?college_recent_grads`
+- See the structure of the data with: `glimpse(college_recent_grads)`
+- Create an array of STEM categories:
+
+```{r}
+    stem_categories <- c("Biology & Life Science",
+                         "Computers & Mathematics",
+                         "Engineering",
+                         "Physical Sciences")
+```
+    
+### **mutate, group_by, summarize**
+
+1. Create a new variable that indicates if the major has more women than men.
+2. Create a new variable called `STEM` that is a 0/1 indicator if the major is in one of the `stem_categories`.
+3. Which major category has the highest typical (can use `mean()`, `median()`, etc.) median income? (Hint: use `group_by()` and `summarize()`)
+4. Create a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not.
+5. As time permits, review the data to create new variables, summarize different aspects, or visualize the data in different ways. Familiarize yourself with dplyr!

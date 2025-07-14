@@ -193,6 +193,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../04b_SingleDataset_pt2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Single Dataset - Part 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../05_JoiningDatasets/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Joining Datasets</span></a>
   </div>
@@ -238,6 +244,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">Day 4</span></span>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Exercise Solutions</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ExerciseSolutions/Day1_Solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 1- Solutions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -253,7 +276,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#select-arrange-filter-distinct-count" id="toc-select-arrange-filter-distinct-count" class="nav-link" data-scroll-target="#select-arrange-filter-distinct-count"><strong>select, arrange, filter, distinct, count</strong></a></li>
-  <li><a href="#mutate-group_by-summarize" id="toc-mutate-group_by-summarize" class="nav-link" data-scroll-target="#mutate-group_by-summarize"><strong>mutate, group_by, summarize</strong></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -317,15 +339,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <ol start="3" type="1">
 <li>Output a count of the number of majors in each <code>major_category</code></li>
-</ol>
-</section>
-<section id="mutate-group_by-summarize" class="level3">
-<h3 class="anchored" data-anchor-id="mutate-group_by-summarize"><strong>mutate, group_by, summarize</strong></h3>
-<ol start="4" type="1">
-<li>Create a new variable called <code>STEM</code> that is a 0/1 indicator if the major is in one of the <code>stem_categories</code> from #2 above.</li>
-<li>Which major category has the highest typical (can use <code>mean()</code>, <code>median()</code>, etc.) median income? (Hint: use <code>group_by()</code> and <code>summarize()</code>)</li>
-<li>Create a scatterplot of median income vs.&nbsp;proportion of women in that major, coloured by whether the major is in a STEM field or not.</li>
-<li>As time permits, review the data to create new variables, summarize different aspects, or visualize the data in different ways. Familiarize yourself with dplyr!</li>
 </ol>
 
 

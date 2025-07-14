@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.40">
+
+  <title>daro-training-site – Working with a single dataset Part 2</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-213463b5b953f80387822b03deb1b271.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+
+  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
+
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-gradient="linear-gradient(to top right, #FFFFFF, #FECCDD, #FFA219, #FF791F)" class="quarto-title-block center">
+  <h1 class="title">Working with a single dataset<br>Part 2</h1>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section>
+<section id="mutate" class="title-slide slide level1 center" data-background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)">
+<h1><code>mutate</code></h1>
+
+</section>
+<section id="mutate-to-add-a-new-variable" class="slide level2">
+<h2><code>mutate</code> to add a new variable</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb1-2"><a></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_len <span class="sc">/</span> bill_dep) <span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a></a>  <span class="fu">select</span>(species<span class="sc">:</span>bill_dep,bill_ratio) <span class="sc">%&gt;%</span></span>
+<span id="cb1-4"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(bill_ratio))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      species    island bill_len bill_dep bill_ratio
+1      Gentoo    Biscoe     51.3     14.2   3.612676
+2      Gentoo    Biscoe     50.2     14.3   3.510490
+3      Gentoo    Biscoe     59.6     17.0   3.505882
+4      Gentoo    Biscoe     46.1     13.2   3.492424
+5      Gentoo    Biscoe     54.3     15.7   3.458599
+6      Gentoo    Biscoe     48.7     14.1   3.453901
+7      Gentoo    Biscoe     47.2     13.7   3.445255
+8      Gentoo    Biscoe     46.5     13.5   3.444444
+9      Gentoo    Biscoe     55.1     16.0   3.443750
+10     Gentoo    Biscoe     48.5     14.1   3.439716
+11     Gentoo    Biscoe     47.3     13.8   3.427536
+12     Gentoo    Biscoe     47.5     14.0   3.392857
+13     Gentoo    Biscoe     49.1     14.5   3.386207
+14     Gentoo    Biscoe     50.7     15.0   3.380000
+15     Gentoo    Biscoe     53.4     15.8   3.379747
+16     Gentoo    Biscoe     44.9     13.3   3.375940
+17     Gentoo    Biscoe     48.2     14.3   3.370629
+18     Gentoo    Biscoe     52.5     15.6   3.365385
+19     Gentoo    Biscoe     48.4     14.4   3.361111
+20     Gentoo    Biscoe     47.5     14.2   3.345070
+21     Gentoo    Biscoe     50.1     15.0   3.340000
+22     Gentoo    Biscoe     50.5     15.2   3.322368
+23     Gentoo    Biscoe     45.5     13.7   3.321168
+24     Gentoo    Biscoe     49.1     14.8   3.317568
+25     Gentoo    Biscoe     48.4     14.6   3.315068
+26     Gentoo    Biscoe     49.6     15.0   3.306667
+27     Gentoo    Biscoe     45.3     13.7   3.306569
+28     Gentoo    Biscoe     50.4     15.3   3.294118
+29     Gentoo    Biscoe     50.0     15.2   3.289474
+30     Gentoo    Biscoe     55.9     17.0   3.288235
+31     Gentoo    Biscoe     45.7     13.9   3.287770
+32     Gentoo    Biscoe     47.6     14.5   3.282759
+33     Gentoo    Biscoe     45.3     13.8   3.282609
+34     Gentoo    Biscoe     46.6     14.2   3.281690
+35     Gentoo    Biscoe     46.2     14.1   3.276596
+36     Gentoo    Biscoe     45.2     13.8   3.275362
+37     Gentoo    Biscoe     42.9     13.1   3.274809
+38     Gentoo    Biscoe     45.5     13.9   3.273381
+39     Gentoo    Biscoe     49.1     15.0   3.273333
+40     Gentoo    Biscoe     46.8     14.3   3.272727
+41     Gentoo    Biscoe     50.0     15.3   3.267974
+42  Chinstrap     Dream     58.0     17.8   3.258427
+43     Gentoo    Biscoe     44.9     13.8   3.253623
+44     Gentoo    Biscoe     47.4     14.6   3.246575
+45     Gentoo    Biscoe     49.2     15.2   3.236842
+46     Gentoo    Biscoe     50.8     15.7   3.235669
+47     Gentoo    Biscoe     44.0     13.6   3.235294
+48     Gentoo    Biscoe     48.5     15.0   3.233333
+49     Gentoo    Biscoe     43.3     13.4   3.231343
+50     Gentoo    Biscoe     46.5     14.4   3.229167
+51     Gentoo    Biscoe     45.8     14.2   3.225352
+52     Gentoo    Biscoe     48.7     15.1   3.225166
+53     Gentoo    Biscoe     46.9     14.6   3.212329
+54     Gentoo    Biscoe     50.4     15.7   3.210191
+55     Gentoo    Biscoe     46.2     14.4   3.208333
+56     Gentoo    Biscoe     46.5     14.5   3.206897
+57     Gentoo    Biscoe     47.8     15.0   3.186667
+58     Gentoo    Biscoe     46.2     14.5   3.186207
+59     Gentoo    Biscoe     48.1     15.1   3.185430
+60     Gentoo    Biscoe     47.7     15.0   3.180000
+61     Gentoo    Biscoe     50.5     15.9   3.176101
+62     Gentoo    Biscoe     50.5     15.9   3.176101
+63     Gentoo    Biscoe     47.5     15.0   3.166667
+64     Gentoo    Biscoe     51.5     16.3   3.159509
+65     Gentoo    Biscoe     43.8     13.9   3.151079
+66     Gentoo    Biscoe     50.0     15.9   3.144654
+67     Gentoo    Biscoe     46.5     14.8   3.141892
+68     Gentoo    Biscoe     49.3     15.7   3.140127
+69     Gentoo    Biscoe     45.5     14.5   3.137931
+70     Gentoo    Biscoe     45.8     14.6   3.136986
+71     Gentoo    Biscoe     43.6     13.9   3.136691
+72     Gentoo    Biscoe     51.1     16.3   3.134969
+73     Gentoo    Biscoe     49.8     15.9   3.132075
+74     Gentoo    Biscoe     45.1     14.4   3.131944
+75     Gentoo    Biscoe     49.4     15.8   3.126582
+76     Gentoo    Biscoe     42.7     13.7   3.116788
+77     Gentoo    Biscoe     44.5     14.3   3.111888
+78     Gentoo    Biscoe     42.0     13.5   3.111111
+79     Gentoo    Biscoe     45.1     14.5   3.110345
+80     Gentoo    Biscoe     45.1     14.5   3.110345
+81     Gentoo    Biscoe     45.4     14.6   3.109589
+82     Gentoo    Biscoe     42.6     13.7   3.109489
+83     Gentoo    Biscoe     48.7     15.7   3.101911
+84     Gentoo    Biscoe     46.2     14.9   3.100671
+85     Gentoo    Biscoe     49.6     16.0   3.100000
+86     Gentoo    Biscoe     49.9     16.1   3.099379
+87     Gentoo    Biscoe     51.1     16.5   3.096970
+88     Gentoo    Biscoe     46.4     15.0   3.093333
+89     Gentoo    Biscoe     43.3     14.0   3.092857
+90     Gentoo    Biscoe     47.3     15.3   3.091503
+91     Gentoo    Biscoe     48.2     15.6   3.089744
+92     Gentoo    Biscoe     49.5     16.1   3.074534
+93     Gentoo    Biscoe     50.0     16.3   3.067485
+94     Gentoo    Biscoe     52.1     17.0   3.064706
+95     Gentoo    Biscoe     43.5     14.2   3.063380
+96     Gentoo    Biscoe     49.5     16.2   3.055556
+97     Gentoo    Biscoe     45.2     14.8   3.054054
+98     Gentoo    Biscoe     46.1     15.1   3.052980
+99     Gentoo    Biscoe     52.2     17.1   3.052632
+100    Gentoo    Biscoe     46.7     15.3   3.052288
+101    Gentoo    Biscoe     47.2     15.5   3.045161
+102    Gentoo    Biscoe     49.0     16.1   3.043478
+103    Gentoo    Biscoe     46.8     15.4   3.038961
+104    Gentoo    Biscoe     48.6     16.0   3.037500
+105    Gentoo    Biscoe     45.5     15.0   3.033333
+106    Gentoo    Biscoe     44.5     14.7   3.027211
+107    Gentoo    Biscoe     42.8     14.2   3.014085
+108    Gentoo    Biscoe     43.4     14.4   3.013889
+109    Gentoo    Biscoe     48.8     16.2   3.012346
+110    Gentoo    Biscoe     40.9     13.7   2.985401
+111    Gentoo    Biscoe     43.2     14.5   2.979310
+112    Gentoo    Biscoe     46.4     15.6   2.974359
+113    Gentoo    Biscoe     48.4     16.3   2.969325
+114    Gentoo    Biscoe     49.8     16.8   2.964286
+115    Gentoo    Biscoe     50.8     17.3   2.936416
+116 Chinstrap     Dream     48.1     16.4   2.932927
+117    Gentoo    Biscoe     46.3     15.8   2.930380
+118    Gentoo    Biscoe     45.0     15.4   2.922078
+119    Gentoo    Biscoe     46.8     16.1   2.906832
+120 Chinstrap     Dream     49.8     17.3   2.878613
+121 Chinstrap     Dream     52.0     18.1   2.872928
+122    Gentoo    Biscoe     43.5     15.2   2.861842
+123    Gentoo    Biscoe     45.2     15.8   2.860759
+124 Chinstrap     Dream     50.9     17.9   2.843575
+125    Gentoo    Biscoe     41.7     14.7   2.836735
+126 Chinstrap     Dream     46.8     16.5   2.836364
+127    Gentoo    Biscoe     44.5     15.7   2.834395
+128 Chinstrap     Dream     47.5     16.8   2.827381
+129 Chinstrap     Dream     46.9     16.6   2.825301
+130 Chinstrap     Dream     51.3     18.2   2.818681
+131 Chinstrap     Dream     55.8     19.8   2.818182
+132 Chinstrap     Dream     50.1     17.9   2.798883
+133 Chinstrap     Dream     52.2     18.8   2.776596
+134 Chinstrap     Dream     48.5     17.5   2.771429
+135    Gentoo    Biscoe     45.2     16.4   2.756098
+136 Chinstrap     Dream     51.5     18.7   2.754011
+137 Chinstrap     Dream     50.8     18.5   2.745946
+138 Chinstrap     Dream     50.5     18.4   2.744565
+139 Chinstrap     Dream     52.0     19.0   2.736842
+140 Chinstrap     Dream     49.6     18.2   2.725275
+141 Chinstrap     Dream     45.2     16.6   2.722892
+142 Chinstrap     Dream     47.0     17.3   2.716763
+143 Chinstrap     Dream     51.0     18.8   2.712766
+144 Chinstrap     Dream     51.4     19.0   2.705263
+145 Chinstrap     Dream     49.2     18.2   2.703297
+146 Chinstrap     Dream     53.5     19.9   2.688442
+147 Chinstrap     Dream     45.7     17.0   2.688235
+148 Chinstrap     Dream     50.2     18.7   2.684492
+149 Chinstrap     Dream     45.9     17.1   2.684211
+150 Chinstrap     Dream     45.5     17.0   2.676471
+151 Chinstrap     Dream     50.8     19.0   2.673684
+152 Chinstrap     Dream     49.7     18.6   2.672043
+153 Chinstrap     Dream     51.3     19.2   2.671875
+154 Chinstrap     Dream     50.2     18.8   2.670213
+155 Chinstrap     Dream     50.9     19.1   2.664921
+156 Chinstrap     Dream     52.7     19.8   2.661616
+157 Chinstrap     Dream     51.9     19.5   2.661538
+158 Chinstrap     Dream     45.7     17.3   2.641618
+159 Chinstrap     Dream     46.2     17.5   2.640000
+160 Chinstrap     Dream     52.8     20.0   2.640000
+161 Chinstrap     Dream     46.6     17.8   2.617978
+162 Chinstrap     Dream     46.7     17.9   2.608939
+163 Chinstrap     Dream     50.6     19.4   2.608247
+164 Chinstrap     Dream     46.4     17.8   2.606742
+165 Chinstrap     Dream     54.2     20.8   2.605769
+166 Chinstrap     Dream     49.5     19.0   2.605263
+167 Chinstrap     Dream     43.2     16.6   2.602410
+168 Chinstrap     Dream     47.6     18.3   2.601093
+169 Chinstrap     Dream     46.5     17.9   2.597765
+170 Chinstrap     Dream     51.3     19.9   2.577889
+171 Chinstrap     Dream     50.5     19.6   2.576531
+172 Chinstrap     Dream     50.7     19.7   2.573604
+173    Gentoo    Biscoe     44.4     17.3   2.566474
+174 Chinstrap     Dream     50.0     19.5   2.564103
+175 Chinstrap     Dream     51.7     20.3   2.546798
+176 Chinstrap     Dream     42.5     16.7   2.544910
+177 Chinstrap     Dream     45.2     17.8   2.539326
+178 Chinstrap     Dream     46.1     18.2   2.532967
+179 Chinstrap     Dream     50.3     20.0   2.515000
+180 Chinstrap     Dream     49.0     19.5   2.512821
+181 Chinstrap     Dream     52.0     20.7   2.512077
+182 Chinstrap     Dream     49.0     19.6   2.500000
+183 Chinstrap     Dream     46.4     18.6   2.494624
+184 Chinstrap     Dream     49.3     19.9   2.477387
+185 Chinstrap     Dream     40.9     16.6   2.463855
+186 Chinstrap     Dream     42.5     17.3   2.456647
+187 Chinstrap     Dream     42.4     17.3   2.450867
+188    Adelie Torgersen     44.1     18.0   2.450000
+189    Adelie Torgersen     42.9     17.6   2.437500
+190    Adelie Torgersen     40.9     16.8   2.434524
+191 Chinstrap     Dream     46.0     18.9   2.433862
+192 Chinstrap     Dream     45.4     18.7   2.427807
+193    Adelie Torgersen     45.8     18.9   2.423280
+194 Chinstrap     Dream     43.5     18.1   2.403315
+195    Adelie     Dream     40.7     17.0   2.394118
+196    Adelie     Dream     39.5     16.7   2.365269
+197    Adelie Torgersen     40.2     17.0   2.364706
+198    Adelie     Dream     40.6     17.2   2.360465
+199    Adelie    Biscoe     37.7     16.0   2.356250
+200    Adelie     Dream     40.2     17.1   2.350877
+201 Chinstrap     Dream     45.6     19.4   2.350515
+202    Adelie     Dream     41.1     17.5   2.348571
+203    Adelie Torgersen     41.1     17.6   2.335227
+204    Adelie     Dream     43.2     18.5   2.335135
+205    Adelie    Biscoe     42.7     18.3   2.333333
+206    Adelie Torgersen     42.8     18.5   2.313514
+207    Adelie    Biscoe     41.6     18.0   2.311111
+208    Adelie    Biscoe     38.1     16.5   2.309091
+209    Adelie Torgersen     39.6     17.2   2.302326
+210    Adelie     Dream     42.2     18.5   2.281081
+211    Adelie Torgersen     39.0     17.1   2.280702
+212    Adelie    Biscoe     43.2     19.0   2.273684
+213    Adelie     Dream     41.1     18.1   2.270718
+214    Adelie Torgersen     38.6     17.0   2.270588
+215    Adelie Torgersen     39.5     17.4   2.270115
+216    Adelie Torgersen     41.5     18.3   2.267760
+217    Adelie    Biscoe     40.5     17.9   2.262570
+218    Adelie    Biscoe     41.1     18.2   2.258242
+219    Adelie    Biscoe     38.8     17.2   2.255814
+220    Adelie Torgersen     36.2     16.1   2.248447
+221    Adelie    Biscoe     45.6     20.3   2.246305
+222    Adelie Torgersen     43.1     19.2   2.244792
+223    Adelie    Biscoe     38.6     17.2   2.244186
+224    Adelie     Dream     41.5     18.5   2.243243
+225    Adelie    Biscoe     39.7     17.7   2.242938
+226    Adelie     Dream     37.0     16.5   2.242424
+227    Adelie    Biscoe     38.1     17.0   2.241176
+228    Adelie Torgersen     40.3     18.0   2.238889
+229    Adelie     Dream     44.1     19.7   2.238579
+230    Adelie Torgersen     41.4     18.5   2.237838
+231    Adelie    Biscoe     39.6     17.7   2.237288
+232    Adelie    Biscoe     39.0     17.5   2.228571
+233    Adelie    Biscoe     41.4     18.6   2.225806
+234    Adelie     Dream     37.3     16.8   2.220238
+235    Adelie     Dream     39.5     17.8   2.219101
+236    Adelie     Dream     39.7     17.9   2.217877
+237    Adelie     Dream     40.8     18.4   2.217391
+238    Adelie Torgersen     35.2     15.9   2.213836
+239    Adelie    Biscoe     37.6     17.0   2.211765
+240    Adelie Torgersen     37.8     17.1   2.210526
+241    Adelie Torgersen     41.1     18.6   2.209677
+242    Adelie Torgersen     38.8     17.6   2.204545
+243    Adelie Torgersen     42.1     19.1   2.204188
+244    Adelie    Biscoe     36.5     16.6   2.198795
+245    Adelie    Biscoe     35.5     16.2   2.191358
+246    Adelie     Dream     37.0     16.9   2.189349
+247    Adelie     Dream     39.6     18.1   2.187845
+248    Adelie Torgersen     38.9     17.8   2.185393
+249    Adelie Torgersen     37.8     17.3   2.184971
+250    Adelie    Biscoe     40.6     18.6   2.182796
+251    Adelie     Dream     40.3     18.5   2.178378
+252    Adelie     Dream     38.1     17.6   2.164773
+253    Adelie    Biscoe     42.2     19.5   2.164103
+254    Adelie     Dream     40.9     18.9   2.164021
+255    Adelie     Dream     41.1     19.0   2.163158
+256    Adelie Torgersen     35.9     16.6   2.162651
+257    Adelie    Biscoe     40.6     18.8   2.159574
+258    Adelie     Dream     40.8     18.9   2.158730
+259    Adelie Torgersen     39.7     18.4   2.157609
+260    Adelie Torgersen     41.8     19.4   2.154639
+261    Adelie    Biscoe     42.0     19.5   2.153846
+262    Adelie    Biscoe     41.1     19.1   2.151832
+263    Adelie Torgersen     38.5     17.9   2.150838
+264    Adelie    Biscoe     40.5     18.9   2.142857
+265    Adelie     Dream     36.4     17.0   2.141176
+266    Adelie Torgersen     46.0     21.5   2.139535
+267    Adelie Torgersen     40.6     19.0   2.136842
+268    Adelie    Biscoe     36.4     17.1   2.128655
+269    Adelie    Biscoe     40.1     18.9   2.121693
+270    Adelie    Biscoe     35.7     16.9   2.112426
+271    Adelie    Biscoe     38.2     18.1   2.110497
+272    Adelie     Dream     39.2     18.6   2.107527
+273    Adelie     Dream     39.6     18.8   2.106383
+274    Adelie     Dream     36.0     17.1   2.105263
+275    Adelie Torgersen     36.2     17.2   2.104651
+276    Adelie    Biscoe     39.7     18.9   2.100529
+277    Adelie Torgersen     35.7     17.0   2.100000
+278    Adelie     Dream     37.3     17.8   2.095506
+279    Adelie     Dream     36.2     17.3   2.092486
+280    Adelie Torgersen     39.1     18.7   2.090909
+281    Adelie     Dream     37.8     18.1   2.088398
+282    Adelie     Dream     39.0     18.7   2.085561
+283    Adelie     Dream     39.8     19.1   2.083770
+284    Adelie Torgersen     42.0     20.2   2.079208
+285    Adelie     Dream     32.1     15.5   2.070968
+286    Adelie     Dream     38.9     18.8   2.069149
+287    Adelie    Biscoe     37.8     18.3   2.065574
+288    Adelie Torgersen     36.6     17.8   2.056180
+289    Adelie     Dream     33.1     16.1   2.055901
+290    Adelie     Dream     37.2     18.1   2.055249
+291    Adelie Torgersen     42.5     20.7   2.053140
+292    Adelie    Biscoe     41.0     20.0   2.050000
+293    Adelie     Dream     38.1     18.6   2.048387
+294    Adelie    Biscoe     37.9     18.6   2.037634
+295    Adelie    Biscoe     37.9     18.6   2.037634
+296    Adelie Torgersen     38.7     19.0   2.036842
+297    Adelie     Dream     41.3     20.3   2.034483
+298    Adelie     Dream     35.6     17.5   2.034286
+299    Adelie Torgersen     35.5     17.5   2.028571
+300    Adelie     Dream     36.5     18.0   2.027778
+301    Adelie     Dream     37.5     18.5   2.027027
+302    Adelie     Dream     36.0     17.8   2.022472
+303    Adelie    Biscoe     37.7     18.7   2.016043
+304    Adelie Torgersen     34.6     17.2   2.011628
+305    Adelie     Dream     36.0     17.9   2.011173
+306    Adelie Torgersen     39.2     19.6   2.000000
+307    Adelie     Dream     40.2     20.1   2.000000
+308    Adelie     Dream     42.3     21.2   1.995283
+309    Adelie     Dream     38.3     19.2   1.994792
+310    Adelie     Dream     36.8     18.5   1.989189
+311    Adelie     Dream     36.6     18.4   1.989130
+312    Adelie     Dream     34.0     17.1   1.988304
+313    Adelie     Dream     37.5     18.9   1.984127
+314    Adelie     Dream     36.9     18.6   1.983871
+315    Adelie     Dream     35.7     18.0   1.983333
+316    Adelie    Biscoe     37.6     19.1   1.968586
+317    Adelie    Biscoe     41.3     21.1   1.957346
+318    Adelie    Biscoe     35.0     17.9   1.955307
+319    Adelie    Biscoe     35.0     17.9   1.955307
+320    Adelie Torgersen     36.7     18.8   1.952128
+321    Adelie     Dream     37.6     19.3   1.948187
+322    Adelie     Dream     36.0     18.5   1.945946
+323    Adelie     Dream     38.8     20.0   1.940000
+324    Adelie Torgersen     37.2     19.4   1.917526
+325    Adelie    Biscoe     39.6     20.7   1.913043
+326    Adelie    Biscoe     38.2     20.0   1.910000
+327    Adelie Torgersen     39.3     20.6   1.907767
+328    Adelie    Biscoe     34.5     18.1   1.906077
+329    Adelie Torgersen     37.7     19.8   1.904040
+330    Adelie Torgersen     36.7     19.3   1.901554
+331    Adelie    Biscoe     37.8     20.0   1.890000
+332    Adelie Torgersen     34.1     18.1   1.883978
+333    Adelie    Biscoe     35.9     19.2   1.869792
+334    Adelie Torgersen     34.4     18.4   1.869565
+335    Adelie    Biscoe     35.3     18.9   1.867725
+336    Adelie     Dream     36.3     19.5   1.861538
+337    Adelie     Dream     39.2     21.1   1.857820
+338    Adelie Torgersen     38.6     21.2   1.820755
+339    Adelie Torgersen     37.3     20.5   1.819512
+340    Adelie Torgersen     35.1     19.4   1.809278
+341    Adelie Torgersen     33.5     19.0   1.763158
+342    Adelie Torgersen     34.6     21.1   1.639810
+343    Adelie Torgersen       NA       NA         NA
+344    Gentoo    Biscoe       NA       NA         NA</code></pre>
+</div>
+</div>
+</section>
+<section id="small-and-large-bill-ratios" class="slide level2">
+<h2>Small and large bill ratios</h2>
+<div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_len <span class="sc">/</span> bill_dep) <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a></a>  <span class="fu">select</span>(species,bill_ratio) <span class="sc">%&gt;%</span></span>
+<span id="cb3-4"><a></a>  <span class="fu">filter</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   species bill_ratio
+1   Adelie   1.901554
+2   Adelie   1.907767
+3   Adelie   1.883978
+4   Adelie   1.820755
+5   Adelie   1.639810
+6   Adelie   1.869565
+7   Adelie   1.869792
+8   Adelie   1.867725
+9   Adelie   1.857820
+10  Adelie   1.940000
+11  Adelie   1.948187
+12  Adelie   1.945946
+13  Adelie   1.984127
+14  Adelie   1.995283
+15  Adelie   1.955307
+16  Adelie   1.906077
+17  Adelie   1.968586
+18  Adelie   1.957346
+19  Adelie   1.763158
+20  Adelie   1.917526
+21  Adelie   1.952128
+22  Adelie   1.809278
+23  Adelie   1.861538
+24  Adelie   1.983871
+25  Adelie   1.994792
+26  Adelie   1.983333
+27  Adelie   1.988304
+28  Adelie   1.955307
+29  Adelie   1.890000
+30  Adelie   1.910000
+31  Adelie   1.913043
+32  Adelie   1.819512
+33  Adelie   1.904040
+34  Adelie   1.989189
+35  Adelie   1.989130</code></pre>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_len <span class="sc">/</span> bill_dep) <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a></a>  <span class="fu">select</span>(species,bill_ratio) <span class="sc">%&gt;%</span></span>
+<span id="cb5-4"><a></a>  <span class="fu">filter</span>(bill_ratio <span class="sc">&gt;</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      species bill_ratio
+1      Gentoo   3.492424
+2      Gentoo   3.067485
+3      Gentoo   3.453901
+4      Gentoo   3.289474
+5      Gentoo   3.282759
+6      Gentoo   3.444444
+7      Gentoo   3.109589
+8      Gentoo   3.052288
+9      Gentoo   3.231343
+10     Gentoo   3.038961
+11     Gentoo   3.043478
+12     Gentoo   3.321168
+13     Gentoo   3.315068
+14     Gentoo   3.136986
+15     Gentoo   3.140127
+16     Gentoo   3.111111
+17     Gentoo   3.236842
+18     Gentoo   3.186207
+19     Gentoo   3.225166
+20     Gentoo   3.510490
+21     Gentoo   3.110345
+22     Gentoo   3.206897
+23     Gentoo   3.274809
+24     Gentoo   3.052980
+25     Gentoo   3.111888
+26     Gentoo   3.186667
+27     Gentoo   3.370629
+28     Gentoo   3.267974
+29     Gentoo   3.091503
+30     Gentoo   3.014085
+31     Gentoo   3.110345
+32     Gentoo   3.505882
+33     Gentoo   3.317568
+34     Gentoo   3.109489
+35     Gentoo   3.235294
+36     Gentoo   3.101911
+37     Gentoo   3.116788
+38     Gentoo   3.100000
+39     Gentoo   3.306569
+40     Gentoo   3.306667
+41     Gentoo   3.176101
+42     Gentoo   3.136691
+43     Gentoo   3.273381
+44     Gentoo   3.176101
+45     Gentoo   3.375940
+46     Gentoo   3.281690
+47     Gentoo   3.439716
+48     Gentoo   3.131944
+49     Gentoo   3.340000
+50     Gentoo   3.229167
+51     Gentoo   3.151079
+52     Gentoo   3.033333
+53     Gentoo   3.294118
+54     Gentoo   3.282609
+55     Gentoo   3.100671
+56     Gentoo   3.287770
+57     Gentoo   3.458599
+58     Gentoo   3.225352
+59     Gentoo   3.208333
+60     Gentoo   3.055556
+61     Gentoo   3.063380
+62     Gentoo   3.380000
+63     Gentoo   3.180000
+64     Gentoo   3.089744
+65     Gentoo   3.141892
+66     Gentoo   3.093333
+67     Gentoo   3.037500
+68     Gentoo   3.345070
+69     Gentoo   3.134969
+70     Gentoo   3.275362
+71     Gentoo   3.386207
+72     Gentoo   3.365385
+73     Gentoo   3.246575
+74     Gentoo   3.144654
+75     Gentoo   3.253623
+76     Gentoo   3.013889
+77     Gentoo   3.612676
+78     Gentoo   3.392857
+79     Gentoo   3.064706
+80     Gentoo   3.166667
+81     Gentoo   3.052632
+82     Gentoo   3.137931
+83     Gentoo   3.074534
+84     Gentoo   3.027211
+85     Gentoo   3.235669
+86     Gentoo   3.126582
+87     Gentoo   3.212329
+88     Gentoo   3.361111
+89     Gentoo   3.096970
+90     Gentoo   3.233333
+91     Gentoo   3.288235
+92     Gentoo   3.045161
+93     Gentoo   3.273333
+94     Gentoo   3.427536
+95     Gentoo   3.379747
+96     Gentoo   3.092857
+97     Gentoo   3.185430
+98     Gentoo   3.322368
+99     Gentoo   3.132075
+100    Gentoo   3.159509
+101    Gentoo   3.276596
+102    Gentoo   3.443750
+103    Gentoo   3.012346
+104    Gentoo   3.445255
+105    Gentoo   3.272727
+106    Gentoo   3.210191
+107    Gentoo   3.054054
+108    Gentoo   3.099379
+109 Chinstrap   3.258427</code></pre>
+</div>
+</div>
+</div></section>
+<section id="mutate-based-on-criteria" class="slide level2">
+<h2><code>mutate</code> based on criteria</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_len <span class="sc">/</span> bill_dep,</span>
+<span id="cb7-3"><a></a>         <span class="at">ratio_class =</span> <span class="fu">ifelse</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span>, <span class="st">"small"</span>, <span class="st">"large"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-4"><a></a>  <span class="fu">count</span>(species,ratio_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    species ratio_class   n
+1    Adelie       large 116
+2    Adelie       small  35
+3    Adelie        &lt;NA&gt;   1
+4 Chinstrap       large  68
+5    Gentoo       large 123
+6    Gentoo        &lt;NA&gt;   1</code></pre>
+</div>
+</div>
+</section>
+<section id="mutate-based-on-criteria-cont." class="slide level2">
+<h2><code>mutate</code> based on criteria (cont.)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" data-code-line-numbers="3-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_len <span class="sc">/</span> bill_dep,</span>
+<span id="cb9-3"><a></a>         <span class="at">ratio_class =</span> <span class="fu">case_when</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"small"</span>,</span>
+<span id="cb9-4"><a></a>                                 bill_ratio <span class="sc">&gt;</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"large"</span>,</span>
+<span id="cb9-5"><a></a>                                 <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"medium"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-6"><a></a>  <span class="fu">count</span>(species,ratio_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    species ratio_class   n
+1    Adelie      medium 117
+2    Adelie       small  35
+3 Chinstrap       large   1
+4 Chinstrap      medium  67
+5    Gentoo       large 108
+6    Gentoo      medium  16</code></pre>
+</div>
+</div>
+</section>
+<section id="case_when-overview" class="slide level2">
+<h2><code>case_when</code> overview</h2>
+<ul>
+<li>Multiple if/else statements in a single easy to read format</li>
+<li>Assessed in order</li>
+<li>If no <code>.default</code> or <code>TRUE</code> statement provided will result in missing data</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="3,4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_len <span class="sc">/</span> bill_dep,</span>
+<span id="cb11-3"><a></a>         <span class="at">ratio_class =</span> <span class="fu">case_when</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"small"</span>,</span>
+<span id="cb11-4"><a></a>                                 bill_ratio <span class="sc">&gt;</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"large"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-5"><a></a>  <span class="fu">count</span>(species,ratio_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    species ratio_class   n
+1    Adelie       small  35
+2    Adelie        &lt;NA&gt; 117
+3 Chinstrap       large   1
+4 Chinstrap        &lt;NA&gt;  67
+5    Gentoo       large 108
+6    Gentoo        &lt;NA&gt;  16</code></pre>
+</div>
+</div>
+</section>
+<section id="case_when---final-else-statement" class="slide level2">
+<h2><code>case_when</code> - final else statement</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_len <span class="sc">/</span> bill_dep,</span>
+<span id="cb13-3"><a></a>         <span class="at">ratio_class =</span> <span class="fu">case_when</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"small"</span>,</span>
+<span id="cb13-4"><a></a>                                 bill_ratio <span class="sc">&gt;</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"large"</span>,</span>
+<span id="cb13-5"><a></a>                                 <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"medium"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-6"><a></a>  <span class="fu">count</span>(species,ratio_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_len <span class="sc">/</span> bill_dep,</span>
+<span id="cb14-3"><a></a>         <span class="at">ratio_class =</span> <span class="fu">case_when</span>(<span class="at">.default =</span> <span class="st">"medium"</span>,</span>
+<span id="cb14-4"><a></a>                                 bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"small"</span>,</span>
+<span id="cb14-5"><a></a>                                 bill_ratio <span class="sc">&gt;</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"large"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb14-6"><a></a>  <span class="fu">count</span>(species,ratio_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="case_when-order-matters" class="slide level2">
+<h2><code>case_when</code> order matters</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="3,4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_len <span class="sc">/</span> bill_dep,</span>
+<span id="cb15-3"><a></a>         <span class="at">ratio_class =</span> <span class="fu">case_when</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"small"</span>,</span>
+<span id="cb15-4"><a></a>                                 bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"medium"</span>,</span>
+<span id="cb15-5"><a></a>                                 <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"large"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb15-6"><a></a>  <span class="fu">count</span>(species,ratio_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="3,4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_len <span class="sc">/</span> bill_dep,</span>
+<span id="cb16-3"><a></a>         <span class="at">ratio_class =</span> <span class="fu">case_when</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"medium"</span>,</span>
+<span id="cb16-4"><a></a>                                 bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"small"</span>,</span>
+<span id="cb16-5"><a></a>                                 <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"large"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb16-6"><a></a>  <span class="fu">count</span>(species,ratio_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<aside class="notes">
+<p>left side: - if <code>bill_ratio &lt; 2</code> then small - else if <code>bill_ratio &lt; 3</code> then medium - else then large</p>
+<p>right side: - if <code>bill_ration &lt; 3</code> then medium - else if <code>bill_ratio &lt; 2</code> then small - The <code>small</code> category will never be utilized since the medium will take all &lt; 2 automatically</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="case_when-order-matters-cont." class="slide level2">
+<h2><code>case_when</code> order matters (cont.)</h2>
+<div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">case_when</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"small"</span>,</span>
+<span id="cb17-2"><a></a>          bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"medium"</span>,</span>
+<span id="cb17-3"><a></a>          <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"large"</span>)<span class="er">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>    species ratio_class   n
+1    Adelie       large   1
+2    Adelie      medium 116
+3    Adelie       small  35
+4 Chinstrap       large   1
+5 Chinstrap      medium  67
+6    Gentoo       large 109
+7    Gentoo      medium  15</code></pre>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">case_when</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"medium"</span>,</span>
+<span id="cb19-2"><a></a>          bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"small"</span>,</span>
+<span id="cb19-3"><a></a>          <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"large"</span>)<span class="er">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>    species ratio_class   n
+1    Adelie       large   1
+2    Adelie      medium 151
+3 Chinstrap       large   1
+4 Chinstrap      medium  67
+5    Gentoo       large 109
+6    Gentoo      medium  15</code></pre>
+</div>
+</div>
+</div></section>
+<section id="case_when-order-matters-cont.-1" class="slide level2">
+<h2><code>case_when</code> order matters (cont.)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="3-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_len <span class="sc">/</span> bill_dep,</span>
+<span id="cb21-3"><a></a>         <span class="at">ratio_class =</span> <span class="fu">case_when</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">&amp;</span> sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"small-female"</span>,</span>
+<span id="cb21-4"><a></a>                                 bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"small-male"</span>,</span>
+<span id="cb21-5"><a></a>                                 bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">&amp;</span> sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"medium-female"</span>,</span>
+<span id="cb21-6"><a></a>                                 bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"medium-male"</span>,</span>
+<span id="cb21-7"><a></a>                                 sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"large-female"</span>,</span>
+<span id="cb21-8"><a></a>                                 <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"large-male"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb21-9"><a></a>  <span class="fu">count</span>(sex,ratio_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="3-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_len <span class="sc">/</span> bill_dep,</span>
+<span id="cb22-3"><a></a>         <span class="at">ratio_class =</span> <span class="fu">case_when</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"small-male"</span>,</span>
+<span id="cb22-4"><a></a>                                 bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">&amp;</span> sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"small-female"</span>,</span>
+<span id="cb22-5"><a></a>                                 bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"medium-male"</span>,</span>
+<span id="cb22-6"><a></a>                                 bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">&amp;</span> sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"medium-female"</span>,</span>
+<span id="cb22-7"><a></a>                                 sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"large-female"</span>,</span>
+<span id="cb22-8"><a></a>                                 <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"large-male"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb22-9"><a></a>  <span class="fu">count</span>(sex,ratio_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="case_when-order-matters-cont.-2" class="slide level2">
+<h2><code>case_when</code> order matters (cont.)</h2>
+<div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="1,2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">case_when</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">&amp;</span> sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"small-female"</span>,</span>
+<span id="cb23-2"><a></a>          bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"small-male"</span>,</span>
+<span id="cb23-3"><a></a>          bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">&amp;</span> sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"medium-female"</span>,</span>
+<span id="cb23-4"><a></a>          bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"medium-male"</span>,</span>
+<span id="cb23-5"><a></a>          sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"large-female"</span>,</span>
+<span id="cb23-6"><a></a>          <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"large-male"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>     sex   ratio_class   n
+1 female  large-female  55
+2 female medium-female  93
+3 female  small-female  17
+4   male    large-male  51
+5   male   medium-male 101
+6   male    small-male  16
+7   &lt;NA&gt;    large-male   5
+8   &lt;NA&gt;   medium-male   4
+9   &lt;NA&gt;    small-male   2</code></pre>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="1,2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">case_when</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"small-male"</span>,</span>
+<span id="cb25-2"><a></a>          bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">&amp;</span> sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"small-female"</span>,</span>
+<span id="cb25-3"><a></a>          bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"medium-male"</span>,</span>
+<span id="cb25-4"><a></a>          bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">&amp;</span> sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"medium-female"</span>,</span>
+<span id="cb25-5"><a></a>          sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"large-female"</span>,</span>
+<span id="cb25-6"><a></a>          <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"large-male"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>     sex  ratio_class   n
+1 female large-female  55
+2 female  medium-male  93
+3 female   small-male  17
+4   male   large-male  51
+5   male  medium-male 101
+6   male   small-male  16
+7   &lt;NA&gt;   large-male   5
+8   &lt;NA&gt;  medium-male   4
+9   &lt;NA&gt;   small-male   2</code></pre>
+</div>
+</div>
+</div></section>
+<section id="case_when-missing-data" class="slide level2">
+<h2><code>case_when</code> missing data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="4,6,8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb27-2"><a></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_len <span class="sc">/</span> bill_dep,</span>
+<span id="cb27-3"><a></a>         <span class="at">ratio_class =</span> <span class="fu">case_when</span>(bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">&amp;</span> sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"small-female"</span>,</span>
+<span id="cb27-4"><a></a>                                 bill_ratio <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">&amp;</span> sex <span class="sc">==</span> <span class="st">"male"</span> <span class="sc">~</span> <span class="st">"small-male"</span>,</span>
+<span id="cb27-5"><a></a>                                 bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">&amp;</span> sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"medium-female"</span>,</span>
+<span id="cb27-6"><a></a>                                 bill_ratio <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">&amp;</span> sex <span class="sc">==</span> <span class="st">"male"</span> <span class="sc">~</span> <span class="st">"medium-male"</span>,</span>
+<span id="cb27-7"><a></a>                                 sex <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"large-female"</span>,</span>
+<span id="cb27-8"><a></a>                                 sex <span class="sc">==</span> <span class="st">"male"</span> <span class="sc">~</span> <span class="st">"large-male"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb27-9"><a></a>  <span class="fu">count</span>(sex,ratio_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     sex   ratio_class   n
+1 female  large-female  55
+2 female medium-female  93
+3 female  small-female  17
+4   male    large-male  51
+5   male   medium-male 101
+6   male    small-male  16
+7   &lt;NA&gt;          &lt;NA&gt;  11</code></pre>
+</div>
+</div>
+</section></section>
+<section>
+<section id="summarize-and-group_by" class="title-slide slide level1 center" data-background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)">
+<h1><code>summarize</code> and <code>group_by</code></h1>
+
+</section>
+<section id="summarize-for-summary-stats" class="slide level2">
+<h2><code>summarize</code> for summary stats</h2>
+<div>
+<ul>
+<li class="fragment">Fun fact: <code>summarize</code> and <code>summarise</code> both work</li>
+<li class="fragment">Hadley Wickham, creator of the <code>tidyverse</code> is from New Zealand</li>
+<li class="fragment"><code>mutate</code>: observation level</li>
+<li class="fragment"><code>summarize</code>: aggregation of data</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>penguins <span class="sc">%&gt;%</span> </span>
+<span id="cb29-2"><a></a>  <span class="fu">summarize</span>(<span class="at">avg_bill_len =</span> <span class="fu">mean</span>(bill_len, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  avg_bill_len
+1     43.92193</code></pre>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="section" class="title-slide slide level1 center" data-background-gradient="radial-gradient(#FFA219, #FFFFFF, #FFFFFF)">
+<h1></h1>
+<div class="tip">
+<p>💡<b>Tip!</b> <br><br> <code>summarize()</code> changes the data frame entirely. It collapses rows down to a single summary statistic, and removes all columns that are irrelevant to the calculation.</p>
+</div>
+</section>
+<section id="group_by-for-grouped-operations" class="slide level2">
+<h2><code>group_by</code> for grouped operations</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>penguins <span class="sc">%&gt;%</span> </span>
+<span id="cb31-2"><a></a>  <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span> </span>
+<span id="cb31-3"><a></a>  <span class="fu">summarize</span>(<span class="at">avg_bill_len =</span> <span class="fu">mean</span>(bill_len, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  species   avg_bill_len
+  &lt;fct&gt;            &lt;dbl&gt;
+1 Adelie            38.8
+2 Chinstrap         48.8
+3 Gentoo            47.5</code></pre>
+</div>
+</div>
+</section>
+<section id="group_by---multiple-variables" class="slide level2">
+<h2><code>group_by</code> - multiple variables</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>penguins <span class="sc">%&gt;%</span> </span>
+<span id="cb33-2"><a></a>  <span class="fu">group_by</span>(species,island) <span class="sc">%&gt;%</span> </span>
+<span id="cb33-3"><a></a>  <span class="fu">summarize</span>(<span class="at">avg_bill_len =</span> <span class="fu">mean</span>(bill_len, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 3
+# Groups:   species [3]
+  species   island    avg_bill_len
+  &lt;fct&gt;     &lt;fct&gt;            &lt;dbl&gt;
+1 Adelie    Biscoe            39.0
+2 Adelie    Dream             38.5
+3 Adelie    Torgersen         39.0
+4 Chinstrap Dream             48.8
+5 Gentoo    Biscoe            47.5</code></pre>
+</div>
+</div>
+</section>
+<section id="calculating-frequencies" class="slide level2">
+<h2>Calculating frequencies</h2>
+<ul>
+<li><code>count</code> is simply short for <code>group_by</code> then determine frequencies</li>
+<li>the following two results give the same result</li>
+</ul>
+<div class="fragment">
+<div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>penguins <span class="sc">%&gt;%</span> </span>
+<span id="cb35-2"><a></a>  <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span> </span>
+<span id="cb35-3"><a></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  species       n
+  &lt;fct&gt;     &lt;int&gt;
+1 Adelie      152
+2 Chinstrap    68
+3 Gentoo      124</code></pre>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>penguins <span class="sc">%&gt;%</span> </span>
+<span id="cb37-2"><a></a>  <span class="fu">count</span>(species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    species   n
+1    Adelie 152
+2 Chinstrap  68
+3    Gentoo 124</code></pre>
+</div>
+</div>
+</div></div>
+</section>
+<section id="multiple-summary-statistics" class="slide level2">
+<h2>Multiple summary statistics</h2>
+<p><code>summarize</code> can be used for multiple summary statistics as well</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb39-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb39-3"><a></a>    <span class="at">min_bill_len =</span> <span class="fu">min</span>(bill_len, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb39-4"><a></a>    <span class="at">mean_bill_len =</span> <span class="fu">mean</span>(bill_len, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb39-5"><a></a>    <span class="at">median_bill_len =</span> <span class="fu">median</span>(bill_len, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb39-6"><a></a>    <span class="at">max_bill_len =</span> <span class="fu">max</span>(bill_len, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb39-7"><a></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  min_bill_len mean_bill_len median_bill_len max_bill_len
+1         32.1      43.92193           44.45         59.6</code></pre>
+</div>
+</div>
+</section>
+<section id="summarize-with-missing-data" class="slide level2">
+<h2><code>summarize</code> with missing data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>penguins <span class="sc">%&gt;%</span> </span>
+<span id="cb41-2"><a></a>  <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span> </span>
+<span id="cb41-3"><a></a>  <span class="fu">summarize</span>(<span class="at">avg_bill_len =</span> <span class="fu">mean</span>(bill_len))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  species   avg_bill_len
+  &lt;fct&gt;            &lt;dbl&gt;
+1 Adelie            NA  
+2 Chinstrap         48.8
+3 Gentoo            NA  </code></pre>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a>penguins <span class="sc">%&gt;%</span> </span>
+<span id="cb43-2"><a></a>  <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span> </span>
+<span id="cb43-3"><a></a>  <span class="fu">summarize</span>(<span class="at">avg_bill_len =</span> <span class="fu">mean</span>(bill_len, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  species   avg_bill_len
+  &lt;fct&gt;            &lt;dbl&gt;
+1 Adelie            38.8
+2 Chinstrap         48.8
+3 Gentoo            47.5</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="summarize-with-missing-data-1" class="slide level2">
+<h2><code>summarize</code> with missing data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb45-2"><a></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(bill_len)) <span class="sc">%&gt;%</span> </span>
+<span id="cb45-3"><a></a>  <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span> </span>
+<span id="cb45-4"><a></a>  <span class="fu">summarize</span>(<span class="at">avg_bill_len =</span> <span class="fu">mean</span>(bill_len))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  species   avg_bill_len
+  &lt;fct&gt;            &lt;dbl&gt;
+1 Adelie            38.8
+2 Chinstrap         48.8
+3 Gentoo            47.5</code></pre>
+</div>
+</div>
+</section></section>
+<section id="your-turn-mutate-group_by-summarize" class="title-slide slide level1 center" data-background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)">
+<h1>Your turn: <br><code>mutate</code>, <code>group_by</code>, <code>summarize</code></h1>
+<p>✋ if you have questions or need help</p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z"></path></svg> when you are finished</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_13e22d83" data-update-every="1" data-play-sound="true" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.15,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

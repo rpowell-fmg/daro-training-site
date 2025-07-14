@@ -1,0 +1,17 @@
+{
+  "hash": "f837fd1461b1d73ffb609df05d9cee58",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Single Dataset - Part 2\"\nformat: html\n---\n\n\n\n## Slides\n\n[View slides in full screen](04b_SingleDataset_pt2.html)\n\n\n\n```{=html}\n<iframe class=\"slide-deck\" src=\"04b_SingleDataset_pt2.html\" height=\"450\" width=\"800\" style=\"border: 1px solid #F0F0F0;\"></iframe>\n```\n\n\n## Exercises\n\n### Data\n- Use `college_recent_grads` data from the **fivethirtyeight** package\n- Review documentation for the data with: `?college_recent_grads`\n- See the structure of the data with: `glimpse(college_recent_grads)`\n- Create an array of STEM categories:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n    stem_categories <- c(\"Biology & Life Science\",\n                         \"Computers & Mathematics\",\n                         \"Engineering\",\n                         \"Physical Sciences\")\n```\n:::\n\n\n    \n### **mutate, group_by, summarize**\n\n1. Create a new variable that indicates if the major has more women than men.\n2. Create a new variable called `STEM` that is a 0/1 indicator if the major is in one of the `stem_categories`.\n3. Which major category has the highest typical (can use `mean()`, `median()`, etc.) median income? (Hint: use `group_by()` and `summarize()`)\n4. Create a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not.\n5. As time permits, review the data to create new variables, summarize different aspects, or visualize the data in different ways. Familiarize yourself with dplyr!",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
