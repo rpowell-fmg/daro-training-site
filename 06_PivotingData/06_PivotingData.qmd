@@ -25,7 +25,7 @@ library(emojifont)
 options(width=33)
 ```
 
-# Data: Sales
+# Data: Sales {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #FECCDD)"}
 ## Data: Sales
 
 ```{r}
@@ -413,7 +413,7 @@ pivot_wider(
 ```{r}
 #| label: pivot-wider-syntax-2
 #| eval: FALSE
-#| code-line-numbers: 4
+#| code-line-numbers: 3
 pivot_wider(
   data,
   names_from = "name", 
@@ -434,12 +434,11 @@ pivot_wider(
 ```{r}
 #| label: pivot-wider-syntax-3
 #| eval: FALSE
-#| code-line-numbers: 5
-pivot_longer(
+#| code-line-numbers: 4
+pivot_wider(
   data,
-  cols, 
-  names_to = "name", 
-  values_to = "value"
+  names_from = "name", 
+  values_from = "value"
   )
 ```
 :::

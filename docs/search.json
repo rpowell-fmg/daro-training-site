@@ -527,7 +527,7 @@
     "href": "06_PivotingData/06_PivotingData.html#pivot_wider-2",
     "title": "Pivoting Data",
     "section": "pivot_wider()",
-    "text": "pivot_wider()\n\n\ndata (as usual)\nDifferent from pivot_longer(): No column information is needed\nnames_from: name of the column where variables are located\nvalues_from: name of the column where data/values are located\n\n\n\npivot_longer(\n  data,\n  cols, \n  names_to = \"name\", \n  values_to = \"value\"\n  )"
+    "text": "pivot_wider()\n\n\ndata (as usual)\nDifferent from pivot_longer(): No column information is needed\nnames_from: name of the column where variables are located\nvalues_from: name of the column where data/values are located\n\n\n\npivot_wider(\n  data,\n  names_from = \"name\", \n  values_from = \"value\"\n  )"
   },
   {
     "objectID": "06_PivotingData/06_PivotingData.html#purchases-rightarrow-customers",
@@ -551,18 +551,18 @@
     "text": "Desired output\n\n\n# A tibble: 10 × 5\n   name               profession      birth_year death_year known_for\n   &lt;chr&gt;              &lt;chr&gt;                &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    \n 1 Ada Lovelace       Mathematician           NA         NA first co…\n 2 Marie Curie        Physicist and …         NA         NA theory o…\n 3 Janaki Ammal       Botanist              1897       1984 hybrid s…\n 4 Chien-Shiung Wu    Physicist             1912       1997 confim a…\n 5 Katherine Johnson  Mathematician         1918       2020 calculat…\n 6 Rosalind Franklin  Chemist               1920       1958 &lt;NA&gt;     \n 7 Vera Rubin         Astronomer            1928       2016 existenc…\n 8 Gladys West        Mathematician         1930         NA mathemat…\n 9 Flossie Wong-Staal Virologist and…       1947         NA first sc…\n10 Jennifer Doudna    Biochemist            1964         NA one of t…"
   },
   {
-    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#inputs-reminder",
-    "href": "05_JoiningDatasets/05_JoiningDatasets.html#inputs-reminder",
+    "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#inputs-variable-names-and-dimensions",
+    "href": "05_JoiningDatasets/05_JoiningDatasets.html#inputs-variable-names-and-dimensions",
     "title": "Merging/Joining Multiple Datasets",
-    "section": "Inputs, reminder",
-    "text": "Inputs, reminder\n\n\nnames(professions)\n\n[1] \"name\"       \"profession\"\n\nnames(dates)\n\n[1] \"name\"       \"birth_year\"\n[3] \"death_year\"\n\nnames(works)\n\n[1] \"name\"      \"known_for\"\n\n\n\n\nnrow(professions)\n\n[1] 10\n\nnrow(dates)\n\n[1] 8\n\nnrow(works)\n\n[1] 9"
+    "section": "Inputs: variable names and dimensions",
+    "text": "Inputs: variable names and dimensions\n\n\nnames(professions)\n\n[1] \"name\"       \"profession\"\n\nnames(dates)\n\n[1] \"name\"       \"birth_year\"\n[3] \"death_year\"\n\nnames(works)\n\n[1] \"name\"      \"known_for\"\n\n\n\n\nnrow(professions)\n\n[1] 10\n\nnrow(dates)\n\n[1] 8\n\nnrow(works)\n\n[1] 9"
   },
   {
     "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#joining-data-frames-1",
     "href": "05_JoiningDatasets/05_JoiningDatasets.html#joining-data-frames-1",
     "title": "Merging/Joining Multiple Datasets",
     "section": "Joining data frames",
-    "text": "Joining data frames\n\nsomething_join(x, y)\n\n\nleft_join(): all rows from x\nright_join(): all rows from y\nfull_join(): all rows from both x and y\nsemi_join(): all rows from x where there are matching values in y, keeping just columns from x\ninner_join(): all rows from x where there are matching values in y, return all combination of multiple matches in the case of multiple matches\nanti_join(): return all rows from x where there are not matching values in y, never duplicate rows of x\n…"
+    "text": "Joining data frames\n\nsomething_join(x, y)\n\n\n\nleft_join(): all rows from x\nright_join(): all rows from y\nfull_join(): all rows from both x and y\ninner_join(): all rows from x where there are matching values in y, return all combination of multiple matches in the case of multiple matches\nsemi_join(): all rows from x where there are matching values in y, keeping just columns from x\nanti_join(): return all rows from x where there are not matching values in y, never duplicate rows of x\n…"
   },
   {
     "objectID": "05_JoiningDatasets/05_JoiningDatasets.html#setup",
@@ -1544,7 +1544,7 @@
     "href": "04_SingleDataset/index.html#exercises",
     "title": "Single Dataset",
     "section": "Exercises",
-    "text": "Exercises\n\nData\n\nUse college_recent_grads data from the fivethirtyeight package\nReview documentation for the data with: ?college_recent_grads\nSee the structure of the data with: glimpse(college_recent_grads)\n\n\n\nselect, arrange, filter, distinct, count\n\nWhich major has the highest percentage of women? (Hint: use arrange(desc()) to easily see the top items)\n\nOutput only relevant variables\n\nGet a list of STEM majors that have median earnings &lt; $36,000\n\n(Hint: use the %in% to see if the major_category is in stem_categories)\nOutput only relevant variables\nUse this code to create a list of STEM majors to compare to:\n\n\n\n    stem_categories &lt;- c(\"Biology & Life Science\",\n                         \"Computers & Mathematics\",\n                         \"Engineering\",\n                         \"Physical Sciences\")\n\n\nOutput a count of the number of majors in each major_category\n\n\n\nmutate, group_by, summarize\n\nCreate a new variable called STEM that is a 0/1 indicator if the major is in one of the stem_categories from #2 above.\nWhich major category has the highest typical (can use mean(), median(), etc.) median income? (Hint: use group_by() and summarize())\nCreate a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not.\nAs time permits, review the data to create new variables, summarize different aspects, or visualize the data in different ways. Familiarize yourself with ggplot!",
+    "text": "Exercises\n\nData\n\nUse college_recent_grads data from the fivethirtyeight package\nReview documentation for the data with: ?college_recent_grads\nSee the structure of the data with: glimpse(college_recent_grads)\n\n\n\nselect, arrange, filter, distinct, count\n\nWhich major has the highest percentage of women? (Hint: use arrange(desc()) to easily see the top items)\n\nOutput only relevant variables\n\nGet a list of STEM majors that have median earnings &lt; $36,000\n\n(Hint: use the %in% to see if the major_category is in stem_categories)\nOutput only relevant variables\nUse this code to create a list of STEM majors to compare to:\n\n\n\n    stem_categories &lt;- c(\"Biology & Life Science\",\n                         \"Computers & Mathematics\",\n                         \"Engineering\",\n                         \"Physical Sciences\")\n\n\nOutput a count of the number of majors in each major_category\n\n\n\nmutate, group_by, summarize\n\nCreate a new variable called STEM that is a 0/1 indicator if the major is in one of the stem_categories from #2 above.\nWhich major category has the highest typical (can use mean(), median(), etc.) median income? (Hint: use group_by() and summarize())\nCreate a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not.\nAs time permits, review the data to create new variables, summarize different aspects, or visualize the data in different ways. Familiarize yourself with dplyr!",
     "crumbs": [
       "Day 1",
       "Single Dataset"

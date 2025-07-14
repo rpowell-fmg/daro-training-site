@@ -39,4 +39,4 @@ format: html
 4. Create a new variable called `STEM` that is a 0/1 indicator if the major is in one of the `stem_categories` from #2 above.
 5. Which major category has the highest typical (can use `mean()`, `median()`, etc.) median income? (Hint: use `group_by()` and `summarize()`)
 6. Create a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not.
-7. As time permits, review the data to create new variables, summarize different aspects, or visualize the data in different ways. Familiarize yourself with ggplot!
+7. As time permits, review the data to create new variables, summarize different aspects, or visualize the data in different ways. Familiarize yourself with dplyr!

@@ -25,9 +25,6 @@ library(emojifont)
 options(width=69)
 ```
 
-
-# Data {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #FECCDD)"}
-
 # Data: Women in science {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #FECCDD)"}
 Information on 10 women in science who changed the world
 
@@ -85,7 +82,7 @@ professions %>%
 
 
 
-## Inputs, reminder
+## Inputs: variable names and dimensions
 
 ```{r}
 #| label: set-col-wdith
@@ -123,15 +120,16 @@ nrow(works)
 something_join(x, y)
 ```
 
+::: {.incremental}
 - `left_join()`: all rows from x
 - `right_join()`: all rows from y
 - `full_join()`: all rows from both x and y
-- `semi_join()`: all rows from x where there are matching values in y, keeping just columns from x
 - `inner_join()`: all rows from x where there are matching values in y, return
 all combination of multiple matches in the case of multiple matches
+- `semi_join()`: all rows from x where there are matching values in y, keeping just columns from x
 - `anti_join()`: return all rows from x where there are not matching values in y, never duplicate rows of x
 - ...
-
+:::
 
 ## Setup
 ```{r}
