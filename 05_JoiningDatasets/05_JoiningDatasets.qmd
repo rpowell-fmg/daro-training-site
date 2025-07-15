@@ -76,8 +76,8 @@ Source: [Discover Magazine](https://www.discovermagazine.com/the-sciences/meet-1
 #| echo: FALSE
 #| content-overflow: nostretch
 professions %>%
-  left_join(dates, by="name") %>%
-  left_join(works, by="name")
+  left_join(dates, join_by(name)) %>%
+  left_join(works, join_by(name))
 ```
 
 
@@ -364,8 +364,8 @@ professions %>%
 #| label: join-sci-final-2
 #| code-line-numbers: "2,3"
 professions %>%
-  left_join(dates, by="name") %>%
-  left_join(works, by="name")
+  left_join(dates, join_by(name)) %>%
+  left_join(works, join_by(name))
 ```
 
 
@@ -403,7 +403,7 @@ y_multi
 #| code-line-numbers: 3
 x_multi %>% 
   left_join(y_multi,
-            by=c("id","id2"))
+            join_by(id,id2))
 ```
 :::
 
@@ -414,7 +414,7 @@ x_multi %>%
 #| code-line-numbers: 3
 x_multi %>% 
   right_join(y_multi,
-             by=c("id","id2"))
+            join_by(id,id2))
 ```
 :::
 ::::
@@ -427,7 +427,7 @@ x_multi %>%
 #| code-line-numbers: 3
 x_multi %>% 
   full_join(y_multi,
-            by=c("id","id2"))
+            join_by(id,id2))
 ```
 :::
 
@@ -451,7 +451,7 @@ x_multi %>%
 #| code-line-numbers: 3
 x_multi %>% 
   semi_join(y_multi,
-            by=c("id","id2"))
+            join_by(id,id2))
 ```
 :::
 
@@ -462,7 +462,7 @@ x_multi %>%
 #| code-line-numbers: 3
 x_multi %>% 
   anti_join(y_multi,
-            by=c("id","id2"))
+            join_by(id,id2))
 ```
 :::
 ::::

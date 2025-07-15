@@ -1,0 +1,245 @@
+---
+title: "Day 2-Solutions"
+format: html
+---
+
+# Single Dataset - mutate, group_by, summarize
+
+## Load Packages & Set STEM Array
+```{r}
+#| label: single-prep
+library(tidyverse)
+library(fivethirtyeight)
+
+stem_categories <- c("Biology & Life Science",
+                         "Computers & Mathematics",
+                         "Engineering",
+                         "Physical Sciences")
+
+stem_categories
+```
+
+## Exercises
+
+1. Create a new variable that indicates if the major has more women than men
+
+```{r}
+#| label: single-1
+more_women_flag <- college_recent_grads %>%
+  mutate(more_women = if_else(sharewomen < .5, 0, 1)) %>%
+  select(major, major_category, sharewomen, more_women)
+
+more_women_flag %>%
+  count(more_women)
+
+more_women_flag %>%
+  count(major_category, more_women)
+```
+
+2. Create a new variable called STEM that is a 0/1 indicator if the major is in one of the `stem_categories`.
+
+```{r}
+#| label: single-2
+college_recent_grads_stem <- college_recent_grads %>%
+  mutate(STEM = if_else(major_category %in% stem_categories, 1, 0))
+
+college_recent_grads_stem %>%
+  count(STEM)
+```
+
+3. Which major category has the highest typical (can use `mean()`, `median()`, etc.) median income? (Hint: use `group_by()` and `summarize()`)
+
+```{r}
+#| label: single-3
+college_recent_grads %>%
+  group_by(major_category) %>%
+  summarize(mean_income = mean(median)) %>%
+  arrange(desc(mean_income))
+
+college_recent_grads %>%
+  group_by(major_category) %>%
+  summarize(median_income = median(median)) %>%
+  arrange(desc(median_income))
+```
+
+4. Create a scatterplot of median income vs. proportion of women in that major, colored by whether the major is in a STEM field or not.
+
+```{r}
+#| label: single-4
+college_recent_grads %>%
+  mutate(STEM = if_else(major_category %in% stem_categories, "Yes", "No")) %>%
+  ggplot(aes(x = sharewomen, y = median, fill = STEM)) +
+  geom_point(color = "black", pch = 21, size = 3) +
+  theme_minimal() +
+  scale_fill_manual(name = "Stem Major", values = c("#FFA219", "#FECCDD")) +
+  labs(
+    x = "Proportion of women in major",
+    y = "Median income of major"
+  )
+```
+
+
+# Joining Datasets
+
+## Install & Load Packages
+```{r}
+#| label: join-install
+#| eval: false
+install.packages("nycflights13")
+```
+
+```{r}
+#| label: join-pkgs
+library(nycflights13)
+flights
+weather
+airports
+airlines
+planes
+```
+
+## Exercises
+
+1. Which airline had the most Airbus planes departing NYC in 2013?
+
+```{r}
+#| label: join-1
+
+airbus_counts<-planes %>% 
+  left_join(flights, join_by(tailnum)) %>% 
+  select(tailnum, manufacturer, carrier) %>% 
+  filter(manufacturer == "AIRBUS INDUSTRIE") %>% 
+  count(carrier) %>% 
+  left_join(airlines, join_by(carrier)) %>% 
+  select(carrier, name, n) %>% 
+  arrange(desc(n))
+
+airbus_counts
+```
+
+2. What airlines do not have any Airbus planes? (Hint: use what you created in exercise 1 and use `anti_join()`)
+
+```{r}
+#| label: join-2
+
+airlines %>% 
+  anti_join(airbus_counts, join_by(carrier, name))
+```
+
+
+3. What airline had the most delayed over 30 min (based on arrival time)?
+
+Option 1: can calculate a "Long Delay Variable"
+```{r}
+#| label: join-3-option1
+flights %>%
+  mutate(long_arr_delay = case_when(
+    arr_delay > 30 ~ "Long Delay",
+    TRUE ~ "Small or No Delay"
+  )) %>%
+  count(carrier, long_arr_delay) %>%
+  filter(long_arr_delay == "Long Delay") %>%
+  left_join(airlines, by = "carrier") %>%
+  select(carrier, name, n) %>%
+  arrange(desc(n))
+```
+
+Option 2: Can filter to the flights with delays over 30 min
+```{r}
+#| label: join-3-option2
+flights %>%
+  filter(arr_delay > 30) %>%
+  count(carrier) %>%
+  left_join(airlines, by = "carrier") %>%
+  select(carrier, name, n) %>%
+  arrange(desc(n))
+```
+
+4. Create a plot to see if there is a relationship between flight duration (`air_time`) and number of seats on the plane. (Hint: Only keep cases that have data in both datasets)
+
+```{r}
+#| label: join-4
+
+flights %>% 
+  select(tailnum, air_time) %>% 
+  left_join(planes, join_by(tailnum)) %>% 
+  filter(!is.na(seats)) %>% 
+  ggplot(aes(x = seats, y = air_time)) + 
+  geom_point()
+``` 
+
+# Pivoting Data
+
+## Data
+We are using the same flight information as the exercises in the Joining Datasets section:
+```{r}
+#| label: pivot-install
+#| eval: false
+install.packages("nycflights13")
+```
+
+```{r}
+#| label: pivot-pkgs
+#| eval: false
+library(nycflights13)
+flights
+weather
+airports
+airlines
+planes
+```
+
+## Exercises
+1. Create a crosstab output of the airline by depature airport (`origin`)
+
+```{r}
+#| label: pivot-1
+flights %>% 
+  count(carrier, origin) %>% 
+  pivot_wider(names_from = "origin", values_from = "n")
+```
+
+With full names merged on:
+```{r}
+#| label: pivot-1-labels
+flights %>% 
+  count(carrier, origin) %>% 
+  left_join(airlines, join_by(carrier)) %>% 
+  left_join(airports, join_by(origin == faa)) %>% 
+  select(n:name.y) %>% 
+  pivot_wider(names_from = "name.y", values_from = "n") %>% 
+  arrange(name.x)
+```
+
+2. Calculate the average temperature, wind speed, and percipitation by origin airport for the month of January.  Try to do this using `pivot_longer()` and one `summarize()` statement.
+
+```{r}
+#| label: pivot-2
+weather %>% 
+  filter(month == 1) %>% 
+  select(origin, temp, wind_speed, precip) %>% 
+  pivot_longer(cols=temp:precip, 
+               names_to = "weather_type",
+               values_to = "weather_data") %>% 
+  group_by(origin, weather_type) %>% 
+  summarize(avg_weather_data = mean(weather_data, na.rm=TRUE)) %>% 
+  pivot_wider(names_from = weather_type, 
+              values_from = avg_weather_data)
+```
+
+3. Try to recreate this plot that displays the average wind speed and wind gusts by month on the same plot. (Hint: pivot to get the values Use `geom_line()`
+
+```{r}
+#| label: pivot-3
+weather %>% 
+  select(month, wind_speed, wind_gust) %>% 
+  pivot_longer(cols = wind_speed:wind_gust, 
+               names_to="wind_type", 
+               values_to="mph") %>% 
+  group_by(month,wind_type) %>% 
+  summarize(mph = mean(mph, na.rm=TRUE)) %>% 
+  ggplot(aes(x = month, y = mph, color = wind_type)) + 
+  geom_line() + 
+  theme_bw()
+```
+

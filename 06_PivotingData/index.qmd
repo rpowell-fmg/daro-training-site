@@ -12,14 +12,48 @@ format: html
 ```
 ## Exercises
 
-**Exercise 1**
 
--    
+## Data
+We are using the same flight information as the exercises in the Joining Datasets section:
+```{r}
+#| label: pivot-install
+#| eval: false
+install.packages("nycflights13")
+```
 
-**Exercise 2**
+```{r}
+#| label: pivot-pkgs
+#| eval: false
+library(nycflights13)
+flights
+weather
+airports
+airlines
+planes
+```
 
--    
+## Exercises
+1. Create a crosstab output of the airline by depature airport (`origin`)
+2. Calculate the average temperature, wind speed, and percipitation by origin airport for the month of January.  Try to do this using `pivot_longer()` and one `summarize()` statement.
+3. Try to recreate this plot that displays the average wind speed and wind gusts by month on the same plot. (Hint: pivot to get the values Use `geom_line()`)
 
-**Exercise 3**
+```{r}
+#| label: pivot-3
+#| echo: false
+#| warning: false
 
--    
+library(tidyverse)
+library(nycflights13)
+
+weather %>% 
+  select(month, wind_speed, wind_gust) %>% 
+  pivot_longer(cols = wind_speed:wind_gust, 
+               names_to="wind_type", 
+               values_to="mph") %>% 
+  group_by(month, wind_type) %>% 
+  summarize(mph = mean(mph, na.rm=TRUE)) %>% 
+  ggplot(aes(x = month, y = mph, color = wind_type)) + 
+  geom_line() + 
+  theme_bw()
+```
+  

@@ -10,16 +10,24 @@ format: html
 ```{=html}
 <iframe class="slide-deck" src="05_JoiningDatasets.html" height="450" width="800" style="border: 1px solid #F0F0F0;"></iframe>
 ```
+
 ## Exercises
 
-**Exercise 1**
+### Data
 
--    
+Install and load the `nycflights13` dataset. There are 5 datasets in this package:
 
-**Exercise 2**
+-   `flights`
+-   `weather`
+-   `airports`
+-   `airlines`
+-   `planes`
 
--    
+Use the help to review the documentation for these datasets.
 
-**Exercise 3**
+### Exercises
 
--    
+1.  Which airline had the most Airbus planes departing NYC in 2013?
+2.  What airlines do not have any Airbus planes? (Hint: use what you created in exercise 1 and use `anti_join()`)
+3.  What airline had the most delayed over 30 min (based on arrival time)?
+4.  Create a plot to see if there is a relationship between flight duration (`air_time`) and number of seats on the plane. (Hint: Only keep cases that have data in both datasets)

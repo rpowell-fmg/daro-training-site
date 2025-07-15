@@ -1,0 +1,17 @@
+{
+  "hash": "70609400ce126fe55f4bc271c1362329",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Pivoting Data\"\nformat: html\n---\n\n\n\n\n## Slides\n\n[View slides in full screen](06_PivotingData.html)\n\n\n\n\n```{=html}\n<iframe class=\"slide-deck\" src=\"06_PivotingData.html\" height=\"450\" width=\"800\" style=\"border: 1px solid #F0F0F0;\"></iframe>\n```\n\n\n\n## Exercises\n\n\n## Data\nWe are using the same flight information as the exercises in the Joining Datasets section:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(\"nycflights13\")\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(nycflights13)\nflights\nweather\nairports\nairlines\nplanes\n```\n:::\n\n\n\n\n## Exercises\n1. Create a crosstab output of the airline by depature airport (`origin`)\n2. Calculate the average temperature, wind speed, and percipitation by origin airport for the month of January.  Try to do this using `pivot_longer()` and one `summarize()` statement.\n3. Try to recreate this plot that displays the average wind speed and wind gusts by month on the same plot. (Hint: pivot to get the values Use `geom_line()`)\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/pivot-3-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
