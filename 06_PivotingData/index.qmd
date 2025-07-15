@@ -33,9 +33,9 @@ planes
 ```
 
 ## Exercises
-1. Create a crosstab output of the airline by depature airport (`origin`)
-2. Calculate the average temperature, wind speed, and percipitation by origin airport for the month of January.  Try to do this using `pivot_longer()` and one `summarize()` statement.
-3. Try to recreate this plot that displays the average wind speed and wind gusts by month on the same plot. (Hint: pivot to get the values Use `geom_line()`)
+1. Create a crosstab output of the airline by departure airport (`origin`)
+2. Calculate the average temperature, wind speed, and precipitation by origin airport for the month of January.  Try to do this using `pivot_longer()` and one `summarize()` statement.
+3. Try to recreate this plot that displays the average wind speed and wind gusts by month on the same plot. (Hint: pivot to get the values and use `geom_line()`)
 
 ```{r}
 #| label: pivot-3

@@ -1,0 +1,17 @@
+{
+  "hash": "2f08426f53d5c996770bb860a4fd4b11",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Data Attributes\"\nformat: html\n---\n\n\n\n\n## Slides\n\n[View slides in full screen](08_DataAttributes.html)\n\n\n\n\n```{=html}\n<iframe class=\"slide-deck\" src=\"08_DataAttributes.html\" height=\"450\" width=\"800\" style=\"border: 1px solid #F0F0F0;\"></iframe>\n```\n\n\n\n\n## Factors\n\n### Data\n\nUse `gss_cat` data from the `forcats` package. Remember you can get information on the built in datasets using `?gss_cat`.\n\n### Exercises\n\n1.  Create a new age variable called `age_cat` that categorizes `age` into a factor with the following categories (Hint: Be mindful of any missing data):\n\n    -   \\< 30\n    -   30-39\n    -   40-49\n    -   50-59\n    -   60-69\n    -   70 +\n\n2.  In the `relig` variable there are missing data not showing as `NA`.  Recode these to our usual -99 and -98 values to these options.\n\n3. Create a new religion variable called `relig_other` that combines answers with \\<100 responses into the `Other` category.  (Hint: Be mindful our the missing data you just recoded)\n\n## Date/time variables\n\n### Data\n\nUse birthdays data that is hosted on the share drive.  Remember to change pathnames to have forward slashes \"/\"\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nbirthdays<-read_csv(\"PATHNAME/birthdays.csv\")\n```\n:::\n\n\n\n\n### Exercises\n1. Create a new birthday variable that is a date type variable.\n2. Create a new entrollment variable that is a date type variable.\n3. What is the average age of this population as of today? (Hint: use `today()` and `time_length()`)\n4. What is the average age of enrollment by sex? (Hint: use `time_length()`)\n\n## String variables\n\n### Data\n\nUse the `gss_cat` dataset from the `forcats` package\n\n### Exercises\n\n1. Create a new variable for party affiliation that creates 4 categories.  Use stringr functions to find these instead of manually typing all.\n\n    - Independent\n    - Democrat (include strong, not strong, and near)\n    - Republican (include strong, not strong, and near)\n    - Other (include strong, not strong, and near)\n\n2. Create a new variable called `baptist` that indicates if a respondent is some type of baptist based on their response to `denom`.  (Hint: View the levels of `denom` to understand what might be considered baptist.)\n3. The `rincome` variable has some levels using \"to\" for the wording (\\$8000 to 9999) and some using \"-\" for the wording (\\$10000 - 14999).  Create a new variable that standardizes this wording using the functions from stringr.",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

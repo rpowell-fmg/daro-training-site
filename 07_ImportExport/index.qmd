@@ -12,14 +12,11 @@ format: html
 ```
 ## Exercises
 
-**Exercise 1**
+### Data
+All data for these exercises are located on our share drive.
 
--    
-
-**Exercise 2**
-
--    
-
-**Exercise 3**
-
--    
+### Exercises
+1. Read in the `svy_stata.dta` file and review the data structure with `glimpse()`.
+2. Convert all labelled data to factors and save as a new dataset called `stata_fcts`.
+3. Using the original data you read in, create a new dataset called `stata_nolabels` that removes all value labels
+4. Use `count()` to see the output differences between `Q2` on the original input data, `stata_fcts`, and `stata_nolabels`

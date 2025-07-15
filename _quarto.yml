@@ -37,11 +37,13 @@ website:
         contents:
           - href: 07_ImportExport/index.qmd
           - href: 08_DataAttributes/index.qmd
-          - href: 09_LabelledData/index.qmd
       - section: "Day 4"
+        contents:
+          - href: 09_LabelledData/index.qmd
       - section: "Exercise Solutions"
         contents:
           - href: ExerciseSolutions/Day1_Solutions.qmd
+          - href: ExerciseSolutions/Day2_Solutions.qmd
 
 
   page-footer:

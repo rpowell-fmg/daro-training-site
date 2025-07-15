@@ -66,12 +66,14 @@ college_recent_grads %>%
 
 ```{r}
 #| label: single-4
+library(scales)
 college_recent_grads %>%
   mutate(STEM = if_else(major_category %in% stem_categories, "Yes", "No")) %>%
   ggplot(aes(x = sharewomen, y = median, fill = STEM)) +
   geom_point(color = "black", pch = 21, size = 3) +
   theme_minimal() +
   scale_fill_manual(name = "Stem Major", values = c("#FFA219", "#FECCDD")) +
+  scale_y_continuous(labels = label_number()) +
   labs(
     x = "Proportion of women in major",
     y = "Median income of major"
@@ -102,17 +104,74 @@ planes
 
 1. Which airline had the most Airbus planes departing NYC in 2013?
 
+Option 1: Merge then do `case_when()`
+
 ```{r}
-#| label: join-1
+#| label: join-1-opt1
+
+merged_planes<-flights %>% 
+  select(tailnum, carrier) %>% 
+  left_join(airlines, join_by(carrier)) %>% 
+  left_join(planes, join_by(tailnum))
+
+
+merged_planes %>% 
+  select(tailnum, carrier, name, manufacturer) %>% 
+  mutate(Airbus = case_when(manufacturer == "AIRBUS INDUSTRIE" ~ 1,
+                            manufacturer == "AIRBUS" ~ 1,
+                            TRUE ~ 0)) %>% 
+  count(name, Airbus) %>% 
+  filter(Airbus == 1)
+```
+
+Option 2: Merge then do `if_else()`
+
+```{r}
+#| label: join-1-opt2
+merged_planes<-flights %>% 
+  select(tailnum, carrier) %>% 
+  left_join(airlines, join_by(carrier)) %>% 
+  left_join(planes, join_by(tailnum))
+
+merged_planes %>% 
+  select(tailnum, carrier, name, manufacturer) %>% 
+  mutate(Airbus = if_else((manufacturer == "AIRBUS INDUSTRIE" | 
+                            manufacturer == "AIRBUS"),
+                          1,0)) %>% 
+  count(name, Airbus) %>% 
+  filter(Airbus == 1)
+```
+
+Option 3: Merge then do `filter()`
+
+```{r}
+#| label: join-1-opt3
+merged_planes<-flights %>% 
+  select(tailnum, carrier) %>% 
+  left_join(airlines, join_by(carrier)) %>% 
+  left_join(planes, join_by(tailnum))
+
+merged_planes %>% 
+  select(tailnum, carrier, name, manufacturer) %>% 
+  filter((manufacturer == "AIRBUS INDUSTRIE" | 
+            manufacturer == "AIRBUS")) %>% 
+  count(name)
+```
+
+
+Option 4: Can merge/filter in different orders.  Here we get the count by `carrier` then merge on the airline name.
+```{r}
+#| label: join-1-opt4
 
 airbus_counts<-planes %>% 
   left_join(flights, join_by(tailnum)) %>% 
   select(tailnum, manufacturer, carrier) %>% 
-  filter(manufacturer == "AIRBUS INDUSTRIE") %>% 
+  filter((manufacturer == "AIRBUS INDUSTRIE" | 
+            manufacturer == "AIRBUS")) %>% 
   count(carrier) %>% 
   left_join(airlines, join_by(carrier)) %>% 
-  select(carrier, name, n) %>% 
-  arrange(desc(n))
+  select(name, n) %>% 
+  arrange(name)
 
 airbus_counts
 ```
@@ -123,7 +182,7 @@ airbus_counts
 #| label: join-2
 
 airlines %>% 
-  anti_join(airbus_counts, join_by(carrier, name))
+  anti_join(airbus_counts, join_by(name))
 ```
 
 
@@ -162,8 +221,7 @@ flights %>%
 
 flights %>% 
   select(tailnum, air_time) %>% 
-  left_join(planes, join_by(tailnum)) %>% 
-  filter(!is.na(seats)) %>% 
+  inner_join(planes, join_by(tailnum)) %>% 
   ggplot(aes(x = seats, y = air_time)) + 
   geom_point()
 ``` 
@@ -190,7 +248,7 @@ planes
 ```
 
 ## Exercises
-1. Create a crosstab output of the airline by depature airport (`origin`)
+1. Create a crosstab output of the airline by departure airport (`origin`)
 
 ```{r}
 #| label: pivot-1
@@ -200,15 +258,21 @@ flights %>%
 ```
 
 With full names merged on:
+
+**Notes:** 
+
+    -  if the variable is called something different across the two datasets you can use `x_varname == y_varname` in the `join_by()` statement.
+    -  if two datasets have the same name, the default suffix will be `.x` and `.y`.  You can specify a suffix, using a `suffix = c("_xsuffix", "_ysuffix")` statment in the `*_join()` statement
+
 ```{r}
 #| label: pivot-1-labels
 flights %>% 
   count(carrier, origin) %>% 
   left_join(airlines, join_by(carrier)) %>% 
-  left_join(airports, join_by(origin == faa)) %>% 
-  select(n:name.y) %>% 
-  pivot_wider(names_from = "name.y", values_from = "n") %>% 
-  arrange(name.x)
+  left_join(airports, join_by(origin == faa), suffix = c("_airline", "_airport")) %>% 
+  select(n:name_airport) %>% 
+  pivot_wider(names_from = name_airport, values_from = n) %>% 
+  arrange(name_airline)
 ```
 
 2. Calculate the average temperature, wind speed, and percipitation by origin airport for the month of January.  Try to do this using `pivot_longer()` and one `summarize()` statement.
@@ -227,7 +291,7 @@ weather %>%
               values_from = avg_weather_data)
 ```
 
-3. Try to recreate this plot that displays the average wind speed and wind gusts by month on the same plot. (Hint: pivot to get the values Use `geom_line()`
+3. Try to recreate this plot that displays the average wind speed and wind gusts by month on the same plot. (Hint: pivot to get the values and use `geom_line()`)
 
 ```{r}
 #| label: pivot-3

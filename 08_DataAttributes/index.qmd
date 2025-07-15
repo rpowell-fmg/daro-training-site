@@ -10,16 +10,60 @@ format: html
 ```{=html}
 <iframe class="slide-deck" src="08_DataAttributes.html" height="450" width="800" style="border: 1px solid #F0F0F0;"></iframe>
 ```
-## Exercises
 
-**Exercise 1**
+## Factors
 
--    
+### Data
 
-**Exercise 2**
+Use `gss_cat` data from the `forcats` package. Remember you can get information on the built in datasets using `?gss_cat`.
 
--    
+### Exercises
 
-**Exercise 3**
+1.  Create a new age variable called `age_cat` that categorizes `age` into a factor with the following categories (Hint: Be mindful of any missing data):
 
--    
+    -   \< 30
+    -   30-39
+    -   40-49
+    -   50-59
+    -   60-69
+    -   70 +
+
+2.  In the `relig` variable there are missing data not showing as `NA`.  Recode these to our usual -99 and -98 values to these options.
+
+3. Create a new religion variable called `relig_other` that combines answers with \<100 responses into the `Other` category.  (Hint: Be mindful our the missing data you just recoded)
+
+## Date/time variables
+
+### Data
+
+Use birthdays data that is hosted on the share drive.  Remember to change pathnames to have forward slashes "/"
+```{r}
+#| label: date-data
+#| warning: false
+#| eval: false
+birthdays<-read_csv("PATHNAME/birthdays.csv")
+```
+
+### Exercises
+1. Create a new birthday variable that is a date type variable.
+2. Create a new entrollment variable that is a date type variable.
+3. What is the average age of this population as of today? (Hint: use `today()` and `time_length()`)
+4. What is the average age of enrollment by sex? (Hint: use `time_length()`)
+
+## String variables
+
+### Data
+
+Use the `gss_cat` dataset from the `forcats` package
+
+### Exercises
+
+1. Create a new variable for party affiliation that creates 4 categories.  Use stringr functions to find these instead of manually typing all.
+
+    - Independent
+    - Democrat (include strong, not strong, and near)
+    - Republican (include strong, not strong, and near)
+    - Other (include strong, not strong, and near)
+
+2. Create a new variable called `baptist` that indicates if a respondent is some type of baptist based on their response to `denom`.  (Hint: View the levels of `denom` to understand what might be considered baptist.)
+3. The `rincome` variable has some levels using "to" for the wording (\$8000 to 9999) and some using "-" for the wording (\$10000 - 14999).  Create a new variable that standardizes this wording using the functions from stringr.

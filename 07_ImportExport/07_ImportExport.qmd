@@ -1,6 +1,6 @@
 ---
 title: "Import/Export Data"
-order: 7
+order: 8
 title-slide-attributes:
     data-background-gradient: linear-gradient(to top right, {{< brand color background >}}, {{< brand color pastelpink >}}, {{< brand color fmorange >}}, {{< brand color tangerine >}})
 
@@ -31,7 +31,7 @@ options(width=69)
 ```
 
 
-# Reading rectangular data into R
+# Reading rectangular data into R {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
 
 ::: {.column}
 ```{r}
@@ -112,7 +112,7 @@ read_csv("../data/import/df.csv")
 ::::
 
 
-# Variable names
+# Variable names {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
 
 ## Data with bad names
 
@@ -173,7 +173,7 @@ ggplot(edibnb_badnames,
   geom_point()
 ```
 
-# Missing Data
+# Missing Data {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
 
 ::: {.column}
 ```{r}
@@ -263,7 +263,7 @@ read_csv("../data/import/df-na.csv", col_types = list(col_double(),
 `col_skip()`       | do not read
 `col_time()`       | time
 
-# Reading in Survey Data
+# Reading in Survey Data {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
 
 ```{r}
 #| label: images-haven

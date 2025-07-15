@@ -17,7 +17,7 @@ format:
     code-overflow: scroll
 ---
 
-# Data types
+# Data types {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
 ```{r}
 #| label: packages
 #| echo: FALSE
@@ -35,6 +35,7 @@ options(width=69)
 #| label: load-data
 #| echo: false
 spss_ex<-read_sav("../data/import/svy_spss.sav")
+penguins<-tibble(penguins)
 ```
 
 ## Data types in R
@@ -196,7 +197,62 @@ pi / 0
 ```
 :::
 
-# Data classes
+## Missing data
+
+- `is.na()` function allows us to determine if a value is missing
+
+. . .
+
+- Can be very helpful when working with `case_when()` or `if_else()` statements
+
+. . .
+
+- requires data to have explicit missing, so must be careful when working with strings
+
+:::: column
+::: fragment
+```{r}
+#| label: missing-1
+miss_array<-c(NA, 5, "", "Text")
+
+typeof(miss_array)
+
+miss_array
+```
+:::
+::: fragment
+```{r}
+#| label: missing-2
+is.na(miss_array)
+```
+:::
+::::
+
+:::: column
+::: fragment
+```{r}
+#| label: missing-3
+case_when(is.na(miss_array) == "" ~ 1,
+          TRUE ~ 0)
+```
+:::
+::: fragment
+```{r}
+#| label: missing-4
+case_when(miss_array == "" ~ 1,
+          TRUE ~ 0)
+```
+:::
+::: fragment
+```{r}
+#| label: missing-5
+case_when(is.na(miss_array) | miss_array == "" ~ 1,
+          TRUE ~ 0)
+```
+:::
+::::
+
+# Data classes {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
 
 ## Data classes in R
 
@@ -205,7 +261,7 @@ pi / 0
 - **data frame**
 - **list**
 
-# Factors
+# Factors {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
 
 ## Factors
 
@@ -336,7 +392,52 @@ knitr::include_graphics("images/forcats-part-of-tidyverse.png")
 See [https://forcats.tidyverse.org/](https://forcats.tidyverse.org/) for more details
 :::
 
-# Dates
+# {background-gradient="radial-gradient(#FFA219, #FFFFFF, #FFFFFF)"}
+
+::: {.tip}
+`r emoji('bulb')`<b>Tip!</b> <br><br> 
+Factor functions should be called in `mutate()` as you are mutating the variable
+:::
+
+## Factor example - penguins
+
+```{r}
+#| label: factor-ex-1
+glimpse(penguins)
+```
+
+## Factor example - penguins (cont.)
+
+```{r}
+#| label: factor-ex-2
+#| error: true
+penguins %>% 
+  fct_collapse(NewIsland = c("Dream", "Torgersen"))
+```
+
+. . .
+
+```{r}
+#| label: factor-ex-3
+penguins %>% 
+  mutate(island2 = fct_collapse(island, NewIsland = c("Dream", "Torgersen"))) %>% 
+  count(island, island2)
+```
+
+
+# Your turn: <br>Factor variables {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+```
+
+
+# Dates {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
 
 ## Dates
 
@@ -384,6 +485,7 @@ knitr::include_graphics("images/lubridate-tidyverse.png")
     - `ymd()` looks for a date in year, month, day format
     - `mdy()` looks for a date in month, day, year format
     - `ymd_hms()` looks for a datetime in year, month, day, hour, minute, second format
+    - `make_datetime()` has arguments for each component of a datetime variable
 - Parse datetime components from a date/time variable
     - `date()` will parse just the date component of a datetime variable
     - `year()` and `hour()` will parse just the year and hour components
@@ -423,6 +525,7 @@ spss_ex %>%
 :::
 
 ::: fragment
+Note that the ymd and other functions, expect a character value
 Note that the output here shows a "phantom" date when only a time is provided
 :::
 ::::
@@ -441,8 +544,24 @@ spss_ex %>%
          DateTime_Char, LastDateTime_Formatted)
 ```
 
+## Calculating time differences {.smaller}
 
-# Your turn: <br>Factors and date variables {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+How may days since the start of data collection did a person respond?
+
+```{r}
+#| label: lubridate-diffs
+#| code-line-numbers: "|2|3|4" 
+spss_ex %>% 
+  mutate(days_to_complete = 
+           time_length(ymd(LastConnectionDate) - ymd("20250315"), 
+                       unit = "days")) %>% 
+  select(LastConnectionDate,days_to_complete) %>% 
+  filter(LastConnectionDate != "")
+
+```
+
+
+# Your turn: <br>Date variables {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
 
 `r emojifont::emoji("raised_hand")` if you have questions or need help
 
@@ -453,3 +572,196 @@ spss_ex %>%
 countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
 ```
 
+# Working with strings {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
+
+## stringr
+
+::: {.column}
+```{r}
+#| label: images-stringr
+#| echo: FALSE
+#| out.width: "80%"
+#| fig-align: center
+knitr::include_graphics("images/stringr-tidyverse.png")
+```
+::: 
+:::: {.column}
+::: {.incremental}
+Functions to work with strings
+
+    - detect matches
+    - subset strings
+    - manage lengths
+    - mutate strings
+    - join and split strings
+
+:::
+::::
+
+## Typical stringr function format
+
+Most string functions are in the format:
+```{r}
+#| label: stringr-format
+#| eval: false
+#| code-line-numbers: "|1|2|3|"
+func_name(
+  string,
+  pattern,
+  ...
+)
+```
+
+## Detect matches {.smaller}
+
+`string_detect(string, pattern)`: Detects the presence of a pattern match in a string
+
+::: column
+```{r}
+#| label: stringr-detect
+starwars %>% 
+  select(name, hair_color) %>% 
+  filter(hair_color == "brown")
+```
+:::
+
+:::: column
+::: fragment
+```{r}
+#| label: stringr-detect-2
+starwars %>% 
+  select(name, hair_color) %>% 
+  filter(str_detect(hair_color,"brown"))
+```
+:::
+::::
+
+## Subset strings {.smaller}
+
+`str_sub(string, start, end)`: Subset strings based on a known location
+`str_extract(string, pattern)`: Return the first pattern match found
+
+::: column
+```{r}
+#| label: stringr-sub-1
+starwars %>% 
+  select(name, hair_color) %>% 
+  mutate(primary_hair = str_sub(hair_color, 1, 5))
+```
+:::
+
+:::: column
+::: fragment
+```{r}
+#| label: stringr-sub-2
+starwars %>% 
+  select(name, hair_color) %>% 
+  mutate(primary_hair = str_extract(hair_color, "^.*,"))
+```
+:::
+::::
+
+## Regular expressions
+
+Powerful...yet annoying
+
+. . .
+
+A few common ones you will likely use:
+
+| operator | definition |   | operator | definition |
+|----------|------------------------|----|------------|------------------------|
+| `^` | start of a string |  | `[:alpha:]` | all upper and lower case alpha characters |
+| `$` | end of a string |  |  `[:digit:]` | all numeric digits |
+| `.` | any character |  | `[:alnum:]` | all `[:alpha:]` + all `[:digit:]` |
+| `a*` | zero or more "a" in a row |  | `[abe]` | one of the letters in brackets |
+| `a{n}` | exactly n "a" characters in a row |  | `[^abe]` | anything but the letters in brackets |
+
+. . .
+
+When I work with strings, the [stringr cheatsheet](https://rstudio.github.io/cheatsheets/strings.pdf) is always open in a browser (or on my desk)!
+
+## Subset strings {.smaller}
+
+`str_extract(string, pattern)`: Return the first pattern match found
+
+::: column
+```{r}
+#| label: stringr-sub-3
+starwars %>% 
+  select(name, hair_color) %>% 
+  mutate(primary_hair = str_extract(hair_color, "^.*,"))
+```
+:::
+
+:::: column
+::: fragment
+```{r}
+#| label: stringr-sub-4
+starwars %>% 
+  select(name, hair_color) %>% 
+  mutate(primary_hair = str_extract(hair_color, "^.*(?=,)"))
+```
+:::
+::::
+
+## Mutate strings
+
+`str_replace(string, pattern, replacement)`: Replace the first matched patttern
+
+```{r}
+#| label: stringr-replace-1
+starwars %>% 
+  select(name, hair_color) %>% 
+  mutate(new_hair = str_replace(hair_color, "blond", "rainbow")) %>% 
+  filter(str_detect(hair_color,"blond"))
+```
+
+## Mutate strings (cont.)
+
+`str_replace(string, pattern, replacement)`: Replace the first matched patttern
+
+```{r}
+#| label: stringr-replace-2
+starwars %>% 
+  select(name, hair_color) %>% 
+  mutate(additional_colors = str_replace(hair_color, "^.*, ", "")) %>% 
+  filter(str_detect(hair_color,","))
+```
+
+
+## Split strings
+
+`str_split_i(string, pattern, n)`: Split at the pattern, and return the nth substring
+
+
+```{r}
+#| label: stringr-replace-3
+starwars %>% 
+  select(name, hair_color) %>% 
+  mutate(additional_colors = str_split_i(hair_color, ", ", 2)) %>% 
+  filter(str_detect(hair_color,","))
+```
+
+
+## Other helpful string functions
+
+::: {.incremental}
+- `str_length(string)`: number of characters (also `nchar(string)`)
+- `str_pad(string, width, side, pad = " ")`: pad the string with additional characters (default is to pad with a space, but can also use this to pad leading 0s)
+- `str_trim(string, side)`: trim whitespace from the start and/or end of a string
+- `str_squish(string)`: trim whitespace from both ends and collapse multiple spaces in the middle into a single space
+- `toupper(string)`: converts the entire string to uppercase
+- `tolower(string)`: converts the entire string to lowercase
+:::
+
+# Your turn: <br>String variables {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+```
