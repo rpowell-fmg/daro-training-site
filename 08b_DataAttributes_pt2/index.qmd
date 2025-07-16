@@ -1,0 +1,30 @@
+---
+title: "Data Attributes-Part 2"
+format: html
+---
+
+## Slides
+
+[View slides in full screen](08b_DataAttributes_pt2.html)
+
+```{=html}
+<iframe class="slide-deck" src="08b_DataAttributes_pt2.html" height="450" width="800" style="border: 1px solid #F0F0F0;"></iframe>
+```
+
+## String variables
+
+### Data
+
+Use the `gss_cat` dataset from the `forcats` package
+
+### Exercises
+
+1. Create a new variable for party affiliation that creates 4 categories.  Use stringr functions to find these instead of manually typing all.
+
+    - Independent
+    - Democrat (include strong, not strong, and near)
+    - Republican (include strong, not strong, and near)
+    - Other (include strong, not strong, and near)
+
+2. Create a new variable called `baptist` that indicates if a respondent is some type of baptist based on their response to `denom`.  (Hint: View the levels of `denom` to understand what might be considered baptist.)
+3. The `rincome` variable has some levels using "to" for the wording (\$8000 to 9999) and some using "-" for the wording (\$10000 - 14999).  Create a new variable that standardizes this wording using the functions from stringr.

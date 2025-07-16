@@ -43,21 +43,3 @@ Use the `birthdays.csv` data that is hosted on the share drive.  Read in the dat
 2. Create a new entrollment variable that is a date type variable.
 3. What is the average age of this population as of today? (Hint: use `today()` and `time_length()`)
 4. What is the average age of enrollment by sex? (Hint: use `time_length()`)
-
-## String variables
-
-### Data
-
-Use the `gss_cat` dataset from the `forcats` package
-
-### Exercises
-
-1. Create a new variable for party affiliation that creates 4 categories.  Use stringr functions to find these instead of manually typing all.
-
-    - Independent
-    - Democrat (include strong, not strong, and near)
-    - Republican (include strong, not strong, and near)
-    - Other (include strong, not strong, and near)
-
-2. Create a new variable called `baptist` that indicates if a respondent is some type of baptist based on their response to `denom`.  (Hint: View the levels of `denom` to understand what might be considered baptist.)
-3. The `rincome` variable has some levels using "to" for the wording (\$8000 to 9999) and some using "-" for the wording (\$10000 - 14999).  Create a new variable that standardizes this wording using the functions from stringr.

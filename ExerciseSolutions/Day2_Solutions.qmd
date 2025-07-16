@@ -291,6 +291,47 @@ weather %>%
               values_from = avg_weather_data)
 ```
 
+
+You can do this without pivot, but I wanted you to get experience with pivoting data.  Here are two ways to do this *not* using `pivot_longer()`
+
+Manually run each summarize statement:
+```{r}
+#| label: pivot-2-multi-sum
+weather %>%
+  filter(month == 1) %>%
+  select(origin, temp, wind_speed, precip) %>%
+  group_by(origin) %>%
+  summarize(avg_temp = mean(temp, na.rm=TRUE),
+            avg_wind_speed = mean(wind_speed, na.rm=TRUE),
+            avg_precip = mean(precip, na.rm=TRUE))
+```
+
+Use `across()` within `summarize()` to run all statements at once:
+```{r}
+#| label: pivot-2-multi-across
+
+## No arguments in the mean function
+weather %>%
+  filter(month == 1) %>%
+  select(origin, temp, wind_speed, precip) %>%
+  group_by(origin) %>%
+  summarize(across(
+    c(temp, wind_speed, precip),
+    mean
+  ))
+
+## Adding arguments to the mean function
+weather %>%
+  filter(month == 1) %>%
+  select(origin, temp, wind_speed, precip) %>%
+  group_by(origin) %>%
+  summarize(across(
+    c(temp, wind_speed, precip),
+    ~ mean(., na.rm = TRUE)
+  ))
+```
+
+
 3. Try to recreate this plot that displays the average wind speed and wind gusts by month on the same plot. (Hint: pivot to get the values and use `geom_line()`)
 
 ```{r}

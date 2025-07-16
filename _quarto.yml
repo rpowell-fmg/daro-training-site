@@ -39,6 +39,7 @@ website:
           - href: 08_DataAttributes/index.qmd
       - section: "Day 4"
         contents:
+          - href: 08b_DataAttributes_pt2/index.qmd
           - href: 09_LabelledData/index.qmd
       - section: "Exercise Solutions"
         contents:

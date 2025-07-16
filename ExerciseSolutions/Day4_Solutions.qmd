@@ -1,0 +1,69 @@
+---
+title: "Day 4-Solutions"
+format: html
+---
+
+# Data Attributes - Strings
+
+## Data
+
+Use the `gss_cat` dataset from the `forcats` package
+```{r}
+#| label: fct-pkgs
+#| warning: false
+library(tidyverse)
+glimpse(gss_cat)
+```
+
+## Exercises
+1. Create a new variable for party affiliation that creates 4 categories.  Use stringr functions to find these instead of manually typing all.
+
+    - Independent
+    - Democrat (include strong, not strong, and near)
+    - Republican (include strong, not strong, and near)
+    - Other (include strong, not strong, and near)
+
+```{r}
+#| label: string-1
+
+gss_cat_party<-gss_cat %>% 
+  mutate(party_affil = case_when(str_detect(tolower(partyid), "dem") ~ "Democrat",
+                                 str_detect(tolower(partyid), "rep") ~ "Republican",
+                                 TRUE ~ partyid)) 
+
+gss_cat_party %>% 
+  count(party_affil, partyid)
+
+```
+
+2. Create a new variable called `baptist` that indicates if a respondent is some type of baptist based on their response to `denom`.  (Hint: View the levels of `denom` to understand what might be considered baptist.)
+
+```{r}
+#| label: string-2
+
+gss_cat_baptist<-gss_cat %>% 
+  mutate(baptist = if_else(str_detect(tolower(denom), "bapt"), 1, 0)) 
+
+gss_cat_baptist %>% 
+  count(denom, baptist) %>%
+  arrange(-baptist) %>% 
+  print(n = 30)
+
+```
+
+3. The `rincome` variable has some levels using "to" for the wording (\$8000 to 9999) and some using "-" for the wording (\$10000 - 14999).  Create a new variable that standardizes this wording using the functions from stringr.
+
+```{r}
+#| label: string-3-opt1
+gss_cat %>% 
+  mutate(rincome_cat = str_replace(rincome," - ", " to ")) %>% 
+  count(rincome, rincome_cat)
+```
+
+Option 2:
+```{r}
+#| label: string-3-opt2
+gss_cat %>% 
+  mutate(rincome_cat = str_replace(rincome," to ", " - ")) %>% 
+  count(rincome, rincome_cat)
+```

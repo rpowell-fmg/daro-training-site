@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Single Dataset – daro-training-site</title>
+<title>Day 4-Solutions – daro-training-site</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01_GettingStarted/index.html">Day 1</a></li><li class="breadcrumb-item"><a href="../04_SingleDataset/index.html">Single Dataset</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Day 4-Solutions</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -176,7 +176,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../04_SingleDataset/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../04_SingleDataset/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Single Dataset</span></a>
   </div>
 </li>
@@ -290,11 +290,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#slides" id="toc-slides" class="nav-link active" data-scroll-target="#slides">Slides</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
+  <li><a href="#data-attributes---strings" id="toc-data-attributes---strings" class="nav-link active" data-scroll-target="#data-attributes---strings">Data Attributes - Strings</a>
   <ul class="collapse">
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#select-arrange-filter-distinct-count" id="toc-select-arrange-filter-distinct-count" class="nav-link" data-scroll-target="#select-arrange-filter-distinct-count"><strong>select, arrange, filter, distinct, count</strong></a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -302,9 +301,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01_GettingStarted/index.html">Day 1</a></li><li class="breadcrumb-item"><a href="../04_SingleDataset/index.html">Single Dataset</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Single Dataset</h1>
+<h1 class="title">Day 4-Solutions</h1>
 </div>
 
 
@@ -321,44 +320,167 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p><a href="04_SingleDataset.html">View slides in full screen</a></p>
-<iframe class="slide-deck" src="04_SingleDataset.html" height="450" width="800" style="border: 1px solid #F0F0F0;"></iframe>
+<section id="data-attributes---strings" class="level1">
+<h1>Data Attributes - Strings</h1>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>Use the <code>gss_cat</code> dataset from the <code>forcats</code> package</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(gss_cat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 21,483
+Columns: 9
+$ year    &lt;int&gt; 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 20…
+$ marital &lt;fct&gt; Never married, Divorced, Widowed, Never married, Divorced, Mar…
+$ age     &lt;int&gt; 26, 48, 67, 39, 25, 25, 36, 44, 44, 47, 53, 52, 52, 51, 52, 40…
+$ race    &lt;fct&gt; White, White, White, White, White, White, White, White, White,…
+$ rincome &lt;fct&gt; $8000 to 9999, $8000 to 9999, Not applicable, Not applicable, …
+$ partyid &lt;fct&gt; "Ind,near rep", "Not str republican", "Independent", "Ind,near…
+$ relig   &lt;fct&gt; Protestant, Protestant, Protestant, Orthodox-christian, None, …
+$ denom   &lt;fct&gt; "Southern baptist", "Baptist-dk which", "No denomination", "No…
+$ tvhours &lt;int&gt; 12, NA, 2, 4, 1, NA, 3, NA, 0, 3, 2, NA, 1, NA, 1, 7, NA, 3, 3…</code></pre>
+</div>
+</div>
 </section>
 <section id="exercises" class="level2">
 <h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
-<ul>
-<li>Use <code>college_recent_grads</code> data from the <strong>fivethirtyeight</strong> package</li>
-<li>Review documentation for the data with: <code>?college_recent_grads</code></li>
-<li>See the structure of the data with: <code>glimpse(college_recent_grads)</code></li>
-</ul>
-</section>
-<section id="select-arrange-filter-distinct-count" class="level3">
-<h3 class="anchored" data-anchor-id="select-arrange-filter-distinct-count"><strong>select, arrange, filter, distinct, count</strong></h3>
 <ol type="1">
-<li>Which major has the highest percentage of women? (Hint: use <code>arrange(desc())</code> to easily see the top items)
+<li><p>Create a new variable for party affiliation that creates 4 categories. Use stringr functions to find these instead of manually typing all.</p>
 <ul>
-<li>Output only relevant variables</li>
-</ul></li>
-<li>Get a list of STEM majors that have median earnings &lt; $36,000
-<ul>
-<li>(Hint: use the <code>%in%</code> to see if the <code>major_category</code> is in <code>stem_categories</code>)</li>
-<li>Output only relevant variables</li>
-<li>Use this code to create a list of STEM majors to compare to:</li>
+<li>Independent</li>
+<li>Democrat (include strong, not strong, and near)</li>
+<li>Republican (include strong, not strong, and near)</li>
+<li>Other (include strong, not strong, and near)</li>
 </ul></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>    stem_categories <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Biology &amp; Life Science"</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"Computers &amp; Mathematics"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"Engineering"</span>,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"Physical Sciences"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gss_cat_party<span class="ot">&lt;-</span>gss_cat <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">party_affil =</span> <span class="fu">case_when</span>(<span class="fu">str_detect</span>(<span class="fu">tolower</span>(partyid), <span class="st">"dem"</span>) <span class="sc">~</span> <span class="st">"Democrat"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                                 <span class="fu">str_detect</span>(<span class="fu">tolower</span>(partyid), <span class="st">"rep"</span>) <span class="sc">~</span> <span class="st">"Republican"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                                 <span class="cn">TRUE</span> <span class="sc">~</span> partyid)) </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>gss_cat_party <span class="sc">%&gt;%</span> </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(party_affil, partyid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 3
+   party_affil partyid                n
+   &lt;chr&gt;       &lt;fct&gt;              &lt;int&gt;
+ 1 Democrat    Ind,near dem        2499
+ 2 Democrat    Not str democrat    3690
+ 3 Democrat    Strong democrat     3490
+ 4 Don't know  Don't know             1
+ 5 Independent Independent         4119
+ 6 No answer   No answer            154
+ 7 Other party Other party          393
+ 8 Republican  Strong republican   2314
+ 9 Republican  Not str republican  3032
+10 Republican  Ind,near rep        1791</code></pre>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Create a new variable called <code>baptist</code> that indicates if a respondent is some type of baptist based on their response to <code>denom</code>. (Hint: View the levels of <code>denom</code> to understand what might be considered baptist.)</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>gss_cat_baptist<span class="ot">&lt;-</span>gss_cat <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">baptist =</span> <span class="fu">if_else</span>(<span class="fu">str_detect</span>(<span class="fu">tolower</span>(denom), <span class="st">"bapt"</span>), <span class="dv">1</span>, <span class="dv">0</span>)) </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>gss_cat_baptist <span class="sc">%&gt;%</span> </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(denom, baptist) <span class="sc">%&gt;%</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>baptist) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 30 × 3
+   denom                baptist     n
+   &lt;fct&gt;                  &lt;dbl&gt; &lt;int&gt;
+ 1 Baptist-dk which           1  1457
+ 2 Other baptists             1   213
+ 3 Southern baptist           1  1536
+ 4 Nat bapt conv usa          1    40
+ 5 Nat bapt conv of am        1    76
+ 6 Am bapt ch in usa          1   130
+ 7 Am baptist asso            1   237
+ 8 No answer                  0   117
+ 9 Don't know                 0    52
+10 No denomination            0  1683
+11 Other                      0  2534
+12 Episcopal                  0   397
+13 Presbyterian-dk wh         0   244
+14 Presbyterian, merged       0    67
+15 Other presbyterian         0    47
+16 United pres ch in us       0   110
+17 Presbyterian c in us       0   104
+18 Lutheran-dk which          0   267
+19 Evangelical luth           0   122
+20 Other lutheran             0    30
+21 Wi evan luth synod         0    71
+22 Lutheran-mo synod          0   212
+23 Luth ch in america         0    71
+24 Am lutheran                0   146
+25 Methodist-dk which         0   239
+26 Other methodist            0    33
+27 United methodist           0  1067
+28 Afr meth ep zion           0    32
+29 Afr meth episcopal         0    77
+30 Not applicable             0 10072</code></pre>
+</div>
 </div>
 <ol start="3" type="1">
-<li>Output a count of the number of majors in each <code>major_category</code></li>
+<li>The <code>rincome</code> variable has some levels using “to” for the wording ($8000 to 9999) and some using “-” for the wording ($10000 - 14999). Create a new variable that standardizes this wording using the functions from stringr.</li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>gss_cat <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rincome_cat =</span> <span class="fu">str_replace</span>(rincome,<span class="st">" - "</span>, <span class="st">" to "</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(rincome, rincome_cat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 16 × 3
+   rincome        rincome_cat         n
+   &lt;fct&gt;          &lt;chr&gt;           &lt;int&gt;
+ 1 No answer      No answer         183
+ 2 Don't know     Don't know        267
+ 3 Refused        Refused           975
+ 4 $25000 or more $25000 or more   7363
+ 5 $20000 - 24999 $20000 to 24999  1283
+ 6 $15000 - 19999 $15000 to 19999  1048
+ 7 $10000 - 14999 $10000 to 14999  1168
+ 8 $8000 to 9999  $8000 to 9999     340
+ 9 $7000 to 7999  $7000 to 7999     188
+10 $6000 to 6999  $6000 to 6999     215
+11 $5000 to 5999  $5000 to 5999     227
+12 $4000 to 4999  $4000 to 4999     226
+13 $3000 to 3999  $3000 to 3999     276
+14 $1000 to 2999  $1000 to 2999     395
+15 Lt $1000       Lt $1000          286
+16 Not applicable Not applicable   7043</code></pre>
+</div>
+</div>
+<p>Option 2:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>gss_cat <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rincome_cat =</span> <span class="fu">str_replace</span>(rincome,<span class="st">" to "</span>, <span class="st">" - "</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(rincome, rincome_cat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 16 × 3
+   rincome        rincome_cat        n
+   &lt;fct&gt;          &lt;chr&gt;          &lt;int&gt;
+ 1 No answer      No answer        183
+ 2 Don't know     Don't know       267
+ 3 Refused        Refused          975
+ 4 $25000 or more $25000 or more  7363
+ 5 $20000 - 24999 $20000 - 24999  1283
+ 6 $15000 - 19999 $15000 - 19999  1048
+ 7 $10000 - 14999 $10000 - 14999  1168
+ 8 $8000 to 9999  $8000 - 9999     340
+ 9 $7000 to 7999  $7000 - 7999     188
+10 $6000 to 6999  $6000 - 6999     215
+11 $5000 to 5999  $5000 - 5999     227
+12 $4000 to 4999  $4000 - 4999     226
+13 $3000 to 3999  $3000 - 3999     276
+14 $1000 to 2999  $1000 - 2999     395
+15 Lt $1000       Lt $1000         286
+16 Not applicable Not applicable  7043</code></pre>
+</div>
+</div>
 
 
 </section>

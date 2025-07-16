@@ -211,6 +211,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../08b_DataAttributes_pt2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Attributes-Part 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../09_LabelledData/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Labelled Data</span></a>
   </div>
@@ -260,11 +266,6 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#data-1" id="toc-data-1" class="nav-link" data-scroll-target="#data-1">Data</a></li>
   <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1">Exercises</a></li>
-  </ul></li>
-  <li><a href="#string-variables" id="toc-string-variables" class="nav-link" data-scroll-target="#string-variables">String variables</a>
-  <ul class="collapse">
-  <li><a href="#data-2" id="toc-data-2" class="nav-link" data-scroll-target="#data-2">Data</a></li>
-  <li><a href="#exercises-2" id="toc-exercises-2" class="nav-link" data-scroll-target="#exercises-2">Exercises</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -332,27 +333,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Create a new entrollment variable that is a date type variable.</li>
 <li>What is the average age of this population as of today? (Hint: use <code>today()</code> and <code>time_length()</code>)</li>
 <li>What is the average age of enrollment by sex? (Hint: use <code>time_length()</code>)</li>
-</ol>
-</section>
-</section>
-<section id="string-variables" class="level2">
-<h2 class="anchored" data-anchor-id="string-variables">String variables</h2>
-<section id="data-2" class="level3">
-<h3 class="anchored" data-anchor-id="data-2">Data</h3>
-<p>Use the <code>gss_cat</code> dataset from the <code>forcats</code> package</p>
-</section>
-<section id="exercises-2" class="level3">
-<h3 class="anchored" data-anchor-id="exercises-2">Exercises</h3>
-<ol type="1">
-<li><p>Create a new variable for party affiliation that creates 4 categories. Use stringr functions to find these instead of manually typing all.</p>
-<ul>
-<li>Independent</li>
-<li>Democrat (include strong, not strong, and near)</li>
-<li>Republican (include strong, not strong, and near)</li>
-<li>Other (include strong, not strong, and near)</li>
-</ul></li>
-<li><p>Create a new variable called <code>baptist</code> that indicates if a respondent is some type of baptist based on their response to <code>denom</code>. (Hint: View the levels of <code>denom</code> to understand what might be considered baptist.)</p></li>
-<li><p>The <code>rincome</code> variable has some levels using “to” for the wording ($8000 to 9999) and some using “-” for the wording ($10000 - 14999). Create a new variable that standardizes this wording using the functions from stringr.</p></li>
 </ol>
 
 
