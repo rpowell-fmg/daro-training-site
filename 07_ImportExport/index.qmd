@@ -16,6 +16,13 @@ format: html
 All data for these exercises are located on our share drive.
 
 ### Exercises
+#### Excel Files
+1. Read in the first tab of the `excel_svy.xlsx` data.
+2. Read in the second tab of the `excel_svy.xlsx` data as is.  Review the data you read in, and identify what code you could use to improve this.
+3. Try to improve the data you read in from the second tab through arguments in the `read_excel()` function.
+4. Practice exporting an excel file with `write.xlsx()` from the `openxslx` package
+
+#### Stata Files
 1. Read in the `svy_stata.dta` file and review the data structure with `glimpse()`.
 2. Convert all labelled data to factors and save as a new dataset called `stata_fcts`.
 3. Using the original data you read in, create a new dataset called `stata_nolabels` that removes all value labels

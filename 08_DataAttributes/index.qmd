@@ -36,13 +36,7 @@ Use `gss_cat` data from the `forcats` package. Remember you can get information 
 
 ### Data
 
-Use birthdays data that is hosted on the share drive.  Remember to change pathnames to have forward slashes "/"
-```{r}
-#| label: date-data
-#| warning: false
-#| eval: false
-birthdays<-read_csv("PATHNAME/birthdays.csv")
-```
+Use the `birthdays.csv` data that is hosted on the share drive.  Read in the data using `read_csv()`. (Hint: Remember to change pathnames to have forward slashes "/")
 
 ### Exercises
 1. Create a new birthday variable that is a date type variable.

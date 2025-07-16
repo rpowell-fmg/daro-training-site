@@ -94,7 +94,7 @@ gss_cat_religoth %>%
 
 ## Data
 
-Use birthdays data that is hosted on the share drive.  Remember to change pathnames to have forward slashes "/"
+Use the `birthdays.csv` data that is hosted on the share drive.  Read in the data using `read_csv()`. (Hint: Remember to change pathnames to have forward slashes "/")
 ```{r}
 #| label: date-data
 #| warning: false

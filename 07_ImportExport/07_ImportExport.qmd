@@ -111,6 +111,232 @@ read_csv("../data/import/df.csv")
 ::: 
 ::::
 
+## Reading Excel files
+
+::: column
+```{r}
+#| label: excel-read-syntax-1
+#| eval: false
+read_excel(
+  path,
+  sheet = NULL,
+  col_names = TRUE,
+  col_types = NULL,
+  na = "",
+  skip = 0,
+  guess_max = min(1000, n_max),
+)
+```
+:::
+
+::: column
+
+:::
+
+## Reading Excel files
+
+::: column
+```{r}
+#| label: excel-read-syntax-2
+#| eval: false
+#| code-line-numbers: "2"
+read_excel(
+  path,
+  sheet = NULL,
+  col_names = TRUE,
+  col_types = NULL,
+  na = "",
+  skip = 0,
+  guess_max = min(1000, n_max),
+)
+```
+:::
+
+::: column
+- provide the path for where the data is located (remember "/")
+
+:::
+
+## Reading Excel files
+
+::: column
+```{r}
+#| label: excel-read-syntax-3
+#| eval: false
+#| code-line-numbers: "3"
+read_excel(
+  path,
+  sheet = NULL,
+  col_names = TRUE,
+  col_types = NULL,
+  na = "",
+  skip = 0,
+  guess_max = min(1000, n_max),
+)
+```
+:::
+
+::: column
+- provide the path for where the data is located (remember "/")
+- specify the sheet name (default is pulling in the first sheet)
+
+:::
+
+## Reading Excel files
+
+::: column
+```{r}
+#| label: excel-read-syntax-4
+#| eval: false
+#| code-line-numbers: "4"
+read_excel(
+  path,
+  sheet = NULL,
+  col_names = TRUE,
+  col_types = NULL,
+  na = "",
+  skip = 0,
+  guess_max = min(1000, n_max),
+)
+```
+:::
+
+::: column
+- provide the path for where the data is located (remember "/")
+- specify the sheet name (default is pulling in the first sheet/tab)
+- specify the column names to use in an array: `c("name1", "name2")` (default is to use the first row of the sheet)
+
+:::
+
+## Reading Excel files
+
+::: column
+```{r}
+#| label: excel-read-syntax-5
+#| eval: false
+#| code-line-numbers: "5,8"
+read_excel(
+  path,
+  sheet = NULL,
+  col_names = TRUE,
+  col_types = NULL,
+  na = "",
+  skip = 0,
+  guess_max = min(1000, n_max),
+)
+```
+:::
+
+::: column
+- provide the path for where the data is located (remember "/")
+- specify the sheet name (default is pulling in the first sheet/tab)
+- specify the column names to use in an array: `c("name1", "name2")` (default is to use the first row of the sheet)
+- specify the column types 
+    - default is to use its best guess based on `guess_max` argument
+
+:::
+
+## Reading Excel files
+
+::: column
+```{r}
+#| label: excel-read-syntax-6
+#| eval: false
+#| code-line-numbers: "6"
+read_excel(
+  path,
+  sheet = NULL,
+  col_names = TRUE,
+  col_types = NULL,
+  na = "",
+  skip = 0,
+  guess_max = min(1000, n_max),
+)
+```
+:::
+
+::: column
+- provide the path for where the data is located (remember "/")
+- provide the sheet name (default is pulling in the first sheet/tab)
+- specify the column names to use in an array: `c("name1", "name2")` (default is to use the first row of the sheet)
+- specify the column types 
+    - default is to use its best guess based on `guess_max` argument
+- provide what values are missing (default is empty cell)
+
+:::
+
+## Reading Excel files
+
+::: column
+```{r}
+#| label: excel-read-syntax-7
+#| eval: false
+#| code-line-numbers: "7"
+read_excel(
+  path,
+  sheet = NULL,
+  col_names = TRUE,
+  col_types = NULL,
+  na = "",
+  skip = 0,
+  guess_max = min(1000, n_max),
+)
+```
+:::
+
+::: column
+- provide the path for where the data is located (remember "/")
+- provide the sheet name (default is pulling in the first sheet/tab)
+- specify the column names to use in an array: `c("name1", "name2")` (default is to use the first row of the sheet)
+- specify the column types 
+    - default is to use its best guess based on `guess_max` argument
+- provide what values are missing (default is empty cell)
+- tell excel how many rows to skip if any - where to start reading the data (default is to start in cell A1 - skip no rows)
+
+:::
+
+## Reading Excel files - Example
+
+```{r}
+#| label: read-excel-ex-1
+fav_foods<-read_excel("../data/import/favourite-food.xlsx")
+
+fav_foods
+```
+
+## Reading Excel files - Example
+
+```{r}
+#| label: read-excel-ex-2
+#| code-line-numbers: "2,3|4"
+fav_foods<-read_excel("../data/import/favourite-food.xlsx",
+                      col_names = c("ID","Name","Food","Plan","Age","SES"),
+                      skip = 1, 
+                      na = c("N/A","99999"))
+
+fav_foods
+```
+
+## Writing Excel files
+
+```{r}
+#| label: openxlsx-1
+#| code-line-numbers: "1|3|4|5"
+library(openxlsx)
+
+write.xlsx(fav_foods, 
+           "../data/import/favorite-food-betternames.xlsx",
+           colNames = TRUE, rowNames = FALSE)
+```
+
+. . .
+
+```{r}
+#| label: openxlsx-2
+fav_foods2<-read_excel("../data/import/favorite-food-betternames.xlsx")
+
+fav_foods2
+```
 
 # Variable names {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
 
@@ -393,5 +619,5 @@ attributes(spss_ex_nolabels$Q2)$labels
 
 ```{r}
 #| echo: false
-countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+countdown::countdown(minutes = 20, seconds = 0, play_sound = TRUE)
 ```
