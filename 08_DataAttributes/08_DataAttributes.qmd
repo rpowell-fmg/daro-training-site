@@ -232,7 +232,7 @@ is.na(miss_array)
 ::: fragment
 ```{r}
 #| label: missing-3
-case_when(is.na(miss_array) == "" ~ 1,
+case_when(is.na(miss_array) ~ 1,
           TRUE ~ 0)
 ```
 :::
@@ -569,7 +569,7 @@ spss_ex %>%
 
 ```{r}
 #| echo: false
-countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+countdown::countdown(minutes = 20, seconds = 0, play_sound = TRUE)
 ```
 
 # Working with strings {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
@@ -639,6 +639,7 @@ starwars %>%
 ## Subset strings {.smaller}
 
 `str_sub(string, start, end)`: Subset strings based on a known location
+
 `str_extract(string, pattern)`: Return the first pattern match found
 
 ::: column

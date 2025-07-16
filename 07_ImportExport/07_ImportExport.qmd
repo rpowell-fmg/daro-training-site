@@ -401,6 +401,8 @@ ggplot(edibnb_badnames,
 
 # Missing Data {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
 
+## Missing data
+
 ::: {.column}
 ```{r}
 #| label: df-na-images
@@ -409,7 +411,9 @@ ggplot(edibnb_badnames,
 knitr::include_graphics("images/df-na.png")
 ```
 ::: 
-::: {.column}
+
+:::: {.column}
+::: {.fragment}
 ```{r}
 #| label: df-na-read
 #| eval: FALSE
@@ -422,6 +426,7 @@ read_csv("../data/import/df-na.csv")
 read_csv("../data/import/df-na.csv") %>% print(n = 10)
 ```
 ::: 
+::::
 
 ## Option 1. Explicit NAs
 
@@ -574,7 +579,8 @@ spss_ex_factor %>%
 ```
 :::
 
-::: column
+:::: column
+::: fragment
 Option 2: Strip the labels
 ```{r}
 #| label: svy-nolab
@@ -591,6 +597,7 @@ spss_ex_nolabels %>%
   glimpse()
 ```
 :::
+::::
 
 ## Note on stripping the labels
 
