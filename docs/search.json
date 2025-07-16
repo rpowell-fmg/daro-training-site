@@ -14,7 +14,7 @@
     "href": "index.html#resources",
     "title": "R Training for DARO!",
     "section": "Resources",
-    "text": "Resources\n\nR for Data Science\nOverview of the packages in the tidyverse\nSome examples of Stata code to R code can be found here",
+    "text": "Resources\n\nR for Data Science\nOverview of the packages in the tidyverse\nSome examples of Stata code to R code can be found here\nAdditional information on importing survey data into R can be found in Appendix A of Exploring Complex Survey Data Analysis Using R",
     "crumbs": [
       "Home"
     ]
@@ -34,7 +34,27 @@
     "href": "index.html#logical-operators-in-r",
     "title": "R Training for DARO!",
     "section": "Logical operators in R",
-    "text": "Logical operators in R\n\n\n\n\n\n\n\n\n\n\noperator\ndefinition\n\noperator\ndefinition\n\n\n\n\n&lt;\nless than\n\nx & y\nx AND y\n\n\n&lt;=\nless than or equal to\n\nx | y\nx OR y\n\n\n&gt;\ngreater than\n\nis.na(x)\ntest if x is NA\n\n\n&gt;=\ngreater than or equal to\n\n!is.na(x)\ntest if x is not NA\n\n\n==\nexactly equal to\n\nx %in% y\ntest if x is in y\n\n\n!=\nnot equal to\n\n!(x %in% y)\ntest if x is not in y\n\n\n\n\nMost slides and exercises are adapted from Data Science in a Box.",
+    "text": "Logical operators in R\n\n\n\n\n\n\n\n\n\n\noperator\ndefinition\n\noperator\ndefinition\n\n\n\n\n&lt;\nless than\n\nx & y\nx AND y\n\n\n&lt;=\nless than or equal to\n\nx | y\nx OR y\n\n\n&gt;\ngreater than\n\nis.na(x)\ntest if x is NA\n\n\n&gt;=\ngreater than or equal to\n\n!is.na(x)\ntest if x is not NA\n\n\n==\nexactly equal to\n\nx %in% y\ntest if x is in y\n\n\n!=\nnot equal to\n\n!(x %in% y)\ntest if x is not in y",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#rstudio-keyboard-shortcuts",
+    "href": "index.html#rstudio-keyboard-shortcuts",
+    "title": "R Training for DARO!",
+    "section": "RStudio Keyboard Shortcuts",
+    "text": "RStudio Keyboard Shortcuts\n\n\n\n\n\n\n\nshortcut\ndefinition\n\n\n\n\nCtrl+Enter\nRuns current line(s) of code\n\n\nCtrl+Shift+C\nComments/Uncomments line(s) of code\n\n\nCtrl+Shift+M\nInserts a tidyverse pipe operator with spaces (%&gt;%)\n\n\nAlt+-\nInserts an assignment operator with spaces (&lt;-)\n\n\nAlt+Shift+K\nOpens the keyboard shortcut listing",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "R Training for DARO!",
+    "section": "",
+    "text": "Most slides and exercises are adapted from Data Science in a Box.",
     "crumbs": [
       "Home"
     ]

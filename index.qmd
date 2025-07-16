@@ -6,9 +6,10 @@ All slides and exercises will be posted here throughout the week!
 
 ## Resources
 
--    [R for Data Science](https://r4ds.hadley.nz/)
--    Overview of the packages in the [tidyverse](https://tidyverse.tidyverse.org/)
+-   [R for Data Science](https://r4ds.hadley.nz/)
+-   Overview of the packages in the [tidyverse](https://tidyverse.tidyverse.org/)
 -   Some examples of Stata code to R code can be found [here](https://rstudio.github.io/cheatsheets/stata2r.pdf)
+-   Additional information on importing survey data into R can be found in [Appendix A of Exploring Complex Survey Data Analysis Using R](https://tidy-survey-r.github.io/tidy-survey-book/importing-survey-data-into-r.html)
 
 ## Cheat sheets
 
@@ -36,6 +37,18 @@ All slides and exercises will be posted here throughout the week!
 | `==` | exactly equal to |  | `x %in% y` | test if `x` is in `y` |
 | `!=` | not equal to |  | `!(x %in% y)` | test if `x` is not in `y` |
 
+## RStudio Keyboard Shortcuts
+
+| shortcut | definition |
+|----------|------------------------|
+| `Ctrl+Enter` | Runs current line(s) of code |
+| `Ctrl+Shift+C` | Comments/Uncomments line(s) of code |
+| `Ctrl+Shift+M` | Inserts a `tidyverse` pipe operator with spaces (` %>% `) |
+| `Alt+-` | Inserts an assignment operator with spaces (` <- `) |
+| `Alt+Shift+K` | Opens the keyboard shortcut listing |
+
+<br>
+----------------------------------------------------------------------------------
 ::: footnote
 Most slides and exercises are adapted from [Data Science in a
 Box](https://datasciencebox.org/).
