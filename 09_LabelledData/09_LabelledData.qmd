@@ -126,7 +126,7 @@ options(width=33)
 
 ## Rename variables
 
-`rename()` function from **dplyr** package allows us to update variable names one at a time in the format `old_var` = `new_var`
+`rename()` function from **dplyr** package allows us to update variable names one at a time in the format `new_var` = `old_var`
 
 ::: {.column}
 ```{r}
@@ -469,7 +469,7 @@ val_labels(spss_ex$Q2)
 
 ## Edit specific value label {.smaller}
 
-`val_label()` (not plural) allos us to see or set a single label for a single value of a particular variable
+`val_label()` (not plural) allows us to see or set a single label for a single value of a particular variable
 
 ::: column
 ```{r}
@@ -624,7 +624,7 @@ We know how to handle strings and can pull out the levels/values from the labels
 spss_ex %>% 
   look_for() %>%
   lookfor_to_long_format() %>% 
-  mutate(levels = str_extract(value_labels,"(?<=\\[)[:digit:]*(?=\\])")) %>% 
+  mutate(levels = str_extract(value_labels,"(?<=\\[).*(?=\\])")) %>% 
   rename(values=levels)
 ```
 
