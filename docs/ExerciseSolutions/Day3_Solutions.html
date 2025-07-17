@@ -113,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Day 3-Solutions</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ExerciseSolutions/Day1_Solutions.html">Exercise Solutions</a></li><li class="breadcrumb-item"><a href="../ExerciseSolutions/Day3_Solutions.html">Day 3-Solutions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -278,6 +278,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Day 2-Solutions</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ExerciseSolutions/Day3_Solutions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Day 3-Solutions</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -311,7 +317,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ExerciseSolutions/Day1_Solutions.html">Exercise Solutions</a></li><li class="breadcrumb-item"><a href="../ExerciseSolutions/Day3_Solutions.html">Day 3-Solutions</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Day 3-Solutions</h1>
 </div>
@@ -490,14 +496,14 @@ $ tvhours &lt;int&gt; 12, NA, 2, 4, 1, NA, 3, NA, 0, 3, 2, NA, 1, NA, 1, 7, NA, 
 </div>
 <div class="cell" data-warnings="false">
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: There were 12 warnings in `mutate()`.
-The first warning was:
-ℹ In argument: `enrollment_year = as.integer(runif(1, min = birth_year + 15,
-  max = 2024))`.
-ℹ In group 2: `row_number() = 2`.
-Caused by warning in `runif()`:
-! NAs produced
-ℹ Run `dplyr::last_dplyr_warnings()` to see the 11 remaining warnings.</code></pre>
+<pre><code>Rows: 100 Columns: 8
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): sex
+dbl (7): uniqueid, birth_year, birth_month, birth_day, enrollment_year, enro...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -505,14 +511,14 @@ Caused by warning in `runif()`:
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 100
 Columns: 8
-$ uniqueid         &lt;int&gt; 10000001, 10000002, 10000003, 10000004, 10000005, 100…
-$ birth_year       &lt;int&gt; 1972, 2019, 1978, 2009, 2018, 2020, 1949, 1982, 2001,…
-$ birth_month      &lt;int&gt; 10, 9, 4, 6, 2, 5, 7, 4, 12, 1, 5, 7, 5, 11, 1, 10, 1…
-$ birth_day        &lt;int&gt; 13, 1, 2, 20, 24, 28, 15, 11, 29, 11, 6, 25, 5, 25, 4…
-$ sex              &lt;chr&gt; "Female", "Female", NA, "Male", "Female", "Female", "…
-$ enrollment_year  &lt;int&gt; 2023, NA, 2001, 2024, NA, NA, 1964, 1998, 2017, 2011,…
-$ enrollment_month &lt;int&gt; 12, NA, 11, 6, NA, NA, 4, 7, 2, 8, 10, 11, 12, 12, 4,…
-$ enrollment_day   &lt;int&gt; 19, NA, 29, 4, NA, NA, 29, 9, 10, 1, 2, 24, 25, 20, 1…</code></pre>
+$ uniqueid         &lt;dbl&gt; 10000001, 10000002, 10000003, 10000004, 10000005, 100…
+$ birth_year       &lt;dbl&gt; 1997, 1922, 1955, 1971, 2015, 2017, 2014, 1960, 1925,…
+$ birth_month      &lt;dbl&gt; 2, 3, 4, 3, 4, 5, 6, 11, 4, 6, 2, 11, 3, 3, 8, 8, 4, …
+$ birth_day        &lt;dbl&gt; 16, 14, 11, 12, 7, 3, 9, 8, 24, 25, 11, 13, 26, 11, 1…
+$ sex              &lt;chr&gt; "Female", NA, "Male", "Female", NA, "Male", "Female",…
+$ enrollment_year  &lt;dbl&gt; 2012, 2003, 2018, 2021, NA, NA, NA, 1983, 1948, 1964,…
+$ enrollment_month &lt;dbl&gt; 6, 6, 2, 7, NA, NA, NA, 1, 7, 9, 6, 12, 1, 7, 4, 11, …
+$ enrollment_day   &lt;dbl&gt; 18, 15, 26, 19, NA, NA, NA, 14, 14, 6, 17, 20, 6, 30,…</code></pre>
 </div>
 </div>
 </section>
@@ -529,19 +535,19 @@ $ enrollment_day   &lt;int&gt; 19, NA, 29, 4, NA, NA, 29, 9, 10, 1, 2, 24, 25, 2
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 9
    uniqueid birth_year birth_month birth_day sex    enrollment_year
-      &lt;int&gt;      &lt;int&gt;       &lt;int&gt;     &lt;int&gt; &lt;chr&gt;            &lt;int&gt;
- 1 10000001       1972          10        13 Female            2023
- 2 10000002       2019           9         1 Female              NA
- 3 10000003       1978           4         2 &lt;NA&gt;              2001
- 4 10000004       2009           6        20 Male              2024
- 5 10000005       2018           2        24 Female              NA
- 6 10000006       2020           5        28 Female              NA
- 7 10000007       1949           7        15 Female            1964
- 8 10000008       1982           4        11 Male              1998
- 9 10000009       2001          12        29 Female            2017
-10 10000010       1972           1        11 Female            2011
+      &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt;
+ 1 10000001       1997           2        16 Female            2012
+ 2 10000002       1922           3        14 &lt;NA&gt;              2003
+ 3 10000003       1955           4        11 Male              2018
+ 4 10000004       1971           3        12 Female            2021
+ 5 10000005       2015           4         7 &lt;NA&gt;                NA
+ 6 10000006       2017           5         3 Male                NA
+ 7 10000007       2014           6         9 Female              NA
+ 8 10000008       1960          11         8 Male              1983
+ 9 10000009       1925           4        24 Male              1948
+10 10000010       1949           6        25 Male              1964
 # ℹ 90 more rows
-# ℹ 3 more variables: enrollment_month &lt;int&gt;, enrollment_day &lt;int&gt;,
+# ℹ 3 more variables: enrollment_month &lt;dbl&gt;, enrollment_day &lt;dbl&gt;,
 #   birthday &lt;date&gt;</code></pre>
 </div>
 </div>
@@ -556,25 +562,25 @@ $ enrollment_day   &lt;int&gt; 19, NA, 29, 4, NA, NA, 29, 9, 10, 1, 2, 24, 25, 2
 ℹ In argument: `enrollment_date = ymd(glue("{enrollment_year}
   {enrollment_month} {enrollment_day}"))`.
 Caused by warning:
-!  12 failed to parse.</code></pre>
+!  19 failed to parse.</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>birthdays_dt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 10
    uniqueid birth_year birth_month birth_day sex    enrollment_year
-      &lt;int&gt;      &lt;int&gt;       &lt;int&gt;     &lt;int&gt; &lt;chr&gt;            &lt;int&gt;
- 1 10000001       1972          10        13 Female            2023
- 2 10000002       2019           9         1 Female              NA
- 3 10000003       1978           4         2 &lt;NA&gt;              2001
- 4 10000004       2009           6        20 Male              2024
- 5 10000005       2018           2        24 Female              NA
- 6 10000006       2020           5        28 Female              NA
- 7 10000007       1949           7        15 Female            1964
- 8 10000008       1982           4        11 Male              1998
- 9 10000009       2001          12        29 Female            2017
-10 10000010       1972           1        11 Female            2011
+      &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt;
+ 1 10000001       1997           2        16 Female            2012
+ 2 10000002       1922           3        14 &lt;NA&gt;              2003
+ 3 10000003       1955           4        11 Male              2018
+ 4 10000004       1971           3        12 Female            2021
+ 5 10000005       2015           4         7 &lt;NA&gt;                NA
+ 6 10000006       2017           5         3 Male                NA
+ 7 10000007       2014           6         9 Female              NA
+ 8 10000008       1960          11         8 Male              1983
+ 9 10000009       1925           4        24 Male              1948
+10 10000010       1949           6        25 Male              1964
 # ℹ 90 more rows
-# ℹ 4 more variables: enrollment_month &lt;int&gt;, enrollment_day &lt;int&gt;,
+# ℹ 4 more variables: enrollment_month &lt;dbl&gt;, enrollment_day &lt;dbl&gt;,
 #   birthday &lt;date&gt;, enrollment_date &lt;date&gt;</code></pre>
 </div>
 </div>
@@ -589,7 +595,7 @@ Caused by warning:
 <pre><code># A tibble: 1 × 1
   avg_age
     &lt;dbl&gt;
-1    53.8</code></pre>
+1    52.3</code></pre>
 </div>
 </div>
 <ol start="4" type="1">
@@ -604,9 +610,9 @@ Caused by warning:
 <pre><code># A tibble: 3 × 2
   sex    avg_age_enrollment
   &lt;chr&gt;               &lt;dbl&gt;
-1 Female               40.7
-2 Male                 36.2
-3 &lt;NA&gt;                 26.9</code></pre>
+1 Female               38.6
+2 Male                 34.7
+3 &lt;NA&gt;                 47.0</code></pre>
 </div>
 </div>
 

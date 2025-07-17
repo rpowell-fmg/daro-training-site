@@ -107,26 +107,7 @@ birthdays<-read_csv("PATHNAME/birthdays.csv")
 #| echo: false
 #| warnings: false
 
-set.seed(20250715)
-birthdays<-tibble(uniqueid = c(10000001:10000100),
-                  birth_year=as.integer(runif(100, min=1920, max=2024)),
-                  birth_month=as.integer(runif(100, min=1, max=13))) %>% 
-  group_by(row_number()) %>% 
-  mutate(birth_day = case_when(birth_month %in% c(4,6,9,11)~as.integer(runif(1,min=1,max=31)),
-                         birth_month==2 & leap_year(birth_year)~as.integer(runif(1,min=1,max=30)),
-                         birth_month==2~as.integer(runif(1,min=1,max=29)),
-                         TRUE~as.integer(runif(1,min=1,max=32))),
-         sex_prep = runif(1,min=0,max=1),
-         sex = case_when(sex_prep < .45~"Male",
-                         sex_prep < .9~"Female"),
-         enrollment_year = as.integer(runif(1, min=birth_year+15, max=2024)),
-         enrollment_month = case_when(!is.na(enrollment_year)~as.integer(runif(1, min=1, max=13))),
-         enrollment_day = case_when(enrollment_month %in% c(4,6,9,11)~as.integer(runif(1,min=1,max=31)),
-                                    enrollment_month==2 & leap_year(enrollment_year)~as.integer(runif(1,min=1,max=30)),
-                                    enrollment_month==2~as.integer(runif(1,min=1,max=29)),
-                                    !is.na(enrollment_month)~as.integer(runif(1,min=1,max=32)))) %>% 
-  ungroup() %>% 
-  select(uniqueid:birth_month,birth_day,sex:enrollment_day)
+birthdays<-read_csv("../data/birthdays.csv")
 ```
 
 ```{r}

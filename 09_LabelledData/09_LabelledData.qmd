@@ -116,6 +116,8 @@ knitr::include_graphics("images/approach-b-2.png")
 
 # Variable names and labels {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
 
+# Rename variables {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
+
 ```{r}
 #| label: set-col-width
 #| echo: false
@@ -265,7 +267,9 @@ spss_ex %>%
 :::
 ::::
 
-## Relabel Variables
+# Relabel variables {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
+
+## Relabel variables
 
 `var_label()` function from **labelled** package allows us view labels and set labels
 
@@ -297,7 +301,7 @@ var_label(spss_ex$Q2)
 Using `var_label()` will change the label on the same dataset! <br>USE WITH CAUTION!
 :::
 
-## Relabel Multiple variables {.smaller}
+## Relabel multiple variables {.smaller}
 
 ::: {.column}
 ```{r}
@@ -326,7 +330,7 @@ var_label(spss_ex_newlabel$QS)
 :::
 ::::
 
-## Relabel Multiple Variables - All at once
+## Relabel multiple Variables - All at once
 
 ```{r}
 #| label: set-full-width
@@ -413,9 +417,216 @@ spss_ex %>%
 Order on your full dataset and the order of your labels needs to be the same! <br><br>Goal is to have a function that does this for you...more to come.
 :::
 
+# Your turn: <br>Labelled data {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+```
+
 # Variable values and labels {background-gradient="linear-gradient(to bottom right, #FFFFFF, #7CDCFF, #7CDCFF, #7CDCFF)"}
 
+## See and set value labels {.smaller}
+
+```{r}
+#| label: create-dup-data
+#| echo: false
+
+spss_ex2<-spss_ex
+```
+
+
+`val_labels()` allows us to see or set all value labels for a particular variable
+
+::: column
+```{r}
+#| label: val-labels
+val_labels(spss_ex$Q2)
+```
+:::
+
+:::: column
+::: fragment
+```{r}
+#| label: val-labels-set
+val_labels(spss_ex$Q2) <- c(
+    "No, None" = 0,
+    "Yes, Previously" = 1,
+    "Yes, Currently" = 2,
+    "Yes, College" = 3,
+    "Yes, Service" = 4
+  )
+
+val_labels(spss_ex$Q2)
+
+```
+:::
+::::
+
+## Edit specific value label {.smaller}
+
+`val_label()` (not plural) allos us to see or set a single label for a single value of a particular variable
+
+::: column
+```{r}
+#| label: val-label
+val_label(spss_ex$Q2, 0)
+```
+:::
+
+:::: column
+::: fragment
+```{r}
+#| label: val-label-set
+val_label(spss_ex$Q2, 0) <- "NADA"
+
+val_labels(spss_ex$Q2)
+```
+:::
+::::
+
+## Setting labels in pipelines - single variable
+
+```{r}
+#| label: reset-data
+#| echo: false
+
+spss_ex<-spss_ex2
+```
+
+`set_value_labels()` allows us to set the labels for the data in our dataset in the format of `c("label1" = value1, "label2" = value2, ...)`
+
+. . .
+
+```{r}
+#| label: val-labels-2
+#| code-line-numbers: "|2|3-9|"
+spss_Q2new<-spss_ex %>% 
+  zap_labels() %>% 
+  set_value_labels(Q2 = c(
+    "No, None" = 0,
+    "Yes, Previously" = 1,
+    "Yes, Currently" = 2,
+    "Yes, College" = 3,
+    "Yes, Service" = 4
+  ))
+```
+
+. . .
+
+```{r}
+#| label: val-labels-2out
+val_labels(spss_Q2new$Q2)
+```
+
+
+## Setting labels in pipelines - multiple variable {.smaller}
+
+::: {.column}
+```{r}
+#| label: val-labels-3
+val_labels(spss_ex$Q2)
+val_labels(spss_ex$Q4)
+```
+:::
+
+:::: {.column}
+::: {.fragment}
+```{r}
+#| label: val-labels-4
+#| code-line-numbers: "|4-10|11-14"
+spss_ex_newlabels<-spss_ex %>% 
+  zap_labels() %>% 
+  set_value_labels(
+    Q2 = c(
+      "No, None" = 0,
+      "Yes, Previously" = 1,
+      "Yes, Currently" = 2,
+      "Yes, College" = 3,
+      "Yes, Service" = 4
+      ),
+    Q4 = c(
+      "NADA" = 0,
+      "100% Yes" = 1
+    )
+  )
+```
+:::
+::: {.fragment}
+```{r}
+#| label: vallabels-set2-view
+val_labels(spss_ex_newlabels$Q2)
+val_labels(spss_ex_newlabels$Q4)
+```
+:::
+::::
+
+## Setting labels in pipelines - All at once
+
+. . .
+
+Stay tuned...
+
+. . .
+
+We're currently creating a process that will automate the labels creation for all variables at once based on the metadata and AQ.
+
+
+# Your turn: <br>Labelled data {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}
+
+`r emojifont::emoji("raised_hand")` if you have questions or need help
+
+`r fontawesome::fa("comment")` when you are finished
+
+```{r}
+#| echo: false
+countdown::countdown(minutes = 15, seconds = 0, play_sound = TRUE)
+```
+
 # Data dictionary/codebook {background-gradient="linear-gradient(to bottom right, #FFFFFF, #FECCDD, #FECCDD, #FECCDD)"}
+
+
+## Data dictionary {.smaller}
+```{r}
+#| echo: false
+options(width=69)
+```
+
+
+`look_for()` creates the data dictionary
+
+`lookfor_to_long_format()` puts it in an easy to view tibble format for us
+
+```{r}
+#| label: codebook
+spss_ex %>% 
+  look_for() %>%
+  lookfor_to_long_format()
+```
+
+## Data dictionary (cont.) {.smaller}
+
+Notice how the "levels" column doesn't get populated in the long format (may be a bug)
+
+. . .
+
+We know how to handle strings and can pull out the levels/values from the labels
+
+. . .
+
+
+```{r}
+#| label: codebook-2
+spss_ex %>% 
+  look_for() %>%
+  lookfor_to_long_format() %>% 
+  mutate(levels = str_extract(value_labels,"(?<=\\[)[:digit:]*(?=\\])")) %>% 
+  rename(values=levels)
+```
 
 
 # Your turn: <br>Labelled data {background-gradient="linear-gradient(to bottom, #FFFFFF, #FFFFFF, #6BE1CA)"}

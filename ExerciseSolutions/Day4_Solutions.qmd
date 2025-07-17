@@ -67,3 +67,8 @@ gss_cat %>%
   mutate(rincome_cat = str_replace(rincome," to ", " - ")) %>% 
   count(rincome, rincome_cat)
 ```
+
+# Labels
+
+Solutions are located on our sharedrive
+

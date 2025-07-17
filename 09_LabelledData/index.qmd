@@ -12,14 +12,19 @@ format: html
 ```
 ## Exercises
 
-**Exercise 1**
+Data for this is all located on the share drive.
+
+### Rename and relabel variables
+
+1. Read in the `label_ex.sav` dataset.
+2. Read in the `label_metavars.xlsx` file, which houses the renames and labels for our variables on the first tab "variables".
+3. Rename the variables in `label_ex` to match the requested delivery variable names in `label_metavars`.
+4. Relabel the variables in `label_ex` to match the requested delivery variable label in `label_metavars`.
+
+### Relabel values
 
 -    
 
-**Exercise 2**
-
--    
-
-**Exercise 3**
+### Data dictionary
 
 -    
