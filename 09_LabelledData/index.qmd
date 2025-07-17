@@ -23,8 +23,11 @@ Data for this is all located on the share drive.
 
 ### Relabel values
 
--    
+1. Change the variable labels on `EM7/Education` to match the labels on the "values" tab in the `label_metavars.xlsx` file.
+2. Let's say we want to change only values 3 and 4 of TT3 to be "Probably, Yes" and "Definitely, Yes" respectively. What code would you use for this?
 
 ### Data dictionary
 
--    
+1. Create a data dictionary for the `label_ex` data. Make sure you populate the levels column with the values.
+2. Export this to Excel (Hint: use the `write.xlsx` function from the `openxlsx` package).
+3. Extra credit: Can you figure out how to attach a distribution of the data to the data dictionary and export that to Excel?
