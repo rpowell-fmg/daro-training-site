@@ -12,7 +12,7 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://https://github.com/rpowell-fmg/daro-training-site
+        href: https://github.com/rpowell-fmg/daro-training-site
         text: "GitHub"
 
     style: docked
