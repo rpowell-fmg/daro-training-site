@@ -68,7 +68,7 @@ gss_cat %>%
   count(rincome, rincome_cat)
 ```
 
-# Labels
+# Labelled Data Exercises
 
-Solutions are located on our sharedrive
+Solutions to all exercises from the labelled data section are located on our sharedrive.
 

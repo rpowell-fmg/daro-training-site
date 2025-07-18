@@ -46,6 +46,7 @@ website:
           - href: ExerciseSolutions/Day1_Solutions.qmd
           - href: ExerciseSolutions/Day2_Solutions.qmd
           - href: ExerciseSolutions/Day3_Solutions.qmd
+          - href: ExerciseSolutions/Day4_Solutions.qmd
 
 
   page-footer:
