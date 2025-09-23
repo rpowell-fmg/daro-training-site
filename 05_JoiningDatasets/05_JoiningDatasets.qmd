@@ -438,7 +438,7 @@ x_multi %>%
 #| code-line-numbers: 3
 x_multi %>% 
   inner_join(y_multi,
-             by=c("id","id2"))
+             join_by(id,id2))
 ```
 :::
 ::::

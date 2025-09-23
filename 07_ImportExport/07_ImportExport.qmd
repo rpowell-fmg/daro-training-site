@@ -524,7 +524,7 @@ When reading in data from SAS, SPSS, and Stata, data is likely to have labels
 
 ```{r}
 #| label: read-spss
-#| cache: true
+
 spss_ex<-read_sav("../data/import/svy_spss.sav")
 
 glimpse(spss_ex)
